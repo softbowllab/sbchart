@@ -1,0 +1,25 @@
+title: SBChart v2.0
+email: escho@softbowl.co.kr
+description: >-
+baseurl: ""
+url: ""
+highlighter: rouge
+permalink: /:categories/:title:output_ext
+# Exclude non-site files
+exclude: ['bin', 'README.md']
+# Build settings
+markdown: kramdown
+plugins:
+#livereload: true 
+
+codeurl: 'https://github.com/softbowllab/sbchart'
+sections: [
+  ['global', 'global'],
+  ['data', 'data'],
+  ['grid', 'grid'],
+  ['title', 'title'],
+  ['legend', 'legend'],
+  ['axes', 'axes']
+]
+twitter_username: softbowl
+github_username:  softbowllab
