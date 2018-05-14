@@ -1,7 +1,7 @@
 title: SBChart v2.0
 email: escho@softbowl.co.kr
 description: >-
-baseurl: ""
+baseurl: "/sbchart"
 url: ""
 highlighter: rouge
 permalink: /:categories/:title:output_ext
