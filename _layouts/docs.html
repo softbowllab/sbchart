@@ -11,19 +11,38 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 	{% include header.html %}
-    <div class="page-content">
-		{{ content }}
+
+<div class="page-content">
+	<div class="container">
+		<div class="row">
+			{% assign post_count = site.docs|size %}
+			{% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
+				<div id="navigation" class="col-sm-2">
+					{% include lnb.docs.html %}
+				</div>
+
+				<div id="content" class="col-sm-10">
+					{{ content }}
+				</div>
+			{% else %}
+				<div id="content" class="col-sm-12">
+					{{ content }}
+				</div>
+			{% endif %}
+		</div>
+		<div class="row">
+			<div id="footer" class="col-sm-12">
+				{% include footer.html %}
+			</div>
+		</div>
 	</div>
-    {% include footer.html %}
+</div>
+
 	{% if site.google_analytics_id != "" %}
-		{% include google_analytics.html %}
+	{% include google_analytics.html %}
 	{% endif %}
 </body>
 </html>
