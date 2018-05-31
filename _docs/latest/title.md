@@ -5,13 +5,11 @@ categories: ["latest","title"]
 order: 999
 ---
 
-## title
+## title 
 ---
 
-차트의 제목, 위치 등을 지정합니다.
+차트의 제목, 위치 등을 지정합니다. `#2.0.0`
 
-
-`#2.0.0`
 
 * Type : object
 
@@ -27,18 +25,15 @@ title: {
 
 ### title.text
 
-제목을 지정합니다. 공백일 경우 제목이 차트에 표현되지 않습니다.
-
-`#2.0.0`
+제목을 지정합니다. 공백일 경우 제목이 차트에 표현되지 않습니다. `#2.0.0`
 
 * Type : string
 
 
 ### title.position
 
-제목 위치를 지정합니다
+제목 위치를 지정합니다 `#2.0.0`
 
-`#2.0.0`
 
 * Type : string
 
@@ -48,12 +43,9 @@ title: {
 	* top-right: 상단-우측에 위치
 	* top-left: 상단-좌측에 위치
 
-## title.padding
----
+### title.padding
 
-제목의 padding을 지정합니다.
-
-`#2.0.0`
+제목의 padding을 지정합니다. `#2.0.0`
 
 * Type : object
 

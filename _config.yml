@@ -45,6 +45,7 @@ release:
     - {name: "title"}
     - {name: "legend"}
     - {name: "axes"}
+    - {name: "extend"}
   "2.0.0": 
     - {name: "axes"}
 

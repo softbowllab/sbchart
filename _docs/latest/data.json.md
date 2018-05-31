@@ -13,8 +13,6 @@ order: 3
 [data.columns](/data/data.columns.html) 과 동일한 방식으로 Series(범례,Legend)기준으로 Series별 값들은 좌측에서 우측(열 기준)으로 읽게되며 각 배열은 하나의 Series를 의미합니다.
 
 이때 이름(라벨/Label)으로 쓰일 열과 값으로 쓰일 열들은 [data.keys](/data/data.keys.html) 설정을 통하여 지정합니다.
-
-
 `#2.0.0`
 
 * Type : object[]

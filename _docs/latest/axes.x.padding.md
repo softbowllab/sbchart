@@ -1,0 +1,53 @@
+---
+title:  axes.x.padding
+date:   2018-05-14
+categories: ["latest","axes"]
+order: 4
+---
+
+## axes.x.padding
+---
+
+x축 1번째 값부터 마지막 n번째 값이 위치할 tick의 좌우 padding 값을 정의한다.
+`#2.0.0`
+
+* Type : number/object
+
+* 좌우 모두 동일한 값을 지정
+
+
+```javascript
+axes: {
+	x : {
+		padding: 20
+	}
+}
+```
+
+## axes.x.padding.left
+
+x축 1번째 tick의 좌측 padding 값을 정의한다.
+`#2.0.0`
+
+* Type : number
+
+* Example
+
+  ```javascript
+axes: {
+	x : {
+		padding:  {
+			left: 20,
+			right: 20
+		}
+	}
+}
+```
+
+## axes.x.padding.right
+
+x축 마지막 tick의 우측 padding 값을 정의한다.
+`#2.0.0`
+
+* Type : number
+

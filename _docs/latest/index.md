@@ -72,3 +72,13 @@ x,y 축 관련 옵션입니다.
 {% for item in pages %}
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
+
+### extend
+
+차트별 확장 옵션입니다.
+
+{% assign cate = "extend" %}
+{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
+{% for item in pages %}
+* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
+{% endfor %}

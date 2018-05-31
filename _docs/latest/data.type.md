@@ -9,11 +9,9 @@ order: 11
 ---
 
 차트의 종류를 지정합니다.
-
-
 `#2.0.0`
 
-* Type : object
+* Type : string
 
 * Default : "line"
 
@@ -21,3 +19,13 @@ order: 11
 ```javascript
 data: {type: "bar"}
 ```
+
+* Values :
+  * line
+  * bar
+  * spline
+  * stackbar
+  * stackbar.100
+  * pie
+  * donut
+  * area

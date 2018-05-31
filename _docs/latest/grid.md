@@ -10,9 +10,7 @@ order: 999
 
 차트의 그리드를 설정 합니다.
 
-x,y축이 존재하지 않는 원(pie), 도넛(donut) 차트는 해당 사항이 없습니다.
-
-`#2.0.0`
+x,y축이 존재하지 않는 원(pie), 도넛(donut) 차트는 해당 사항이 없습니다. `#2.0.0`
 
 * Type : object
 
@@ -31,9 +29,7 @@ grid: {
 
 ### grid.x.show
 
-x축 그리드를 show/hidden 처리합니다.
-
-`#2.0.0`
+x축 그리드를 show/hidden 처리합니다. `#2.0.0`
 
 * Type : boolean
 
@@ -41,9 +37,7 @@ x축 그리드를 show/hidden 처리합니다.
 
 ### grid.y.show
 
-y축 그리드를 show/hidden 처리합니다.
-
-`#2.0.0`
+y축 그리드를 show/hidden 처리합니다. `#2.0.0`
 
 * Type : boolean
 
