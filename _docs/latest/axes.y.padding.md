@@ -9,6 +9,8 @@ order: 13
 ---
 
 y축 1번째 값부터 마지막 n번째 값이 위치할 tick의 상하 padding 값을 정의한다.
+
+단위는 1개 tick의 높이이다.
 `#2.0.0`
 
 * Type : number/object
@@ -19,7 +21,7 @@ y축 1번째 값부터 마지막 n번째 값이 위치할 tick의 상하 padding
 ```javascript
 axes: {
 	y : {
-		padding: 20
+		padding: 2
 	}
 }
 ```
@@ -37,8 +39,8 @@ y축 1번째 tick의 상단 padding 값을 정의한다.
 axes: {
 	y : {
 		padding:  {
-			top: 20,
-			bottom: 20
+			top: 2,
+			bottom: 2
 		}
 	}
 }

@@ -1,0 +1,79 @@
+---
+title:  Categories
+date:   2018-05-17
+categories: ["latest","options"]
+order: 202
+---
+<p>카테고리 기능을 사용하여  x축 tick에 display 될 문자열 변경/지정 할 수 있습니다.<br/>
+axes.x.type="categories"로 지정하고 x축tick 에 display 될 문자열들을 axes.x.categories=[]에 입력합니다.</p>
+
+<!-- show/hidden -->
+<div class="checkbox">
+	<label>
+		<input type="checkbox" id="chkEx01" checked>
+		<mark>카테고리</mark><code>axes.x.type="categories"</code>, <code>axes.x.categories=["전국","서울",...]</code>
+	</label>
+</div>
+		
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "spline",
+		columns: [
+			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+		]
+	},
+	axes: {
+		x : {
+			type: "categories",
+			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
+		}
+	}
+};
+SBChart.render("#chartWrap", conf);
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "spline",
+		columns: [
+			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+		]
+	},
+	axes: {
+		x : {
+			type: "categories",
+			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
+		}
+	}
+};
+SBChart.render("#chartWrap", conf);
+
+//sereise
+document.getElementById("chkEx01").onchange = function() {
+	if (this.checked) {
+		conf.axes.x = {
+			type: "categories",
+			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
+		};
+	} else {
+		conf.axes.x = {};
+	}
+	SBChart.render("#chartWrap", conf);
+};
+
+</script>

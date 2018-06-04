@@ -1,0 +1,90 @@
+---
+title:  Axis-Y tick
+date:   2018-06-04
+categories: ["latest","options"]
+order: 205
+---
+<p>Y축의 tick 라벨을 변경하거나 display 될 tick을 선택 할 수 있습니다.</p>
+
+<!-- show/hidden -->
+<div class="row">
+	<div class="col-sm-1"><mark>format</mark></div>
+	<div class="col-sm-2">(예) 라벨 변경</div>
+	<div class="col-sm-9">
+		<label>
+			<input type="checkbox" id="chkFormat" checked>
+			<code>axes.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code>
+		</label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-1"><mark>values</mark></div>
+	<div class="col-sm-2">(예) display 값 선택</div>
+	<div class="col-sm-9">
+		<label>
+			<input type="checkbox" id="chkValues" checked>
+			<code>axes.y.tick.values = [7000000, 8000000, 9000000]</code>
+		</label>
+	</div>
+</div>
+			
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	},
+	axes: {
+		y: {
+			tick: {
+				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
+				values:[7000000, 8000000, 9000000]
+			}
+		}
+	}
+};
+SBChart.render("#chartWrap", conf);
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var conf = {
+	global : {
+		size : { width: 800, height: 320 }
+	},
+	data : {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	},
+	axes: {
+		y: {
+			tick: {
+				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
+				values:[7000000, 8000000, 9000000]
+			}
+		}
+	}
+};
+SBChart.render("#chartWrap", conf);
+//legend show/hidden
+document.getElementById("chkFormat").onchange = function() {
+	conf.axes.y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
+	SBChart.render("#chartWrap", conf);
+};
+
+//axis-x show/hidden
+document.getElementById("chkValues").onchange = function() {
+	conf.axes.y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+	SBChart.render("#chartWrap", conf);
+};
+
+</script>

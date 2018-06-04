@@ -65,6 +65,8 @@ axes: {
 ### axes.x.tick.count
 
 x축 display 될 tick 갯수를 지정한다.
+
+2이하의 값은 유효하지 않으므로 3이상의 값을 입력한다.
 `#2.0.0`
 
 * Type: number

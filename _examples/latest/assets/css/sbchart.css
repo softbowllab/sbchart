@@ -1,3 +1,9 @@
+.sb-grid line {
+  stroke: #aaa; }
+
+.sb-grid-x, .sb-grid-y {
+  stroke-opacity: 0.3; }
+
 .sb-legend-background {
   opacity: .75;
   fill: #fff;

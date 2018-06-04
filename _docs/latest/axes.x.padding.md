@@ -9,6 +9,8 @@ order: 4
 ---
 
 x축 1번째 값부터 마지막 n번째 값이 위치할 tick의 좌우 padding 값을 정의한다.
+
+단위는 1개 tick의 너비이다.
 `#2.0.0`
 
 * Type : number/object
@@ -19,7 +21,7 @@ x축 1번째 값부터 마지막 n번째 값이 위치할 tick의 좌우 padding
 ```javascript
 axes: {
 	x : {
-		padding: 20
+		padding: 2
 	}
 }
 ```
@@ -37,8 +39,8 @@ x축 1번째 tick의 좌측 padding 값을 정의한다.
 axes: {
 	x : {
 		padding:  {
-			left: 20,
-			right: 20
+			left: 2,
+			right: 2
 		}
 	}
 }
