@@ -1,0 +1,71 @@
+---
+title:  CSS Class
+date:   2018-06-05
+categories: ["latest","options"]
+order: 203
+---
+<p>차트의 CSS 클래스명을 지정합니다. Class명 변경을 통하여 차트의 스타일을 실시간으로 변경할 수 있습니다.</p>
+<br>
+<!-- show/hidden -->
+
+<div class="row">
+	<div class="col-sm-2"><mark>classname 적용</mark></div>
+	<div class="col-sm-10">
+		<label>
+			<input type="checkbox" id="chkClassname" checked>
+			<code>global.svg.classname="sbchart"</code>
+		</label>
+	</div>
+</div>
+			
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight css %}
+.sbchart {background-color: lightcyan;}
+{% endhighlight %}</p>
+<p>{% highlight javascript %}
+var conf = {
+	global : {
+		size : { width: 800, height: 320 },
+		svg: {classname:"sbchart"}
+	},
+	data : {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	}
+};
+SBChart.render("#chartWrap", conf);
+{% endhighlight %}</p>
+<!-- Script -->
+<style>
+	.sbchart {background-color: lightcyan;}
+</style>
+<script>
+var conf = {
+	global : {
+		size : { width: 800, height: 320 },
+		svg: {classname:"sbchart"}
+	},
+	data : {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	}
+};
+SBChart.render("#chartWrap", conf);
+
+//sereise
+document.getElementById("chkClassname").onchange = function() {
+	if (this.checked) {
+		conf.global.svg.classname = "sbchart"
+	} else {
+		delete conf.global.svg.classname;
+	}
+	SBChart.render("#chartWrap", conf);
+};
+
+</script>

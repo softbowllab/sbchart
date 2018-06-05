@@ -2,20 +2,21 @@
 title:  Categories
 date:   2018-05-17
 categories: ["latest","options"]
-order: 202
+order: 211
 ---
-<p>카테고리 기능을 사용하여  x축 tick에 display 될 문자열 변경/지정 할 수 있습니다.<br/>
-axes.x.type="categories"로 지정하고 x축tick 에 display 될 문자열들을 axes.x.categories=[]에 입력합니다.</p>
-
+<p>카테고리 기능을 사용하여  x축 tick에 display 될 문자열을 지정 할 수 있습니다.</p>
+<br>
 <!-- show/hidden -->
-<div class="checkbox">
-	<label>
-		<input type="checkbox" id="chkEx01" checked>
-		<mark>카테고리</mark><code>axes.x.type="categories"</code>, <code>axes.x.categories=["전국","서울",...]</code>
-	</label>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkEx01" checked>
+			<mark>카테고리</mark><code>axes.x.type="category"</code>, <code>axes.x.categories=["전국","서울",...]</code>
+		</label>
+	</div>
 </div>
 		
-<p  id="chartWrap"></p>
+<p  id="chartWrap" style="min-height:320px"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
@@ -33,7 +34,7 @@ var conf = {
 	},
 	axes: {
 		x : {
-			type: "categories",
+			type: "category",
 			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
 		}
 	}
@@ -56,7 +57,7 @@ var conf = {
 	},
 	axes: {
 		x : {
-			type: "categories",
+			type: "category",
 			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
 		}
 	}
@@ -67,7 +68,7 @@ SBChart.render("#chartWrap", conf);
 document.getElementById("chkEx01").onchange = function() {
 	if (this.checked) {
 		conf.axes.x = {
-			type: "categories",
+			type: "category",
 			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"]
 		};
 	} else {

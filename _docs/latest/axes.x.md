@@ -21,12 +21,9 @@ axes: {
 	x : {
 		show:false,
 		type: "indexed",
-		tick: {
-			format: function(d) { return d + "%"; },
-			count: 5,
-			fit: false,
-			values: [2,4,10]
-		}
+		max: 10,
+		min: 1,
+		height: 20
 	}
 }
 ```
@@ -53,3 +50,27 @@ x축의 형태를 지정한다.
   * "timeseries": x축을 시간순으로 배열
   * "indexed": x축을 데이터순으로 일정하게 배열
   * "category": 카테고리(x축 라벨 수동 지정, axes.x.categories = []
+
+### axes.x.min
+
+x축 값 범위의 최소값을 지정한다.
+
+axes.x.type = "timeseries" 인 경우는 동작하지 않는다.
+
+* Type : number
+
+
+### axes.x.max
+
+x축 값 범위의 최대값을 지정한다.
+
+axes.x.type = "timeseries" 인 경우는 동작하지 않는다.
+
+* Type : number
+
+### axes.x.height
+
+x축 영역의 높이를 강제 지정한다.
+
+* Type : number
+

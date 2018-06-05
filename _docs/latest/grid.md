@@ -21,7 +21,8 @@ grid: {
 		show:true
 	},
 	y: { 
-		show:false
+		show:false,
+		ticks: 5
 	}
 }
 ```
@@ -29,7 +30,8 @@ grid: {
 
 ### grid.x.show
 
-x축 그리드를 show/hidden 처리합니다. `#2.0.0`
+x축 그리드를 show/hidden 처리합니다.
+`#2.0.0`
 
 * Type : boolean
 
@@ -37,8 +39,16 @@ x축 그리드를 show/hidden 처리합니다. `#2.0.0`
 
 ### grid.y.show
 
-y축 그리드를 show/hidden 처리합니다. `#2.0.0`
+y축 그리드를 show/hidden 처리합니다.
+`#2.0.0`
 
 * Type : boolean
 
 * Default : true
+
+### grid.y.ticks
+
+y축 그리드 tick 갯수를 지정합니다.
+`#2.0.0`
+
+* Type : number
