@@ -139,15 +139,15 @@ document.getElementById("cboAnchor").onchange = function() {
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtX").onchange = function() {
-	conf.legend.inset.x = this.value;
+	conf.legend.inset.x = parseInt(this.value);
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtY").onchange = function() {
-	conf.legend.inset.y = this.value;
+	conf.legend.inset.y = parseInt(this.value);
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtStep").onchange = function() {
-	conf.legend.inset.step = this.value;
+	conf.legend.inset.step = parseInt(this.value);
 	SBChart.render("#chartWrap", conf);
 };
 
