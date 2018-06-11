@@ -44,10 +44,10 @@ release:
     - {name: "grid"}
     - {name: "title"}
     - {name: "legend"}
-    - {name: "axes"}
+    - {name: "axis"}
     - {name: "extend"}
   "2.0.0": 
-    - {name: "axes"}
+    - {name: "axis"}
 
 # favicon: /assets/favicon.ico
 # feed:

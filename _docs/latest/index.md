@@ -63,11 +63,11 @@ Grid 설정 옵션 입니다.
 {% endfor %}
 
 
-### axes
+### axis
 
 x,y 축 관련 옵션입니다.
 
-{% assign cate = "axes" %}
+{% assign cate = "axis" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
 {% for item in pages %}
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})

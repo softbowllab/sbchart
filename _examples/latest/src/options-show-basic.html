@@ -16,13 +16,13 @@ order: 201
 <div class="checkbox">
 	<label>
 		<input type="checkbox" id="chkAxisX" checked>
-		<mark>x축</mark>: <code>axes.x.show = true/false</code>
+		<mark>x축</mark>: <code>axis.x.show = true/false</code>
 	</label>
 </div>
 <div class="checkbox">
 	<label>
 		<input type="checkbox" id="chkAxisY" checked>
-		<mark>y축</mark>: <code>axes.y.show = true/false</code>
+		<mark>y축</mark>: <code>axis.y.show = true/false</code>
 	</label>
 </div>
 	
@@ -62,7 +62,7 @@ var conf = {
 		]
 	},
 	legend: {show:true},
-	axes: {
+	axis: {
 		x : { show:true},
 		y : { show:true}
 	},
@@ -89,7 +89,7 @@ var conf = {
 		]
 	},
 	legend: {show:true},
-	axes: {
+	axis: {
 		x : { show:true},
 		y : { show:true}
 	},
@@ -109,12 +109,12 @@ document.getElementById("chkLegend").onchange = function() {
 
 //axis-x show/hidden
 document.getElementById("chkAxisX").onchange = function() {
-	conf.axes.x.show = this.checked;
+	conf.axis.x.show = this.checked;
 	SBChart.render("#chartWrap", conf);
 };
 //axis-y show/hidden
 document.getElementById("chkAxisY").onchange = function() {
-	conf.axes.y.show = this.checked;
+	conf.axis.y.show = this.checked;
 	SBChart.render("#chartWrap", conf);
 };
 

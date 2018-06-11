@@ -1,11 +1,11 @@
 ---
-title:  axes.x
+title:  axis.x
 date:   2018-05-14
-categories: ["latest","axes"]
+categories: ["latest","axis"]
 order: 2
 ---
 
-## axes.x
+## axis.x
 ---
 
 x축관련 값들을 설정합니다.
@@ -17,7 +17,7 @@ x축이 없는 원(pie), 도녓(donut) 계열 차트는 지원하지 않습니�
 
 * Format
 ```javascript
-axes: {
+axis: {
 	x : {
 		show:false,
 		type: "indexed",
@@ -28,7 +28,7 @@ axes: {
 }
 ```
 
-### axes.x.show
+### axis.x.show
 
 x축의 show/hidden 을 지정합니다.
 `#2.0.0`
@@ -38,7 +38,7 @@ x축의 show/hidden 을 지정합니다.
 * Default : true
 
 
-### axes.x.type
+### axis.x.type
 
 x축의 형태를 지정한다.
 
@@ -49,26 +49,26 @@ x축의 형태를 지정한다.
 * Values
   * "timeseries": x축을 시간순으로 배열
   * "indexed": x축을 데이터순으로 일정하게 배열
-  * "category": 카테고리(x축 라벨 수동 지정, axes.x.categories = []
+  * "category": 카테고리(x축 라벨 수동 지정, axis.x.categories = []
 
-### axes.x.min
+### axis.x.min
 
 x축 값 범위의 최소값을 지정한다.
 
-axes.x.type = "timeseries" 인 경우는 동작하지 않는다.
+axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 * Type : number
 
 
-### axes.x.max
+### axis.x.max
 
 x축 값 범위의 최대값을 지정한다.
 
-axes.x.type = "timeseries" 인 경우는 동작하지 않는다.
+axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 * Type : number
 
-### axes.x.height
+### axis.x.height
 
 x축 영역의 높이를 강제 지정한다.
 

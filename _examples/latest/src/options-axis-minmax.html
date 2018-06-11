@@ -1,5 +1,5 @@
 ---
-title:  Axes Min/Max
+title:  Axis Min/Max
 date:   2018-06-05
 categories: ["latest","options"]
 order: 233
@@ -15,7 +15,7 @@ order: 233
 	<div class="col-sm-1 text-right">, max:</div>
 	<div class="col-sm-1"><input type="text" id="txtXMax" class="w-100"></div>
 	<div class="col-sm-1">}</div>
-	<div class="col-sm-5"><code>axes.x.min=-1</code><code>axes.x.max=19</code></div>
+	<div class="col-sm-5"><code>axis.x.min=-1</code><code>axis.x.max=19</code></div>
 </div>
 <div class="row">
 	<div class="col-sm-1"><mark>Y축</mark></div>
@@ -25,7 +25,7 @@ order: 233
 	<div class="col-sm-1 text-right">, max:</div>
 	<div class="col-sm-1"><input type="text" id="txtYMax" class="w-100"></div>
 	<div class="col-sm-1">}</div>
-	<div class="col-sm-5"><code>axes.y.min=-4</code><code>axes.y.max=6</code></div>
+	<div class="col-sm-5"><code>axis.y.min=-4</code><code>axis.y.max=6</code></div>
 </div>
 					
 <p  id="chartWrap"></p>
@@ -42,7 +42,7 @@ var conf = {
 			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
 		]
 	},
-	axes: {
+	axis: {
 		x: {
 			padding: 0,
 			min: -1, max:19
@@ -67,7 +67,7 @@ var conf = {
 			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
 		]
 	},
-	axes: {
+	axis: {
 		x: {
 			padding: 0,
 			min: -1, max:19
@@ -80,25 +80,25 @@ var conf = {
 };
 SBChart.render("#chartWrap", conf);
 
-document.getElementById("txtXMin").value = conf.axes.x.min;
-document.getElementById("txtXMax").value = conf.axes.x.max;
-document.getElementById("txtYMin").value = conf.axes.y.min;
-document.getElementById("txtYMax").value = conf.axes.y.max;
+document.getElementById("txtXMin").value = conf.axis.x.min;
+document.getElementById("txtXMax").value = conf.axis.x.max;
+document.getElementById("txtYMin").value = conf.axis.y.min;
+document.getElementById("txtYMax").value = conf.axis.y.max;
 
 document.getElementById("txtXMin").onchange = function() {
-	conf.axes.x.min = this.value;
+	conf.axis.x.min = this.value;
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtXMax").onchange = function() {
-	conf.axes.x.max = parseInt(this.value);
+	conf.axis.x.max = parseInt(this.value);
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtYMin").onchange = function() {
-	conf.axes.y.min = this.value;
+	conf.axis.y.min = this.value;
 	SBChart.render("#chartWrap", conf);
 };
 document.getElementById("txtYMax").onchange = function() {
-	conf.axes.y.max = parseInt(this.value);
+	conf.axis.y.max = parseInt(this.value);
 	SBChart.render("#chartWrap", conf);
 };
 

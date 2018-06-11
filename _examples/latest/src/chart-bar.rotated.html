@@ -4,8 +4,8 @@ date:   2018-05-17
 categories: ["latest","chart"]
 order: 103
 ---
-<p>막대 차트 가로 예제입니다.</p>
-<p>"axes.rotated" 값을 "true"로 지정합니다.</p>
+<p>막대 차트 가로 그리기 예제입니다.</p>
+<p>data.type="<em>bar</em>" 로 그리고 "axis.rotated="<em>true</em>"로 지정합니다.</p>
 
 <!-- bindto -->
 <h4>Example</h4>
@@ -24,7 +24,7 @@ var conf = {
 		]
 	},
 	legend: {show: false},
-	axes: {rotated: true}
+	axis: {rotated: true}
 };
 SBChart.render("#chartWrap", conf);
 {% endhighlight %}</p>
@@ -41,7 +41,7 @@ SBChart.render("#chartWrap", conf);
 			]
 		},
 		legend: {show: false},
-		axes: {rotated: true}
+		axis: {rotated: true}
 	};
 	SBChart.render("#chartWrap", conf);
 </script>

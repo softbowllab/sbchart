@@ -13,7 +13,7 @@ order: 234
 	<div class="col-sm-9">
 		<label>
 			<input type="checkbox" id="chkFormat" checked>
-			<code>axes.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code>
+			<code>axis.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code>
 		</label>
 	</div>
 </div>
@@ -23,7 +23,7 @@ order: 234
 	<div class="col-sm-9">
 		<label>
 			<input type="checkbox" id="chkValues" checked>
-			<code>axes.y.tick.values = [7000000, 8000000, 9000000]</code>
+			<code>axis.y.tick.values = [7000000, 8000000, 9000000]</code>
 		</label>
 	</div>
 </div>
@@ -42,7 +42,7 @@ var conf = {
 			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
 		]
 	},
-	axes: {
+	axis: {
 		y: {
 			tick: {
 				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
@@ -65,7 +65,7 @@ var conf = {
 			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
 		]
 	},
-	axes: {
+	axis: {
 		y: {
 			tick: {
 				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
@@ -77,13 +77,13 @@ var conf = {
 SBChart.render("#chartWrap", conf);
 //legend show/hidden
 document.getElementById("chkFormat").onchange = function() {
-	conf.axes.y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
+	conf.axis.y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
 	SBChart.render("#chartWrap", conf);
 };
 
 //axis-x show/hidden
 document.getElementById("chkValues").onchange = function() {
-	conf.axes.y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+	conf.axis.y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
 	SBChart.render("#chartWrap", conf);
 };
 

@@ -1,11 +1,11 @@
 ---
-title:  axes.y.padding
+title:  axis.y.padding
 date:   2018-05-14
-categories: ["latest","axes"]
+categories: ["latest","axis"]
 order: 13
 ---
 
-## axes.y.padding
+## axis.y.padding
 ---
 
 y축 1번째 값부터 마지막 n번째 값이 위치할 tick의 상하 padding 값을 정의한다.
@@ -19,14 +19,14 @@ y축 1번째 값부터 마지막 n번째 값이 위치할 tick의 상하 padding
 
 
 ```javascript
-axes: {
+axis: {
 	y : {
 		padding: 2
 	}
 }
 ```
 
-## axes.y.padding.top
+## axis.y.padding.top
 
 y축 1번째 tick의 상단 padding 값을 정의한다.
 `#2.0.0`
@@ -36,7 +36,7 @@ y축 1번째 tick의 상단 padding 값을 정의한다.
 * Example
 
   ```javascript
-axes: {
+axis: {
 	y : {
 		padding:  {
 			top: 2,
@@ -46,7 +46,7 @@ axes: {
 }
 ```
 
-## axes.y.padding.bottom
+## axis.y.padding.bottom
 
 y축 마지막 tick의 하단 padding 값을 정의한다.
 `#2.0.0`

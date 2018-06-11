@@ -1,11 +1,11 @@
 ---
-title:  axes.y.tick
+title:  axis.y.tick
 date:   2018-05-14
-categories: ["latest","axes"]
+categories: ["latest","axis"]
 order: 13
 ---
 
-## axes.y.tick
+## axis.y.tick
 ---
 
 y축 tick 의 갯수와 라벨 등을 지정한다.
@@ -15,7 +15,7 @@ y축 tick 의 갯수와 라벨 등을 지정한다.
 
 * Format
 ```javascript
-axes: {
+axis: {
 	y : {
 		tick: {
 			format: function(d) { return d + "%"; },
@@ -26,7 +26,7 @@ axes: {
 }
 ```
 
-### axes.y.tick.format
+### axis.y.tick.format
 
 y축 tick에 display 될 문자/숫자를 정의할 사용자 함수
 
@@ -36,7 +36,7 @@ y축 tick에 display 될 문자/숫자를 정의할 사용자 함수
 * Type : any
 
 
-### axes.y.tick.count
+### axis.y.tick.count
 
 y축 display 될 tick 갯수를 지정한다.
 `#2.0.0`
@@ -44,7 +44,7 @@ y축 display 될 tick 갯수를 지정한다.
 * Type: number
 
 
-### axes.y.tick.values
+### axis.y.tick.values
 
 y축에서 해당값을 가진 tick 만 나타난다.
 `#2.0.0`
