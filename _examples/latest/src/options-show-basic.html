@@ -2,7 +2,7 @@
 title:  Show/Hidden
 date:   2018-05-17
 categories: ["latest","options"]
-order: 201
+order: 202
 ---
 <p>show/hidden 옵션들 입니다.</p>
 <br>
@@ -40,8 +40,20 @@ order: 201
 </div>
 <div class="checkbox">
 	<label>
+		<input type="checkbox" id="chkPoint" checked>
+		<mark>포인트</mark>: <code>extend.point.show = true/false</code>
+	</label>
+</div>
+<div class="checkbox">
+	<label>
 		<input type="checkbox" id="chkTitle" checked>
 		<mark>타이틀</mark>: <code>title.text = "제목"</code>, 값이 있다면 show, 없으면 hidden
+	</label>
+</div>
+<div class="checkbox">
+	<label>
+		<input type="checkbox" id="chkTickOuter" checked>
+		<mark>바깥쪽 Tick</mark>: <code>axis.x.tick.outer = true/false, axis.y.tick.outer = true/false</code>
 	</label>
 </div>
 		
@@ -50,9 +62,6 @@ order: 201
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var conf = {
-	global : {
-		size : { width: 800, height: 320 }
-	},
 	data : {
 		type: "bar",
 		columns: [
@@ -63,12 +72,25 @@ var conf = {
 	},
 	legend: {show:true},
 	axis: {
-		x : { show:true},
-		y : { show:true}
+		x : {
+			show:true,
+			tick: {
+				outer:true
+			}
+		},
+		y : { 
+			show:true,
+			tick: {
+				outer:true
+			}
+		}
 	},
 	grid: {
 		x : { show:true},
 		y : { show:true}
+	},
+	extend: {
+		point: {show:false}
 	},
 	title: { text:"그래프 제목" }
 };
@@ -77,11 +99,7 @@ SBChart.render("#chartWrap", conf);
 <!-- Script -->
 <script>
 var conf = {
-	global : {
-		size : { width: 800, height: 320 }
-	},
 	data : {
-		type: "bar",
 		columns: [
 			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
 			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
@@ -90,12 +108,25 @@ var conf = {
 	},
 	legend: {show:true},
 	axis: {
-		x : { show:true},
-		y : { show:true}
+		x : {
+			show:true,
+			tick: {
+				outer:true
+			}
+		},
+		y : { 
+			show:true,
+			tick: {
+				outer:true
+			}
+		}
 	},
 	grid: {
 		x : { show:true},
 		y : { show:true}
+	},
+	extend: {
+		point: {show:true}
 	},
 	title: { text:"그래프 제목" }
 };
@@ -128,9 +159,21 @@ document.getElementById("chkGridY").onchange = function() {
 	conf.grid.y.show = this.checked;
 	SBChart.render("#chartWrap", conf);
 };
+//point show/hidden
+document.getElementById("chkPoint").onchange = function() {
+	conf.extend.point.show = this.checked;
+	SBChart.render("#chartWrap", conf);
+};
 //title show/hidden
 document.getElementById("chkTitle").onchange = function() {
 	conf.title.text = this.checked ? "그래프 제목": "";
 	SBChart.render("#chartWrap", conf);
 };
+//outer tick show/hidden
+document.getElementById("chkTickOuter").onchange = function() {
+	conf.axis.x.tick.outer = this.checked;
+	conf.axis.y.tick.outer = this.checked;
+	SBChart.render("#chartWrap", conf);
+};
+
 </script>

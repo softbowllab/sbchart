@@ -20,7 +20,8 @@ axis: {
 		tick: {
 			format: function(d) { return d + "%"; },
 			count: 5,
-			values: [2,4,10]
+			values: [2,4,10],
+			outer: true
 		}
 	}
 }
@@ -50,3 +51,12 @@ y축에서 해당값을 가진 tick 만 나타난다.
 `#2.0.0`
 
 * Type: any[]
+
+### axis.y.tick.outer
+
+y축 바깥쪽 tick display 여부를 지정한다.
+`#2.0.0`
+
+* Type: boolean
+
+* Default: true

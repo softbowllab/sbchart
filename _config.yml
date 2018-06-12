@@ -31,10 +31,10 @@ defaults:
   values:
     layout: examples
     permalink: /:collection/release/:categories/:name:output_ext
-- scope:
-    path: "_examples/latest/assets"
-  values:
-    permalink: release/:path:output_ext
+# - scope:
+#     path: "_examples/latest/assets"
+#   values:
+#     permalink: release/:path:output_ext
 
 # 변수 (release 카테고리)
 release:

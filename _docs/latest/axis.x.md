@@ -23,7 +23,8 @@ axis: {
 		type: "indexed",
 		max: 10,
 		min: 1,
-		height: 20
+		height: 20,
+		localtime:true
 	}
 }
 ```
@@ -73,4 +74,12 @@ axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 x축 영역의 높이를 강제 지정한다.
 
 * Type : number
+
+### axis.x.localtime
+
+x축 시간대를 처리하는 방법으로 true 인 경우 x 값을 localtime으로 처리, false이면 내부적으로 UTC로 변환한다.
+
+* Type : boolean
+
+* Default : true
 
