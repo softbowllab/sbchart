@@ -108,9 +108,9 @@ var chart = sb.chart.render("#chartWrap", {
 	}
 });
 
-document.getElementById("txtX").value = conf.legend.inset.x;
-document.getElementById("txtY").value = conf.legend.inset.y;
-document.getElementById("txtStep").value = conf.legend.inset.step;
+document.getElementById("txtX").value = chart.legend().inset.x;
+document.getElementById("txtY").value = chart.legend().inset.y;
+document.getElementById("txtStep").value = chart.legend().inset.step;
 
 document.getElementById("cboPostion").onchange = function() {
 	chart.legend().position = this.value;

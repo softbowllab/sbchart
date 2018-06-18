@@ -5,7 +5,7 @@ categories: ["latest"]
 order: 0
 ---
 
-## SBChart v2.0 API
+## SBChart v2.0 Document
 ---
 
 ### global
