@@ -11,7 +11,7 @@ order: 303
 <div class="row">
 	<div class="col-sm-2"><mark>data.json</mark></div>
 	<div class="col-sm-6">
-		<textarea id="txtColumns" class="w-100" rows="10">[
+		<textarea id="txtJSON" class="w-100" rows="10">[
 	{"region":"전국", "2015":3.51, "2016":0.71, "2017":1.48},
 	{"region":"서울", "2015":4.6, "2016":2.14, "2017":3.64},
 	{"region":"부산", "2015":3.43, "2016":3.18, "2017":2.35},
@@ -37,7 +37,7 @@ order: 303
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		json: [
@@ -70,12 +70,11 @@ var conf = {
 			type: 'category'
 		}
 	}	
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		json: [
@@ -108,12 +107,12 @@ var conf = {
 			type: 'category'
 		}
 	}	
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtColumns").onchange = function() {
-	conf.data.json = JSON.parse(this.value);
-	SBChart.render("#chartWrap", conf);
+document.getElementById("txtJSON").onchange = function() {
+	chart.data({
+		json: JSON.parse(this.value)
+	}).render();
 };
 
 </script>

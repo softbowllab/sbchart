@@ -21,8 +21,10 @@ order: 1
 
 <h4>3. 챠트 그려주기</h4>
 <p>데이터와 옵션을 지정하여 차트 랜더링합니다.</p>
+<p>챠트를 생성하는 방법은 아래와 같이 3가지 방법이 있습니다.</p>
+
 <p>{% highlight javascript %}
-SBChart.render("#chartWrap", {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		columns: [
 			["data1", 5, 2, 3, 4, 5, 6],
@@ -33,3 +35,29 @@ SBChart.render("#chartWrap", {
 });
 {% endhighlight %}</p>
 
+<p>{% highlight javascript %}
+var chart = new sb.chart();
+sbchart.render("#chartWrap", {
+	data : {
+		columns: [
+			["data1", 5, 2, 3, 4, 5, 6],
+			["data2", 15, -12, 13, -14, 15, 16],
+			["data3", 25, 22, 23, 24, -25, 26],
+		]
+	}
+});
+{% endhighlight %}</p>
+
+		
+<p>{% highlight javascript %}
+var chart = new sb.chart("#chartWrap", {
+	data : {
+		columns: [
+			["data1", 5, 2, 3, 4, 5, 6],
+			["data2", 15, -12, 13, -14, 15, 16],
+			["data3", 25, 22, 23, 24, -25, 26],
+		]
+	}
+});
+chart.render();
+{% endhighlight %}</p>

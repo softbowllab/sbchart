@@ -19,17 +19,27 @@ Object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다
 
 * Example
 
-```javascript
+  ```javascript
 axis: {
 	x : {
 		label: "지역별"
 	}
 }
 ```
+또는
+
+  ```javascript
+axis: {
+	x : {
+		text: "지역별",
+		position: "inner-left"
+	}
+}
+```
 
 ## axis.x.label.text
 
-x축 라벨을 지정
+x축 라벨을 지정합니다.
 `#2.0.0`
 
 * Type : string

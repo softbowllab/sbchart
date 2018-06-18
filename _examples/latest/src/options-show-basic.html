@@ -94,7 +94,7 @@ var conf = {
 	},
 	title: { text:"그래프 제목" }
 };
-SBChart.render("#chartWrap", conf);
+sb.chart.render("#chartWrap", conf);
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
@@ -130,50 +130,50 @@ var conf = {
 	},
 	title: { text:"그래프 제목" }
 };
-SBChart.render("#chartWrap", conf);
+sb.chart.render("#chartWrap", conf);
 
 //legend show/hidden
 document.getElementById("chkLegend").onchange = function() {
 	conf.legend.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 
 //axis-x show/hidden
 document.getElementById("chkAxisX").onchange = function() {
 	conf.axis.x.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 //axis-y show/hidden
 document.getElementById("chkAxisY").onchange = function() {
 	conf.axis.y.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 
 //grid axis-x show/hidden
 document.getElementById("chkGridX").onchange = function() {
 	conf.grid.x.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 //grid axis-y show/hidden
 document.getElementById("chkGridY").onchange = function() {
 	conf.grid.y.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 //point show/hidden
 document.getElementById("chkPoint").onchange = function() {
 	conf.extend.point.show = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 //title show/hidden
 document.getElementById("chkTitle").onchange = function() {
 	conf.title.text = this.checked ? "그래프 제목": "";
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 //outer tick show/hidden
 document.getElementById("chkTickOuter").onchange = function() {
 	conf.axis.x.tick.outer = this.checked;
 	conf.axis.y.tick.outer = this.checked;
-	SBChart.render("#chartWrap", conf);
+	sb.chart.render("#chartWrap", conf);
 };
 
 </script>

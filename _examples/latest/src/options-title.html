@@ -53,7 +53,7 @@ order: 241
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -69,12 +69,11 @@ var conf = {
 			top: 0, right: 0, bottom: 10, left: 0
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -90,38 +89,42 @@ var conf = {
 			top: 0, right: 0, bottom: 10, left: 0
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtText").value = conf.title.text;
-document.getElementById("txtTop").value = conf.title.padding.top;
-document.getElementById("txtRight").value = conf.title.padding.right;
-document.getElementById("txtBottom").value = conf.title.padding.bottom;
-document.getElementById("txtLeft").value = conf.title.padding.left;
+document.getElementById("txtText").value = chart.title().text;
+document.getElementById("txtTop").value = chart.title().padding.top;
+document.getElementById("txtRight").value = chart.title().padding.right;
+document.getElementById("txtBottom").value = chart.title().padding.bottom;
+document.getElementById("txtLeft").value = chart.title().padding.left;
 
 document.getElementById("txtText").onchange = function() {
-	conf.title.text = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		text: this.value
+	}).render();
 };
 document.getElementById("cboPostion").onchange = function() {
-	conf.title.position = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		position: this.value
+	}).render();
 };
 document.getElementById("txtTop").onchange = function() {
-	conf.title.padding.top = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		padding: {top: parseInt(this.value)}
+	}).render();
 };
 document.getElementById("txtRight").onchange = function() {
-	conf.title.padding.right = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		padding: {right: this.value}
+	}).render();
 };
 document.getElementById("txtBottom").onchange = function() {
-	conf.title.padding.bottom = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		padding: {bottom: parseInt(this.value)}
+	}).render();
 };
 document.getElementById("txtLeft").onchange = function() {
-	conf.title.padding.left = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.title({
+		padding: {left: this.value}
+	}).render();
 };
-
 </script>

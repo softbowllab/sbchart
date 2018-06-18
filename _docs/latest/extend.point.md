@@ -2,7 +2,7 @@
 title:  extend.point
 date:   2018-06-12
 categories: ["latest","extend"]
-order: 2
+order: 1
 ---
 
 ## extend.point

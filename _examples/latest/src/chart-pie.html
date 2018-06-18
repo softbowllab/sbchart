@@ -12,7 +12,7 @@ order: 109
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+sb.chart.render("#chartWrap", {
 	data : {
 		type: "pie",
 		columns: [
@@ -21,12 +21,11 @@ var conf = {
 			["2017",1.48]
 		]
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-	var conf = {
+	sb.chart.render("#chartWrap", {
 		data : {
 			type: "pie",
 			columns: [
@@ -35,6 +34,5 @@ SBChart.render("#chartWrap", conf);
 				["2017",1.48]
 			]
 		}
-	};
-	SBChart.render("#chartWrap", conf);
+	});
 </script>

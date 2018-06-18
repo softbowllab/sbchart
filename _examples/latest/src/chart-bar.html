@@ -12,10 +12,7 @@ order: 102
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
-	global : {
-		size : { width: 800, height: 320 }
-	},
+sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -23,12 +20,11 @@ var conf = {
 		]
 	},
 	legend: {show: false}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-	var conf = {
+	sb.chart.render("#chartWrap", {
 		data : {
 			type: "bar",
 			columns: [
@@ -36,6 +32,5 @@ SBChart.render("#chartWrap", conf);
 			]
 		},
 		legend: {show: false}
-	};
-	SBChart.render("#chartWrap", conf);
+	});
 </script>

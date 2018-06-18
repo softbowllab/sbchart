@@ -24,7 +24,7 @@ order: 291
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -41,12 +41,11 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -63,19 +62,18 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtRatio").value = conf.extend.bar.width.ratio;
-document.getElementById("txtMax").value = conf.extend.bar.width.max;
+document.getElementById("txtRatio").value = chart.extend().bar.width.ratio;
+document.getElementById("txtMax").value = chart.extend().bar.width.max;
 
 document.getElementById("txtRatio").onchange = function() {
-	conf.extend.bar.width.ratio = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.extend().bar.width.ratio = this.value;
+	chart.render();
 };
 document.getElementById("txtMax").onchange = function() {
-	conf.extend.bar.width.max = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.extend().bar.width.max = this.value;
+	chart.render();
 };
 
 </script>

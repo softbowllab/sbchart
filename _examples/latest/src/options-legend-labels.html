@@ -23,7 +23,7 @@ order: 222
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -37,12 +37,11 @@ var conf = {
 			"2017": "'17년"
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -56,25 +55,24 @@ var conf = {
 			"2017": "'17년"
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txt2015").value = conf.data.legends["2015"];
-document.getElementById("txt2016").value = conf.data.legends["2016"];
-document.getElementById("txt2017").value = conf.data.legends["2017"];
+document.getElementById("txt2015").value = chart.data().legends["2015"];
+document.getElementById("txt2016").value = chart.data().legends["2016"];
+document.getElementById("txt2017").value = chart.data().legends["2017"];
 
 
 document.getElementById("txt2015").onchange = function() {
-	conf.data.legends["2015"] = this.value
-	SBChart.render("#chartWrap", conf);
+	chart.data().legends["2015"] = this.value
+	chart.render();
 };
 document.getElementById("txt2016").onchange = function() {
-	conf.data.legends["2016"] = this.value
-	SBChart.render("#chartWrap", conf);
+	chart.data().legends["2016"] = this.value
+	chart.render();
 };
 document.getElementById("txt2017").onchange = function() {
-	conf.data.legends["2017"] = this.value
-	SBChart.render("#chartWrap", conf);
+	chart.data().legends["2017"] = this.value
+	chart.render();
 };
 
 </script>

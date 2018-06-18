@@ -32,7 +32,7 @@ order: 234
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -47,12 +47,11 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -67,18 +66,17 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
-//legend show/hidden
+});
+
 document.getElementById("chkFormat").onchange = function() {
-	conf.axis.y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
-	SBChart.render("#chartWrap", conf);
+	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
+	chart.render();
 };
 
 //axis-x show/hidden
 document.getElementById("chkValues").onchange = function() {
-	conf.axis.y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
-	SBChart.render("#chartWrap", conf);
+	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+	chart.render();
 };
 
 </script>

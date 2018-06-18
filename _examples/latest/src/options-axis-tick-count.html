@@ -23,7 +23,7 @@ order: 231
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -38,12 +38,11 @@ var conf = {
 			tick: { count: 4 }
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -58,22 +57,27 @@ var conf = {
 			tick: { count: 4 }
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtX").value = conf.axis.x.tick.count;
-document.getElementById("txtY").value = conf.axis.y.tick.count;
+document.getElementById("txtX").value = chart.axis().x.tick.count;
+document.getElementById("txtY").value = chart.axis().y.tick.count;
 
 //legend show/hidden
 document.getElementById("txtX").onchange = function() {
-	conf.axis.x.tick.count = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {
+			tick: { count: this.value }
+		}
+	}).render();
 };
 
 //axis-x show/hidden
 document.getElementById("txtY").onchange = function() {
-	conf.axis.y.tick.count = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		y: {
+			tick: { count: this.value }
+		}
+	}).render();
 };
 
 </script>

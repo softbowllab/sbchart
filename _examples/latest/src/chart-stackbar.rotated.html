@@ -12,7 +12,7 @@ order: 108
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+sb.chart.render("#chartWrap", {
 	data : {
 		type: "stackbar",
 		columns: [
@@ -22,12 +22,11 @@ var conf = {
 		]
 	},
 	axis: {rotated:true}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-	var conf = {
+	sb.chart.render("#chartWrap", {
 		data : {
 			type: "stackbar",
 			columns: [
@@ -37,6 +36,5 @@ SBChart.render("#chartWrap", conf);
 			]
 		},
 		axis: {rotated:true}
-	};
-	SBChart.render("#chartWrap", conf);
+	});
 </script>

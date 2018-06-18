@@ -32,7 +32,7 @@ order: 233
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -49,12 +49,11 @@ var conf = {
 			min: -4, max:6
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -71,29 +70,32 @@ var conf = {
 			min: -4, max:6
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtXMin").value = conf.axis.x.min;
-document.getElementById("txtXMax").value = conf.axis.x.max;
-document.getElementById("txtYMin").value = conf.axis.y.min;
-document.getElementById("txtYMax").value = conf.axis.y.max;
+document.getElementById("txtXMin").value = chart.axis().x.min;
+document.getElementById("txtXMax").value = chart.axis().x.max;
+document.getElementById("txtYMin").value = chart.axis().y.min;
+document.getElementById("txtYMax").value = chart.axis().y.max;
 
 document.getElementById("txtXMin").onchange = function() {
-	conf.axis.x.min = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {min:this.value}
+	}).render();
 };
 document.getElementById("txtXMax").onchange = function() {
-	conf.axis.x.max = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {max: parseInt(this.value)}
+	}).render();
 };
 document.getElementById("txtYMin").onchange = function() {
-	conf.axis.y.min = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		y: {min: this.value}
+	}).render();
 };
 document.getElementById("txtYMax").onchange = function() {
-	conf.axis.y.max = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		y: {max: parseInt(this.value)}
+	}).render();
 };
 
 </script>

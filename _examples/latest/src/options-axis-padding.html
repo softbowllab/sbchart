@@ -36,7 +36,7 @@ order: 232
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -51,12 +51,11 @@ var conf = {
 			padding: { top: 1, bottom: 1 }
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "bar",
 		columns: [
@@ -71,29 +70,34 @@ var conf = {
 			padding: { top: 1, bottom: 1 }
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
-document.getElementById("txtLeft").value = conf.axis.x.padding.left;
-document.getElementById("txtRight").value = conf.axis.x.padding.right;
-document.getElementById("txtTop").value = conf.axis.y.padding.top;
-document.getElementById("txtBottom").value = conf.axis.y.padding.bottom;
+document.getElementById("txtLeft").value = chart.axis().x.padding.left;
+document.getElementById("txtRight").value = chart.axis().x.padding.right;
+document.getElementById("txtTop").value = chart.axis().y.padding.top;
+document.getElementById("txtBottom").value = chart.axis().y.padding.bottom;
 
 document.getElementById("txtLeft").onchange = function() {
-	conf.axis.x.padding.left = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {
+			padding: {left : this.value}
+		}
+	}).render();
 };
 document.getElementById("txtRight").onchange = function() {
-	conf.axis.x.padding.right = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {
+			padding: {right : parseInt(this.value)}
+		}
+	}).render();
 };
 document.getElementById("txtTop").onchange = function() {
-	conf.axis.y.padding.top = parseInt(this.value);
-	SBChart.render("#chartWrap", conf);
+	chart.axis().y.padding.top = this.value;
+	chart.render();
 };
 document.getElementById("txtBottom").onchange = function() {
-	conf.axis.y.padding.bottom = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis().y.padding.bottom = this.value;
+	chart.render();
 };
 
 </script>

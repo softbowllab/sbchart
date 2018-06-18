@@ -57,7 +57,7 @@ order: 234
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "line",
 		columns: [
@@ -80,12 +80,11 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-var conf = {
+var chart = sb.chart.render("#chartWrap", {
 	data : {
 		type: "line",
 		columns: [
@@ -108,28 +107,38 @@ var conf = {
 			}
 		}
 	}
-};
-SBChart.render("#chartWrap", conf);
+});
 
 //axis-X label
 document.getElementById("txtLabelX").onchange = function() {
-	conf.axis.x.label.text = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {
+			label: {text: this.value }
+		}
+	}).render();
 };
 //axis-X label
 document.getElementById("cboPositionX").onchange = function() {
-	conf.axis.x.label.position = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		x: {
+			label: {position: this.value }
+		}
+	}).render();
 };
 //axis-Y label
 document.getElementById("txtLabelY").onchange = function() {
-	conf.axis.y.label.text = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		y: {
+			label: {text: this.value }
+		}
+	}).render();
 };
 //axis-Y label
 document.getElementById("cboPositionY").onchange = function() {
-	conf.axis.y.label.position = this.value;
-	SBChart.render("#chartWrap", conf);
+	chart.axis({
+		y: {
+			label: {position: this.value }
+		}
+	}).render();
 };
-
 </script>
