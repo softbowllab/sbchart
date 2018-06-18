@@ -47,6 +47,7 @@ release:
     - {name: "axis"}
     - {name: "extend"}
     - {name: "API"}
+    - {name: "CLASS"}
   "2.0.0": 
     - {name: "axis"}
 
