@@ -41,7 +41,7 @@ x축의 show/hidden 을 지정합니다.
 
 ### axis.x.type
 
-x축의 형태를 지정한다.
+x축의 형태를 지정합니다.
 
 * Type : string
 
@@ -54,7 +54,7 @@ x축의 형태를 지정한다.
 
 ### axis.x.min
 
-x축 값 범위의 최소값을 지정한다.
+x축 값 범위의 최소값을 지정합니다.
 
 axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
@@ -63,7 +63,7 @@ axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 ### axis.x.max
 
-x축 값 범위의 최대값을 지정한다.
+x축 값 범위의 최대값을 지정합니다.
 
 axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
@@ -71,13 +71,13 @@ axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 ### axis.x.height
 
-x축 영역의 높이를 강제 지정한다.
+x축 영역의 높이를 강제 지정합니다.
 
 * Type : number
 
 ### axis.x.localtime
 
-x축 시간대를 처리하는 방법으로 true 인 경우 x 값을 localtime으로 처리, false이면 내부적으로 UTC로 변환한다.
+x축 시간대를 처리하는 방법으로 true 인 경우 x 값을 localtime으로 처리, false이면 내부적으로 UTC로 변환합니다.
 
 * Type : boolean
 

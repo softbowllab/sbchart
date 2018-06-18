@@ -47,7 +47,7 @@ title: {
 
 제목의 padding을 지정합니다.
 
-title.position="top-right" 인 경우는 padding.left 값을, title.position="top-left" 인 경우는 padding.right 값을 사용하지 않는다.
+title.position="top-right" 인 경우는 padding.left 값을, title.position="top-left" 인 경우는 padding.right 값을 사용하지 않습니다.
  `#2.0.0`
 
 * Type : object

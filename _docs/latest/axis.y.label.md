@@ -41,7 +41,7 @@ axis: {
 
 ## axis.y.label.text
 
-Y축 라벨을 지정
+Y축 라벨을 지정합니다.
 `#2.0.0`
 
 * Type : string
