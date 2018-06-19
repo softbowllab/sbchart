@@ -19,6 +19,8 @@ order: 1
 
 ### sb.chart.render()
 
+SBChart 객체를 생성하고 랜더링합니다.
+
 static 함수이며 리턴값은 차트 Object 입니다.
 
 * Parameters
