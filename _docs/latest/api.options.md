@@ -1,11 +1,11 @@
 ---
-title:  Basic
+title:  Options
 date:   2018-06-18
 categories: ["latest","API"]
 order: 0
 ---
 
-## Basic API
+## Options API
 ---
 
 ### data()
