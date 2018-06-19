@@ -48,7 +48,7 @@ var chart = sb.chart.render("#chartWrap",{
 
 ### [SBCHART].render()
 
-이미 생성된 차트 Object에서 차트를 (다시) 그려주기 위한 함수입니다.
+이미 생성된 SBChart 객체에 차트를 (다시) 그려주기 위한 함수입니다.
 
 * Parameters
 
