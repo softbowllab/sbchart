@@ -5,23 +5,23 @@ categories: ["latest","API"]
 order: 1
 ---
 
-## 차트객체 생성 및 랜더링
+## SBChart 객체 생성 및 랜더링
 ---
 
-차트 객체를 생성 하는 방식은 
+SBChart 객체를 생성 하는 방식은 
 
 1. static 함수인 <code>sb.chart.render()</code> 를 사용하는 방식과
 
 1. 인스턴스를 직접 생성하는  <code>new sb.chart()</code> 방식
 
-2가지로 나누어지며 첫번째 방식 <code>sb.chart.render()</code> 함수는 객체 생성과 랜더링이 동시에 수행됩니다.
+2가지로 나누어지며 첫번째 방식 <code>sb.chart.render()</code> 함수는 SBChart 객체 생성과 랜더링이 동시에 수행됩니다.
 
 
 ### sb.chart.render()
 
 SBChart 객체를 생성하고 랜더링합니다.
 
-static 함수이며 리턴값은 차트 Object 입니다.
+static 함수이며 리턴값은 SBChart Object 입니다.
 
 * Parameters
 

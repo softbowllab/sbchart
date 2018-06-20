@@ -37,11 +37,15 @@ title: {
 
 * Type : string
 
+* Default : "top-center"
+
 * Values
 
 	* top-center: `Default` 상단-가운데에 위치
 	* top-right: 상단-우측에 위치
 	* top-left: 상단-좌측에 위치
+
+
 
 ### title.padding
 

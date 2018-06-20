@@ -8,7 +8,7 @@ order: 3
 ## data.json
 ---
 
-**TODO** JSON형태로 챠트 데이터를 지정합니다.
+JSON형태로 챠트 데이터를 지정합니다.
 
 [data.columns](/data/data.columns.html) 과 동일한 방식으로 Series(범례,Legend)기준으로 Series별 값들은 좌측에서 우측(열 기준)으로 읽게되며 각 배열은 하나의 Series를 의미합니다.
 

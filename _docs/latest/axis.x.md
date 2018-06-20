@@ -48,9 +48,9 @@ x축의 형태를 지정합니다.
 * Default : "indexed"
 
 * Values
-  * "timeseries": x축을 시간순으로 배열
-  * "indexed": x축을 데이터순으로 일정하게 배열
-  * "category": 카테고리(x축 라벨 수동 지정, axis.x.categories = []
+  * "timeseries": x축을 시간순으로 배열합니다.
+  * "indexed": `default` x축을 데이터순으로 일정하게 배열합니다.
+  * "category": x축 라벨 수동 지정합니다. `axis.x.categories = []` 값도 함께 지졍하셔야 합니다.
 
 ### axis.x.min
 

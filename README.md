@@ -2,11 +2,17 @@
 
 ## 구성
 
-- API 문서
-- 샘플 페이지 
+- 문서
+- 샘플
 
 ## 진행 상황
 
-### 2018.05.25, Beta1
+### 2018.05.25, alpha 오픈
 
-- 개발 베타 버전 기준 가 오픈
+- 개발 alpha 버전 기준 오픈
+
+
+## 참고
+
+[Jekyll on Windows](https://jekyllrb.com/docs/windows/)
+

@@ -40,6 +40,8 @@ legend: {
 
 * Type : string
 
+* Default : "botom"
+
 * Values
 
 	* botom: `Default` 아래에 위치

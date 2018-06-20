@@ -8,7 +8,7 @@ order: 2
 ## legend.item
 ---
 
-범례 각 아이템에 대해서 정의합니다. `#2.0.0`
+범례에 표현되는 Series 별 아이템에 대해서 정의합니다. `#2.0.0`
 
 * Type : object
 
@@ -26,7 +26,7 @@ legend: {
 
 ### legend.item.tile.height
 
-범례의 Tile 박스의 높이를 지정합니다. `#2.0.0`
+범례내 각 아이템의 Tile 박스의 높이를 지정합니다. `#2.0.0`
 
 * Type : number
 
@@ -35,7 +35,7 @@ legend: {
 
 ### legend.item.tile.width
 
-범례의 Tile 박스의 너비를 지정합니다. `#2.0.0`
+범례내 각 아이템의 Tile 박스의 너비를 지정합니다. `#2.0.0`
 
 * Type : number
 

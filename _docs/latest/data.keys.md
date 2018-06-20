@@ -8,7 +8,7 @@ order: 4
 ## data.keys
 ---
 
-**TODO** JSON 데이터를 사용할 경우 이름(라벨/Label)으로 쓰일 열과 값으로 쓰일 열을 지정합니다.
+JSON 데이터를 사용할 경우 이름(라벨/Label)으로 쓰일 열과 값으로 쓰일 열을 지정합니다.
 `#2.0.0`
 
 * Type : object[][]
@@ -30,7 +30,7 @@ data : {
 
 ### data.keys.x
 
-이름(라벨/Label)으로 쓰일 열명을 지정합니다.
+x축으로 쓰일 열을 지정합니다.
 
 * Type : string
 

@@ -15,9 +15,9 @@ axis.x.type = "category" 로 지정되어 있어야 합니다.
 
 * Type : string[]
 
+* Format
 
-
-```javascript
+  ```javascript
 axis: {
 	x : {
 		type: "category",

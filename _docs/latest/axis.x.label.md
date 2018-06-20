@@ -63,23 +63,23 @@ x축 라벨의 위치를 지정합니다.
 
 * Type : string
 
+* Default :  "inner-right" / "inner-top"
+
 * Values (일반)
-  * "inner-right":  축 안쪽 오른쪽
+  * "inner-right": `default` 축 안쪽 오른쪽
   * "inner-center": 축 안쪽 가운데
   * "inner-left":  축 안쪽 왼쪽
   * "outer-right":  축 바깥쪽 오른쪽
   * "outer-center":  축 바깥쪽 가운데
   * "outer-left":축 바깥쪽 왼쪽
 
-* Values (Rotated)
-  * "inner-top": 축 안쪽 상단
+* Values (Rotated, axis.rotated=true 인 경우)
+  * "inner-top": `default` 축 안쪽 상단
   * "inner-middle": 축 안쪽 중간
   * "inner-bottom": 축 안쪽 하단
   * "outer-top": 축 바깥쪽 상단
   * "outer-middle": 축 바깥쪽 중간
   * "outer-bottom": 축 바깥쪽 하단
-
-* Default : "inner-right"
 
 * Example
 
