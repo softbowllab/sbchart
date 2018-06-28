@@ -21,7 +21,7 @@ scripts: []
 		}
 	});
 	require(["sb.chart","jquery"], function(sbchart, jq) {
-		sb.chart.render("#chartWrap",{
+		sbchart.render("#chartWrap",{
 			data : {
 				type: "bar",
 				columns: [
@@ -29,8 +29,18 @@ scripts: []
 				]
 			}
 		});
-	});
-</script>
+		// 2초후 다시 그려주기
+		setTimeout(function() {
+			jq("#chartWrap").sbchart({
+				data: {
+					type: "area",
+					columns: [
+						["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
+					]
+				}
+			});
+		},2000);
+	});</script>
 {% endhighlight %}</p>
 <!-- Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
@@ -50,6 +60,7 @@ scripts: []
 				]
 			}
 		});
+		// 2초후 다시 그려주기
 		setTimeout(function() {
 			jq("#chartWrap").sbchart({
 				data: {
@@ -60,6 +71,5 @@ scripts: []
 				}
 			});
 		},2000);
-		
 	});
 </script>
