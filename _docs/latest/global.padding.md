@@ -15,8 +15,8 @@ order: 2
 * Format
 ```javascript
 global: {
-	padding: { 
-		top:10, right:10, bottom:10, left:10
-	}
+    padding: { 
+        top:10, right:10, bottom:10, left:10
+    }
 }
 ```

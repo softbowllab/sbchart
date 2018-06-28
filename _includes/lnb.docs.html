@@ -5,7 +5,7 @@
 		<li class="nav-header">{{ cate.name }}</li>
 		{% assign pages = site.docs | where: "categories", version | where: "categories", cate.name | sort: "order" %}
 		{% for item in pages %}
-			<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+			<li><a {% if item.title == page.title %}class="active" {% endif %}href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
 		{% endfor %}
 	{% endfor %}
 </ul>

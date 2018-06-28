@@ -16,9 +16,9 @@ order: 999
 * Format
 ```javascript
 title: {
-	text: "시도별 주택가격 변동률",
-	position: "top-center",
-	padding: {top:10, right:10, bottom:10, left:10}
+    text: "시도별 주택가격 변동률",
+    position: "top-center",
+    padding: {top:10, right:10, bottom:10, left:10}
 }
 ```
 
@@ -59,9 +59,9 @@ title.position="top-right" 인 경우는 padding.left 값을, title.position="to
 * Format
 ```javascript
 title: {
-	padding: { 
-		top:10, right:10, bottom:10, left:10
-	}
+    padding: { 
+        top:10, right:10, bottom:10, left:10
+    }
 }
 ```
 

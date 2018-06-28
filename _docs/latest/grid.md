@@ -17,13 +17,13 @@ x,y축이 존재하지 않는 원(pie), 도넛(donut) 차트는 해당 사항이
 * Format
 ```javascript
 grid: {
-	x: { 
-		show:true
-	},
-	y: { 
-		show:false,
-		ticks: 5
-	}
+    x: { 
+        show:true
+    },
+    y: { 
+        show:false,
+        ticks: 5
+    }
 }
 ```
 

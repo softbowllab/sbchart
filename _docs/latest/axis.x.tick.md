@@ -16,17 +16,17 @@ x축 tick 의 갯수와 라벨 등을 지정합니다.
 * Format
 ```javascript
 axis: {
-	x : {
-		tick: {
-			format: function(d) { return d + "%"; },
-			count: 5,
-			fit: false,
-			values: [2,4,10],
-			outer:true,
-			rotate: 0,
-			multiline: true
-		}
-	}
+    x : {
+        tick: {
+            format: function(d) { return d + "%"; },
+            count: 5,
+            fit: false,
+            values: [2,4,10],
+            outer:true,
+            rotate: 0,
+            multiline: true
+        }
+    }
 }
 ```
 
@@ -45,11 +45,11 @@ axis.x.type="timeseries" 인 경우 "%Y/%m/%d" 와 같이 포멧 문자열을 �
 
   ```javascript
 axis: {
-	x : {
-		tick: {
-			format: function(d) { return (d*100) + "%"; }
-		}
-	}
+    x : {
+        tick: {
+            format: function(d) { return (d*100) + "%"; }
+        }
+    }
 }
 ```
 
@@ -57,11 +57,11 @@ axis: {
 
   ```javascript
 axis: {
-	x : {
-		tick: {
-			format: "%Y-%m"
-		}
-	}
+    x : {
+        tick: {
+            format: "%Y-%m"
+        }
+    }
 }
 ```
 

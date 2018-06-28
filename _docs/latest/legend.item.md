@@ -15,12 +15,12 @@ order: 2
 * Format
 ```javascript
 legend: {
-	item: {
-		tile: {
-			height: 10,
-			width: 10
-		}
-	}
+    item: {
+        tile: {
+            height: 10,
+            width: 10
+        }
+    }
 }
 ```
 

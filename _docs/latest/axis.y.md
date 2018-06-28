@@ -18,12 +18,12 @@ y축이 없는 원(pie), 도녓(donut) 계열 차트는 지원하지 않습니�
 * Format
 ```javascript
 axis: {
-	y : {
-		show:false,
-		min: 0,
-		max: 100,
-		center: 50
-	}
+    y : {
+        show:false,
+        min: 0,
+        max: 100,
+        center: 50
+    }
 }
 ```
 

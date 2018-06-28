@@ -16,12 +16,12 @@ legend.position="inset" 인 경우 범례의 위치, 형태 등을 지정합니�
 * Format
 ```javascript
 legend: {
-	inset: {
-		anchor:"top-left",
-		x: 10,
-		y: 0,
-		step: 2
-	}
+    inset: {
+        anchor:"top-left",
+        x: 10,
+        y: 0,
+        step: 2
+    }
 }
 ```
 

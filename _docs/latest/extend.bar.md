@@ -15,13 +15,13 @@ order: 2
 * Format
 ```javascript
 extend: {
-	bar: {
-		width: {
-			ratio: 0.6,
-			max: 20
-		},
-		zerobased: false
-	}
+    bar: {
+        width: {
+            ratio: 0.6,
+            max: 20
+        },
+        zerobased: false
+    }
 }
 ```
 

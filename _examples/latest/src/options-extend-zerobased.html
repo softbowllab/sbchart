@@ -8,82 +8,82 @@ order: 392
 <br>
 <!--  -->
 <div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkZerobased" checked>
-			<mark>Zerobased</mark><code>extend.area.zerobased=false</code></code>
-		</label>
-	</div>
+    <div class="col-sm-12">
+        <label>
+            <input type="checkbox" id="chkZerobased" checked>
+            <mark>Zerobased</mark><code>extend.area.zerobased=false</code></code>
+        </label>
+    </div>
 </div>
-						
+                        
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "area",
-		json: [
-			{ month:"2017.07", volume: 7707750 },
-			{ month:"2017.08", volume: 7573752 },
-			{ month:"2017.09", volume: 7914913 },
-			{ month:"2017.10", volume: 7386713 },
-			{ month:"2017.11", volume: 8708523 },
-			{ month:"2017.12", volume: 8624841 },
-			{ month:"2018.01", volume: 8785755 },
-			{ month:"2018.02", volume: 8048044 },
-			{ month:"2018.03", volume: 9083890 }
-		],
-		keys: {
-			x: "month",
-			value: ["volume"]
-		}
-	},
-	axis: {
-		x: {type:"category"}
-	},
-	extend: {
-		area: {
-			zerobased : true
-		}
-	}
+    data : {
+        type: "area",
+        json: [
+            { month:"2017.07", volume: 7707750 },
+            { month:"2017.08", volume: 7573752 },
+            { month:"2017.09", volume: 7914913 },
+            { month:"2017.10", volume: 7386713 },
+            { month:"2017.11", volume: 8708523 },
+            { month:"2017.12", volume: 8624841 },
+            { month:"2018.01", volume: 8785755 },
+            { month:"2018.02", volume: 8048044 },
+            { month:"2018.03", volume: 9083890 }
+        ],
+        keys: {
+            x: "month",
+            value: ["volume"]
+        }
+    },
+    axis: {
+        x: {type:"category"}
+    },
+    extend: {
+        area: {
+            zerobased : true
+        }
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "area",
-		json: [
-			{ month:"2017.07", volume: 7707750 },
-			{ month:"2017.08", volume: 7573752 },
-			{ month:"2017.09", volume: 7914913 },
-			{ month:"2017.10", volume: 7386713 },
-			{ month:"2017.11", volume: 8708523 },
-			{ month:"2017.12", volume: 8624841 },
-			{ month:"2018.01", volume: 8785755 },
-			{ month:"2018.02", volume: 8048044 },
-			{ month:"2018.03", volume: 9083890 }
-		],
-		keys: {
-			x: "month",
-			value: ["volume"]
-		}
-	},
-	axis: {
-		x: {type:"category"}
-	},
-	extend: {
-		area: {
-			zerobased : true
-		}
-	}
+    data : {
+        type: "area",
+        json: [
+            { month:"2017.07", volume: 7707750 },
+            { month:"2017.08", volume: 7573752 },
+            { month:"2017.09", volume: 7914913 },
+            { month:"2017.10", volume: 7386713 },
+            { month:"2017.11", volume: 8708523 },
+            { month:"2017.12", volume: 8624841 },
+            { month:"2018.01", volume: 8785755 },
+            { month:"2018.02", volume: 8048044 },
+            { month:"2018.03", volume: 9083890 }
+        ],
+        keys: {
+            x: "month",
+            value: ["volume"]
+        }
+    },
+    axis: {
+        x: {type:"category"}
+    },
+    extend: {
+        area: {
+            zerobased : true
+        }
+    }
 });
 
 document.getElementById("chkZerobased").onchange = function() {
-	
-	chart.extend().area.zerobased = this.checked;
-	chart.render();
+    
+    chart.extend().area.zerobased = this.checked;
+    chart.render();
 };
 
 </script>

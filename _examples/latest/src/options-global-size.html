@@ -8,16 +8,16 @@ order: 301
 <br>
 <!-- show/hidden -->
 <div class="row">
-	<div class="col-sm-1"><mark>크기</mark></div>
-	<div class="col-sm-1">width</div>
-	<div class="col-sm-1"><input type="text" id="txtWidth" class="w-100"></div>
-	<div class="col-sm-9"><code>global.size.width=800</code></div>
+    <div class="col-sm-1"><mark>크기</mark></div>
+    <div class="col-sm-1">width</div>
+    <div class="col-sm-1"><input type="text" id="txtWidth" class="w-100"></div>
+    <div class="col-sm-9"><code>global.size.width=800</code></div>
 </div>
 <div class="row">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-1">max</div>
-	<div class="col-sm-1"><input type="text" id="txtHeight" class="w-100"></div>
-	<div class="col-sm-9"><code>global.size.height=320</code></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1">max</div>
+    <div class="col-sm-1"><input type="text" id="txtHeight" class="w-100"></div>
+    <div class="col-sm-9"><code>global.size.height=320</code></div>
 </div>
 
 <p  id="chartWrap"></p>
@@ -25,41 +25,41 @@ order: 301
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	global : {
-		size : { width: 800, height: 320 }
-	},
-	data : {
-		type: "bar",
-		columns: [
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	}
+    global : {
+        size : { width: 800, height: 320 }
+    },
+    data : {
+        type: "bar",
+        columns: [
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	global : {
-		size : { width: 800, height: 320 }
-	},
-	data : {
-		type: "bar",
-		columns: [
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	}
+    global : {
+        size : { width: 800, height: 320 }
+    },
+    data : {
+        type: "bar",
+        columns: [
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    }
 });
 
 document.getElementById("txtWidth").value = chart.global().size.width;
 document.getElementById("txtHeight").value = chart.global().size.height;
 
 document.getElementById("txtWidth").onchange = function() {
-	chart.global().size.width = this.value;
-	chart.render();
+    chart.global().size.width = this.value;
+    chart.render();
 };
 document.getElementById("txtHeight").onchange = function() {
-	chart.global().size.height = this.value;
-	chart.render();
+    chart.global().size.height = this.value;
+    chart.render();
 };
 
 

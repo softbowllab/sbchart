@@ -21,21 +21,21 @@ Object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다
 
   ```javascript
 axis: {
-	y : {
-		label: "지역별"
-	}
+    y : {
+        label: "지역별"
+    }
 }
 ```
 또는
 
   ```javascript
 axis: {
-	y : {
-		label:  {
-			text: "변동률(%)",
-			position: "inner-top"
-		}
-	}
+    y : {
+        label:  {
+            text: "변동률(%)",
+            position: "inner-top"
+        }
+    }
 }
 ```
 
@@ -50,11 +50,11 @@ Y축 라벨을 지정합니다.
 
   ```javascript
 axis: {
-	y : {
-		label:  {
-			text: "변동률(%)"
-		}
-	}
+    y : {
+        label:  {
+            text: "변동률(%)"
+        }
+    }
 }
 ```
 
@@ -87,11 +87,11 @@ Y축 라벨의 위치를 지정합니다.
 
   ```javascript
 axis: {
-	y : {
-		label:  {
-			text: "변동률(%)",
-			position: "inner-top"
-		}
-	}
+    y : {
+        label:  {
+            text: "변동률(%)",
+            position: "inner-top"
+        }
+    }
 }
 ```

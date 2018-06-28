@@ -20,9 +20,9 @@ y축 1번째 값부터 마지막 n번째 값이 위치할 tick의 상하 padding
 
 ```javascript
 axis: {
-	y : {
-		padding: 2
-	}
+    y : {
+        padding: 2
+    }
 }
 ```
 
@@ -37,12 +37,12 @@ y축 1번째 tick의 상단 padding 값을 정의합니다.
 
   ```javascript
 axis: {
-	y : {
-		padding:  {
-			top: 2,
-			bottom: 2
-		}
-	}
+    y : {
+        padding:  {
+            top: 2,
+            bottom: 2
+        }
+    }
 }
 ```
 

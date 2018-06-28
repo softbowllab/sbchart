@@ -18,14 +18,14 @@ x축이 없는 원(pie), 도녓(donut) 계열 차트는 지원하지 않습니�
 * Format
 ```javascript
 axis: {
-	x : {
-		show:false,
-		type: "indexed",
-		max: 10,
-		min: 1,
-		height: 20,
-		localtime:true
-	}
+    x : {
+        show:false,
+        type: "indexed",
+        max: 10,
+        min: 1,
+        height: 20,
+        localtime:true
+    }
 }
 ```
 

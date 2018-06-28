@@ -20,7 +20,7 @@ order: 1
 * Format
 ```javascript
 axis: {
-	rotated: true
+    rotated: true
 }
 ```
 

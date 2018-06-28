@@ -8,68 +8,68 @@ order: 333
 <br>
 <!-- show/hidden -->
 <div class="row">
-	<div class="col-sm-1"><mark>X축</mark></div>
-	<div class="col-sm-1 text-right">{</div>
-	<div class="col-sm-1 text-right">min:</div>
-	<div class="col-sm-1"><input type="text" id="txtXMin" class="w-100"></div>
-	<div class="col-sm-1 text-right">, max:</div>
-	<div class="col-sm-1"><input type="text" id="txtXMax" class="w-100"></div>
-	<div class="col-sm-1">}</div>
-	<div class="col-sm-5"><code>axis.x.min=-1</code><code>axis.x.max=19</code></div>
+    <div class="col-sm-1"><mark>X축</mark></div>
+    <div class="col-sm-1 text-right">{</div>
+    <div class="col-sm-1 text-right">min:</div>
+    <div class="col-sm-1"><input type="text" id="txtXMin" class="w-100"></div>
+    <div class="col-sm-1 text-right">, max:</div>
+    <div class="col-sm-1"><input type="text" id="txtXMax" class="w-100"></div>
+    <div class="col-sm-1">}</div>
+    <div class="col-sm-5"><code>axis.x.min=-1</code><code>axis.x.max=19</code></div>
 </div>
 <div class="row">
-	<div class="col-sm-1"><mark>Y축</mark></div>
-	<div class="col-sm-1 text-right">{</div>
-	<div class="col-sm-1 text-right">min:</div>
-	<div class="col-sm-1"><input type="text" id="txtYMin" class="w-100"></div>
-	<div class="col-sm-1 text-right">, max:</div>
-	<div class="col-sm-1"><input type="text" id="txtYMax" class="w-100"></div>
-	<div class="col-sm-1">}</div>
-	<div class="col-sm-5"><code>axis.y.min=-4</code><code>axis.y.max=6</code></div>
+    <div class="col-sm-1"><mark>Y축</mark></div>
+    <div class="col-sm-1 text-right">{</div>
+    <div class="col-sm-1 text-right">min:</div>
+    <div class="col-sm-1"><input type="text" id="txtYMin" class="w-100"></div>
+    <div class="col-sm-1 text-right">, max:</div>
+    <div class="col-sm-1"><input type="text" id="txtYMax" class="w-100"></div>
+    <div class="col-sm-1">}</div>
+    <div class="col-sm-5"><code>axis.y.min=-4</code><code>axis.y.max=6</code></div>
 </div>
-					
+                    
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	},
-	axis: {
-		x: {
-			padding: 0,
-			min: -1, max:19
-		},
-		y: {
-			padding: 0,
-			min: -4, max:6
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    },
+    axis: {
+        x: {
+            padding: 0,
+            min: -1, max:19
+        },
+        y: {
+            padding: 0,
+            min: -4, max:6
+        }
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	},
-	axis: {
-		x: {
-			padding: 0,
-			min: -1, max:19
-		},
-		y: {
-			padding: 0,
-			min: -4, max:6
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    },
+    axis: {
+        x: {
+            padding: 0,
+            min: -1, max:19
+        },
+        y: {
+            padding: 0,
+            min: -4, max:6
+        }
+    }
 });
 
 document.getElementById("txtXMin").value = chart.axis().x.min;
@@ -78,24 +78,24 @@ document.getElementById("txtYMin").value = chart.axis().y.min;
 document.getElementById("txtYMax").value = chart.axis().y.max;
 
 document.getElementById("txtXMin").onchange = function() {
-	chart.axis({
-		x: {min:this.value}
-	}).render();
+    chart.axis({
+        x: {min:this.value}
+    }).render();
 };
 document.getElementById("txtXMax").onchange = function() {
-	chart.axis({
-		x: {max: parseInt(this.value)}
-	}).render();
+    chart.axis({
+        x: {max: parseInt(this.value)}
+    }).render();
 };
 document.getElementById("txtYMin").onchange = function() {
-	chart.axis({
-		y: {min: this.value}
-	}).render();
+    chart.axis({
+        y: {min: this.value}
+    }).render();
 };
 document.getElementById("txtYMax").onchange = function() {
-	chart.axis({
-		y: {max: parseInt(this.value)}
-	}).render();
+    chart.axis({
+        y: {max: parseInt(this.value)}
+    }).render();
 };
 
 </script>

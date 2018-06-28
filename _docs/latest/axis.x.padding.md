@@ -20,9 +20,9 @@ x축의 첫번째 tick 과 마지막 n번째 tick의 좌우 padding 값을 정�
 
 ```javascript
 axis: {
-	x : {
-		padding: 2
-	}
+    x : {
+        padding: 2
+    }
 }
 ```
 
@@ -37,11 +37,11 @@ x축 첫번째 tick의 좌측 padding 값을 정의합니다.
 
   ```javascript
 axis: {
-	x : {
-		padding:  {
-			left: 2
-		}
-	}
+    x : {
+        padding:  {
+            left: 2
+        }
+    }
 }
 ```
 
@@ -56,10 +56,10 @@ x축 마지막 tick의 우측 padding 값을 정의합니다.
 
   ```javascript
 axis: {
-	x : {
-		padding:  {
-			right: 2
-		}
-	}
+    x : {
+        padding:  {
+            right: 2
+        }
+    }
 }
 ```

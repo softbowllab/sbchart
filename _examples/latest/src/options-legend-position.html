@@ -8,52 +8,52 @@ order: 321
 <br>
 <!-- show/hidden -->
 <div class="row">
-	<div class="col-sm-2"><mark>위치</mark></div>
-	<div class="col-sm-2">
-			<select id="cboPostion" class="w-100">
-				<option value="bottom">bottom (default)</option>
-				<option value="right">right</option>
-				<option value="inset" selected>inset</option>
-			</select>
-	</div>
-	<div class="col-sm-8"><code>legend.position = "right/bottom/inset"</code></div>
+    <div class="col-sm-2"><mark>위치</mark></div>
+    <div class="col-sm-2">
+            <select id="cboPostion" class="w-100">
+                <option value="bottom">bottom (default)</option>
+                <option value="right">right</option>
+                <option value="inset" selected>inset</option>
+            </select>
+    </div>
+    <div class="col-sm-8"><code>legend.position = "right/bottom/inset"</code></div>
 </div>
 <div class="row inset">
-	<div class="col-sm-1"><mark>Inset</mark></div>
-	<div class="col-sm-1">anchor</div>
-	<div class="col-sm-2">
-			<select id="cboAnchor" class="w-100">
-				<option value="top-left" selected>top-left (Default)</option>
-				<option value="top-right">top-right</option>
-				<option value="bottom-left">bottom-left</option>
-				<option value="bottom-right">bottom-right</option>
-			</select>
-	</div>
-	<div class="col-sm-8"><code>legend.inset.anchor = "top-left/top-right/bottom-right/bottom-left"</code></div>
+    <div class="col-sm-1"><mark>Inset</mark></div>
+    <div class="col-sm-1">anchor</div>
+    <div class="col-sm-2">
+            <select id="cboAnchor" class="w-100">
+                <option value="top-left" selected>top-left (Default)</option>
+                <option value="top-right">top-right</option>
+                <option value="bottom-left">bottom-left</option>
+                <option value="bottom-right">bottom-right</option>
+            </select>
+    </div>
+    <div class="col-sm-8"><code>legend.inset.anchor = "top-left/top-right/bottom-right/bottom-left"</code></div>
 </div>
 <div class="row inset">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-1">x</div>
-	<div class="col-sm-2">
-		<input id="txtX" class="w-100">
-	</div>
-	<div class="col-sm-8"><code>legend.inset.x</code></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1">x</div>
+    <div class="col-sm-2">
+        <input id="txtX" class="w-100">
+    </div>
+    <div class="col-sm-8"><code>legend.inset.x</code></div>
 </div>
 <div class="row inset">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-1">y</div>
-	<div class="col-sm-2">
-		<input id="txtY" class="w-100">
-	</div>
-	<div class="col-sm-8"><code>legend.inset.y</code></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1">y</div>
+    <div class="col-sm-2">
+        <input id="txtY" class="w-100">
+    </div>
+    <div class="col-sm-8"><code>legend.inset.y</code></div>
 </div>
 <div class="row inset">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-1">step</div>
-	<div class="col-sm-2">
-		<input id="txtStep" class="w-100">
-	</div>
-	<div class="col-sm-8"><code>legend.inset.step</code></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1">step</div>
+    <div class="col-sm-2">
+        <input id="txtStep" class="w-100">
+    </div>
+    <div class="col-sm-8"><code>legend.inset.step</code></div>
 </div>
 
 <p  id="chartWrap"></p>
@@ -61,51 +61,51 @@ order: 321
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
-			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	},
-	legend: {
-		position: "inset",
-		item: {
-			tile: {height:5, width:2}
-		},
-		inset: {
-			anchor: "top-left",
-			x: 180,
-			y: 20,
-			step: 2
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+            ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    },
+    legend: {
+        position: "inset",
+        item: {
+            tile: {height:5, width:2}
+        },
+        inset: {
+            anchor: "top-left",
+            x: 180,
+            y: 20,
+            step: 2
+        }
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
-			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
-			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-		]
-	},
-	legend: {
-		position: "inset",
-		item: {
-			tile: {height:5, width:2}
-		},
-		inset: {
-			anchor: "top-left",
-			x: 180,
-			y: 20,
-			step: 2
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+            ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+    },
+    legend: {
+        position: "inset",
+        item: {
+            tile: {height:5, width:2}
+        },
+        inset: {
+            anchor: "top-left",
+            x: 180,
+            y: 20,
+            step: 2
+        }
+    }
 });
 
 document.getElementById("txtX").value = chart.legend().inset.x;
@@ -113,37 +113,37 @@ document.getElementById("txtY").value = chart.legend().inset.y;
 document.getElementById("txtStep").value = chart.legend().inset.step;
 
 document.getElementById("cboPostion").onchange = function() {
-	chart.legend().position = this.value;
-	if(this.value == "inset") {
-		var els = document.getElementsByClassName("inset hide");
-		for(var i=(els.length-1); i >= 0; i--) {
-			els[i].classList.remove("hide");
-		}
-	} else {
-		var els = document.getElementsByClassName("inset");
-		for(var i=(els.length-1); i >= 0; i--) {
-			els[i].classList.add("hide");
-		}
-	}
-	chart.render();
+    chart.legend().position = this.value;
+    if(this.value == "inset") {
+        var els = document.getElementsByClassName("inset hide");
+        for(var i=(els.length-1); i >= 0; i--) {
+            els[i].classList.remove("hide");
+        }
+    } else {
+        var els = document.getElementsByClassName("inset");
+        for(var i=(els.length-1); i >= 0; i--) {
+            els[i].classList.add("hide");
+        }
+    }
+    chart.render();
 };
 
 document.getElementById("cboAnchor").onchange = function() {
-	if(!chart.legend().inset) chart.legend().inset = {};
-	chart.legend().inset.anchor = this.value;
-	chart.render();
+    if(!chart.legend().inset) chart.legend().inset = {};
+    chart.legend().inset.anchor = this.value;
+    chart.render();
 };
 document.getElementById("txtX").onchange = function() {
-	chart.legend().inset.x = parseInt(this.value);
-	chart.render();
+    chart.legend().inset.x = parseInt(this.value);
+    chart.render();
 };
 document.getElementById("txtY").onchange = function() {
-	chart.legend().inset.y = parseInt(this.value);
-	chart.render();
+    chart.legend().inset.y = parseInt(this.value);
+    chart.render();
 };
 document.getElementById("txtStep").onchange = function() {
-	chart.legend().inset.step = parseInt(this.value);
-	chart.render();
+    chart.legend().inset.step = parseInt(this.value);
+    chart.render();
 };
 
 </script>

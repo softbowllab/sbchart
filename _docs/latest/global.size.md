@@ -17,9 +17,9 @@ order: 3
 * Format
 ```javascript
 global: {
-	size: { 
-		width:800, height:400
-	}
+    size: { 
+        width:800, height:400
+    }
 }
 ```
 

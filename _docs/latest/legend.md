@@ -15,14 +15,14 @@ order: 1
 * Format
 ```javascript
 legend: {
-	show: true,
-	position: "inset",
-	inset: {
-		anchor:"top-left",
-		x: 10,
-		y: 0
-	},
-	padding: 10
+    show: true,
+    position: "inset",
+    inset: {
+        anchor:"top-left",
+        x: 10,
+        y: 0
+    },
+    padding: 10
 }
 ```
 

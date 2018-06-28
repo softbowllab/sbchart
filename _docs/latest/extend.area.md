@@ -15,9 +15,9 @@ order: 3
 * Format
 ```javascript
 extend: {
-	area: {
-		zerobased: false
-	}
+    area: {
+        zerobased: false
+    }
 }
 ```
 

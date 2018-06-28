@@ -8,75 +8,75 @@ order: 334
 <br>
 <!-- show/hidden -->
 <div class="row">
-	<div class="col-sm-1"><mark>format</mark></div>
-	<div class="col-sm-2">(예) 라벨 변경</div>
-	<div class="col-sm-9">
-		<label>
-			<input type="checkbox" id="chkFormat" checked>
-			<code>axis.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code>
-		</label>
-	</div>
+    <div class="col-sm-1"><mark>format</mark></div>
+    <div class="col-sm-2">(예) 라벨 변경</div>
+    <div class="col-sm-9">
+        <label>
+            <input type="checkbox" id="chkFormat" checked>
+            <code>axis.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code>
+        </label>
+    </div>
 </div>
 <div class="row">
-	<div class="col-sm-1"><mark>values</mark></div>
-	<div class="col-sm-2">(예) display 값 선택</div>
-	<div class="col-sm-9">
-		<label>
-			<input type="checkbox" id="chkValues" checked>
-			<code>axis.y.tick.values = [7000000, 8000000, 9000000]</code>
-		</label>
-	</div>
+    <div class="col-sm-1"><mark>values</mark></div>
+    <div class="col-sm-2">(예) display 값 선택</div>
+    <div class="col-sm-9">
+        <label>
+            <input type="checkbox" id="chkValues" checked>
+            <code>axis.y.tick.values = [7000000, 8000000, 9000000]</code>
+        </label>
+    </div>
 </div>
-			
+            
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-		]
-	},
-	axis: {
-		y: {
-			tick: {
-				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
-				values:[7000000, 8000000, 9000000]
-			}
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+        ]
+    },
+    axis: {
+        y: {
+            tick: {
+                format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
+                values:[7000000, 8000000, 9000000]
+            }
+        }
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
-		type: "bar",
-		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-		]
-	},
-	axis: {
-		y: {
-			tick: {
-				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
-				values:[7000000, 8000000, 9000000]
-			}
-		}
-	}
+    data : {
+        type: "bar",
+        columns: [
+            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+        ]
+    },
+    axis: {
+        y: {
+            tick: {
+                format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; },
+                values:[7000000, 8000000, 9000000]
+            }
+        }
+    }
 });
 
 document.getElementById("chkFormat").onchange = function() {
-	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
-	chart.render();
+    chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
+    chart.render();
 };
 
 //axis-x show/hidden
 document.getElementById("chkValues").onchange = function() {
-	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
-	chart.render();
+    chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+    chart.render();
 };
 
 </script>

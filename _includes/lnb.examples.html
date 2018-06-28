@@ -7,6 +7,6 @@
 		<li class="nav-header">{{ item.categories[1] | upcase }}</li>	
 			{% assign cate = item.categories[1] %}
 		{% endif %}
-		<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+		<li><a {% if item.title == page.title %}class="active" {% endif %}href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
 	{% endfor %}
 </ul>

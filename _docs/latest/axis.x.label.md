@@ -21,19 +21,19 @@ Object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다
 
   ```javascript
 axis: {
-	x : {
-		label: "지역별"
-	}
+    x : {
+        label: "지역별"
+    }
 }
 ```
 또는
 
   ```javascript
 axis: {
-	x : {
-		text: "지역별",
-		position: "inner-left"
-	}
+    x : {
+        text: "지역별",
+        position: "inner-left"
+    }
 }
 ```
 
@@ -48,11 +48,11 @@ x축 라벨을 지정합니다.
 
   ```javascript
 axis: {
-	x : {
-		label:  {
-			text: "지역별"
-		}
-	}
+    x : {
+        label:  {
+            text: "지역별"
+        }
+    }
 }
 ```
 
@@ -85,11 +85,11 @@ x축 라벨의 위치를 지정합니다.
 
   ```javascript
 axis: {
-	x : {
-		label:  {
-			text: "지역별",
-			position: "inner-left"
-		}
-	}
+    x : {
+        label:  {
+            text: "지역별",
+            position: "inner-left"
+        }
+    }
 }
 ```

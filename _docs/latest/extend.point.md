@@ -16,9 +16,9 @@ order: 1
 * Format
 ```javascript
 extend: {
-	point: {
-		show: true
-	}
+    point: {
+        show: true
+    }
 }
 ```
 

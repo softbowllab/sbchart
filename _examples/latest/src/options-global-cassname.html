@@ -9,15 +9,15 @@ order: 304
 <!-- show/hidden -->
 
 <div class="row">
-	<div class="col-sm-2"><mark>classname 적용</mark></div>
-	<div class="col-sm-10">
-		<label>
-			<input type="checkbox" id="chkClassname" checked>
-			<code>global.svg.classname="sbchart"</code>
-		</label>
-	</div>
+    <div class="col-sm-2"><mark>classname 적용</mark></div>
+    <div class="col-sm-10">
+        <label>
+            <input type="checkbox" id="chkClassname" checked>
+            <code>global.svg.classname="sbchart"</code>
+        </label>
+    </div>
 </div>
-			
+            
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
@@ -27,43 +27,43 @@ order: 304
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	global : {
-		svg: {classname:"sbchart"}
-	},
-	data : {
-		type: "bar",
-		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-		]
-	}
+    global : {
+        svg: {classname:"sbchart"}
+    },
+    data : {
+        type: "bar",
+        columns: [
+            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+        ]
+    }
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <style>
-	.sbchart {background-color: lightcyan;}
-	.sbchart .sb-axis-x {font-size: 20px;}
+    .sbchart {background-color: lightcyan;}
+    .sbchart .sb-axis-x {font-size: 20px;}
 </style>
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	global : {
-		svg: {classname:"sbchart"}
-	},
-	data : {
-		type: "bar",
-		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-		]
-	}
+    global : {
+        svg: {classname:"sbchart"}
+    },
+    data : {
+        type: "bar",
+        columns: [
+            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+        ]
+    }
 });
 
 //sereise
 document.getElementById("chkClassname").onchange = function() {
-	if (this.checked) {
-		chart.global().svg.classname = "sbchart"
-	} else {
-		delete chart.global().svg.classname;
-	}
-	chart.render();
+    if (this.checked) {
+        chart.global().svg.classname = "sbchart"
+    } else {
+        delete chart.global().svg.classname;
+    }
+    chart.render();
 };
 
 </script>

@@ -16,15 +16,15 @@ y축 tick 의 갯수와 라벨 등을 지정합니다.
 * Format
 ```javascript
 axis: {
-	y : {
-		tick: {
-			format: function(d) { return d + "%"; },
-			count: 5,
-			values: [2,4,10],
-			outer: true,
-			rotate: 0
-		}
-	}
+    y : {
+        tick: {
+            format: function(d) { return d + "%"; },
+            count: 5,
+            values: [2,4,10],
+            outer: true,
+            rotate: 0
+        }
+    }
 }
 ```
 
