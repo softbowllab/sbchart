@@ -1,0 +1,67 @@
+---
+title:  Using width jQuery
+date:   2018-06-27
+categories: ["latest","basic"]
+order: 3
+scripts: ["jquery","sbchart"]
+---
+<p>jquery.js 파일이 sbchart.js 파일보다 <mark>먼저 선언</mark>되어 있다면 jquery 플러그인을 사용 할 수 있습니다.</p>
+<p><code>$("..").sbchart();</code>형태로 구현해줍니다.</p>
+<!-- bindto -->
+<h4>Example</h4>
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight html %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/sbchart.js"></script>
+<script>
+(function($) {
+	$(function() {
+		var charts = $("#chartWrap").sbchart({
+			data : {
+				type: "bar",
+				columns: [
+					["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
+				]
+			}
+		});
+		// 2초후 데이터 변경
+		setTimeout(function() {
+			charts.forEach(function(chart) {
+				chart.data({
+					columns: [
+						["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
+					]
+				}).render();
+			});
+		},2000);
+	});
+})(jQuery.noConflict())
+</script>
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+(function($) {
+	$(function() {
+		var charts = $("#chartWrap").sbchart({
+			data : {
+				type: "bar",
+				columns: [
+					["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
+				]
+			}
+		});
+		setTimeout(function() {
+			charts.forEach(function(chart) {
+				chart.data({
+					type: "area",
+					columns: [
+						["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
+					]
+				}).render();
+			});
+		},2000);
+	});
+})(jQuery.noConflict())
+</script>

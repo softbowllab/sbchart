@@ -31,6 +31,7 @@ defaults:
   values:
     layout: examples
     permalink: /:collection/release/:categories/:name:output_ext
+    scripts: ["sbchart"]
 # - scope:
 #     path: "_examples/latest/assets"
 #   values:
