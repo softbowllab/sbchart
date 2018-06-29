@@ -1,5 +1,5 @@
 ---
-title:  Options
+title:  options
 date:   2018-06-18
 categories: ["latest","API"]
 order: 0
