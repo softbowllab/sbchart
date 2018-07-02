@@ -21,7 +21,7 @@ order: 0
 
 ### data
 
-대상 데이터 및 챠트 종류 등 데이터 관련 옵션입니다.
+대상 데이터 및 차트 종류 등 데이터 관련 옵션입니다.
 
 {% assign cate = "data" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
