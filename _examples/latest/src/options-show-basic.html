@@ -5,58 +5,62 @@ categories: ["latest","options"]
 order: 302
 ---
 <p>show/hidden 옵션들 입니다.</p>
-<br>
-<!-- show/hidden -->
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkLegend" checked>
-        <mark>범례</mark>: <code>legend.show = true/false</code>
-    </label>
+<hr>
+<h4>Example</h4>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkLegend" checked>
+				<mark>범례</mark>: <code>legend.show = true/false</code>
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkAxisX" checked>
+				<mark>x축</mark>: <code>axis.x.show = true/false</code>
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkAxisY" checked>
+				<mark>y축</mark>: <code>axis.y.show = true/false</code>
+			</label>
+		</div>
+			
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkGridX" checked>
+				<mark>그리드 x축</mark>: <code>grid.x.show = true/false</code>
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkGridY" checked>
+				<mark>그리드 y축</mark>: <code>grid.y.show = true/false</code>
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkPoint" checked>
+				<mark>포인트</mark>: <code>extend.point.show = true/false</code>
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkTitle" checked>
+				<mark>타이틀</mark>: <code>title.text = "제목"</code>, 값이 있다면 show, 없으면 hidden
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkTickOuter" checked>
+				<mark>바깥쪽 Tick</mark>: <code>axis.x.tick.outer = true/false, axis.y.tick.outer = true/false</code>
+			</label>
+		</div>
+	</div>
 </div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkAxisX" checked>
-        <mark>x축</mark>: <code>axis.x.show = true/false</code>
-    </label>
-</div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkAxisY" checked>
-        <mark>y축</mark>: <code>axis.y.show = true/false</code>
-    </label>
-</div>
-    
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkGridX" checked>
-        <mark>그리드 x축</mark>: <code>grid.x.show = true/false</code>
-    </label>
-</div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkGridY" checked>
-        <mark>그리드 y축</mark>: <code>grid.y.show = true/false</code>
-    </label>
-</div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkPoint" checked>
-        <mark>포인트</mark>: <code>extend.point.show = true/false</code>
-    </label>
-</div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkTitle" checked>
-        <mark>타이틀</mark>: <code>title.text = "제목"</code>, 값이 있다면 show, 없으면 hidden
-    </label>
-</div>
-<div class="checkbox">
-    <label>
-        <input type="checkbox" id="chkTickOuter" checked>
-        <mark>바깥쪽 Tick</mark>: <code>axis.x.tick.outer = true/false, axis.y.tick.outer = true/false</code>
-    </label>
-</div>
-        
+
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
