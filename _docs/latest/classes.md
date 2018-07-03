@@ -25,6 +25,14 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * .sb-title : 타이틀 최상위. `#2.0.0`
 
+* 예
+
+   ```css
+.sb-title { font-size:16px; font-weight:bold; }	/* 타이틀 폰트 사이즈 변경 */
+```
+
+
+
 
 ### axis
 
@@ -50,6 +58,15 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * .sb-axis-y-label : y 축 라벨. `#2.0.0`
 
+* 예
+
+   ```css
+.sb-axis-x .tick text {font-size:13px;}	/* x축 tick 폰트 크기 변경 */
+.sb-axis-x .tick line {display:none;}	/* x축 tick 라인(눈금) 없애기 */
+.sb-axis-x .domain {display:none}	/* x축 선 없애기 */
+.sb-axis-x .sb-axis-x-label {font-size:14px;}	/* x축 라벨 폰트 크기 변경 */
+```
+
 
 ### legend 
 
@@ -63,8 +80,14 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * .sb-legend .sb-legend-item .sb-legend-item-tile : 범례 Tile. `#2.0.0`
 
-* .sb-legend .sb-legend-item .sb-legend-item-event : 범례 Tile. `#2.0.0`
+* .sb-legend .sb-legend-item .sb-legend-item-event : TODO. `#2.0.0`
 
+* 예
+
+   ```css
+.sb-legend .sb-legend-background {stroke-width: 0}	/* 범례 박스 라인 없애기 */
+.sb-legend .sb-legend-item-text {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
+```
 
 ### grid
 
