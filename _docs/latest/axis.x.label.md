@@ -31,8 +31,10 @@ axis: {
   ```javascript
 axis: {
     x : {
-        text: "지역별",
-        position: "inner-left"
+        label: {
+            text: "지역별",
+            position: "inner-left"
+		}
     }
 }
 ```
