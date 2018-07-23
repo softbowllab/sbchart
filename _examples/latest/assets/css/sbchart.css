@@ -1,3 +1,7 @@
+.sb-series-arc text {
+  fill: #fff;
+  font-size: 11px; }
+
 .sb-grid line {
   stroke: #aaa; }
 
@@ -10,11 +14,51 @@
   stroke: #d3d3d3;
   stroke-width: 1; }
 
-.sb-legend-arc {
-  fill: #fff; }
-
 .sb-legend-item {
   font-size: 10px; }
 
 .sb-title {
-  font: 14px sans-serif; }
+  font: 16px sans-serif; }
+
+.sb-tooltip {
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  width: 170px; }
+
+.sb-tooltip.show {
+  display: block; }
+
+.sb-tooltip p.sb-tooltip-title {
+  padding: 7px 15px;
+  color: #fff;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0; }
+
+.sb-tooltip ul.sb-tooltip-cont {
+  list-style: none;
+  padding: 15px;
+  color: #fff;
+  border-radius: 0 0 5px 5px;
+  margin: 0; }
+
+.sb-tooltip ul.sb-tooltip-cont li span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  content: ''; }
+
+.sb-tooltip ul.sb-tooltip-cont li em {
+  font-style: normal;
+  float: right; }
+
+.sb-tooltip ul.sb-tooltip-cont li svg {
+  width: 10px;
+  height: 10px; }
+
+.sb-labels {
+  font-size: 10px; }
