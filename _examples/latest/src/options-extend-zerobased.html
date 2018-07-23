@@ -4,7 +4,7 @@ date:   2018-06-04
 categories: ["latest","options"]
 order: 392
 ---
-<p>막대/영역 차트에서 값이 모두 양수이거나 모두 음수인 경우 최소값 또는 최대 값이 0으로 설정할 수 있습니다.</p>
+<p>막대/영역 차트에서 값이 모두 양수이거나 모두 음수인 경우 최소값 또는 최대 값을 0으로 설정할 수 있습니다.</p>
 <hr>
 <h4>Example</h4>
 <div class="row">
@@ -52,38 +52,37 @@ var chart = sb.chart.render("#chartWrap", {
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "area",
-        json: [
-            { month:"2017.07", volume: 7707750 },
-            { month:"2017.08", volume: 7573752 },
-            { month:"2017.09", volume: 7914913 },
-            { month:"2017.10", volume: 7386713 },
-            { month:"2017.11", volume: 8708523 },
-            { month:"2017.12", volume: 8624841 },
-            { month:"2018.01", volume: 8785755 },
-            { month:"2018.02", volume: 8048044 },
-            { month:"2018.03", volume: 9083890 }
-        ],
-        keys: {
-            x: "month",
-            value: ["volume"]
-        }
-    },
-    axis: {
-        x: {type:"category"}
-    },
-    extend: {
-        area: {
-            zerobased : true
-        }
-    }
+	data : {
+		type: "area",
+		json: [
+			{ month:"2017.07", volume: 7707750 },
+			{ month:"2017.08", volume: 7573752 },
+			{ month:"2017.09", volume: 7914913 },
+			{ month:"2017.10", volume: 7386713 },
+			{ month:"2017.11", volume: 8708523 },
+			{ month:"2017.12", volume: 8624841 },
+			{ month:"2018.01", volume: 8785755 },
+			{ month:"2018.02", volume: 8048044 },
+			{ month:"2018.03", volume: 9083890 }
+		],
+		keys: {
+			x: "month",
+			value: ["volume"]
+		}
+	},
+	axis: {
+		x: {type:"category"}
+	},
+	extend: {
+		area: {
+			zerobased : true
+		}
+	}
 });
 
 document.getElementById("chkZerobased").onchange = function() {
-    
-    chart.extend().area.zerobased = this.checked;
-    chart.render();
+	chart.extend().area.zerobased = this.checked;
+	chart.render();
 };
 
 </script>

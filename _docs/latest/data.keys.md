@@ -33,12 +33,14 @@ data : {
 ### data.keys.x
 
 x축으로 쓰일 열을 지정합니다.
+`#2.0.0`
 
 * Type : string
 
 ### data.keys.value
 
 값으로 쓰일 열들을 지정합니다.
+`#2.0.0`
 
 * Type : string[]
 

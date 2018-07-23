@@ -18,7 +18,7 @@ order: 1
 
 * Type : string[]
 
-* Default : ['#00A9ff','#ffb840','#ff5a46','#00bd9f','#785fff','#83b14e','#458a3f','#295ba0','#2a4175','#289399','#617178','#8a9a9a','#516f7d','#dddddd']
+* Default : ['#00a9ff','#ffb840','#ff5a46','#00bd9f','#785fff','#83b14e','#458a3f','#295ba0','#2a4175','#289399','#617178','#8a9a9a','#516f7d','#dddddd']
 
 * Format
 ```javascript

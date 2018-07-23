@@ -22,6 +22,7 @@ SBChart 객체를 생성 하는 방식은
 SBChart 객체를 생성하고 랜더링합니다.
 
 static 함수이며 리턴값은 SBChart Object 입니다.
+`#2.0.0`
 
 * Parameters
 
@@ -49,6 +50,7 @@ var chart = sb.chart.render("#chartWrap",{
 ### [SBCHART].render()
 
 이미 생성된 SBChart 객체에 차트를 (다시) 그려주기 위한 함수입니다.
+`#2.0.0`
 
 * Parameters
 

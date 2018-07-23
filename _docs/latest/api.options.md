@@ -11,7 +11,7 @@ order: 0
 ### data()
 
 대상 데이터 및 차트 종류 등 데이터 관련 옵션을 지정하거나 조회합니다.
-
+`#2.0.0`
 
 * Example
 
@@ -31,6 +31,7 @@ var columns = chart.data();
 ### grid()
 
 Grid 설정 옵션을 지정하거나 조회합니다.
+`#2.0.0`
 
 * Example
 
@@ -46,6 +47,7 @@ var opt = chart.grid().x.show;
 ### title()
 
 타이틀의 위치, 모양에 대한 옵션을 지정하거나 조회합니다.
+`#2.0.0`
 
 * Example
 
@@ -61,6 +63,7 @@ var opt = chart.title().text;
 ### legend()
 
 범례의 위치, 모양에 대한 옵션을 지정하거나 조회합니다.
+`#2.0.0`
 
 * Example
 
@@ -75,6 +78,7 @@ var opt = chart.legend().show;
 ### axis()
 
 x,y 축 관련 옵션을 지정하거나 조회합니다.
+`#2.0.0`
 
 * Example
 
@@ -92,6 +96,7 @@ var opt = chart.axis().x.label;
 ### extend()
 
 차트별 확장 옵션을 지정하거나 조회합니다.
+`#2.0.0`
 
 * Example
 
