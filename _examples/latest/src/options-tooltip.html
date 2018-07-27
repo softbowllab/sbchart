@@ -1,0 +1,105 @@
+---
+title:  Tooltip
+date:   2018-07-25
+categories: ["latest","options"]
+order: 351
+---
+<p>툴팁 표시하거나 그룹으로 모아 봅니다.</p>
+<hr>
+<h4>Example</h4>
+<div class="row">
+	<div class="col-sm-12">(값을 변경하고 차트에 마우스를 올려보세요.)</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkShow" checked>
+			<mark>show/hidden</mark>
+		</label>
+		<code>tooltip.show = true/false</code>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkGrouped" checked>
+			<mark>그룹으로 보기</mark>
+		</label>
+		<code>tooltip.grouped = true/false</code>
+	</div>
+</div>
+	
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var chart = sb.chart.render("#chartWrap", {
+    data : {
+        type: "bar",
+        json: [
+            {"region":"서울", "2015":4.6, "2016":2.14, "2017":3.64},
+            {"region":"경기", "2015":4.47, "2016":0.84, "2017":1.67},
+            {"region":"강원", "2015":2.21, "2016":1.33, "2017":2.4},
+            {"region":"충청", "2015":1.13, "2016":-0.7, "2017":-0.36},
+            {"region":"전라", "2015":0.35, "2016":0.09, "2017":1.98},
+            {"region":"경상", "2015":2.65, "2016":-1.66, "2017":-0.9},
+            {"region":"제주", "2015":8.08, "2016":4.63, "2017":1.66}
+        ],
+        keys: {
+            x: "region",
+            value: ["2015", "2016", "2017"]
+        }
+    },
+    axis: {
+        x: {
+            type: 'category'
+        }
+    }
+});
+//show/hidden
+document.getElementById("chkShow").onchange = function() {
+    chart.tooltip({show:this.checked}).render();
+};
+//grouped
+document.getElementById("chkGrouped").onchange = function() {
+    chart.tooltip({grouped:this.checked}).render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data : {
+		type: "bar",
+		json: [
+			{"region":"서울", "2015":4.6, "2016":2.14, "2017":3.64},
+			{"region":"경기", "2015":4.47, "2016":0.84, "2017":1.67},
+			{"region":"강원", "2015":2.21, "2016":1.33, "2017":2.4},
+			{"region":"충청", "2015":1.13, "2016":-0.7, "2017":-0.36},
+			{"region":"전라", "2015":0.35, "2016":0.09, "2017":1.98},
+			{"region":"경상", "2015":2.65, "2016":-1.66, "2017":-0.9},
+			{"region":"제주", "2015":8.08, "2016":4.63, "2017":1.66}
+		],
+		keys: {
+			x: "region",
+			value: ["2015", "2016", "2017"]
+		}
+	},
+	axis: {
+		x: {
+			type: 'category'
+		}
+	}
+});
+
+//show/hidden
+document.getElementById("chkShow").onchange = function() {
+	chart.tooltip({show:this.checked}).render();
+};
+//grouped
+document.getElementById("chkGrouped").onchange = function() {
+	chart.tooltip({grouped:this.checked}).render();
+};
+
+</script>

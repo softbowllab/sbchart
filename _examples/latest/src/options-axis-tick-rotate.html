@@ -4,25 +4,29 @@ date:   2018-06-18
 categories: ["latest","options"]
 order: 335
 ---
-<p>x,y 축의 tick 문자열을 지정된 각도로 회전합니다.<br>
-x 축은 가로 차트인 경우 <code>axis.rotated === fales</code>, y 축은 세로차트 <code>axis.rotated === true</code>인 경우만 회전이 허용됩니다.</p>
+<style>.w40{width:40px;}</style>
+<p>Tick을 지정된 각도로 회전하거나 멀티라인으로 표시합니다.<br>
+X 축은 가로 차트에서 <code>axis.rotated == fales</code>인 경우만,<br>
+Y 축은 세로 차트에서 <code>axis.rotated == true</code>인 경우만 회전이 허용됩니다.</p>
 <hr>
 <h4>Example</h4>
 <div class="row">
-    <div class="col-sm-2"><mark>X축 Tick</mark></div>
-    <div class="col-sm-2 text-right">회전(rotate)</div>
-    <div class="col-sm-1"><input type="text" id="txtRotateX" class="w-100"></div>
-    <div class="col-sm-7"><code>axis.x.tick.rotate=45</code></div>
+    <div class="col-sm-12">
+		<label>
+			<mark>X축 Tick 회전(rotate)</mark>
+			<input type="text" id="txtRotateX" class="w40">
+		</label>
+		<code>axis.x.tick.rotate=45</code>
+	</div>
 </div>
 <div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-2 text-right">멀티라인(multiline)</div>
-    <div class="col-sm-1">
-        <label>
-            <input type="checkbox" id="chkMultiline">
-        </label>
-    </div>
-    <div class="col-sm-7"><code>axis.x.tick.multiline=false</code></div>
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkMultiline">
+			<mark>멀티라인(multiline)</mark>
+		</label>
+		<code>axis.x.tick.multiline=false</code>
+	</div>
 </div>
 <p id="chartWrap1" class="chartWrap"></p>
 <!-- Code -->

@@ -4,16 +4,17 @@ date:   2018-05-17
 categories: ["latest","options"]
 order: 311
 ---
-<p>카테고리 기능을 사용하여  x축 tick에 display 될 문자열을 지정 할 수 있습니다.</p>
+<p>카테고리 기능을 사용하여  X축 Tick에 표시될 문자열을 지정 합니다.</p>
 <hr>
 <h4>Example</h4>
 <div class="row">
-    <div class="col-sm-12">
-        <label>
-            <input type="checkbox" id="chkEx01" checked>
-            <mark>카테고리</mark><code>axis.x.type="category"</code>, <code>axis.x.categories=["전국","서울",...]</code>
-        </label>
-    </div>
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkEx01" checked>
+			<mark>카테고리</mark>
+		</label>
+		<code>axis.x.type="category"</code>, <code>axis.x.categories=["전국","서울",...]</code>
+	</div>
 </div>
 <p  id="chartWrap"></p>
 <!-- Code -->
@@ -55,7 +56,7 @@ var chart = sb.chart.render("#chartWrap", {
     }
 });
 
-//serise
+//categories
 document.getElementById("chkEx01").onchange = function() {
     if (this.checked) {
         chart.axis({

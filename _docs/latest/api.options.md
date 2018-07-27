@@ -75,6 +75,12 @@ chart.legend({
 var opt = chart.legend().show;
 ```
 
+### tooltip()
+
+툴팁의 표시여부, 형태에 대한 옵션을 지정하거나 조회합니다.
+`#2.0.0`
+
+
 ### axis()
 
 x,y 축 관련 옵션을 지정하거나 조회합니다.

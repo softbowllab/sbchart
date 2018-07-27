@@ -1,0 +1,126 @@
+---
+title:  Label Format
+date:   2018-06-26
+categories: ["latest","options"]
+order: 305
+---
+<style>.w40 {width:40px;}</style>
+<p>라벨을 보이거나 숨기고 라벨 문자열의 커스트마이징(포멧)이 가능합니다.<br>
+원 계열(원, 도넛) 차트의 라벨은 해당되지 않습니다. 원 계열 차트는 각각 <code>extend.pie.label</code>, <code>extend.donut.label</code>옵션을 참조하세요</p>
+<hr>
+<h4>Example</h4>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkFormat" checked><mark>포멧적용</mark>
+			<code>data.labels.format = function(value, id, index) { return value.toFixed(3);}</code>
+		</label>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<mark>위치조정</mark>
+			X : <input type="text" id="txtX" class="w40" value="0">,
+			Y : <input type="text" id="txtY" class="w40" value="-10">
+			<code>data.labels.position = {x: 0, y: -10}</code>
+		</label>
+	</div>
+</div>
+	
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var chart = sb.chart.render("#chartWrap", {
+    data : {
+        type: "bar",
+        columns: [
+            ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
+        ],
+        labels: {
+            format: function(value, id, index) {
+                return value.toFixed(3);
+            },
+            position: {
+                x: 0,
+                y: -10
+            }
+        }
+    }
+});
+// format
+document.getElementById("chkFormat").onchange = function() {
+    if(this.checked) {
+        chart.data({
+            labels: {
+                format: function(value, id, index) {
+                    return value.toFixed(3);
+                },
+                position: {
+                    x: parseInt(document.getElementById("txtX").value),
+                    y: parseInt(document.getElementById("txtY").value)
+                }
+            }
+        }).render();
+    } else {
+        delete chart.data().labels; // delete labels
+        chart.render();
+    }
+};
+// x
+document.getElementById("txtX").onchange = function() {
+    document.getElementById("chkFormat").onchange();
+};
+// y
+document.getElementById("txtY").onchange = function() {
+    document.getElementById("chkFormat").onchange();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data : {
+		type: "bar",
+		columns: [
+			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
+		],
+		labels: {
+			format: function(value, id, index) {
+				return value.toFixed(3);
+			},
+			position: {
+				x: 0,
+				y: -10
+			}
+		}
+	}
+});
+// format
+document.getElementById("chkFormat").onchange = function() {
+	if(this.checked) {
+		chart.data({
+			labels: {
+				format: function(value, id, index) {
+					return value.toFixed(3);
+				},
+				position: {
+					x: parseInt(document.getElementById("txtX").value),
+					y: parseInt(document.getElementById("txtY").value)
+				}
+			}
+		}).render();
+	} else {
+		delete chart.data().labels;	// delete labels
+		chart.render();
+	}
+};
+// x
+document.getElementById("txtX").onchange = function() {
+	document.getElementById("chkFormat").onchange();
+};
+// y
+document.getElementById("txtY").onchange = function() {
+	document.getElementById("chkFormat").onchange();
+};
+</script>

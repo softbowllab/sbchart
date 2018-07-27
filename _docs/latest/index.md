@@ -62,6 +62,16 @@ Grid 설정 옵션 입니다.
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
 
+### tooltip
+
+툴팁 표시 여부 및 그룹핑 등에 대한 옵션입니다.
+
+{% assign cate = "tooltip" %}
+{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
+{% for item in pages %}
+* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
+{% endfor %}
+
 
 ### axis
 

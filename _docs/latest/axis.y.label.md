@@ -46,9 +46,8 @@ Y축 라벨을 지정합니다.
 
 * Type : string
 
-* Example
-
-  ```javascript
+* Format
+```javascript
 axis: {
     y : {
         label:  {
@@ -83,9 +82,8 @@ Y축 라벨의 위치를 지정합니다.
 
 * Default : "inner-top"
 
-* Example
-
-  ```javascript
+* Format
+```javascript
 axis: {
     y : {
         label:  {

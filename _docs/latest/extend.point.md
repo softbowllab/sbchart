@@ -8,7 +8,7 @@ order: 1
 ## extend.point
 ---
 
-포인트에 대한 확장 옵션를 지정합니다.
+점(포인트)에 대한 확장 옵션를 지정합니다.
 `#2.0.0`
 
 * Type : object
@@ -17,7 +17,8 @@ order: 1
 ```javascript
 extend: {
     point: {
-        show: true
+        show: true,
+        r: 2.5
     }
 }
 ```
@@ -30,3 +31,13 @@ extend: {
 * Type : boolean
 
 * Default : true
+
+
+### extend.point.r
+
+각 점의 반지름값을 지정합니다.
+`#2.0.0`
+
+* Type : number
+
+* Default : 2.5

@@ -2,7 +2,7 @@
 title:  data.type
 date:   2018-05-14
 categories: ["latest","data"]
-order: 11
+order: 5
 ---
 
 ## data.type

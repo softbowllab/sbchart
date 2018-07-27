@@ -1,36 +1,36 @@
-.sb-series-arc text {
+.sbchart-series-arc text {
   fill: #fff;
   font-size: 11px; }
 
-.sb-grid line {
+.sbchart-grid line {
   stroke: #aaa; }
 
-.sb-grid-x, .sb-grid-y {
+.sbchart-grid-x, .sbchart-grid-y {
   stroke-opacity: 0.3; }
 
-.sb-legend-background {
+.sbchart-legend-background {
   opacity: .75;
   fill: #fff;
   stroke: #d3d3d3;
   stroke-width: 1; }
 
-.sb-legend-item {
+.sbchart-legend-item {
   font-size: 10px; }
 
-.sb-title {
+.sbchart-title {
   font: 16px sans-serif; }
 
-.sb-tooltip {
+.sbchart-tooltip {
   font-size: 12px;
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   width: 170px; }
 
-.sb-tooltip.show {
+.sbchart-tooltip.show {
   display: block; }
 
-.sb-tooltip p.sb-tooltip-title {
+.sbchart-tooltip p.sbchart-tooltip-title {
   padding: 7px 15px;
   color: #fff;
   border-bottom: 1px solid #333;
@@ -38,27 +38,27 @@
   font-weight: bold;
   margin: 0; }
 
-.sb-tooltip ul.sb-tooltip-cont {
+.sbchart-tooltip ul.sbchart-tooltip-cont {
   list-style: none;
   padding: 15px;
   color: #fff;
   border-radius: 0 0 5px 5px;
   margin: 0; }
 
-.sb-tooltip ul.sb-tooltip-cont li span {
+.sbchart-tooltip ul.sbchart-tooltip-cont li span {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-right: 10px;
   content: ''; }
 
-.sb-tooltip ul.sb-tooltip-cont li em {
+.sbchart-tooltip ul.sbchart-tooltip-cont li em {
   font-style: normal;
   float: right; }
 
-.sb-tooltip ul.sb-tooltip-cont li svg {
+.sbchart-tooltip ul.sbchart-tooltip-cont li svg {
   width: 10px;
   height: 10px; }
 
-.sb-labels {
+.sbchart-labels {
   font-size: 10px; }

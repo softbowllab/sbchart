@@ -8,16 +8,16 @@ order: 5
 ## axis.x.padding
 ---
 
-x축의 첫번째 tick 과 마지막 n번째 tick의 좌우 padding 값을 정의합니다.
+X축의 첫번째 Tick 과 마지막 n번째 Tick의 좌우 padding 값을 정의합니다.
 
-단위는 1개 tick의 너비입니다.
+단위는 1개 Tick의 너비입니다.
 `#2.0.0`
 
 * Type : number/object
 
-* number형태의 값을 지정할 경우는 첫번째 tick 과 마지막 tick 모두 동일하게 반영됩니다.
+* number형태의 값을 지정할 경우는 첫번째 Tick 과 마지막 Tick 모두 동일하게 반영됩니다.
 
-
+* Format
 ```javascript
 axis: {
     x : {
@@ -28,14 +28,13 @@ axis: {
 
 ## axis.x.padding.left
 
-x축 첫번째 tick의 좌측 padding 값을 정의합니다.
+X축 첫번째 Tick의 좌측 padding 값을 정의합니다.
 `#2.0.0`
 
 * Type : number
 
-* Example
-
-  ```javascript
+* Format
+```javascript
 axis: {
     x : {
         padding:  {
@@ -47,14 +46,13 @@ axis: {
 
 ## axis.x.padding.right
 
-x축 마지막 tick의 우측 padding 값을 정의합니다.
+X축 마지막 Tick의 우측 padding 값을 정의합니다.
 `#2.0.0`
 
 * Type : number
 
-* Example
-
-  ```javascript
+* Format
+```javascript
 axis: {
     x : {
         padding:  {

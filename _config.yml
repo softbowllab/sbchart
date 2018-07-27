@@ -42,10 +42,11 @@ release:
   latest: 
     - {name: "global"}
     - {name: "data"}
+    - {name: "axis"}
     - {name: "grid"}
     - {name: "title"}
     - {name: "legend"}
-    - {name: "axis"}
+    - {name: "tooltip"}
     - {name: "extend"}
     - {name: "API"}
     - {name: "CLASS"}

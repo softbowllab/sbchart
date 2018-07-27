@@ -8,16 +8,16 @@ order: 4
 ## axis.x.label
 ---
 
-x축 라벨과 위치를 지정합니다.
+X축 라벨과 위치를 지정합니다.
 
 문자열 또는 Object 타입으로 지정할 수 있습니다. 문자열(string)로 지정한 경우는 해당문자열이 라벨이 됩니다.
 
-Object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다.
+object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다.
 `#2.0.0`
 
 * Type : string/object
 
-* Example
+* Format
 
   ```javascript
 axis: {
@@ -41,12 +41,12 @@ axis: {
 
 ## axis.x.label.text
 
-x축 라벨을 지정합니다.
+X축 라벨을 지정합니다.
 `#2.0.0`
 
 * Type : string
 
-* Example
+* Format
 
   ```javascript
 axis: {
@@ -60,7 +60,7 @@ axis: {
 
 ## axis.x.label.position
 
-x축 라벨의 위치를 지정합니다.
+X축 라벨의 위치를 지정합니다.
 `#2.0.0`
 
 * Type : string
@@ -83,7 +83,7 @@ x축 라벨의 위치를 지정합니다.
   * "outer-middle": 축 바깥쪽 중간
   * "outer-bottom": 축 바깥쪽 하단
 
-* Example
+* Format
 
   ```javascript
 axis: {
