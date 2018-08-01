@@ -23,7 +23,7 @@ global: {
 }
 ```
 
-### global.siz.width 
+### global.size.width 
 
 차트 너비를 지정 지정합니다. `#2.0.0`
 
@@ -31,7 +31,7 @@ global: {
 
 * Default : 0
 
-### global.siz.height
+### global.size.height
 
 차트 높이를 지정 지정합니다. `#2.0.0`
 
