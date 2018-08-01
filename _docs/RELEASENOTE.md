@@ -5,7 +5,7 @@ layout: default.md
 permalink: /:collection/releasenote:output_ext
 ---
 
-# RELEASE NOTE
+# Release Note
 ---
 
 ## 2.0.0 
