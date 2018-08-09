@@ -46,7 +46,7 @@ legend: {
 
 	* bottom: `Default` 아래에 위치
 	* right: 우측에 위치
-	* inset: 차트내에 위치, 사항한 사항은 [legend.inset](/legend/legend.inset.html) 참조
+	* inset: 차트내에 위치, 사항한 사항은 [legend.inset](./legend.inset.html) 참조
 
 ### legend.padding
 
