@@ -92,3 +92,23 @@ x,y 축 관련 옵션입니다.
 {% for item in pages %}
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
+
+### API
+
+제공되는 함수들입니다.
+
+{% assign cate = "API" %}
+{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
+{% for item in pages %}
+* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
+{% endfor %}
+
+### CLASS
+
+CSS 클래스 정의입니다.
+
+{% assign cate = "CLASS" %}
+{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
+{% for item in pages %}
+* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
+{% endfor %}
