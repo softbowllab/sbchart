@@ -62,18 +62,17 @@ document.getElementById("txtTileW").value = chart.legend().item.tile.width;
 document.getElementById("txtTileH").value = chart.legend().item.tile.height;
 
 document.getElementById("txtTileW").onchange = function() {
-    chart.legend({
-        item: {
-            tile: {width:parseInt(this.value)}
-        }
-    }).render();
+	chart.legend({
+		item: {
+			tile: {width:this.value}
+		}
+	}).render();
 };
 document.getElementById("txtTileH").onchange = function() {
-    chart.legend({
-        item: {
-            tile: {height:parseInt(this.value)}
-        }
-    }).render();
+	chart.legend({
+		item: {
+			tile: {height:this.value}
+		}
+	}).render();
 };
-
 </script>

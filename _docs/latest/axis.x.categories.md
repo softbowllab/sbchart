@@ -6,12 +6,14 @@ order: 6
 ---
 
 ## axis.x.categories
+
+_`#2.0.0`_
+
 ---
 
 X축 카테고리를 지정합니다.
 
 `axis.x.type="category"` 로 지정되어 있어야 합니다.
-`#2.0.0`
 
 * Type : string[]
 

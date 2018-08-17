@@ -6,9 +6,12 @@ order: 2
 ---
 
 ## global.padding
+
+_`#2.0.0`_
+
 ---
 
-차트의 내부 컨텐츠의 padding을 지정합니다. `#2.0.0`
+차트의 내부 컨텐츠의 padding을 지정합니다.
 
 * Type : object
 

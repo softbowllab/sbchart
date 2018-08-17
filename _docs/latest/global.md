@@ -6,17 +6,20 @@ order: 0
 ---
 
 ## global
+
+_`#2.0.0`_
+
 ---
 
 차트 공통 옵션을 설정합니다.
-`#2.0.0`
 
 * Type : object
 
 ### global.svg.classname
 
+_`#2.0.0`_
+
 ROOT 엘리먼트의 CSS 클래스명을 정의합니다.
-`#2.0.0`
 
 * Type : string
 

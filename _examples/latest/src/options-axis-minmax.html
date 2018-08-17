@@ -85,7 +85,7 @@ document.getElementById("txtXMin").onchange = function() {
 };
 document.getElementById("txtXMax").onchange = function() {
     chart.axis({
-        x: {max: parseInt(this.value)}
+        x: {max: this.value}
     }).render();
 };
 document.getElementById("txtYMin").onchange = function() {
@@ -95,7 +95,7 @@ document.getElementById("txtYMin").onchange = function() {
 };
 document.getElementById("txtYMax").onchange = function() {
     chart.axis({
-        y: {max: parseInt(this.value)}
+        y: {max: this.value}
     }).render();
 };
 

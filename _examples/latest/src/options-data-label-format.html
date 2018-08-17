@@ -58,8 +58,8 @@ document.getElementById("chkFormat").onchange = function() {
                     return value.toFixed(3);
                 },
                 position: {
-                    x: parseInt(document.getElementById("txtX").value),
-                    y: parseInt(document.getElementById("txtY").value)
+                    x: document.getElementById("txtX").value,
+                    y: document.getElementById("txtY").value
                 }
             }
         }).render();
@@ -105,8 +105,8 @@ document.getElementById("chkFormat").onchange = function() {
 					return value.toFixed(3);
 				},
 				position: {
-					x: parseInt(document.getElementById("txtX").value),
-					y: parseInt(document.getElementById("txtY").value)
+					x: document.getElementById("txtX").value,
+					y: document.getElementById("txtY").value
 				}
 			}
 		}).render();

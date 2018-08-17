@@ -6,10 +6,12 @@ order: 1
 ---
 
 ## extend.point
+
+_`#2.0.0`_
+
 ---
 
 점(포인트)에 대한 확장 옵션를 지정합니다.
-`#2.0.0`
 
 * Type : object
 
@@ -25,8 +27,9 @@ extend: {
 
 ### extend.point.show
 
+_`#2.0.0`_
+
 각 점을 줄에 표시할지 여부 지정합니다.
-`#2.0.0`
 
 * Type : boolean
 
@@ -35,8 +38,9 @@ extend: {
 
 ### extend.point.r
 
+_`#2.0.0`_
+
 각 점의 반지름값을 지정합니다.
-`#2.0.0`
 
 * Type : number
 

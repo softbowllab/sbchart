@@ -6,12 +6,14 @@ order: 5
 ---
 
 ## axis.x.padding
+
+_`#2.0.0`_
+
 ---
 
 X축의 첫번째 Tick 과 마지막 n번째 Tick의 좌우 padding 값을 정의합니다.
 
 단위는 1개 Tick의 너비입니다.
-`#2.0.0`
 
 * Type : number/object
 
@@ -28,8 +30,9 @@ axis: {
 
 ## axis.x.padding.left
 
+_`#2.0.0`_
+
 X축 첫번째 Tick의 좌측 padding 값을 정의합니다.
-`#2.0.0`
 
 * Type : number
 
@@ -46,8 +49,9 @@ axis: {
 
 ## axis.x.padding.right
 
+_`#2.0.0`_
+
 X축 마지막 Tick의 우측 padding 값을 정의합니다.
-`#2.0.0`
 
 * Type : number
 

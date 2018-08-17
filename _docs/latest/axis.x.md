@@ -6,12 +6,14 @@ order: 2
 ---
 
 ## axis.x
+
+_`#2.0.0`_
+
 ---
 
 X축관련 값들을 설정합니다.
 
 X축이 없는 원 계열 차트(원, 도넛) 차트는 해당되지 않습니다.
-`#2.0.0`
 
 * Type : object
 
@@ -31,8 +33,9 @@ axis: {
 
 ### axis.x.show
 
+_`#2.0.0`_
+
 X축 show/hidden 을 지정합니다.
-`#2.0.0`
 
 * Type : boolean
 
@@ -40,6 +43,8 @@ X축 show/hidden 을 지정합니다.
 
 
 ### axis.x.type
+
+_`#2.0.0`_
 
 X축의 형태를 지정합니다.
 
@@ -54,6 +59,8 @@ X축의 형태를 지정합니다.
 
 ### axis.x.min
 
+_`#2.0.0`_
+
 X축 값 범위의 최소값을 지정합니다.
 
 axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
@@ -63,6 +70,8 @@ axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 ### axis.x.max
 
+_`#2.0.0`_
+
 X축 값 범위의 최대값을 지정합니다.
 
 axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
@@ -71,11 +80,15 @@ axis.x.type = "timeseries" 인 경우는 동작하지 않는다.
 
 ### axis.x.height
 
+_`#2.0.0`_
+
 X축 영역의 높이를 강제 지정합니다.
 
 * Type : number
 
 ### axis.x.localtime
+
+_`#2.0.0`_
 
 X축 시간대를 처리하는 방법으로 true 인 경우 x 값을 localtime으로 처리, false이면 내부적으로 UTC로 변환합니다.
 

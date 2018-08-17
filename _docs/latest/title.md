@@ -6,9 +6,12 @@ order: 999
 ---
 
 ## title 
+
+_`#2.0.0`_
+
 ---
 
-차트의 제목, 위치 등을 지정합니다. `#2.0.0`
+차트의 제목, 위치 등을 지정합니다.
 
 
 * Type : object
@@ -25,14 +28,18 @@ title: {
 
 ### title.text
 
-제목을 지정합니다. 공백일 경우 제목이 차트에 표현되지 않습니다. `#2.0.0`
+_`#2.0.0`_
+
+제목을 지정합니다. 공백일 경우 제목이 차트에 표현되지 않습니다.
 
 * Type : string
 
 
 ### title.position
 
-제목 위치를 지정합니다 `#2.0.0`
+_`#2.0.0`_
+
+제목 위치를 지정합니다 
 
 
 * Type : string
@@ -49,10 +56,11 @@ title: {
 
 ### title.padding
 
+_`#2.0.0`_
+
 제목의 padding을 지정합니다.
 
 title.position="top-right" 인 경우는 padding.left 값을, title.position="top-left" 인 경우는 padding.right 값을 사용하지 않습니다.
- `#2.0.0`
 
 * Type : object
 

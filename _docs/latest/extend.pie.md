@@ -6,17 +6,21 @@ order: 4
 ---
 
 ## extend.pie
+
+_`#2.0.0`_
+
 ---
 
-원차트에 대한 확장 옵션를 지정합니다. `#2.0.0`
+원차트에 대한 확장 옵션를 지정합니다.
 
 * Type : object
 
 
 ### extend.pie.label.show
 
+_`#2.0.0`_
+
 라벨 표시 여부를 지정합니다.
-`#2.0.0`
 
 * Type : boolean
 
@@ -36,8 +40,9 @@ extend: {
 
 ### extend.pie.label.format
 
+_`#2.0.0`_
+
 라벨을 커스트마이징 합니다.
-`#2.0.0`
 
 * Type : function
 ```javascript
@@ -63,8 +68,9 @@ extend: {
 
 ### extend.pie.padding
 
+_`#2.0.0`_
+
 각 영역(원호) 사이의 공간을 지정합니다.
-`#2.0.0`
 
 * Type : number
 

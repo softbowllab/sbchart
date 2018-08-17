@@ -6,9 +6,12 @@ order: 1
 ---
 
 ## legend
+
+_`#2.0.0`_
+
 ---
 
-차트의 범례 위치, 형태 등을 지정합니다. `#2.0.0`
+차트의 범례 위치, 형태 등을 지정합니다.
 
 * Type : object
 
@@ -28,7 +31,9 @@ legend: {
 
 ### legend.show
 
-범례의 show/hidden 여부를 지정합니다. `#2.0.0`
+_`#2.0.0`_
+
+범례의 show/hidden 여부를 지정합니다.
 
 * Type : boolean
 
@@ -36,7 +41,9 @@ legend: {
 
 ### legend.position
 
-범례의 위치를 지정합니다. `#2.0.0`
+_`#2.0.0`_
+
+범례의 위치를 지정합니다.
 
 * Type : string
 
@@ -50,7 +57,9 @@ legend: {
 
 ### legend.padding
 
-각 범례 아이템 박스의 padding 을 지정합니다. `#2.0.0`
+_`#2.0.0`_
+
+각 범례 아이템 박스의 padding 을 지정합니다.
 
 * Type : number
 

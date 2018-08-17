@@ -6,16 +6,20 @@ order: 5
 ---
 
 ## extend.donut
+
+_`#2.0.0`_
+
 ---
 
-도넛 차트에 대한 확장 옵션를 지정합니다. `#2.0.0`
+도넛 차트에 대한 확장 옵션를 지정합니다.
 
 * Type : object
 
 ### extend.donut.label.show
 
+_`#2.0.0`_
+
 라벨 표시 여부를 지정합니다.
-`#2.0.0`
 
 * Type : boolean
 
@@ -35,8 +39,9 @@ extend: {
 
 ### extend.donut.label.format
 
+_`#2.0.0`_
+
 라벨을 커스트마이징 합니다.
-`#2.0.0`
 
 * Type : function
 ```javascript
@@ -62,10 +67,11 @@ extend: {
 
 ### extend.donut.innerRadius
 
+_`#2.0.0`_
+
 안쪽 반지름을 지정합니다.
 
 지정하지 않았을 경우는 원의크기에 따라 자동 계산됩니다.
-`#2.0.0`
 
 * Type : number
 
@@ -81,8 +87,9 @@ extend: {
 
 ### extend.donut.padding
 
+_`#2.0.0`_
+
 각 영역(원호) 사이의 공간을 지정합니다.
-`#2.0.0`
 
 * Type : number
 

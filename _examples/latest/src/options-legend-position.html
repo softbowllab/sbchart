@@ -136,15 +136,15 @@ document.getElementById("cboAnchor").onchange = function() {
     chart.render();
 };
 document.getElementById("txtX").onchange = function() {
-    chart.legend().inset.x = parseInt(this.value);
+    chart.legend().inset.x = this.value;
     chart.render();
 };
 document.getElementById("txtY").onchange = function() {
-    chart.legend().inset.y = parseInt(this.value);
+    chart.legend().inset.y = this.value;
     chart.render();
 };
 document.getElementById("txtStep").onchange = function() {
-    chart.legend().inset.step = parseInt(this.value);
+    chart.legend().inset.step = this.value;
     chart.render();
 };
 

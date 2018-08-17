@@ -109,7 +109,7 @@ document.getElementById("cboPostion").onchange = function() {
 };
 document.getElementById("txtTop").onchange = function() {
     chart.title({
-        padding: {top: parseInt(this.value)}
+        padding: {top: this.value}
     }).render();
 };
 document.getElementById("txtRight").onchange = function() {
@@ -119,7 +119,7 @@ document.getElementById("txtRight").onchange = function() {
 };
 document.getElementById("txtBottom").onchange = function() {
     chart.title({
-        padding: {bottom: parseInt(this.value)}
+        padding: {bottom: this.value}
     }).render();
 };
 document.getElementById("txtLeft").onchange = function() {

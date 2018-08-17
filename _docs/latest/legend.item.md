@@ -6,9 +6,12 @@ order: 2
 ---
 
 ## legend.item
+
+_`#2.0.0`_
+
 ---
 
-각 범례 세부 사항을  정의합니다. `#2.0.0`
+각 범례 세부 사항을  정의합니다.
 
 * Type : object
 
@@ -26,7 +29,9 @@ legend: {
 
 ### legend.item.tile.height
 
-각 범례의 Tile 박스의 높이를 지정합니다. `#2.0.0`
+_`#2.0.0`_
+
+각 범례의 Tile 박스의 높이를 지정합니다.
 
 * Type : number
 
@@ -35,7 +40,9 @@ legend: {
 
 ### legend.item.tile.width
 
-각 범례의 Tile 박스의 너비를 지정합니다. `#2.0.0`
+_`#2.0.0`_
+
+각 범례의 Tile 박스의 너비를 지정합니다.
 
 * Type : number
 
