@@ -85,6 +85,8 @@ _`#2.0.0`_
 
 Y축 Tick을 주어진 각도로 회전합니다.
 
+axis.rotated == true 일 때(가로 그래프)만 허용합니다.
+
 * Type: number
 
 * Default: 0

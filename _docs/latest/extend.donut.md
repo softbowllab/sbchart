@@ -15,6 +15,45 @@ _`#2.0.0`_
 
 * Type : object
 
+* Format
+```javascript
+extend: {
+    donut: {
+		padding: 0,
+        label: {
+            show: true,
+            format: function(value, ratio, id) {
+                return (ratio * 100).toFixed(3) + "%";
+            }
+        },
+        innerRadius: 0,
+        padding: 0
+    }
+}
+```
+
+### extend.donut.innerRadius
+
+_`#2.0.0`_
+
+안쪽 반지름을 지정합니다.
+
+지정하지 않았을 경우는 원의크기에 따라 자동 계산됩니다.
+
+* Type : number
+
+
+### extend.donut.padding
+
+_`#2.0.0`_
+
+각 영역(원호) 사이의 공간을 지정합니다.
+
+* Type : number
+
+* Default : 0
+
+
 ### extend.donut.label.show
 
 _`#2.0.0`_
@@ -24,17 +63,6 @@ _`#2.0.0`_
 * Type : boolean
 
 * Default : true
-
-* Format
-```javascript
-extend: {
-    donut: {
-        label: {
-            show: true
-        }
-    }
-}
-```
 
 
 ### extend.donut.label.format
@@ -65,41 +93,4 @@ extend: {
   * id : 범례 ID
 
 
-### extend.donut.innerRadius
 
-_`#2.0.0`_
-
-안쪽 반지름을 지정합니다.
-
-지정하지 않았을 경우는 원의크기에 따라 자동 계산됩니다.
-
-* Type : number
-
-* Format
-```javascript
-extend: {
-    donut: {
-        innerRadius: 0
-    }
-}
-```
-
-
-### extend.donut.padding
-
-_`#2.0.0`_
-
-각 영역(원호) 사이의 공간을 지정합니다.
-
-* Type : number
-
-* Default : 0
-
-* Format
-```javascript
-extend: {
-    donut: {
-        padding: 0
-    }
-}
-```

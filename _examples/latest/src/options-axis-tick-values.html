@@ -1,0 +1,96 @@
+---
+title:  Axis Tick Values
+date:   2018-08-16
+categories: ["latest","options"]
+order: 336
+---
+<p>Y축의 tick을 커스트마이징 하거나 표시될 tick을 선택 할 수 있습니다.</p>
+<hr>
+<h4>Example</h4>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkValuesX" checked>
+			<mark>X축 표시될 Tick 지정</mark>
+		</label>
+		<code>axis.x.tick.values = [0, 4, 6, 8]</code>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkValuesY" checked>
+			<mark>Y축 표시될 Tick 지정</mark>
+		</label>
+		<code>axis.y.tick.values = [7000000, 8000000, 9000000]</code>
+	</div>
+</div>
+<p  id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var chart = sb.chart.render("#chartWrap", {
+    data : {
+        type: "bar",
+        columns: [
+            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+        ]
+    },
+    axis: {
+        x: {
+            tick: {
+                values: [0, 4, 6, 8]
+            }
+        },
+        y: {
+            tick: {
+                values: [7000000, 8000000, 9000000]
+            }
+        }
+    }
+});
+//values-x
+document.getElementById("chkValuesX").onchange = function() {
+    chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8]: null;
+    chart.render();
+};
+//values-y
+document.getElementById("chkValuesY").onchange = function() {
+    chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+    chart.render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data : {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	},
+	axis: {
+		x: {
+			tick: {
+				values: [0, 4, 6, 8]
+			}
+		},
+		y: {
+			tick: {
+				values: [7000000, 8000000, 9000000]
+			}
+		}
+	}
+});
+//values-x
+document.getElementById("chkValuesX").onchange = function() {
+	chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8]: null;
+	chart.render();
+};
+//values-y
+document.getElementById("chkValuesY").onchange = function() {
+	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+	chart.render();
+};
+</script>

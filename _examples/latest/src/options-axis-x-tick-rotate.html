@@ -1,20 +1,19 @@
 ---
-title:  Axis Tick Rotate
-date:   2018-06-18
+title:  Axis-X Tick Rotate
+date:   2018-08-16
 categories: ["latest","options"]
-order: 335
+order: 338
 ---
 <style>.w40{width:40px;}</style>
-<p>Tick을 지정된 각도로 회전하거나 멀티라인으로 표시합니다.<br>
-X 축은 가로 차트에서 <code>axis.rotated == fales</code>인 경우만,<br>
-Y 축은 세로 차트에서 <code>axis.rotated == true</code>인 경우만 회전이 허용됩니다.</p>
+<p>X축의 Tick을 지정된 각도로 회전하거나 멀티라인으로 표시합니다.<br>
+가로 차트<code>axis.rotated == fales</code>인 경우만 회전이 허용됩니다.<br></p>
 <hr>
 <h4>Example</h4>
 <div class="row">
     <div class="col-sm-12">
 		<label>
-			<mark>X축 Tick 회전(rotate)</mark>
-			<input type="text" id="txtRotateX" class="w40">
+			<mark>Tick 회전</mark>
+			<input type="text" id="txtRotateX" class="w40" value="45">
 		</label>
 		<code>axis.x.tick.rotate=45</code>
 	</div>
@@ -22,10 +21,10 @@ Y 축은 세로 차트에서 <code>axis.rotated == true</code>인 경우만 회�
 <div class="row">
 	<div class="col-sm-12">
 		<label>
-			<input type="checkbox" id="chkMultiline">
-			<mark>멀티라인(multiline)</mark>
+			<input type="checkbox" id="chkMultiline" checked>
+			<mark>멀티라인</mark>
 		</label>
-		<code>axis.x.tick.multiline=false</code>
+		<code>axis.x.tick.multiline=true/false</code>
 	</div>
 </div>
 <p id="chartWrap1" class="chartWrap"></p>
@@ -45,7 +44,7 @@ var chart1 = sb.chart.render("#chartWrap1", {
             categories: ["전국","서울특별시","부산광역시","대구광역시","인천광역시","광주광역시","대전광역시","울산광역시","세종특별자치시","경기도","강원도","충청북도","충청남도","전라북도","전라남도","경상북도","경상남도","제주특별자치도"],
             tick: {
                 rotate: 45,
-                multiline: false
+                multiline: true
             }
         }
     }
@@ -54,7 +53,7 @@ var chart1 = sb.chart.render("#chartWrap1", {
 <!-- Script -->
 <!-- Script -->
 <script>
-var chart1 = sb.chart.render("#chartWrap1", {
+var chart = sb.chart.render("#chartWrap1", {
 	data : {
 		type: "bar",
 		columns: [
@@ -67,45 +66,25 @@ var chart1 = sb.chart.render("#chartWrap1", {
 			categories: ["전국","서울특별시","부산광역시","대구광역시","인천광역시","광주광역시","대전광역시","울산광역시","세종특별자치시","경기도","강원도","충청북도","충청남도","전라북도","전라남도","경상북도","경상남도","제주특별자치도"],
 			tick: {
 				rotate: 45,
-				multiline: false
+				multiline: true
 			}
 		}
 	}
 });
-document.getElementById("txtRotateX").value = chart1.axis().x.tick.rotate;
-document.getElementById("chkMultiline").value = chart1.axis().y.tick.multiline;
-
+//rotate
 document.getElementById("txtRotateX").onchange = function() {
-	chart1.axis({
+	chart.axis({
 		x: {
 			tick: { rotate: this.value }
 		}
 	}).render();
 };
+//multiline
 document.getElementById("chkMultiline").onchange = function() {
-	chart1.axis({
+	chart.axis({
 		x: {
 			tick: { multiline: this.checked }
 		}
 	}).render();
 };
-
-
-
-// var chart2 = sb.chart.render("#chartWrap2", {
-//  data : {
-//      type: "bar",
-//      columns: [
-//          ["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
-//      ]
-//  },
-//  axis: {
-//      rotated: true,
-//      y: {
-//          tick: {
-//              rotate: 45
-//          }
-//      }
-//  }
-// });
 </script>

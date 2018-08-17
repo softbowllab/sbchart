@@ -30,6 +30,26 @@ order: 351
 		<code>tooltip.grouped = true/false</code>
 	</div>
 </div>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkFormat" >
+			<mark>포멧 반영</mark>
+			(툴팁 제목,범레명,값 변경 예제)
+		</label>
+		<code>tooltip.format = {}</code>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<label>
+			<input type="checkbox" id="chkPosition" >
+			<mark>위치 변경</mark>
+			(툴팁 위치를 좌측 상단에 고정 예제)
+		</label>
+		<code>tooltip.position = function(data, element, width, height) {}</code>
+	</div>
+</div>
 	
 <p  id="chartWrap"></p>
 <!-- Code -->
@@ -66,6 +86,40 @@ document.getElementById("chkShow").onchange = function() {
 document.getElementById("chkGrouped").onchange = function() {
     chart.tooltip({grouped:this.checked}).render();
 };
+//format
+document.getElementById("chkFormat").onchange = function() {
+    if(this.checked) {
+        chart.tooltip({
+            format: {
+                title: function(x) {
+                    return "지역:" + chart.data().json[x].region;
+                },
+                name: function(name, ratio, id, index) {
+                    return name + "년";
+                },
+                value: function(value, ratio, id, index) {
+                    return value.toFixed(2) + "%";
+                }
+            }
+        }).render();
+    } else {
+        delete chart.tooltip().format;
+        chart.render();
+    }
+};
+//position
+document.getElementById("chkPosition").onchange = function() {
+    if(this.checked) {
+        chart.tooltip({
+            position: function(data, element, width, height) {
+                return {top:0, left:25};
+            }
+        }).render();
+    } else {
+        delete chart.tooltip().position;
+        chart.render();
+    }
+};
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
@@ -100,6 +154,40 @@ document.getElementById("chkShow").onchange = function() {
 //grouped
 document.getElementById("chkGrouped").onchange = function() {
 	chart.tooltip({grouped:this.checked}).render();
+};
+//format
+document.getElementById("chkFormat").onchange = function() {
+	if(this.checked) {
+		chart.tooltip({
+			format: {
+				title: function(x) {
+					return "지역:" + chart.data().json[x].region;
+				},
+				name: function(name, ratio, id, index) {
+					return name + "년";
+				},
+				value: function(value, ratio, id, index) {
+					return value.toFixed(2) + "%";
+				}
+			}
+		}).render();
+	} else {
+		delete chart.tooltip().format;
+		chart.render();
+	}
+};
+//position
+document.getElementById("chkPosition").onchange = function() {
+	if(this.checked) {
+		chart.tooltip({
+			position: function(data, element, width, height) {
+				return {top:0, left:25};
+			}
+		}).render();
+	} else {
+		delete chart.tooltip().position;
+		chart.render();
+	}
 };
 
 </script>
