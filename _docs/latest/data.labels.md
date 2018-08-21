@@ -86,7 +86,7 @@ data : {
 
   * value : 값
 
-  * id : 범례 ID (키)
+  * id : 범례 아이디
 
   * index : 그룹 Ibdex (번호)
 

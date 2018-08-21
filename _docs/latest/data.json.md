@@ -17,7 +17,7 @@ JSON 배열 형태로 차트 데이터를 지정하는 방식입니다.
 
 **반드시** x축 열과 y축 값으로 쓰일 속성들을 [data.keys](/data/data.keys.html)로 지정 하셔야 합니다.
 
-data.keys.x 에 지정된 JSON 속성이 범례 아이디가 됩니다.
+data.keys.value 에 지정된 값들이 범례 아이디가 됩니다.
 
 * Type : object[]
 
@@ -25,13 +25,16 @@ data.keys.x 에 지정된 JSON 속성이 범례 아이디가 됩니다.
 ```javascript
 data : {
     json: [
-        {name: '2015', seoul: 90, busan: 40, daegu: 50, kwangju: 120, sejong: 80, incheon: 90},
-        {name: '2016', seoul: 120, busan: 160, daegu: 200, kwangju: 160, sejong: 130, incheon: 220},
-        {name: '2017', seoul: 300, busan: 240, daegu: 290, kwangju: 230, sejong: 300, incheon: 320}
+        {"name": "seoul", "2015": 90, "2016": 120, "2017": 300},
+        {"name": "busan", "2015": 40, "2016": 160, "2017": 240},
+        {"name": "daegu", "2015": 50, "2016": 200, "2017": 290},
+        {"name": "kwangju", "2015": 120, "2016": 160, "2017": 230},
+        {"name": "sejong", "2015": 80, "2016": 130, "2017": 300},
+        {"name": "incheon", "2015": 90, "2016": 220, "2017": 320}
     ],
     keys: {
         x: "name",
-        value: ["seoul","busan","daegu","kwangju","sejong","incheon"]
+        value: ["2015","2016","2017"]
     }
 }
 ```

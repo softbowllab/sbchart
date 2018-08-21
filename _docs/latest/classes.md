@@ -31,10 +31,9 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
    ```css
 .sbchart-title { font-size:16px; font-weight:bold; }	/* 타이틀 폰트 사이즈 변경 */
+.sbchart-title { fill:#595959; }	/* 폰트 색 변경 */
+
 ```
-
-
-
 
 ### axis
 
@@ -64,6 +63,7 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
    ```css
 .sbchart-axis-x .tick text {font-size:13px;}	/* x축 tick 폰트 크기 변경 */
+.sbchart-axis-y .tick text {fill:#aaaaaa;}	/* x축 tick 글자 색 변경 */
 .sbchart-axis-x .tick line {display:none;}	/* x축 tick 라인(눈금) 없애기 */
 .sbchart-axis-x .domain {display:none}	/* x축 선 없애기 */
 .sbchart-axis-x .sbchart-axis-x-label {font-size:14px;}	/* x축 라벨 폰트 크기 변경 */
@@ -74,21 +74,22 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * ```.sbchart-legend``` : 범례 최상위. `#2.0.0`
 
-* ```.sbchart-legend .sbchart-legend-background``` : 범례 배경. `#2.0.0`
+* ```.sbchart-legend-background``` : 범례 배경. `#2.0.0`
 
-* ```.sbchart-legend .sbchart-legend-item``` : 범례 아이템. `#2.0.0`
+* ```.sbchart-legend-item``` : 범례 아이템. `#2.0.0`
 
-* ```.sbchart-legend .sbchart-legend-item .sbchart-legend-item-text``` : 범례 텍스트. 
+* ```.sbchart-legend-item-text``` : 범례 텍스트. 
 
-* ```.sbchart-legend .sbchart-legend-item .sbchart-legend-item-tile``` : 범례 Tile. `#2.0.0`
+* ```.sbchart-legend-item-tile``` : 범례 Tile. `#2.0.0`
 
-* ```.sbchart-legend .sbchart-legend-item .sbchart-legend-item-event``` : TODO. `#2.0.0`
+* ```.sbchart-legend-item-event``` : TODO. `#2.0.0`
 
 * 예
 
    ```css
-.sbchart-legend .sbchart-legend-background {stroke-width: 0}	/* 범례 박스 라인 없애기 */
-.sbchart-legend .sbchart-legend-item-text {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
+.sbchart-legend-background {stroke-width: 0}	/* 범례 박스 라인 없애기 */
+.sbchart-legend-background {fill:#f2f2f2;}	/* 범례 배경색 정의 */
+.sbchart-legend-item-text {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
 ```
 
 ### grid
