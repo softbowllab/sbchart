@@ -8,6 +8,20 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
+## 2.0.2 
+`2018.08.22`
+
+#### 버그 수정
+
+* pie, donut 차트에서 label.show가 false일 때 tooltip이 표시되지 않는 현상
+
+#### 기능 개선
+
+* stacked bar 계열 차트의 data.labels 표시 추가
+* d3 Version 업데이트 (v5.5.0)
+* svg 구조 및 class명 변경
+* sbchart.css minify
+
 ## 2.0.1 
 `2018.08.09`
 
