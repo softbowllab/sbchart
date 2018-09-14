@@ -2,12 +2,12 @@
 title:  data.legends
 date:   2018-05-14
 categories: ["latest","data"]
-order: 7
+order: 8
 ---
 
 ## data.legends
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 

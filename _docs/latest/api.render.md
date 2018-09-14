@@ -7,7 +7,7 @@ order: 1
 
 ## SBChart 객체 생성 및 랜더링
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 
@@ -22,7 +22,7 @@ SBChart 객체를 생성 하는 방식은
 
 ### sb.chart.render()
 
-_`#2.0.0`_
+`#2.0.0`
 
 SBChart 객체를 생성하고 랜더링합니다.
 
@@ -53,7 +53,7 @@ var chart = sb.chart.render("#chartWrap",{
 
 ### [SBCHART].render()
 
-_`#2.0.0`_
+`#2.0.0`
 
 이미 생성된 SBChart 객체에 차트를 (다시) 그려주기 위한 함수입니다.
 

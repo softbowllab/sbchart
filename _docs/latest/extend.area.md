@@ -7,7 +7,7 @@ order: 3
 
 ## ~~extend.area~~ 
 
-_`#2.0.0`_ _`deprecated`_
+`#2.0.0` _`deprecated #2.0.3`_
 
 ---
 
@@ -26,7 +26,7 @@ extend: {
 
 ### ~~extend.area.zerobased~~
 
-_`#2.0.0`_ _`deprecated`_
+`#2.0.0` _`deprecated #2.0.3`_ _integrate with `axis.y.zerobased`_
 
 값이 모두 양수이거나 모두 음수인 경우 Y축의 최소값 또는 최대 값이 0으로 설정됩니다.
 

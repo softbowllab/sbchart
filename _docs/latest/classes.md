@@ -7,7 +7,7 @@ order: 0
 
 ## CSS classes
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 
@@ -32,7 +32,6 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
    ```css
 .sbchart-title { font-size:16px; font-weight:bold; }	/* 타이틀 폰트 사이즈 변경 */
 .sbchart-title { fill:#595959; }	/* 폰트 색 변경 */
-
 ```
 
 ### axis
@@ -107,11 +106,11 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 ### tooltip
 
-* ```.sbchart-tooltip``` : TODO `#2.0.0`
+* ```.sbchart-tooltip``` : 툴팁 영역. `#2.0.0`
 
-* ```.sbchart-tooltip-title``` : TODO `#2.0.0`
+* ```.sbchart-tooltip-title``` : 툴팁의 제목 영역. `#2.0.0`
 
-* ```.sbchart-tooltip-cont``` : TODO `#2.0.0`
+* ```.sbchart-tooltip-cont``` : 툴팁의 컨텐츠 영역.  `#2.0.0`
 
 
 ### 기타

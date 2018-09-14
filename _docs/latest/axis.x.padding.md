@@ -7,7 +7,7 @@ order: 5
 
 ## axis.x.padding
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 
@@ -30,7 +30,7 @@ axis: {
 
 ## axis.x.padding.left
 
-_`#2.0.0`_
+`#2.0.0`
 
 X축 첫번째 Tick의 좌측 padding 값을 정의합니다.
 
@@ -49,7 +49,7 @@ axis: {
 
 ## axis.x.padding.right
 
-_`#2.0.0`_
+`#2.0.0`
 
 X축 마지막 Tick의 우측 padding 값을 정의합니다.
 

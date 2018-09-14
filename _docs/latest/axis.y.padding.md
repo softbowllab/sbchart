@@ -7,7 +7,7 @@ order: 14
 
 ## axis.y.padding
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 
@@ -30,7 +30,7 @@ axis: {
 
 ## axis.y.padding.top
 
-_`#2.0.0`_
+`#2.0.0`
 
 Y축 1번째 Tick의 상단 padding 값을 정의합니다.
 
@@ -50,7 +50,7 @@ axis: {
 
 ## axis.y.padding.bottom
 
-_`#2.0.0`_
+`#2.0.0`
 
 Y축 마지막 Tick의 하단 padding 값을 정의합니다.
 

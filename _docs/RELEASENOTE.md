@@ -8,6 +8,24 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
+## 2.0.3 
+`2018.09.14`
+
+#### 버그 수정
+
+* axis.x.type이 timeseries일 때, tooltip이 표시되지 않는 현상
+* axis.x.type = timeseries에서 데이터가 시간 순이 아닐 때, 시간 순으로 재정렬
+
+#### 기능 개선
+
+* 범례 항목 마우스 event (legend.item.onmouseover, legend.item.onmouseout) 추가
+* zerobased 옵션 변경
+  * extend.bar.zerobased, extend.area.zerobased 옵션 제거
+  * axis.y.zerobased 옵션 추가
+  * bar와 area에서만 적용되던 zerobased 옵션이 공통으로 변경됨에 따라, line, spline 에서도 영향을 받게 변경
+* axis.x.type이 category일 때, x.tick.format 파라미터에 category name 추가
+* data.groups 옵션 추가 : stacked bar 차트 계열에서 범례별 묶음(그룹화) 처리 지원
+
 ## 2.0.2 
 `2018.08.22`
 

@@ -7,7 +7,7 @@ order: 6
 
 ## axis.x.categories
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 

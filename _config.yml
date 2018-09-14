@@ -18,6 +18,7 @@ collections:
   examples:
     output: true
 
+
 defaults:
 - scope:
     path: _docs
@@ -31,11 +32,7 @@ defaults:
   values:
     layout: examples
     permalink: /:collection/release/:categories/:name:output_ext
-    scripts: ["sbchart"]
-# - scope:
-#     path: "_examples/latest/assets"
-#   values:
-#     permalink: release/:path:output_ext
+
 
 # 변수 (release 카테고리)
 release:

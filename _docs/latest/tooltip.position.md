@@ -7,7 +7,7 @@ order: 3
 
 ## tooltip.position
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 

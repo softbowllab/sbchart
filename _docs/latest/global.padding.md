@@ -7,7 +7,7 @@ order: 2
 
 ## global.padding
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 

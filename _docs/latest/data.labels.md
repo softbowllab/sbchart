@@ -2,12 +2,12 @@
 title:  data.labels
 date:   2018-07-24
 categories: ["latest","data"]
-order: 8
+order: 9
 ---
 
 ## data.labels
 
-_`#2.0.0`_
+`#2.0.0`
 
 ---
 
@@ -45,7 +45,7 @@ data : {
 
 ### data.labels.format
 
-_`#2.0.0`_
+`#2.0.0`
 
 라벨을 커스트마이징 합니다.
 
@@ -93,7 +93,7 @@ data : {
 
 ### data.labels.position
 
-_`#2.0.0`_
+`#2.0.0`
 
 라벨의 위치를 조정합니다.
 
@@ -114,7 +114,7 @@ data : {
 
 ### data.labels.position.x
 
-_`#2.0.0`_
+`#2.0.0`
 
 라벨의 위치를 X축 방향으로 지정된 값 만큼 이동합니다.
 
@@ -127,7 +127,7 @@ _`#2.0.0`_
 
 ### data.labels.position.y
 
-_`#2.0.0`_
+`#2.0.0`
 
 라벨의 위치를 Y축 방향으로 지정된 값 만큼 이동합니다.
 
