@@ -8,7 +8,7 @@ order: 905
 <p>영역별 라벨 지정 & 커스트마이징(data.labels.format), X축 tick 라벨 커스트 마이징(axis.x.tick.format), 막대 너비 조정, 범례 라벨 및 위치 조정 등</p>
 <hr>
 <div class="row">
-	<div id="chartWrap" class="col-sm-12"></div>
+	<div id="chartWrap" class="col-sm-8"></div>
 </div>
 <!-- Highlight -->
 <h4>Code</h4>
@@ -23,7 +23,7 @@ svg {background-color:#f2f2f2} /* 배경색 */
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap",{
     global: {
-        size : {width: 650, height: 377},
+        size : {height: 450},
         color: {
             pattern: ["#4473c5", "#ed7d31"]
         },
@@ -126,7 +126,7 @@ svg {background-color:#f2f2f2} /* 배경색 */
 <script>
 	sb.chart.render("#chartWrap",{
 		global: {
-			size : {width: 650, height: 377},
+			size : {height: 450},
 			color: {
 				pattern: ["#4473c5", "#ed7d31"]
 			},
