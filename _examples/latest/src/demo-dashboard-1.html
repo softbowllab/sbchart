@@ -54,13 +54,11 @@ order: 906
 	<div class="box">
 		<div class="c-50">
 			<div id="chartWrap2">
-				<span class="pie" id="lblPie1">75%</span>
 				<span class="lbl">CPU</span>
 			</div>
 		</div>
 		<div class="c-50">
 			<div id="chartWrap3">
-				<span class="pie" id="lblPie2">75%</span>
 				<span class="lbl">Memory</span>
 			</div>
 		</div>
@@ -166,8 +164,6 @@ chart3.global({
 });
 
 
-var lblPie1 = document.getElementById("lblPie1"),  lblPie2 = document.getElementById("lblPie2");    // 도넛차트 라벨
-
 // 랜더링 수행
 doRender1();
 doRender2();doRender3();
@@ -194,9 +190,12 @@ function doRender2() {
             ["d", d],
             ["a", (1-d)]
         ]
+    }).extend({
+        donut: { 
+            title : (d*100).toFixed(0) + "%"
+        }
     }).render();
-    lblPie1.innerText = (d*100).toFixed(0) + "%"; // % 라벨
-    setTimeout(doRender2, 1000);    //1초후 재실행
+setTimeout(doRender2, 1000);    //1초후 재실행
 }
 
 //차트 #3  랜더링
@@ -210,8 +209,11 @@ function doRender3() {
             ["d", d],
             ["a", (1-d)]
         ]
+    }).extend({
+        donut: { 
+            title : (d*100).toFixed(0) + "%"
+        }
     }).render();
-    lblPie2.innerText = (d*100).toFixed(0) + "%"; // % 라벨
     setTimeout(doRender3, 500); //0.5초후 재실행
 }
 {% endhighlight %}</p>
@@ -315,8 +317,6 @@ function doRender3() {
 	});
 	
 	
-	var lblPie1 = document.getElementById("lblPie1"),  lblPie2 = document.getElementById("lblPie2");	// 도넛차트 라벨
-
 	// 랜더링 수행
 	doRender1();
 	doRender2();doRender3();
@@ -343,8 +343,11 @@ function doRender3() {
 				["d", d],
 				["a", (1-d)]
 			]
+		}).extend({
+			donut: { 
+				title : (d*100).toFixed(0) + "%"
+			}
 		}).render();
-		lblPie1.innerText = (d*100).toFixed(0) + "%"; // % 라벨
 		setTimeout(doRender2, 1000);	//1초후 재실행
 	}
 
@@ -359,8 +362,11 @@ function doRender3() {
 				["d", d],
 				["a", (1-d)]
 			]
+		}).extend({
+			donut: { 
+				title : (d*100).toFixed(0) + "%"
+			}
 		}).render();
-		lblPie2.innerText = (d*100).toFixed(0) + "%"; // % 라벨
 		setTimeout(doRender3, 500); //0.5초후 재실행
 	}
 </script>

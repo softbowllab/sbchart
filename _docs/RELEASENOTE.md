@@ -8,13 +8,29 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
+## 2.0.4 
+`2018.10.26`
+
+#### 신규 차트
+
+* 게이지(gauge) 차트
+
+#### 기능 개선
+
+* 도넛차트 내부 원 내부에 문자열 표현 기능 추가 `extend.donut.title`
+
+#### 버그 수정
+
+* axis.x.type = category & axis.x.tick.centered = true 일 때 첫번째 tick이 사라지는 현상
+* axis.x.type = category & axis.x.tick.outer = false 일 때 우측 tick이 사라지지 않는 현상
+
 ## 2.0.3 
 `2018.09.14`
 
 #### 버그 수정
 
 * axis.x.type이 timeseries일 때, tooltip이 표시되지 않는 현상
-* axis.x.type = timeseries에서 데이터가 시간 순이 아닐 때, 시간 순으로 재정렬
+* axis.x.type = "timeseries"에서 데이터가 시간 순이 아닐 때, 시간 순으로 자동 정렬
 
 #### 기능 개선
 

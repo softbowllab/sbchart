@@ -19,15 +19,15 @@ order: 5
 ```javascript
 extend: {
     donut: {
-		padding: 0,
         label: {
             show: true,
             format: function(value, ratio, id) {
                 return (ratio * 100).toFixed(3) + "%";
             }
         },
-        innerRadius: 0,
-        padding: 0
+        innerRadius: 20,
+        padding: 0,
+        title: "점유율"
     }
 }
 ```
@@ -38,7 +38,7 @@ extend: {
 
 안쪽 반지름을 지정합니다.
 
-지정하지 않았을 경우는 원의크기에 따라 자동 계산됩니다.
+지정하지 않았을 경우는 원의 크기에 따라 자동 계산됩니다.
 
 * Type : number
 
@@ -93,4 +93,39 @@ extend: {
   * id : 범례 ID
 
 
+### extend.donut.title
 
+`#2.0.4`
+
+타이틀을 지정합니다.
+
+`title` 옵션과는 구별되어 도넛의 가운데 영역에 표현됩니다.
+
+* Type : string
+
+
+<!-- ### extend.donut.startAngle
+
+`#2.0.4`
+
+원의 시작 각도를 지정한다.
+
+원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
+
+* Type : number
+
+* Default : -180
+
+
+### extend.donut.endAngle
+
+`#2.0.4`
+
+원의 종료 각도를 지정한다.
+
+원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
+
+* Type : number
+
+* Default : 180
+ -->

@@ -15,6 +15,21 @@ order: 4
 
 * Type : object
 
+* Format
+```javascript
+extend: {
+    pie: {
+        label: {
+            show: true,
+            format: function(value, ratio, id) {
+                return (ratio * 100).toFixed(3) + "%";
+            }
+        },
+        padding: 0
+    }
+}
+```
+
 
 ### extend.pie.label.show
 
@@ -25,17 +40,6 @@ order: 4
 * Type : boolean
 
 * Default : true
-
-* Format
-```javascript
-extend: {
-    pie: {
-        label: {
-            show: true
-        }
-    }
-}
-```
 
 
 ### extend.pie.label.format
@@ -76,11 +80,29 @@ extend: {
 
 * Default : 0
 
-* Format
-```javascript
-extend: {
-    pie: {
-        padding: 0
-    }
-}
-```
+
+<!-- ### extend.pie.startAngle
+
+`#2.0.4`
+
+원의 시작 각도를 지정한다.
+
+원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
+
+* Type : number
+
+* Default : -180
+
+
+### extend.pie.endAngle
+
+`#2.0.4`
+
+원의 종료 각도를 지정한다.
+
+원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
+
+* Type : number
+
+* Default : 180 -->
+
