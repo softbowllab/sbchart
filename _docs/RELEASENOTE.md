@@ -7,6 +7,13 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.5 
+`2018.10.30`
+
+#### 버그 수정
+
+* 원, 도넛 차트에서 영역 시작점(각도) 변경
+
 
 ## 2.0.4 
 `2018.10.26`
