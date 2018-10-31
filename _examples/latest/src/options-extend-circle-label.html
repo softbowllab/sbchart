@@ -1,0 +1,250 @@
+---
+title:  Pie/Donut/Gauge Label
+date:   2018-10-30
+categories: ["latest","options"]
+order: 423
+---
+<style>.h {height:250px;}#chartWrap1,#chartWrap2,#chartWrap3{padding-left:0px;padding-right:0px}</style>
+<p>원 계열(pie/donut/gauge) 차트의 라벨을 숨기거나 보여주고 커스트마이징(포멧정의) 합니다.</p>
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.[pie/donut/gauge].label.show</code></h6>
+			<p><label><input type="checkbox" id="chkShow"  checked>라벨을 숨기거나 표현합니다.</label></p>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<h6><code>extend.[pie/donut/gauge].label.format</code></h6>
+			<p><label><input type="checkbox" id="chkFormat">라벨을 커스트마이징(포멧 정의) 합니다.</label><code>extend.[pie/donut/gauge].label.format = function(value, ratio, id) { value.toFixed(2) + "%"; }</code></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
+<h4>Example</h4>
+<div class="row">
+	<div id="chartWrap1" class="col-sm-4 h"></div>
+	<div id="chartWrap2" class="col-sm-4 h"></div>
+	<div id="chartWrap3" class="col-sm-3 h"></div>
+</div>
+
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+//pie
+var chart1 = sb.chart.render("#chartWrap1", {
+    data : {
+        type: "pie",
+        columns: [
+            ["2015",65.26],
+            ["2016",12.74],
+            ["2017",22]
+        ]
+    }
+});
+//donut
+var chart2 = sb.chart.render("#chartWrap2", {
+    data : {
+        type: "donut",
+        columns: [
+            ["2015",65.26],
+            ["2016",12.74],
+            ["2017",22]
+        ]
+    }
+}); 
+//guage
+var chart3 = sb.chart.render("#chartWrap3", {
+    data : {
+        type: "gauge",
+        columns: [
+            ["2015",65.26]
+        ]
+    }
+}); 
+
+// hidden/show
+document.getElementById("chkShow").onchange = function() {
+    //pie
+    chart1.extend({
+        pie: {
+            label: {
+                show:this.checked
+            }
+        }
+    }).render();
+    //donut
+    chart2.extend({
+        donut: {
+            label: {
+                show:this.checked
+            }
+        }
+    }).render();
+    //gauge
+    chart3.extend({
+        gauge: {
+            label: {
+                show:this.checked
+            }
+        }
+    }).render();
+};
+// format
+document.getElementById("chkFormat").onchange = function() {
+
+    if(this.checked) {
+        //apply format
+        var func = function(value, ratio, id) {
+            return value.toFixed(2) + "%";
+        };
+        document.getElementById("chkShow").checked = true;
+        //pie
+        chart1.extend({
+            pie: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+        //donut
+        chart2.extend({
+            donut: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+        //guage
+        chart3.extend({
+            gauge: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+    } else {
+        //remove format
+        delete chart1.extend().pie.label.format;
+        delete chart2.extend().donut.label.format;
+        delete chart3.extend().gauge.label.format;
+        chart1.render();
+        chart2.render();
+        chart3.render();
+    }
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+//pie
+var chart1 = sb.chart.render("#chartWrap1", {
+	data : {
+		type: "pie",
+		columns: [
+			["2015",65.26],
+			["2016",12.74],
+			["2017",22]
+		]
+	}
+});
+//donut
+var chart2 = sb.chart.render("#chartWrap2", {
+	data : {
+		type: "donut",
+		columns: [
+			["2015",65.26],
+			["2016",12.74],
+			["2017",22]
+		]
+	}
+}); 
+//guage
+var chart3 = sb.chart.render("#chartWrap3", {
+	data : {
+		type: "gauge",
+		columns: [
+			["2015",65.26]
+		]
+	}
+}); 
+
+// hidden/show
+document.getElementById("chkShow").onchange = function() {
+	//pie
+	chart1.extend({
+		pie: {
+			label: {
+				show:this.checked
+			}
+		}
+	}).render();
+	//donut
+	chart2.extend({
+		donut: {
+			label: {
+				show:this.checked
+			}
+		}
+	}).render();
+	//gauge
+	chart3.extend({
+		gauge: {
+			label: {
+				show:this.checked
+			}
+		}
+	}).render();
+};
+// format
+document.getElementById("chkFormat").onchange = function() {
+
+	if(this.checked) {
+		//apply format
+		var func = function(value, ratio, id) {
+			return value.toFixed(2) + "%";
+		};
+		document.getElementById("chkShow").checked = true;
+		//pie
+		chart1.extend({
+			pie: {
+				label: {
+					show: true,
+					format: func
+				}
+			}
+		}).render();
+		//donut
+		chart2.extend({
+			donut: {
+				label: {
+					show: true,
+					format: func
+				}
+			}
+		}).render();
+		//guage
+		chart3.extend({
+			gauge: {
+				label: {
+					show: true,
+					format: func
+				}
+			}
+		}).render();
+	} else {
+		//remove format
+		delete chart1.extend().pie.label.format;
+		delete chart2.extend().donut.label.format;
+		delete chart3.extend().gauge.label.format;
+		chart1.render();
+		chart2.render();
+		chart3.render();
+	}
+};
+</script>

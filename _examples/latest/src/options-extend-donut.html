@@ -1,55 +1,30 @@
 ---
-title:  Donut Chart
+title:  Donut Options
 date:   2018-07-26
 categories: ["latest","options"]
-order: 424
+order: 426
 ---
-<style>.w40 {width:40px;}</style>
-<p>도넛 차트의 라벨을 숨기거나 보여주고 커스트마이징(포멧) 합니다.<br>
-	영역 사이 공간을 지정합니다.<br>
-	내부 원의 크기를 지정합니다.</p>
+도넛(donut) 차트 고유 옵션입니다.
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.donut.title</code></h6>
+			<p>내부 원안에 타이틀을 지정합니다.</p>
+			<p><input type="text" id="txtTitle" class="w" value=""></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkShow">
-			<mark>라벨 Show</mark>
-			<code>extend.donut.label.show = true/false</code>
-		</label>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkFormat">
-			<mark>라벨 포멧 적용</mark>
-		</label>
-		<code>extend.donut.label.format = function(value, ratio, id) { return value + " (" + ratio.toFixed(4)*100 + "%)"; }</code>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<mark>영역 사이 간격</mark>
-			<input type="text" id="txtPadding" class="w40" value="2">
-		</label>
-		<code>extend.donut.padding = 0</code>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<mark>내부 원 크기</mark>
-			<input type="text" id="txtInnerRadius" class="w40" value="0">
-		</label>
-		<code>extend.donut.innerRadius = 0</code>
-	</div>
-</div>
-									
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
+<p>{% highlight css %}
+#chartWrap .sbchart-arcs-title {font-size:2em;}	/* 폰트사이즈 */
+{% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
     data : {
@@ -59,63 +34,21 @@ var chart = sb.chart.render("#chartWrap", {
             ["2016",0.71],
             ["2017",1.48]
         ]
-    },
-    extend: {
-        donut: {
-            label: {
-                show: false
-            },
-            innerRadius: 0,
-            padding: 2
-        }
     }
 });
-// hidden/show
-document.getElementById("chkShow").onchange = function() {
+// title
+document.getElementById("txtTitle").onchange = function() {
     chart.extend({
         donut: {
-            label: {
-                show:this.checked
-            }
-        }
-    });
-    if(document.getElementById("chkFormat").checked) {
-        chart.extend({
-            donut: {
-                label: {
-                    format:function(value, ratio, id) {
-                        return value + " (" + ratio.toFixed(4)*100 + "%)";
-                    }
-                }
-            }
-        });
-    } else {
-        delete chart.extend().donut.label.format;
-    }
-    chart.render();
-};
-// format
-document.getElementById("chkFormat").onchange = function() {
-    document.getElementById("chkShow").onchange();
-};
-// padding
-document.getElementById("txtPadding").onchange = function() {
-    chart.extend({
-        donut: {
-            padding: this.value
-        }
-    }).render();
-};
-// innerRadius
-document.getElementById("txtInnerRadius").onchange = function() {
-    chart.extend({
-        donut: {
-            innerRadius: this.value
+            title: this.value
         }
     }).render();
 };
 {% endhighlight %}</p>
 <!-- Script -->
+<style>
+	#chartWrap .sbchart-arcs-title {font-size:2em;}	/* 폰트사이즈 */
+</style>
 <script>
 var chart = sb.chart.render("#chartWrap", {
 	data : {
@@ -125,59 +58,13 @@ var chart = sb.chart.render("#chartWrap", {
 			["2016",0.71],
 			["2017",1.48]
 		]
-	},
-	extend: {
-		donut: {
-			label: {
-				show: false
-			},
-			innerRadius: 0,
-			padding: 2
-		}
 	}
 });
-// hidden/show
-document.getElementById("chkShow").onchange = function() {
+// title
+document.getElementById("txtTitle").onchange = function() {
 	chart.extend({
 		donut: {
-			label: {
-				show:this.checked
-			}
-		}
-	});
-	if(document.getElementById("chkFormat").checked) {
-		chart.extend({
-			donut: {
-				label: {
-					format:function(value, ratio, id) {
-						return value + " (" + ratio.toFixed(4)*100 + "%)";
-					}
-				}
-			}
-		});
-	} else {
-		delete chart.extend().donut.label.format;
-	}
-	chart.render();
-
-};
-// format
-document.getElementById("chkFormat").onchange = function() {
-	document.getElementById("chkShow").onchange();
-};
-// padding
-document.getElementById("txtPadding").onchange = function() {
-	chart.extend({
-		donut: {
-			padding: this.value
-		}
-	}).render();
-};
-// innerRadius
-document.getElementById("txtInnerRadius").onchange = function() {
-	chart.extend({
-		donut: {
-			innerRadius: this.value
+			title: this.value
 		}
 	}).render();
 };

@@ -1,0 +1,104 @@
+---
+title:  Donut/Gauge Radius
+date:   2018-10-30
+categories: ["latest","options"]
+order: 425
+---
+<style>.h {height:250px;} #chartWrap1, #chartWrap2 {padding:20px}</style>
+<p>도넛/게이지(donut/gauge) 차트의 내부 반지름을 지정합니다.</p>
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.[donut/gauge].innerRadius</code></h6>
+			<p>내부 반지름을 지정합니다.</p>
+			<p><input type="text" id="txtInnerRadius" class="w-short" value="0"></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
+<h4>Example</h4>
+<div class="row">
+	<div id="chartWrap1" class="col-sm-4 h"></div>
+	<div id="chartWrap2" class="col-sm-3 h"></div>
+</div>
+
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+//donut
+var chart1 = sb.chart.render("#chartWrap1", {
+    data : {
+        type: "donut",
+        columns: [
+            ["2015",3.51],
+            ["2016",0.71],
+            ["2017",1.48]
+        ]
+    }
+});
+//gauge
+var chart2 = sb.chart.render("#chartWrap2", {
+    data : {
+        type: "gauge",
+        columns: [
+            ["2015",71]
+        ]
+    }
+});
+// innerRadius
+document.getElementById("txtInnerRadius").onchange = function() {
+    //donut
+    chart1.extend({
+        donut: {
+            innerRadius: this.value
+        }
+    }).render();
+    //gauge
+    chart2.extend({
+        gauge: {
+            innerRadius: this.value
+        }
+    }).render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+//donut
+var chart1 = sb.chart.render("#chartWrap1", {
+	data : {
+		type: "donut",
+		columns: [
+			["2015",3.51],
+			["2016",0.71],
+			["2017",1.48]
+		]
+	}
+});
+//gauge
+var chart2 = sb.chart.render("#chartWrap2", {
+	data : {
+		type: "gauge",
+		columns: [
+			["2015",61.6]
+		]
+	}
+});
+// innerRadius
+document.getElementById("txtInnerRadius").onchange = function() {
+	//donut
+	chart1.extend({
+		donut: {
+			innerRadius: this.value
+		}
+	}).render();
+	//gauge
+	chart2.extend({
+		gauge: {
+			innerRadius: this.value
+		}
+	}).render();
+};
+</script>

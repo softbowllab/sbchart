@@ -1,0 +1,108 @@
+---
+title:  Pie/Donut Arc Spacing
+date:   2018-10-30
+categories: ["latest","options"]
+order: 424
+---
+<style>.h {height:250px;}</style>
+<p>원/도넛(pie/donut) 차트의 영역 사이 공간을 지정합니다.</p>
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.[pie/donut].padding = 0</code></h6>
+			<p>영역 사이 공간을 지정합니다.</p>
+			<p><input type="text" id="txtPadding" class="w-short" value="0"></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
+<h4>Example</h4>
+<div class="row">
+	<div id="chartWrap1" class="col-sm-4 h"></div>
+	<div id="chartWrap2" class="col-sm-4 h"></div>
+</div>
+	
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+//pie
+var chart1 = sb.chart.render("#chartWrap1", {
+    data : {
+        type: "pie",
+        columns: [
+            ["2015",3.51],
+            ["2016",0.71],
+            ["2017",1.48]
+        ]
+    }
+});
+//donut
+var chart2 = sb.chart.render("#chartWrap2", {
+    data : {
+        type: "donut",
+        columns: [
+            ["2015",3.51],
+            ["2016",0.71],
+            ["2017",1.48]
+        ]
+    }
+});
+// padding
+document.getElementById("txtPadding").onchange = function() {
+    //pie
+    chart1.extend({
+        pie: {
+            padding: this.value
+        }
+    }).render();
+    //donut
+    chart2.extend({
+        donut: {
+            padding: this.value
+        }
+    }).render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+//pie
+var chart1 = sb.chart.render("#chartWrap1", {
+	data : {
+		type: "pie",
+		columns: [
+			["2015",3.51],
+			["2016",0.71],
+			["2017",1.48]
+		]
+	}
+});
+//donut
+var chart2 = sb.chart.render("#chartWrap2", {
+	data : {
+		type: "donut",
+		columns: [
+			["2015",3.51],
+			["2016",0.71],
+			["2017",1.48]
+		]
+	}
+});
+// padding
+document.getElementById("txtPadding").onchange = function() {
+	//pie
+	chart1.extend({
+		pie: {
+			padding: this.value
+		}
+	}).render();
+	//donut
+	chart2.extend({
+		donut: {
+			padding: this.value
+		}
+	}).render();
+};
+</script>
