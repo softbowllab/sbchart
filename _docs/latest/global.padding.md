@@ -13,7 +13,7 @@ order: 2
 
 차트의 내부 컨텐츠의 padding을 지정합니다.
 
-차트가 그려질 Element는 padding을 0으로 지정하고 globa.padding옵션을 사용하는 것이 좋습니다.
+CSS padding을 사용하실 경우 차트가 그려질 Element는 padding을 0으로 지정하고 `global.padding`옵션을 사용하여 padding 값을 조정하는 것이 좋습니다.
 
 * Type : object
 
