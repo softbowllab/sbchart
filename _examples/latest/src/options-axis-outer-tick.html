@@ -8,35 +8,26 @@ order: 337
 axis.x.type="categories" 인 경우는 X축 마지막 Tick과 동일한 위치에 중복되어 표시됩니다.
 </p>
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>axis.x.tick.outer</code></h6>
+			<p><label><input type="checkbox" id="chkOuterX">X축 Outer Tick(좌우 끝부분 Tick)을 표시합니다.</label></p>
+		</li>
+		<li>
+			<h6><code>axis.x.tick.centered</code></h6>
+			<p><label><input type="checkbox" id="chkCentered">X축 각각의 Tick을 해당 영역의 가운데 위치로 이동합니다.</label></p>
+		</li>
+		<li>
+			<h6><code>axis.y.tick.outer</code></h6>
+			<p><label><input type="checkbox" id="chkOuterY">Y축 Outer Tick(위 아래 끝부분 Tick)을 표시합니다.</label></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkOuterX">
-			<mark>X축 Outer Tick 표시</mark>
-		</label>
-		<code>axis.x.tick.outer=true/false</code>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkOuterY">
-			<mark>Y축 Outer Tick 표시</mark>
-		</label>
-		<code>axis.y.tick.outer=true/false</code>
-	</div>
-</div>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkCentered">
-			<mark>X축 Tick 가운데 위치이동</mark>
-		</label>
-		<code>axis.x.tick.centered=true/false</code>
-	</div>
-</div>
-		
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>

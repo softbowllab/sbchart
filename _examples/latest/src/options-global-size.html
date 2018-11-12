@@ -7,21 +7,25 @@ order: 311
 <p>차트의 크기를 지정합니다.<br>
 크기를 따로 지정하지 않는다면 차트가 그려지는 영역(컨테이너) 크기에 맞춰집니다.</p>
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>global.size.width</code></h6>
+			<p>차트 너비를 지정합니다.</p>
+			<p><input type="text" id="txtWidth" class="w-short"></p>
+		</li>
+		<li>
+			<h6><code>global.size.height</code></h6>
+			<p>차트 높이를 지정합니다.</p>
+			<p><input type="text" id="txtHeight" class="w-short"></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-    <div class="col-sm-1"><mark>크기</mark></div>
-    <div class="col-sm-1">width</div>
-    <div class="col-sm-1"><input type="text" id="txtWidth" class="w-100"></div>
-    <div class="col-sm-9"><code>global.size.width=800</code></div>
-</div>
-<div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1">height</div>
-    <div class="col-sm-1"><input type="text" id="txtHeight" class="w-100"></div>
-    <div class="col-sm-9"><code>global.size.height=320</code></div>
-</div>
-
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}

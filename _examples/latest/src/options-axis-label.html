@@ -6,50 +6,53 @@ order: 333
 ---
 <p>X,Y축 라벨 및 위치를 지정합니다.</p>
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<h5>X 축</h5>
+	<ul>
+		<li>
+			<h6><code>axis.x.label.text</code></h6>
+			<p>라벨을 지정합니다.</p>
+			<p><input type="text" id="txtLabelX" class="w-long" value="지역별"></p>
+		</li>
+		<li>
+			<h6><code>axis.x.label.position</code></h6>
+			<p>라벨의 위치를 지정합니다.</p>
+			<p><select id="cboPositionX" class="w-long">
+					<option value="inner-right">inner-right (default)</option>
+					<option value="inner-center">inner-center</option>
+					<option value="inner-left">inner-left</option>
+					<option value="outer-right">outer-right</option>
+					<option value="outer-center">outer-center</option>
+					<option value="outer-left">outer-left</option>
+				</select></p>
+		</li>
+	</ul>
+	<h5>Y 축</h5>
+	<ul>
+		<li>
+			<h6><code>axis.y.label.text</code></h6>
+			<p>라벨을 지정합니다.</p>
+			<p><input type="text" id="txtLabelY" class="w-long" value="변동율(%)"></p>
+		</li>
+		<li>
+			<h6><code>axis.y.label.position</code></h6>
+			<p>라벨의 위치를 지정합니다.</p>
+			<p><select id="cboPositionY" class="w-long">
+				<option value="inner-top">inner-top (default)</option>
+				<option value="inner-middle">inner-middle</option>
+				<option value="inner-bottom">inner-bottom</option>
+				<option value="outer-top">outer-top</option>
+				<option value="outer-middle">outer-middle</option>
+				<option value="outer-bottom">outer-bottom</option>
+			</select></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-    <div class="col-sm-1"><mark>X 축</mark></div>
-    <div class="col-sm-1">라벨</div>
-    <div class="col-sm-2"><input id="txtLabelX" type="text" class="w-100"  value="지역별"></div>
-    <div class="col-sm-8"><code>axis.x.label.text = "지역별"</code></div>
-</div>
-<div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1">위치</div>
-    <div class="col-sm-2">
-        <select id="cboPositionX" class="w-100">
-            <option value="inner-right">inner-right (default)</option>
-            <option value="inner-center">inner-center</option>
-            <option value="inner-left">inner-left</option>
-            <option value="outer-right">outer-right</option>
-            <option value="outer-center">outer-center</option>
-            <option value="outer-left">outer-left</option>
-        </select>
-    </div>
-    <div class="col-sm-8"><code>axis.x.label.position = "inner-left"</code></div>
-</div>
-<!-- AXIS Y -->
-<div class="row">
-    <div class="col-sm-1"><mark>Y 축</mark></div>
-    <div class="col-sm-1">라벨</div>
-    <div class="col-sm-2"><input id="txtLabelY" type="text" class="w-100"  value="변동율(%)"></div>
-    <div class="col-sm-8"><code>axis.y.label.text = "변동율(%)"</code></div>
-</div>
-<div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1">위치</div>
-    <div class="col-sm-2">
-        <select id="cboPositionY" class="w-100">
-            <option value="inner-top">inner-top (default)</option>
-            <option value="inner-middle">inner-middle</option>
-            <option value="inner-bottom">inner-bottom</option>
-            <option value="outer-top">outer-top</option>
-            <option value="outer-middle">outer-middle</option>
-            <option value="outer-bottom">outer-bottom</option>
-        </select>
-    </div>
-    <div class="col-sm-8"><code>axis.y.label.position = "inner-top"</code></div>
-</div>
+
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>

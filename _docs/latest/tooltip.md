@@ -45,3 +45,7 @@ tooltip: {
 * Type : boolean
 
 * Default : true
+
+* 주의
+
+  * 버블 차트 `data.type = 'bubble'`는 값과 상관없이 항상 `tooltip.grouped = false` 로 동작합니다.

@@ -4,21 +4,26 @@ date:   2018-06-04
 categories: ["latest","options"]
 order: 334
 ---
-<p>X, Y축의 Tick 갯수를 지정합니다.<br>
-X축은 2이하의 값은 유효하지 않습니다.</p>
+<p>X, Y축의 Tick 갯수를 지정합니다.</p>
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>axis.x.tick.count</code></h6>
+			<p>X축 Tick 갯수를 지정합니다. X축 모두를 표현하려면 0을 입력합니다.</p>
+			<p><input type="text" id="txtX" class="w-short" value="5"></p>
+		</li>
+		<li>
+			<h6><code>axis.y.tick.count</code></h6>
+			<p>Y축 Tick 갯수를 지정합니다.</p>
+			<p><input type="text" id="txtY" class="w-short" value="4"></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-    <div class="col-sm-1"><mark>X축</mark></div>
-    <div class="col-sm-1"><input type="text" id="txtX" class="w-100" value="5"></div>
-    <div class="col-sm-10"><code>axis.x.tick.count=10</code></div>
-</div>
-<div class="row">
-    <div class="col-sm-1"><mark>Y축</mark></div>
-    <div class="col-sm-1"><input type="text" id="txtY" class="w-100" value="4"></div>
-    <div class="col-sm-10"><code>axis.y.tick.count=10</code></div>
-</div>
-                
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>

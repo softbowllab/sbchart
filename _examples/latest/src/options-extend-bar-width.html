@@ -1,26 +1,29 @@
 ---
-title:  Bar Chart Width
+title:  Bar Width
 date:   2018-06-04
 categories: ["latest","options"]
 order: 421
 ---
-<p>막대 차트의 너비를 비율로 지정하고<br>
-	Max 값을 지정하여 최대 너비를 넘지 않도록 합니다.</p>
+<p>막대 차트의 너비를 비율로 지정하고 Max 값을 지정하여 최대 너비를 넘지 않도록 합니다.</p>
 <hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.bar.width.ratio</code></h6>
+			<p>막대 너비를 비율로 지정합니다. 0~1 사이값을 입력하세요.</p>
+			<p><input type="text" id="txtRatio" class="w-short" value=""></p>
+		</li>
+		<li>
+			<h6><code>extend.bar.width.ratio</code></h6>
+			<p>막대 너비의 최대값을 지정합니다.</p>
+			<p><input type="text" id="txtMax" class="w-short" value=""></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
 <h4>Example</h4>
-<div class="row">
-    <div class="col-sm-1"><mark>너비</mark></div>
-    <div class="col-sm-1">ratio</div>
-    <div class="col-sm-1"><input type="text" id="txtRatio" class="w-100"></div>
-    <div class="col-sm-9"><code>extend.bar.width.ratio=0.6</code></div>
-</div>
-<div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1">max</div>
-    <div class="col-sm-1"><input type="text" id="txtMax" class="w-100"></div>
-    <div class="col-sm-9"><code>extend.bar.width.max=20</code></div>
-</div>
-                    
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>

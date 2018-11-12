@@ -6,28 +6,31 @@ order: 313
 ---
 <p>차트의 최상위 엘리먼트에 CSS 클래스명을 지정합니다. Class명 통하여 스타일 변경이 가능합니다.</p>
 <hr>
-<h4>Example</h4>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkClassname" checked>
-			<mark>classname 적용</mark>
-		</label>
-		<code>global.svg.classname="sbchart"</code>
-	</div>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>global.svg.classname</code></h6>
+			<p>차트에 classname을 적용 합니다.</p>
+			<p><input type="text" id="txtClassname" class="w-short" value="sbchart1"> <em>sbchart1, sbchart2를 각각 입력해보세요.</em></p>
+		</li>
+	</ul>
 </div>
-
+<!-- Example -->
+<h4>Example</h4>
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight css %}
-.sbchart {background-color: lightcyan;}
-.sbchart .sbchart-axis-x {font-size: 20px;}
+.sbchart1 {background-color: lightcyan;}
+.sbchart1 .sbchart-axis-x {font-size: 20px;}
+.sbchart2 {background-color:yellow;}
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
     global : {
-        svg: {classname:"sbchart"}
+        svg: {classname:classname:document.getElementById("txtClassname").value}
     },
     data : {
         type: "bar",
@@ -37,24 +40,21 @@ var chart = sb.chart.render("#chartWrap", {
     }
 });
 //classname
-document.getElementById("chkClassname").onchange = function() {
-    if (this.checked) {
-        chart.global().svg.classname = "sbchart"
-    } else {
-        delete chart.global().svg.classname;
-    }
+document.getElementById("txtClassname").onchange = function() {
+    chart.global().svg.classname = this.value
     chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->
 <style>
-	.sbchart {background-color: lightcyan;}
-	.sbchart .sbchart-axis-x {font-size: 20px;}
+	.sbchart1 {background-color: lightcyan;}
+	.sbchart1 .sbchart-axis-x {font-size: 20px;}
+	.sbchart2 {background-color:yellow;}
 </style>
 <script>
 var chart = sb.chart.render("#chartWrap", {
 	global : {
-		svg: {classname:"sbchart"}
+		svg: {classname:document.getElementById("txtClassname").value}
 	},
 	data : {
 		type: "bar",
@@ -64,12 +64,8 @@ var chart = sb.chart.render("#chartWrap", {
 	}
 });
 //classname
-document.getElementById("chkClassname").onchange = function() {
-	if (this.checked) {
-		chart.global().svg.classname = "sbchart"
-	} else {
-		delete chart.global().svg.classname;
-	}
+document.getElementById("txtClassname").onchange = function() {
+	chart.global().svg.classname = this.value
 	chart.render();
 };
 </script>

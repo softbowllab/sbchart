@@ -85,7 +85,7 @@ Y축 바깥쪽 Tick 표시 여부를 지정합니다.
 
 Y축 Tick을 주어진 각도로 회전합니다.
 
-axis.rotated == true 일 때(가로 그래프)만 허용합니다.
+axis.rotated == true 일 때(가로 차트)만 허용합니다.
 
 * Type: number
 

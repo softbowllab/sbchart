@@ -6,26 +6,23 @@ order: 336
 ---
 <p>Y축의 tick을 커스트마이징 하거나 표시될 tick을 선택 할 수 있습니다.</p>
 <hr>
-<h4>Example</h4>
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkValuesX" checked>
-			<mark>X축 표시될 Tick 지정</mark>
-		</label>
-		<code>axis.x.tick.values = [0, 4, 6, 8]</code>
-	</div>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>axis.x.tick.values</code></h6>
+			<p><label><input type="checkbox" id="chkValuesX" checked>X축 표시될 Tick을 정의합니다.</label></p>
+			<p><code>axis.x.tick.values = [0, 4, 6, 8]</code></p>
+		</li>
+		<li>
+			<h6><code>axis.y.tick.values</code></h6>
+			<p><label><input type="checkbox" id="chkValuesY" checked>Y축 표시될 Tick을 정의합니다.</label></p>
+			<p><code>axis.y.tick.values = [7000000, 8000000, 9000000]</code></p>
+		</li>
+	</ul>
 </div>
-
-<div class="row">
-	<div class="col-sm-12">
-		<label>
-			<input type="checkbox" id="chkValuesY" checked>
-			<mark>Y축 표시될 Tick 지정</mark>
-		</label>
-		<code>axis.y.tick.values = [7000000, 8000000, 9000000]</code>
-	</div>
-</div>
+<!-- Example -->
 <p  id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
