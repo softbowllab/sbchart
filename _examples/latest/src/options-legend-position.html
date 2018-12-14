@@ -87,36 +87,9 @@ var chart = sb.chart.render("#chartWrap", {
         }
     }
 });
-{% endhighlight %}</p>
-<!-- Script -->
-<script>
-var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
-            ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
-            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-        ]
-    },
-    legend: {
-        position: "inset",
-        item: {
-            tile: {height:5, width:2}
-        },
-        inset: {
-            anchor: "top-left",
-            x: 180,
-            y: 20,
-            step: 2
-        }
-    }
-});
-
 document.getElementById("txtX").value = chart.legend().inset.x;
 document.getElementById("txtY").value = chart.legend().inset.y;
 document.getElementById("txtStep").value = chart.legend().inset.step;
-
 document.getElementById("cboPostion").onchange = function() {
     chart.legend().position = this.value;
     if(this.value == "inset") {
@@ -152,6 +125,72 @@ document.getElementById("txtY").onchange = function() {
 document.getElementById("txtStep").onchange = function() {
     chart.legend().inset.step = this.value;
     chart.render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data : {
+		type: "bar",
+		columns: [
+			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+		]
+	},
+	legend: {
+		position: "inset",
+		item: {
+			tile: {height:5, width:2}
+		},
+		inset: {
+			anchor: "top-left",
+			x: 180,
+			y: 20,
+			step: 2
+		}
+	}
+});
+
+document.getElementById("txtX").value = chart.legend().inset.x;
+document.getElementById("txtY").value = chart.legend().inset.y;
+document.getElementById("txtStep").value = chart.legend().inset.step;
+
+document.getElementById("cboPostion").onchange = function() {
+	chart.legend().position = this.value;
+	if(this.value == "inset") {
+		var els = document.getElementsByClassName("inset hide");
+		for(var i=(els.length-1); i >= 0; i--) {
+			els[i].classList.remove("hide");
+		}
+	} else {
+		var els = document.getElementsByClassName("inset");
+		for(var i=(els.length-1); i >= 0; i--) {
+			els[i].classList.add("hide");
+		}
+	}
+	chart.render();
+};
+document.getElementById("chkBackground").onchange = function() {
+	chart.legend().background = this.checked;
+	chart.render();
+};
+document.getElementById("cboAnchor").onchange = function() {
+	if(!chart.legend().inset) chart.legend().inset = {};
+	chart.legend().inset.anchor = this.value;
+	chart.render();
+};
+document.getElementById("txtX").onchange = function() {
+	chart.legend().inset.x = this.value;
+	chart.render();
+};
+document.getElementById("txtY").onchange = function() {
+	chart.legend().inset.y = this.value;
+	chart.render();
+};
+document.getElementById("txtStep").onchange = function() {
+	chart.legend().inset.step = this.value;
+	chart.render();
 };
 
 </script>
