@@ -19,6 +19,7 @@ order: 1
 ```javascript
 legend: {
     show: true,
+	background: false,
     position: "inset",
     inset: {
         anchor:"top-left",
@@ -47,13 +48,26 @@ legend: {
 
 * Type : string
 
-* Default : "botom"
+* Default : "bottom"
 
 * Values
 
 	* bottom: `Default` 아래에 위치
 	* right: 우측에 위치
 	* inset: 차트내에 위치, 사항한 사항은 [legend.inset](./legend.inset.html) 참조
+
+### legend.background
+
+`#2.0.7`
+
+`legend.position` 값이 'bottom', 'right' 인 경우 범례의 백그라운드 영역을 표시합니다.
+
+`legend.position='inset'` 인 경우는 해당되지 않습니다.
+
+* Type : boolean
+
+* Default : false
+
 
 ### legend.padding
 

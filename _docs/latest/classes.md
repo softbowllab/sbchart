@@ -88,7 +88,7 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
    ```css
 .sbchart-legend-background {stroke-width: 0}	/* 범례 박스 라인 없애기 */
 .sbchart-legend-background {fill:#f2f2f2;}	/* 범례 배경색 정의 */
-.sbchart-legend-item-text {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
+.sbchart-legend-item {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
 ```
 
 ### grid

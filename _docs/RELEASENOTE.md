@@ -7,6 +7,19 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+
+## 2.0.7
+`2018.12.13`
+
+#### 기능 개선
+
+* `legend.background` 옵션 추가
+
+#### 버그 수정
+
+* 원 차트의 크기에 따른 label, legend 위치 변경
+
+
 ## 2.0.6
 `2018.11.06`
 
