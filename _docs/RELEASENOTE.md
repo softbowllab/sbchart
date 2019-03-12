@@ -8,6 +8,18 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
+## 2.1.0
+`2019.03.12`
+
+#### 차트 추가
+
+* step, area-step, area-splint 차트 추가
+
+#### 기능 변경
+
+* line, spline, area, bubble 차트에서 `axis.rotated = true` 적용되게 변경
+
+
 ## 2.0.9
 `2019.01.30`
 
