@@ -8,7 +8,7 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
-## 2.1.0
+## 2.0.10
 `2019.03.12`
 
 #### 차트 추가
