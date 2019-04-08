@@ -13,7 +13,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 차트 추가
 
-* step, area-step, area-splint 차트 추가
+* step, area-step, area-spline 차트 추가
 
 #### 기능 변경
 
