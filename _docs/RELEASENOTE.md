@@ -1,12 +1,23 @@
 ---
-title:  RELEASE Note
-date:   2018-07-27
+title: RELEASE Note
+date: 2018-07-27
 layout: default.md
 permalink: /:collection/releasenote:output_ext
 ---
 
 # Release Note
 ---
+## 2.0.11
+`2019.04.15`
+
+#### 차트 추가
+
+* stacked area, stacked area (percent), stacked area-spline, stacked area-spline (percent) 차트 추가
+
+#### 기능 개선
+
+* stacked percent chart에서 axis.y.tick에 % 표시 추가
+
 
 ## 2.0.10
 `2019.03.12`
@@ -110,9 +121,9 @@ permalink: /:collection/releasenote:output_ext
 
 * 범례 항목 마우스 event (legend.item.onmouseover, legend.item.onmouseout) 추가
 * zerobased 옵션 변경
-  * `extend.bar.zerobased`, `extend.area.zerobased` 옵션 제거
-  * `axis.y.zerobased` 옵션 추가
-  * bar와 area에서만 적용되던 zerobased 옵션이 공통으로 변경됨에 따라, line, spline 에서도 영향을 받게 변경
+	* `extend.bar.zerobased`, `extend.area.zerobased` 옵션 제거
+	* `axis.y.zerobased` 옵션 추가
+	* bar와 area에서만 적용되던 zerobased 옵션이 공통으로 변경됨에 따라, line, spline 에서도 영향을 받게 변경
 * `axis.x.type`이 category일 때, `x.tick.format` 파라미터에 category name 추가
 * `data.groups` 옵션 추가 : stacked bar 차트 계열에서 범례별 묶음(그룹화) 처리 지원
 
@@ -143,5 +154,4 @@ permalink: /:collection/releasenote:output_ext
 ## 2.0.0 
 `2018.08.01`
 
-* **Renewal Launching** 
-
+* **Renewal Launching**

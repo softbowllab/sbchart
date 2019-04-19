@@ -1,6 +1,6 @@
 ---
-title:  title
-date:   2018-05-14
+title: title
+date: 2018-05-14
 categories: ["latest","title"]
 order: 999
 ---
@@ -14,14 +14,19 @@ order: 999
 제목의 내용이나 위치 등을 지정합니다.
 
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 title: {
-    text: "시도별 주택가격 변동률",
-    position: "top-center",
-    padding: {top:10, right:10, bottom:10, left:10}
+	text: "시도별 주택가격 변동률",
+	position: "top-center",
+	padding: {
+		top: 10, 
+		right: 10, 
+		bottom: 10, 
+		left: 10
+	}
 }
 ```
 
@@ -32,17 +37,17 @@ title: {
 
 제목을 지정합니다. 공백일 경우 제목이 차트에 표현되지 않습니다.
 
-* Type : string
+* Type : String
 
 
 ### title.position
 
 `#2.0.0`
 
-제목 위치를 지정합니다 
+제목의 위치를 지정합니다 
 
 
-* Type : string
+* Type : String
 
 * Default : "top-center"
 
@@ -60,16 +65,18 @@ title: {
 
 제목의 padding을 지정합니다.
 
-title.position="top-right" 인 경우는 padding.left 값을, title.position="top-left" 인 경우는 padding.right 값을 사용하지 않습니다.
+`title.position = "top-right"` 인 경우는 padding.left 값을, `title.position = "top-left"` 인 경우는 padding.right 값을 사용하지 않습니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 title: {
-    padding: { 
-        top:10, right:10, bottom:10, left:10
-    }
+	padding: { 
+		top: 10, 
+		right: 10, 
+		bottom: 10, 
+		left: 10
+	}
 }
 ```
-

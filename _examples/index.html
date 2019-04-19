@@ -1,5 +1,5 @@
 ---
-date:   2018-05-17
+date: 2018-05-17
 permalink: /:collection/:path:output_ext
 layout: default
 ---
@@ -16,7 +16,7 @@ layout: default
 				<li>{{ item.categories[1] | upcase }}</li>	
 					{% assign cate = item.categories[1] %}
 				{% endif %}
-				<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+				<li><a href="{{ site.baseurl }}{{ site.path }}{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 		</ul>
 	</div>

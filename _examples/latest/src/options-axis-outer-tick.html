@@ -1,11 +1,11 @@
 ---
 title: Axis Outer Tick
-date:   2018-08-16
+date: 2018-08-16
 categories: ["latest","options"]
 order: 337
 ---
-<p>X, Y축의 바깥쪽 Tick 을 숨기거나 표시합니다.<br>
-axis.x.type="categories" 인 경우는 X축 마지막 Tick과 동일한 위치에 중복되어 표시됩니다.
+<p>X, Y축의 바깥쪽 Tick을 숨기거나 표시합니다.<br>
+<code>axis.x.type = "categories"</code> 인 경우는 X축 마지막 Tick과 동일한 위치에 중복되어 표시됩니다.
 </p>
 <hr>
 <!-- Options -->
@@ -22,37 +22,72 @@ axis.x.type="categories" 인 경우는 X축 마지막 Tick과 동일한 위치�
 		</li>
 		<li>
 			<h6><code>axis.y.tick.outer</code></h6>
-			<p><label><input type="checkbox" id="chkOuterY">Y축 Outer Tick(위 아래 끝부분 Tick)을 표시합니다.</label></p>
+			<p><label><input type="checkbox" id="chkOuterY">Y축 Outer Tick(위아래 끝부분 Tick)을 표시합니다.</label></p>
 		</li>
 	</ul>
 </div>
 <!-- Example -->
 <h4>Example</h4>
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
-        ]
-    },
-    axis: {
-        x: {
-            tick: { outer: false }
-        },
-        y: {
-            tick: { outer: false }
-        }
-    }
+	data: {
+		type: "bar",
+		columns: [
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+		]
+	},
+	axis: {
+		x: {
+			tick: { 
+				outer: false
+			}
+		},
+		y: {
+			tick: { 
+				outer: false
+			}
+		}
+	}
 });
+
+//outer tick-x
+document.getElementById("chkOuterX").onchange = function() {
+	chart.axis({
+		x: {
+			tick: {
+				outer: this.checked
+			}
+		}
+	}).render();
+};
+//centered
+document.getElementById("chkCentered").onchange = function() {
+	chart.axis({
+		x: {
+			tick: {
+				centered: this.checked
+			}
+		}
+	}).render();
+};
+//outer tick-y
+document.getElementById("chkOuterY").onchange = function() {
+	chart.axis({
+		y: {
+			tick: {
+				outer: this.checked
+			}
+		}
+	}).render();
+};
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
+	data: {
 		type: "bar",
 		columns: [
 			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
@@ -62,10 +97,14 @@ var chart = sb.chart.render("#chartWrap", {
 		x: {
 			type: "category",
 			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"],
-			tick: { outer: false }
+			tick: { 
+				outer: false
+			}
 		},
 		y: {
-			tick: { outer: false }
+			tick: { 
+				outer: false
+			}
 		}
 	}
 });
@@ -73,7 +112,9 @@ var chart = sb.chart.render("#chartWrap", {
 document.getElementById("chkOuterX").onchange = function() {
 	chart.axis({
 		x: {
-			tick: { outer: this.checked }
+			tick: {
+				outer: this.checked
+			}
 		}
 	}).render();
 };
@@ -81,7 +122,9 @@ document.getElementById("chkOuterX").onchange = function() {
 document.getElementById("chkCentered").onchange = function() {
 	chart.axis({
 		x: {
-			tick: { centered: this.checked }
+			tick: {
+				centered: this.checked
+			}
 		}
 	}).render();
 };
@@ -89,7 +132,9 @@ document.getElementById("chkCentered").onchange = function() {
 document.getElementById("chkOuterY").onchange = function() {
 	chart.axis({
 		y: {
-			tick: { outer: this.checked }
+			tick: {
+				outer: this.checked
+			}
 		}
 	}).render();
 };

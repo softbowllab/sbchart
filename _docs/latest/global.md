@@ -1,6 +1,6 @@
 ---
-title:  global
-date:   2018-06-29
+title: global
+date: 2018-06-29
 categories: ["latest","global"]
 order: 0
 ---
@@ -13,21 +13,22 @@ order: 0
 
 공통 옵션을 설정합니다.
 
-* Type : object
+* Type : Object
 
 ### global.svg.classname
 
 `#2.0.0`
 
-ROOT 엘리먼트의 CSS 클래스명을 정의합니다.
+SVG 엘리먼트의 CSS 클래스명을 정의합니다.
 
-* Type : string
+* Type : String
 
 * Format
+
 ```javascript
 global: {
-    svg: { 
-        class: "sbchart"
-    }
+	svg: { 
+		class: "sbchart"
+	}
 }
 ```

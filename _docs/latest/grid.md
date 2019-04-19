@@ -1,6 +1,6 @@
 ---
-title:  grid
-date:   2018-05-14
+title: grid
+date: 2018-05-14
 categories: ["latest","grid"]
 order: 999
 ---
@@ -11,22 +11,22 @@ order: 999
 
 ---
 
-그리드를 설정 합니다.
+그리드를 설정합니다.
 
-X,Y축이 없는 원 계열 차트(원, 도넛)는 해당되지 않습니다.
+X, Y축이 없는 원 계열 차트(원, 도넛, 게이지)는 해당되지 않습니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 grid: {
-    x: { 
-        show:true
-    },
-    y: { 
-        show:false,
-        ticks: 5
-    }
+	x: { 
+		show: true
+	},
+	y: { 
+		show: false,
+		ticks: 5
+	}
 }
 ```
 
@@ -35,9 +35,9 @@ grid: {
 
 `#2.0.0`
 
-X축 그리드를 show/hidden 처리합니다.
+X축 그리드를 show/hide 처리합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -45,9 +45,9 @@ X축 그리드를 show/hidden 처리합니다.
 
 `#2.0.0`
 
-Y축 그리드를 show/hidden 처리합니다.
+Y축 그리드를 show/hide 처리합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -55,6 +55,6 @@ Y축 그리드를 show/hidden 처리합니다.
 
 `#2.0.0`
 
-T축 그리드 Tick 갯수를 지정합니다.
+Y축 그리드 Tick 개수를 지정합니다.
 
-* Type : number
+* Type : Number

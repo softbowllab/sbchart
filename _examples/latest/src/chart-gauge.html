@@ -1,35 +1,38 @@
 ---
-title:  Gauge
-date:   2018-10-18
+title: Gauge
+date: 2018-10-18
 categories: ["latest","chart"]
 order: 123
 ---
-<p>게이지 차트 기본 예제입니다. data.type="<em>gauge</em>" 로 지정합니다.</p>
+<p>게이지 차트 기본 예제입니다. data.type="<em>gauge</em>"로 지정합니다.</p>
 <hr>
 <!-- bindto -->
 <h4>Example</h4>
-<style>#chartWrap,.chartWrap{min-height:160px;margin-right:15%;} @media screen and (max-width: 1000px) { #chartWrap{min-height:140px; margin-right:0;}}</style>
-<p  id="chartWrap"></p>
+<style>
+	#chartWrap, .chartWrap { min-height: 160px; margin-right: 15%; } 
+	@media screen and (max-width: 1000px) { #chartWrap { min-height: 140px; margin-right: 0; } }
+</style>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap", {
-    data : {
-        type: "gauge",
-        columns: [
-            ["2015",65]
-        ]
-    }
+	data: {
+		type: "gauge",
+		columns: [
+			["2015",65]
+		]
+	}
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-    sb.chart.render("#chartWrap", {
-        data : {
-            type: "gauge",
-            columns: [
-                ["2015",65]
-            ]
-        }
-    });
+	sb.chart.render("#chartWrap", {
+		data: {
+			type: "gauge",
+			columns: [
+				["2015",65]
+			]
+		}
+	});
 </script>

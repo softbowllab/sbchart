@@ -1,11 +1,11 @@
 ---
-title:  Data Labels
-date:   2018-06-26
+title: Data Labels
+date: 2018-06-26
 categories: ["latest","options"]
 order: 321
 ---
-<p>값에 대한 라벨을 보이거나 숨기고 라벨 문자열의 커스트마이징(포멧)이 가능합니다.<br>
-원 계열(원, 도넛) 차트의 라벨은 해당되지 않습니다. 원 계열 차트는 각각 <code>extend.pie.label</code>, <code>extend.donut.label</code>옵션을 참조하세요</p>
+<p>값에 대한 라벨을 보이거나 숨기고 라벨 문자열의 커스터마이징(포맷)이 가능합니다.<br>
+원 계열(원, 도넛, 게이지) 차트의 라벨은 해당되지 않습니다. 원 계열 차트는 각각 <code>extend.pie.label</code>, <code>extend.donut.label</code>, <code>extend.gauge.label</code>옵션을 참조하세요</p>
 <hr>
 <!-- Options -->
 <h4>Options</h4>
@@ -14,79 +14,81 @@ order: 321
 	<ul>
 		<li>
 			<h6><code>data.labels.position.x</code></h6>
-			<p>라벨을 X축 방향으로 해당 값 만큼 이동합니다. 양수일 경우는 우측으로 음수일 경우는 좌측으로 이동합니다.</p>
+			<p>라벨을 X축 방향으로 해당 값만큼 이동합니다. 양수일 경우는 우측으로 음수일 경우는 좌측으로 이동합니다.</p>
 			<p><input type="text" id="txtX" class="w-short" value="0"></p>
 		</li>
 		<li>
 			<h6><code>data.labels.position.y</code></h6>
-			<p>라벨을 Y축 방향으로 해당 값 만큼 이동합니다. 양수일 경우는 아래로 음수일 경우는 위로 이동합니다.</p>
+			<p>라벨을 Y축 방향으로 해당 값만큼 이동합니다. 양수일 경우는 아래로 음수일 경우는 위로 이동합니다.</p>
 			<p><input type="text" id="txtY" class="w-short" value="-10"></p>
 		</li>
 	</ul>
-	<h5>포멧</h5>
+	<h5>포맷</h5>
 	<ul>
 		<li>
 			<h6><code>data.labels.format</code></h6>
-			<p><label><input type="checkbox" id="chkFormat" checked>라벨을 커스트마이징(포멧정의) 합니다.</label></p>
-			<p><code>data.labels.format = function(value, id, index) { return value.toFixed(3);}</code></p>
+			<p><label><input type="checkbox" id="chkFormat" checked>라벨을 커스터마이징(포맷 정의) 합니다.</label></p>
+			<p><code>data.labels.format = function(value, id, index) { 
+				return value.toFixed(3);
+			}</code></p>
 		</li>
 	</ul>
 </div>
 <!-- Example -->
 <h4>Example</h4>
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
-        ],
-        labels: {
-            format: function(value, id, index) {
-                return value.toFixed(3);
-            },
-            position: {
-                x: 0,
-                y: -10
-            }
-        }
-    }
+	data: {
+		type: "bar",
+		columns: [
+			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
+		],
+		labels: {
+			format: function(value, id, index) {
+				return value.toFixed(3);
+			},
+			position: {
+				x: 0,
+				y: -10
+			}
+		}
+	}
 });
 // format
 document.getElementById("chkFormat").onchange = function() {
-    if(this.checked) {
-        chart.data({
-            labels: {
-                format: function(value, id, index) {
-                    return value.toFixed(3);
-                },
-                position: {
-                    x: document.getElementById("txtX").value,
-                    y: document.getElementById("txtY").value
-                }
-            }
-        }).render();
-    } else {
-        delete chart.data().labels; // delete labels
-        chart.render();
-    }
+	if(this.checked) {
+		chart.data({
+			labels: {
+				format: function(value, id, index) {
+					return value.toFixed(3);
+				},
+				position: {
+					x: document.getElementById("txtX").value,
+					y: document.getElementById("txtY").value
+				}
+			}
+		}).render();
+	} else {
+		delete chart.data().labels; // delete labels
+		chart.render();
+	}
 };
 // x
 document.getElementById("txtX").onchange = function() {
-    document.getElementById("chkFormat").onchange();
+	document.getElementById("chkFormat").onchange();
 };
 // y
 document.getElementById("txtY").onchange = function() {
-    document.getElementById("chkFormat").onchange();
+	document.getElementById("chkFormat").onchange();
 };
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 var chart = sb.chart.render("#chartWrap", {
-	data : {
+	data: {
 		type: "bar",
 		columns: [
 			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]

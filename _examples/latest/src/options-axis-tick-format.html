@@ -1,10 +1,10 @@
 ---
-title:  Axis Tick Format
-date:   2018-08-16
+title: Axis Tick Format
+date: 2018-08-16
 categories: ["latest","options"]
 order: 335
 ---
-<p>Y축의 tick을 커스트마이징 하거나 표시될 tick을 선택 할 수 있습니다.</p>
+<p>X, Y축의 tick 라벨을 커스터마이징 하거나 표시될 tick을 선택할 수 있습니다.</p>
 <hr>
 <!-- Options -->
 <h4>Options</h4>
@@ -12,57 +12,24 @@ order: 335
 	<ul>
 		<li>
 			<h6><code>axis.x.tick.format</code></h6>
-			<p><label><input type="checkbox" id="chkFormatX" checked>X축 Tick 라벨을 커스트마이징(포멧정의) 합니다.</label></p>
-			<p><code>axis.x.tick.format: function(d) { return (d+1) + "번째"; }</code></p>
+			<p><label><input type="checkbox" id="chkFormatX" checked>X축 Tick 라벨을 커스터마이징(포맷 정의) 합니다.</label></p>
+			<p><code>axis.x.tick.format = function(d) { return (d + 1) + "번째"; }</code></p>
 		</li>
 		<li>
 			<h6><code>axis.y.tick.format</code></h6>
-			<p><label><input type="checkbox" id="chkFormatY" checked>Y축 Tick 라벨을 커스트마이징(포멧정의) 합니다.</label></p>
-			<p><code>axis.y.tick.format=function(d){return (""+Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")+" 천만";}</code></p>
+			<p><label><input type="checkbox" id="chkFormatY" checked>Y축 Tick 라벨을 커스터마이징(포맷 정의) 합니다.</label></p>
+			<p><code>axis.y.tick.format = function(d) { return (""+Math.floor(d / 1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }</code></p>
 		</li>
 	</ul>
 </div>
 <!-- Example -->
 <h4>Example</h4>
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-        ]
-    },
-    axis: {
-        x: {
-            tick: {
-                format: function(d) { return (d+1) + "번째"; }
-            }
-        },
-        y: {
-            tick: {
-                format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }
-            }
-        }
-    }
-});
-// format-x
-document.getElementById("chkFormatX").onchange = function() {
-    chart.axis().x.tick.format = this.checked ? function(d) { return (d+1) + "번째"; }: null;
-    chart.render();
-};
-// format-y
-document.getElementById("chkFormatY").onchange = function() {
-    chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
-    chart.render();
-};
-{% endhighlight %}</p>
-<!-- Script -->
-<script>
-var chart = sb.chart.render("#chartWrap", {
-	data : {
+	data: {
 		type: "bar",
 		columns: [
 			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
@@ -71,24 +38,65 @@ var chart = sb.chart.render("#chartWrap", {
 	axis: {
 		x: {
 			tick: {
-				format: function(d) { return (d+1) + "번째"; }
+				format: function(d) {
+					return (d + 1) + "번째";
+				}
 			}
 		},
 		y: {
 			tick: {
-				format: function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }
+				format: function(d) {
+					return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만";
+				}
 			}
 		}
 	}
 });
 // format-x
 document.getElementById("chkFormatX").onchange = function() {
-	chart.axis().x.tick.format = this.checked ? function(d) { return (d+1) + "번째"; }: null;
+	chart.axis().x.tick.format = this.checked ? function(d) { return (d + 1) + "번째"; } : null;
 	chart.render();
 };
 // format-y
 document.getElementById("chkFormatY").onchange = function() {
-	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; }: null;
+	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d / 1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; } : null;
+	chart.render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	},
+	axis: {
+		x: {
+			tick: {
+				format: function(d) {
+					return (d + 1) + "번째";
+				}
+			}
+		},
+		y: {
+			tick: {
+				format: function(d) {
+					return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만";
+				}
+			}
+		}
+	}
+});
+// format-x
+document.getElementById("chkFormatX").onchange = function() {
+	chart.axis().x.tick.format = this.checked ? function(d) { return (d + 1) + "번째"; } : null;
+	chart.render();
+};
+// format-y
+document.getElementById("chkFormatY").onchange = function() {
+	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d / 1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; } : null;
 	chart.render();
 };
 </script>

@@ -1,6 +1,6 @@
 ---
 title: classes
-date:   2018-06-29
+date: 2018-06-29
 categories: ["latest","CLASS"]
 order: 0
 ---
@@ -11,16 +11,16 @@ order: 0
 
 ---
 
-CSS 클래스 입니다.
+CSS 클래스입니다.
 
-chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes 가 정의되어 있습니다.
+chart, title, axis, legned, grid, tooltip 등 차트 내 각 영역 별로 classes 가 정의되어 있습니다.
 
 
 ### chart
 
-* ```.sbchart-chart``` : x,y축 라벨, 타이틀을 제외한 순수 영역. `#2.0.0`
+* ```.sbchart-chart``` : x, y축 라벨, 타이틀을 제외한 순수 영역. `#2.0.0`
 
-* ```.sbchart-series``` :  Series(범례) 영역 `#2.0.0`
+* ```.sbchart-series``` : Series(범례) 영역 `#2.0.0`
 
 
 ### title
@@ -29,16 +29,16 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * 예
 
-   ```css
-.sbchart-title { font-size:16px; font-weight:bold; }	/* 타이틀 폰트 사이즈 변경 */
-.sbchart-title { fill:#595959; }	/* 폰트 색 변경 */
+	```css
+.sbchart-title { font-size: 16px; font-weight: bold; }	/* 타이틀 폰트 사이즈 변경 */
+.sbchart-title { fill: #595959; }	/* 폰트 색 변경 */
 ```
 
 ### axis
 
-* ```.sbchart-axis``` : x,y축 공통. `#2.0.0`
+* ```.sbchart-axis``` : x, y축 공통. `#2.0.0`
 
-* ```.sbchart-axis-x```  : x축 최상위. `#2.0.0`
+* ```.sbchart-axis-x``` : x축 최상위. `#2.0.0`
 
 * ```.sbchart-axis-x .tick text``` : x축 tick 텍스트. `#2.0.0`
 
@@ -60,12 +60,12 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * 예
 
-   ```css
-.sbchart-axis-x .tick text {font-size:13px;}	/* x축 tick 폰트 크기 변경 */
-.sbchart-axis-y .tick text {fill:#aaaaaa;}	/* x축 tick 글자 색 변경 */
-.sbchart-axis-x .tick line {display:none;}	/* x축 tick 라인(눈금) 없애기 */
-.sbchart-axis-x .domain {display:none}	/* x축 선 없애기 */
-.sbchart-axis-x .sbchart-axis-x-label {font-size:14px;}	/* x축 라벨 폰트 크기 변경 */
+	```css
+.sbchart-axis-x .tick text { font-size: 13px; } /* x축 tick 폰트 크기 변경 */
+.sbchart-axis-y .tick text { fill: #aaaaaa; }	/* x축 tick 글자 색 변경 */
+.sbchart-axis-x .tick line { display: none; }	/* x축 tick 라인(눈금) 없애기 */
+.sbchart-axis-x .domain { display: none; }	/* x축 선 없애기 */
+.sbchart-axis-x .sbchart-axis-x-label { font-size: 14px; }	/* x축 라벨 폰트 크기 변경 */
 ```
 
 
@@ -77,23 +77,23 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * ```.sbchart-legend-item``` : 범례 아이템. `#2.0.0`
 
-* ```.sbchart-legend-item-text``` : 범례 텍스트. 
+* ```.sbchart-legend-item-text``` : 범례 아이템 텍스트. `#2.0.0`
 
-* ```.sbchart-legend-item-tile``` : 범례 Tile. `#2.0.0`
+* ```.sbchart-legend-item-tile``` : 범례 아이템 Tile. `#2.0.0`
 
-* ```.sbchart-legend-item-event``` : TODO. `#2.0.0`
+<!-- * ```.sbchart-legend-item-event``` : TODO. `#2.0.0` -->
 
 * 예
 
-   ```css
-.sbchart-legend-background {stroke-width: 0}	/* 범례 박스 라인 없애기 */
-.sbchart-legend-background {fill:#f2f2f2;}	/* 범례 배경색 정의 */
-.sbchart-legend-item {font-size:14px;}	/* 범례 텍스트 폰트 크기 변경 */
+	```css
+.sbchart-legend-background { stroke-width: 0; } /* 범례 박스 라인 없애기 */
+.sbchart-legend-background { fill: #f2f2f2; }	/* 범례 배경색 정의 */
+.sbchart-legend-item { font-size: 14px; } /* 범례 텍스트 폰트 크기 변경 */
 ```
 
 ### grid
 
-* ```.sbchart-grid``` : 그리드 x,y축  공통. `#2.0.0`
+* ```.sbchart-grid``` : 그리드 x, y축 공통. `#2.0.0`
 
 * ```.sbchart-grid-x``` : 그리드 x축 최상위. `#2.0.0`
 
@@ -110,7 +110,7 @@ chart, title, axis, legned, grid, tooltip 등 차트내 각 영별로 classes �
 
 * ```.sbchart-tooltip-title``` : 툴팁의 제목 영역. `#2.0.0`
 
-* ```.sbchart-tooltip-cont``` : 툴팁의 컨텐츠 영역.  `#2.0.0`
+* ```.sbchart-tooltip-cont``` : 툴팁의 콘텐츠 영역.	`#2.0.0`
 
 
 ### 기타

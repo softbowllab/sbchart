@@ -1,39 +1,47 @@
 ---
-title:  Bar (Rotated)
-date:   2018-05-17
+title: Bar (Rotated)
+date: 2018-05-17
 categories: ["latest","chart"]
 order: 103
 ---
-<p>막대 차트 가로 그리기 예제입니다.</p>
+<p>Bar 차트 가로 그리기 예제입니다.</p>
 <p>data.type="<em>bar</em>" 로 그리고 "axis.rotated="<em>true</em>"로 지정합니다.</p>
 <hr>
 <!-- bindto -->
 <h4>Example</h4>
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
-        ]
-    },
-    legend: {show: false},
-    axis: {rotated: true}
+	data: {
+		type: "bar",
+		columns: [
+			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
+		]
+	},
+	legend: {
+		show: false
+	},
+	axis: {
+		rotated: true
+	}
 });
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
-    sb.chart.render("#chartWrap", {
-        data : {
-            type: "bar",
-            columns: [
-                ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
-            ]
-        },
-        legend: {show: false},
-        axis: {rotated: true}
-    });
+	sb.chart.render("#chartWrap", {
+		data: {
+			type: "bar",
+			columns: [
+				["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67]
+			]
+		},
+		legend: {
+			show: false
+		},
+		axis: {
+			rotated: true
+		}
+	});
 </script>

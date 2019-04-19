@@ -1,6 +1,6 @@
 ---
-title:  extend.gauge
-date:   2018-10-18
+title: extend.gauge
+date: 2018-10-18
 categories: ["latest","extend"]
 order: 6
 ---
@@ -11,25 +11,26 @@ order: 6
 
 ---
 
-게이지 차트에 대한 확장 옵션를 지정합니다.
+게이지 차트에 대한 확장 옵션을 지정합니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 extend: {
-    gauge: {
-        label: {
-            show: true,
-            format: function(value, ratio) {
-                return (value / 100).toFixed(3);
-            }
-        },
-        innerRadius: 20,
-        min: 0,
-        max: 100,
-        units: "%"
-    }
+	gauge: {
+		label: {
+			show: true,
+			format: function(value, ratio) {
+				return (value / 100).toFixed(3);
+			}
+		},
+		innerRadius: 20,
+		fullCircle: false,
+		min: 0,
+		max: 100,
+		units: "%"
+	}
 }
 ```
 
@@ -41,7 +42,7 @@ extend: {
 
 지정하지 않았을 경우는 원의 크기에 따라 자동 계산됩니다.
 
-* Type : number
+* Type : Number
 
 
 
@@ -49,9 +50,9 @@ extend: {
 
 `#2.0.4`
 
-원의 가운데에 표시되는 값에 대한 라벨의 표시 여부를 지정합니다.
+게이지의 가운데에 표시되는 값에 대한 라벨의 표시 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -60,78 +61,64 @@ extend: {
 
 `#2.0.4`
 
-원의 가운데에 표시되는 값에 대한 라벨을 커스트마이징 합니다.
+게이지의 가운데에 표시되는 값에 대한 라벨을 커스터마이징 합니다.
 
-* Type : function
+* Type : Function
 ```javascript
 extend: {
-    gauge: {
-        label: {
-            format: function(value, ratio) {
-                return (ratio / 100).toFixed(3);
-            }
-        }
-    }
+	gauge: {
+		label: {
+			format: function(value, ratio) {
+				return (ratio / 100).toFixed(3);
+			}
+		}
+	}
 }
 ```
 
-* Function 파라메터
+* Function 파라미터
 
-  * value : 값
+	* value : 값
 
-  * ratio : 계산된 비율 (0 ~ 1)
+	* ratio : 계산된 비율 (0 ~ 1)
 
-
-<!-- ### extend.gauge.startAngle
-
-`#2.0.4`
-
-원의 시작 각도를 지정한다.
-
-원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
-
-* Type : number
-
-* Default : -90
-
-
-### extend.gauge.endAngle
+### extend.gauge.fullCircle
 
 `#2.0.4`
 
-원의 종료 각도를 지정한다.
+full circle 여부를 지정합니다.
 
-원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
+`extend.gauge.fullCircle = true`일 경우 원으로 표현됩니다.
 
-* Type : number
+* Type : Boolean
 
-* Default : 90 -->
+* Default : false
 
 
 ### extend.gauge.min
 
 `#2.0.4`
 
-최소값을 지정합니다.
+최솟값을 지정합니다.
 
-최소값 라벨을 커스트마이징 하려면 object 형태로 지정합니다.
+최솟값 라벨을 커스터마이징 하려면 Object 형태로 지정합니다.
 
-* Type : number / object
+* Type : Number / Object
 
 * Default : 0
 
-* Format (using object)
+* Format (using Object)
 ```javascript
 extend: {
-    gauge: {
-        min: {
-            show: true,
-            value: 0,
-            format: function(value) {
-                return value + " %";
-            }
-        }
-    }
+	gauge: {
+		min: {
+			show: true,
+			value: 0,
+			format: function(value) {
+				return value + " %";
+			}
+		}
+	}
 }
 ```
 
@@ -139,9 +126,9 @@ extend: {
 
 `#2.0.4`
 
-최소값 라벨을 show/hidden 처리합니다.
+최솟값 라벨을 show/hide 처리합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -150,9 +137,9 @@ extend: {
 
 `#2.0.4`
 
-`extend.gauge.min`를 object 타입으로 지정하는 경우 최소값을 지정합니다.
+`extend.gauge.min`를 Object 타입으로 지정하는 경우 최솟값을 지정합니다.
 
-* Type : number
+* Type : Number
 
 * Default : 0
 
@@ -161,35 +148,35 @@ extend: {
 
 `#2.0.4`
 
-최소값 라벨을 커스트마이징 합니다.
+최솟값 라벨을 커스터마이징 합니다.
 
-* Type : function
+* Type : Function
 
 
 ### extend.gauge.max
 
 `#2.0.4`
 
-최대값을 지정합니다.
+최댓값을 지정합니다.
 
-최대값 라벨을 커스트마이징 하려면 object 형태로 지정합니다.
+최댓값 라벨을 커스터마이징 하려면 Object 형태로 지정합니다.
 
-* Type : number / object
+* Type : Number / Object
 
-* Default : 0
+* Default : 100
 
-* Format (using object)
+* Format (using Object)
 ```javascript
 extend: {
-    gauge: {
-        max: {
-            show: true,
-            value: 0,
-            format: function(value) {
-                return value + " %";
-            }
-        }
-    }
+	gauge: {
+		max: {
+			show: true,
+			value: 100,
+			format: function(value) {
+				return value + " %";
+			}
+		}
+	}
 }
 ```
 
@@ -197,9 +184,9 @@ extend: {
 
 `#2.0.4`
 
-최대값 라벨을 show/hidden 처리합니다.
+최댓값 라벨을 show/hide 처리합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -208,20 +195,20 @@ extend: {
 
 `#2.0.4`
 
-`extend.gauge.max`를 object 타입으로 지정하는 경우 최대값을 지정합니다.
+`extend.gauge.max`를 Object 타입으로 지정하는 경우 최댓값을 지정합니다.
 
-* Type : number
+* Type : Number
 
-* Default : 0
+* Default : 100
 
 
 ### extend.gauge.max.format
 
 `#2.0.4`
 
-최대값 라벨을 커스트마이징 합니다.
+최댓값 라벨을 커스터마이징 합니다.
 
-* Type : function
+* Type : Function
 
 ### extend.gauge.units
 
@@ -229,4 +216,4 @@ extend: {
 
 단위 영역에 문자열을 지정합니다.
 
-* Type : string
+* Type : String

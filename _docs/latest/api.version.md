@@ -1,18 +1,18 @@
 ---
-title:  version
-date:   2018-08-22
+title: version
+date: 2018-08-22
 categories: ["latest","API"]
 order: 2
 ---
 
-## SBChart 버전정보
+## SBChart 버전 정보
 
 `#2.0.0`
 
 ---
 
-<code>sb.chart.version</code> 속성은 SBChart 버전 정보를 제공합니다.
+`sb.chart.version` 속성은 SBChart 버전 정보를 제공합니다.
 
-  ```javascript
+```javascript
 console.log(sb.chart.version);
 ```

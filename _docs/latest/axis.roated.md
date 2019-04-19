@@ -1,6 +1,6 @@
 ---
-title:  axis.rotated
-date:   2018-05-14
+title: axis.rotated
+date: 2018-05-14
 categories: ["latest","axis"]
 order: 1
 ---
@@ -13,16 +13,17 @@ order: 1
 
 값이 `true` 이면 x, y축을 회전하여 가로 차트로 변경됩니다.
 
-막대차트 계열("bar","stackbar","stackbar.100")만 지원되며 그 외 차트는 지원하지 않습니다.
+~~막대 차트 계열("bar","stackbar","stackbar.100")만 지원되며 그 외 차트는 지원하지 않습니다.~~
 
-* Type : boolean
+막대 차트뿐 아니라 라인 차트 계열도 지원합니다. `#2.0.10`
+
+* Type : Boolean
 
 * Default : false
 
 * Format
 ```javascript
 axis: {
-    rotated: true
+	rotated: true
 }
 ```
-

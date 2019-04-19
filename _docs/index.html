@@ -1,5 +1,5 @@
 ---
-date:   2018-05-17
+date: 2018-05-17
 permalink: /:collection/:path:output_ext
 layout: default
 ---
@@ -14,7 +14,7 @@ layout: default
 			{% assign pages = site.docs | where: "categories", version | where: "categories", cate.name | sort: "order" %}
 			<ul>
 			{% for item in pages %}
-				<li><a href="{{ site.baseurl }}{{site.path}}{{ item.url }}">{{ item.title }}</a></li>
+				<li><a href="{{ site.baseurl }}{{ site.path }}{{ item.url }}">{{ item.title }}</a></li>
 			{% endfor %}
 			</ul>
 		{% endfor %}
@@ -22,4 +22,3 @@ layout: default
 
 	</div>
 </div>
-

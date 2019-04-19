@@ -1,6 +1,6 @@
 ---
-title:  index
-date:   2018-05-14
+title: index
+date: 2018-05-14
 categories: ["latest"]
 order: 0
 ---
@@ -10,7 +10,7 @@ order: 0
 
 ### global
 
-크기, Padding, 색패턴을 정의할 수 있는 옵션 입니다.
+크기, Padding, 색 패턴, 웹 접근성 항목을 정의할 수 있는 옵션입니다.
 
 {% assign cate = "global" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
@@ -30,9 +30,20 @@ order: 0
 {% endfor %}
 
 
+### axis
+
+X, Y 축 관련 옵션입니다.
+
+{% assign cate = "axis" %}
+{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
+{% for item in pages %}
+* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
+{% endfor %}
+
+
 ### grid
 
-Grid 설정 옵션 입니다.
+Grid 설정 옵션입니다.
 
 {% assign cate = "grid" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
@@ -54,13 +65,14 @@ Grid 설정 옵션 입니다.
 
 ### legend
 
-범례의 위치, 모양에 대한  옵션입니다.
+범례의 위치, 모양에 대한 옵션입니다.
 
 {% assign cate = "legend" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
 {% for item in pages %}
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
+
 
 ### tooltip
 
@@ -73,16 +85,6 @@ Grid 설정 옵션 입니다.
 {% endfor %}
 
 
-### axis
-
-x,y 축 관련 옵션입니다.
-
-{% assign cate = "axis" %}
-{% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}
-{% for item in pages %}
-* [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
-{% endfor %}
-
 ### extend
 
 차트별 확장 옵션입니다.
@@ -93,6 +95,7 @@ x,y 축 관련 옵션입니다.
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
 
+
 ### API
 
 제공되는 함수들입니다.
@@ -102,6 +105,7 @@ x,y 축 관련 옵션입니다.
 {% for item in pages %}
 * [{{ item.title }}]({{ site.baseurl }}{{site.path}}{{ item.url }})
 {% endfor %}
+
 
 ### CLASS
 

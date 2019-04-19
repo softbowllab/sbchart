@@ -1,6 +1,6 @@
 ---
-title:  legend
-date:   2018-05-14
+title: legend
+date: 2018-05-14
 categories: ["latest","legend"]
 order: 1
 ---
@@ -11,22 +11,22 @@ order: 1
 
 ---
 
-범례 위치, 형태 등을 지정합니다.
+범례의 위치, 형태 등을 지정합니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 legend: {
-    show: true,
+	show: true,
 	background: false,
-    position: "inset",
-    inset: {
-        anchor:"top-left",
-        x: 10,
-        y: 0
-    },
-    padding: 10
+	position: "inset",
+	inset: {
+		anchor: "top-left",
+		x: 10,
+		y: 0
+	},
+	padding: 10
 }
 ```
 
@@ -34,11 +34,11 @@ legend: {
 
 `#2.0.0`
 
-범례의 show/hidden 여부를 지정합니다.
+범례의 show/hide 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
-* Default : false
+* Default : true
 
 ### legend.position
 
@@ -46,7 +46,7 @@ legend: {
 
 범례의 위치를 지정합니다.
 
-* Type : string
+* Type : String
 
 * Default : "bottom"
 
@@ -54,7 +54,7 @@ legend: {
 
 	* bottom: `Default` 아래에 위치
 	* right: 우측에 위치
-	* inset: 차트내에 위치, 사항한 사항은 [legend.inset](./legend.inset.html) 참조
+	* inset: 차트 내에 위치, 자세한 사항은 [legend.inset](./legend.inset.html) 참조
 
 ### legend.background
 
@@ -62,9 +62,9 @@ legend: {
 
 `legend.position` 값이 'bottom', 'right' 인 경우 범례의 백그라운드 영역을 표시합니다.
 
-`legend.position='inset'` 인 경우는 해당되지 않습니다.
+`legend.position = 'inset'` 인 경우는 해당되지 않습니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : false
 
@@ -73,9 +73,9 @@ legend: {
 
 `#2.0.0`
 
-각 범례 아이템 박스의 padding 을 지정합니다.
+각 범례 아이템 박스의 padding을 지정합니다.
+`legend.position = bottom`일 때, 마지막 범례의 우측으로는 `legend.padding`이 적용되지 않습니다. `#2.0.8`
 
-* Type : number
+* Type : Number
 
 * Default : 0
-

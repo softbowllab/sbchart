@@ -1,6 +1,6 @@
 ---
-title:  extend.donut
-date:   2018-07-24
+title: extend.donut
+date: 2018-07-24
 categories: ["latest","extend"]
 order: 5
 ---
@@ -11,24 +11,25 @@ order: 5
 
 ---
 
-도넛 차트에 대한 확장 옵션를 지정합니다.
+도넛 차트에 대한 확장 옵션을 지정합니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 extend: {
-    donut: {
-        label: {
-            show: true,
-            format: function(value, ratio, id) {
-                return (ratio * 100).toFixed(3) + "%";
-            }
-        },
-        innerRadius: 20,
-        padding: 0,
-        title: "점유율"
-    }
+	donut: {
+		label: {
+			show: true,
+			format: function(value, ratio, id) {
+				return (ratio * 100).toFixed(3) + "%";
+			}
+		},
+		innerRadius: 20,
+		padding: 0,
+		fullCircle: true,
+		title: "점유율"
+	}
 }
 ```
 
@@ -40,16 +41,16 @@ extend: {
 
 지정하지 않았을 경우는 원의 크기에 따라 자동 계산됩니다.
 
-* Type : number
+* Type : Number
 
 
 ### extend.donut.padding
 
 `#2.0.0`
 
-각 영역(원호) 사이의 공간을 지정합니다.
+각 영역(원호) 사이의 여백을 지정합니다.
 
-* Type : number
+* Type : Number
 
 * Default : 0
 
@@ -60,7 +61,7 @@ extend: {
 
 라벨 표시 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -69,28 +70,28 @@ extend: {
 
 `#2.0.0`
 
-라벨을 커스트마이징 합니다.
+라벨을 커스터마이징 합니다.
 
-* Type : function
+* Type : Function
 ```javascript
 extend: {
-    donut: {
-        label: {
-            format: function(value, ratio, id) {
-                return (ratio * 100).toFixed(3) + "%";
-            }
-        }
-    }
+	donut: {
+		label: {
+			format: function(value, ratio, id) {
+				return (ratio * 100).toFixed(3) + "%";
+			}
+		}
+	}
 }
 ```
 
-* Function 파라메터
+* Function 파라미터
 
-  * value : 값
+	* value : 값
 
-  * ratio : 계산된 비율 (0 ~ 1)
+	* ratio : 계산된 비율 (0 ~ 1)
 
-  * id : 범례 ID
+	* id : 범례 ID
 
 
 ### extend.donut.title
@@ -101,8 +102,20 @@ extend: {
 
 `title` 옵션과는 구별되어 도넛의 가운데 영역에 표현됩니다.
 
-* Type : string
+* Type : String
 
+
+### extend.donut.fullCircle
+
+`#2.0.4`
+
+full circle 여부를 지정합니다.
+
+`extend.donut.fullCircle = false`일 경우 반원으로 표현됩니다.
+
+* Type : Boolean
+
+* Default : true
 
 <!-- ### extend.donut.startAngle
 
@@ -112,7 +125,7 @@ extend: {
 
 원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
 
-* Type : number
+* Type : Number
 
 * Default : -180
 
@@ -125,7 +138,7 @@ extend: {
 
 원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
 
-* Type : number
+* Type : Number
 
 * Default : 180
  -->

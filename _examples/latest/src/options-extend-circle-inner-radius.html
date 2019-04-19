@@ -1,6 +1,6 @@
 ---
-title:  Donut/Gauge Radius
-date:   2018-10-30
+title: Donut/Gauge Radius
+date: 2018-10-30
 categories: ["latest","options"]
 order: 425
 ---
@@ -30,45 +30,7 @@ order: 425
 <p>{% highlight javascript %}
 //donut
 var chart1 = sb.chart.render("#chartWrap1", {
-    data : {
-        type: "donut",
-        columns: [
-            ["2015",3.51],
-            ["2016",0.71],
-            ["2017",1.48]
-        ]
-    }
-});
-//gauge
-var chart2 = sb.chart.render("#chartWrap2", {
-    data : {
-        type: "gauge",
-        columns: [
-            ["2015",71]
-        ]
-    }
-});
-// innerRadius
-document.getElementById("txtInnerRadius").onchange = function() {
-    //donut
-    chart1.extend({
-        donut: {
-            innerRadius: this.value
-        }
-    }).render();
-    //gauge
-    chart2.extend({
-        gauge: {
-            innerRadius: this.value
-        }
-    }).render();
-};
-{% endhighlight %}</p>
-<!-- Script -->
-<script>
-//donut
-var chart1 = sb.chart.render("#chartWrap1", {
-	data : {
+	data: {
 		type: "donut",
 		columns: [
 			["2015",3.51],
@@ -79,7 +41,45 @@ var chart1 = sb.chart.render("#chartWrap1", {
 });
 //gauge
 var chart2 = sb.chart.render("#chartWrap2", {
-	data : {
+	data: {
+		type: "gauge",
+		columns: [
+			["2015",71]
+		]
+	}
+});
+// innerRadius
+document.getElementById("txtInnerRadius").onchange = function() {
+	//donut
+	chart1.extend({
+		donut: {
+			innerRadius: this.value
+		}
+	}).render();
+	//gauge
+	chart2.extend({
+		gauge: {
+			innerRadius: this.value
+		}
+	}).render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+//donut
+var chart1 = sb.chart.render("#chartWrap1", {
+	data: {
+		type: "donut",
+		columns: [
+			["2015",3.51],
+			["2016",0.71],
+			["2017",1.48]
+		]
+	}
+});
+//gauge
+var chart2 = sb.chart.render("#chartWrap2", {
+	data: {
 		type: "gauge",
 		columns: [
 			["2015",61.6]

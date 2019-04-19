@@ -1,25 +1,25 @@
 ---
-title:  Dashboard 1 (PC)
-date:   2018-09-05
+title: Dashboard 1 (PC)
+date: 2018-09-05
 categories: ["latest","demo"]
 order: 906
 ---
-<p>실시간 Dashboard 구현 예제 입니다. (PC 전용)</p>
-<p>data 추가하고 render() 함수 실행해 실시간 그래프를 구현할 수 있습니다.</p>
+<p>실시간 Dashboard 구현 예제입니다. (PC 전용)</p>
+<p>data를 추가하고 render() 함수 실행해 실시간 그래프를 구현할 수 있습니다.</p>
 <hr>
 <style>
-	div.block {overflow: hidden; box-shadow: silver 1px 1px; }
-	div.title {background-color: #eee;font-size:.9em; border:1px solid silver; border-bottom:0px; padding:2px 5px; }
-	div.box {float:left;border:1px solid silver; padding:2px 5px;}
-	div.box p.lbl {font-size:.8em;color: #666;}
-	div.box p.val {font-size:1.6em;color: #000;font-weight: bold;line-height: 40px}
-	div.box p.desc {font-size:.8em;color: #666; margin-bottom:0px;}
-	div.box span.pie {position:absolute;top:50%;left:50%; margin-top:-12px; margin-left:-5px;}	/* 도넛차트 라벨 */
-	div.box span.lbl {position:absolute;top:1px;left:1px;font-size:.9em;color:#888}	/* 도넛차트 라벨 */
-	div.hr {margin-top:10px;}
-	div.c-25 {width: 25%;float:left;}
-	div.c-65 {width: 65%;float:left;}
-	div.c-50 {width: 50%;float:left}
+	div.block { overflow: hidden; box-shadow: silver 1px 1px; }
+	div.title { background-color: #eee; font-size: .9em; border: 1px solid silver; border-bottom: 0px; padding: 2px 5px; }
+	div.box { float: left; border: 1px solid silver; padding: 2px 5px; }
+	div.box p.lbl { font-size: .8em; color: #666; }
+	div.box p.val { font-size: 1.6em; color: #000; font-weight: bold; line-height: 40px }
+	div.box p.desc { font-size: .8em; color: #666; margin-bottom: 0px; }
+	div.box span.pie { position: absolute; top: 50%; left: 50%; margin-top: -12px; margin-left: -5px; }	/* 도넛차트 라벨 */
+	div.box span.lbl { position: absolute; top: 1px; left: 1px; font-size: .9em; color: #888; }	/* 도넛차트 라벨 */
+	div.hr { margin-top: 10px; }
+	div.c-25 { width: 25%; float: left; }
+	div.c-65 { width: 65%; float: left; }
+	div.c-50 { width: 50%; float: left; }
 </style>
 
 <div class="block">
@@ -43,15 +43,15 @@ order: 906
 		<p class="desc">INCOMING EVENTS</p>
 	</div>
 </div>
-<div class="block hr c-65" style="margin-right:10px;">
+<div class="block hr c-65" style="margin-right: 10px;">
 	<div class="title">New Users</div>
-	<div class="box" style="width:100%">
+	<div class="box" style="width: 100%">
 		<div id="chartWrap1"></div>
 	</div>
 </div>
 <div class="block hr">
 	<div class="title">Performance</div>
-	<div class="box">
+	<div class="box" style="width: 100%">
 		<div class="c-50">
 			<div id="chartWrap2">
 				<span class="lbl">CPU</span>
@@ -68,185 +68,189 @@ order: 906
 <!-- Highlight -->
 <h4>Code</h4>
 <p>{% highlight css %}
-#chartWrap1	.sbchart-axis-x .tick line {display: none;}	/* x축 tick 라인 숨김 */
-#chartWrap1	.sbchart-axis-x .tick text {fill: #999;}	/* x축 tick 폰트색 */
-#chartWrap1	.sbchart-axis-x .domain {display:none;}		/* x축 라인 숨김 */
-#chartWrap1	.sbchart-axis-y .tick line {display: none;}	/* y축 tick 라인 숨김 */
-#chartWrap1	.sbchart-axis-y .tick text {fill: #999;}	/* y축 tick 폰트색 */
-#chartWrap1	.sbchart-axis-y .domain {display:none;}		/* y축 라인 숨김 */
-#chartWrap1	.sbchart-grid-y-line {stroke-dasharray: 3; }	/* y축 그리드 라인 점선처리 */
-#chartWrap1	.sbchart-grid line {stroke: #666; }	/* 그리드 라인 색 */
-#chartWrap1	.sbchart-shapes-other {stroke-width:4}	/* other 값 라인 굵기 */
+#chartWrap1	.sbchart-axis-x .tick line { display: none; }	/* x축 tick 라인 숨김 */
+#chartWrap1	.sbchart-axis-x .tick text { fill: #999; }	/* x축 tick 폰트색 */
+#chartWrap1	.sbchart-axis-x .domain { display: none; }	/* x축 라인 숨김 */
+#chartWrap1	.sbchart-axis-y .tick line { display: none; }	/* y축 tick 라인 숨김 */
+#chartWrap1	.sbchart-axis-y .tick text { fill: #999; }	/* y축 tick 폰트색 */
+#chartWrap1	.sbchart-axis-y .domain { display: none; }	/* y축 라인 숨김 */
+#chartWrap1	.sbchart-grid-y-line { stroke-dasharray: 3; }	/* y축 그리드 라인 점선처리 */
+#chartWrap1	.sbchart-grid line { stroke: #666; }	/* 그리드 라인 색 */
+#chartWrap1	.sbchart-shapes-other { stroke-width: 4; }	/* other 값 라인 굵기 */
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart1 = new sb.chart("#chartWrap1", {
-    global: {
-        color: {
-            pattern: ["#00a9ff","#4a82b6"]
-        },
-        padding: { 
-            right:10
-        }           
-    },
-    data : {
-        types: {capital:"area",other:"line"},
-        json: [],
-        keys: {
-            x: "day",
-            value: ["capital","other"]
-        },
-    },
-    axis: {
-        x: {
-            type: "timeseries",
-            tick: {
-                count: 5,
-                format: "%M'%S''"
-            }
-        },
-        y: {
-            tick: {
-                values: [0, 2, 4, 6, 8, 10]
-            }
-        }
-    },
-    grid: {
-        x: { show: false }
-    },
-    legend: {
-        show: false
-    },
-    tooltip: {
-        show: false
-    },
-    extend: {
-        point: { show: false }
-    }
+	global: {
+		color: {
+			pattern: ["#00a9ff", "#4a82b6"]
+		},
+		padding: { 
+			right: 10
+		}			
+	},
+	data: {
+		types: {capital: "area", other: "line"},
+		json: [],
+		keys: {
+			x: "day",
+			value: ["capital", "other"]
+		},
+	},
+	axis: {
+		x: {
+			type: "timeseries",
+			tick: {
+				count: 5,
+				format: "%M'%S''"
+			}
+		},
+		y: {
+			tick: {
+				values: [0, 2, 4, 6, 8, 10]
+			}
+		}
+	},
+	grid: {
+		x: { 
+			show: false 
+		}
+	},
+	legend: {
+		show: false
+	},
+	tooltip: {
+		show: false
+	},
+	extend: {
+		point: { 
+			show: false 
+		}
+	}
 });
 
 //차트 #1 랜덤 데이터 생성
-for(var i=20; i>0; i--) {
-    var dt = new Date();
-    dt.setSeconds(dt.getSeconds() - (i));
-    chart1.data().json.push({ day: dt, capital:Math.floor((Math.random() * 9) + 1), other:Math.floor((Math.random() * 9) + 1) });
+for(var i = 20; i > 0; i--) {
+	var dt = new Date();
+	dt.setSeconds(dt.getSeconds() - (i));
+	chart1.data().json.push({ day: dt, capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1) });
 }
 
 // 도넛 차트 2개 공통 속성
 var conf = {
-    global: {
-        color: {
-            pattern: ["#86b9e6","#f2f2f2"]
-        }
-    },
-    data : {
-        type: "donut"
-    },
-    extend: {
-        donut: {
-            label: false,
-            innerRadius: 40
-        }
-    },
-    legend: {
-        show: false
-    },
-    tooltip: {
-        show: false
-    }
+	global: {
+		color: {
+			pattern: ["#86b9e6", "#f2f2f2"]
+		}
+	},
+	data: {
+		type: "donut"
+	},
+	extend: {
+		donut: {
+			label: false,
+			innerRadius: 40
+		}
+	},
+	legend: {
+		show: false
+	},
+	tooltip: {
+		show: false
+	}
 };
 
 var chart2 = new sb.chart("#chartWrap2", conf);
 var chart3 = new sb.chart("#chartWrap3", conf);
 chart3.global({
-    color: {
-        pattern: ["#f5707a","#f2f2f2"]
-    }
+	color: {
+		pattern: ["#f5707a", "#f2f2f2"]
+	}
 });
 
 
-// 랜더링 수행
+// 렌더링 수행
 doRender1();
-doRender2();doRender3();
+doRender2();
+doRender3();
 
-//차트 #1 랜더링
+//차트 #1 렌더링
 function doRender1() {
+	//랜덤 데이터
+	chart1.data().json.push({ day: new Date(), capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1)});
+	if(chart1.data().json.length > 20) chart1.data().json.shift();
+	chart1.render();
 
-    //렌덤 데이터
-    chart1.data().json.push({ day: new Date(), capital:Math.floor((Math.random() * 9) + 1), other:Math.floor((Math.random() * 9) + 1)});
-    if(chart1.data().json.length > 20)  chart1.data().json.shift();
-    chart1.render();
-
-    setTimeout(doRender1, 500); //0.5초후 재실행
+	setTimeout(doRender1, 500);	//0.5초후 재실행
 }
 
-//차트 #2 랜더링
+//차트 #2 렌더링
 function doRender2() {
+	var d = chart2.data().columns ? (chart2.data().columns[0][1] + (Math.random() * 10 / 100)) : 0;	//랜덤 데이터
+	if(d >= 1) d = 0;
 
-    var d = chart2.data().columns? (chart2.data().columns[0][1] + (Math.random()*10/100)):0;    //랜덤 데이터
-    if(d >= 1) d = 0;
+	chart2.data({
+		columns: [
+			["d", d],
+			["a", (1 - d)]
+		]
+	}).extend({
+		donut: { 
+			title: (d * 100).toFixed(0) + "%"
+		}
+	}).render();
 
-    chart2.data({
-        columns: [
-            ["d", d],
-            ["a", (1-d)]
-        ]
-    }).extend({
-        donut: { 
-            title : (d*100).toFixed(0) + "%"
-        }
-    }).render();
-setTimeout(doRender2, 1000);    //1초후 재실행
+	setTimeout(doRender2, 1000);	//1초후 재실행
 }
 
-//차트 #3  랜더링
+//차트 #3 렌더링
 function doRender3() {
+	var d = chart3.data().columns ? (chart3.data().columns[0][1] - (Math.random() * 5 / 100)) : 1;	//랜덤 데이터
+	if(d <= 0) d = 1;
 
-    var d = chart3.data().columns? (chart3.data().columns[0][1] - (Math.random()*5/100)): 1;    //랜덤 데이터
-    if(d <=0 ) d = 1;
+	chart3.data({
+		columns: [
+			["d", d],
+			["a", (1 - d)]
+		]
+	}).extend({
+		donut: { 
+			title: (d * 100).toFixed(0) + "%"
+		}
+	}).render();
 
-    chart3.data({
-        columns: [
-            ["d", d],
-            ["a", (1-d)]
-        ]
-    }).extend({
-        donut: { 
-            title : (d*100).toFixed(0) + "%"
-        }
-    }).render();
-    setTimeout(doRender3, 500); //0.5초후 재실행
+	setTimeout(doRender3, 500); //0.5초후 재실행
 }
 {% endhighlight %}</p>
 
 <!-- Code -->
 <!-- 첫번째 차트 코드 -->
 <style>
-#chartWrap1	.sbchart-axis-x .tick line {display: none;}	/* x축 tick 라인 숨김 */
-#chartWrap1	.sbchart-axis-x .tick text {fill: #999;}	/* x축 tick 폰트색 */
-#chartWrap1	.sbchart-axis-x .domain {display:none;}		/* x축 라인 숨김 */
-#chartWrap1	.sbchart-axis-y .tick line {display: none;}	/* y축 tick 라인 숨김 */
-#chartWrap1	.sbchart-axis-y .tick text {fill: #999;}	/* y축 tick 폰트색 */
-#chartWrap1	.sbchart-axis-y .domain {display:none;}		/* y축 라인 숨김 */
-#chartWrap1	.sbchart-grid-y-line {stroke-dasharray: 3; }	/* y축 그리드 라인 점선처리 */
-#chartWrap1	.sbchart-grid line {stroke: #666; }	/* 그리드 라인 색 */
-#chartWrap1	.sbchart-shapes-other {stroke-width:4}	/* other 값 라인 굵기 */
+#chartWrap1	.sbchart-axis-x .tick line { display: none; }	/* x축 tick 라인 숨김 */
+#chartWrap1	.sbchart-axis-x .tick text { fill: #999; }	/* x축 tick 폰트색 */
+#chartWrap1	.sbchart-axis-x .domain { display: none; }	/* x축 라인 숨김 */
+#chartWrap1	.sbchart-axis-y .tick line { display: none; }	/* y축 tick 라인 숨김 */
+#chartWrap1	.sbchart-axis-y .tick text { fill: #999; }	/* y축 tick 폰트색 */
+#chartWrap1	.sbchart-axis-y .domain { display: none; }	/* y축 라인 숨김 */
+#chartWrap1	.sbchart-grid-y-line { stroke-dasharray: 3; }	/* y축 그리드 라인 점선처리 */
+#chartWrap1	.sbchart-grid line { stroke: #666; }	/* 그리드 라인 색 */
+#chartWrap1	.sbchart-shapes-other { stroke-width: 4; }	/* other 값 라인 굵기 */
 </style>
 <script>
 	var chart1 = new sb.chart("#chartWrap1", {
 		global: {
 			color: {
-				pattern: ["#00a9ff","#4a82b6"]
+				pattern: ["#00a9ff", "#4a82b6"]
 			},
 			padding: { 
-				right:10
+				right: 10
 			}			
 		},
-		data : {
-			types: {capital:"area",other:"line"},
+		data: {
+			types: {capital: "area", other: "line"},
 			json: [],
 			keys: {
 				x: "day",
-				value: ["capital","other"]
+				value: ["capital", "other"]
 			},
 		},
 		axis: {
@@ -264,7 +268,9 @@ function doRender3() {
 			}
 		},
 		grid: {
-			x: { show: false }
+			x: { 
+				show: false 
+			}
 		},
 		legend: {
 			show: false
@@ -273,25 +279,27 @@ function doRender3() {
 			show: false
 		},
 		extend: {
-			point: { show: false }
+			point: { 
+				show: false 
+			}
 		}
 	});
 
 	//차트 #1 랜덤 데이터 생성
-	for(var i=20; i>0; i--) {
+	for(var i = 20; i > 0; i--) {
 		var dt = new Date();
 		dt.setSeconds(dt.getSeconds() - (i));
-		chart1.data().json.push({ day: dt, capital:Math.floor((Math.random() * 9) + 1), other:Math.floor((Math.random() * 9) + 1) });
+		chart1.data().json.push({ day: dt, capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1) });
 	}
 
 	// 도넛 차트 2개 공통 속성
 	var conf = {
 		global: {
 			color: {
-				pattern: ["#86b9e6","#f2f2f2"]
+				pattern: ["#86b9e6", "#f2f2f2"]
 			}
 		},
-		data : {
+		data: {
 			type: "donut"
 		},
 		extend: {
@@ -312,61 +320,61 @@ function doRender3() {
 	var chart3 = new sb.chart("#chartWrap3", conf);
 	chart3.global({
 		color: {
-			pattern: ["#f5707a","#f2f2f2"]
+			pattern: ["#f5707a", "#f2f2f2"]
 		}
 	});
 	
 	
-	// 랜더링 수행
+	// 렌더링 수행
 	doRender1();
-	doRender2();doRender3();
+	doRender2();
+	doRender3();
 
-	//차트 #1 랜더링
+	//차트 #1 렌더링
 	function doRender1() {
-
-		//렌덤 데이터
-		chart1.data().json.push({ day: new Date(), capital:Math.floor((Math.random() * 9) + 1), other:Math.floor((Math.random() * 9) + 1)});
-		if(chart1.data().json.length > 20)  chart1.data().json.shift();
+		//랜덤 데이터
+		chart1.data().json.push({ day: new Date(), capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1)});
+		if(chart1.data().json.length > 20) chart1.data().json.shift();
 		chart1.render();
 
 		setTimeout(doRender1, 500);	//0.5초후 재실행
 	}
 
-	//차트 #2 랜더링
+	//차트 #2 렌더링
 	function doRender2() {
-
-		var d = chart2.data().columns? (chart2.data().columns[0][1] + (Math.random()*10/100)):0;	//랜덤 데이터
+		var d = chart2.data().columns ? (chart2.data().columns[0][1] + (Math.random() * 10 / 100)) : 0;	//랜덤 데이터
 		if(d >= 1) d = 0;
 
 		chart2.data({
 			columns: [
 				["d", d],
-				["a", (1-d)]
+				["a", (1 - d)]
 			]
 		}).extend({
 			donut: { 
-				title : (d*100).toFixed(0) + "%"
+				title: (d * 100).toFixed(0) + "%"
 			}
 		}).render();
+
 		setTimeout(doRender2, 1000);	//1초후 재실행
 	}
 
-	//차트 #3  랜더링
+	//차트 #3 렌더링
 	function doRender3() {
-
-		var d = chart3.data().columns? (chart3.data().columns[0][1] - (Math.random()*5/100)): 1;	//랜덤 데이터
-		if(d <=0 ) d = 1;
+		var d = chart3.data().columns ? (chart3.data().columns[0][1] - (Math.random() * 5 / 100)) : 1;	//랜덤 데이터
+		if(d <= 0) d = 1;
 
 		chart3.data({
 			columns: [
 				["d", d],
-				["a", (1-d)]
+				["a", (1 - d)]
 			]
 		}).extend({
 			donut: { 
-				title : (d*100).toFixed(0) + "%"
+				title: (d * 100).toFixed(0) + "%"
 			}
 		}).render();
+
 		setTimeout(doRender3, 500); //0.5초후 재실행
 	}
 </script>

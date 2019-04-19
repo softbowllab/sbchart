@@ -1,6 +1,6 @@
 ---
-title:  tooltip
-date:   2018-07-24
+title: tooltip
+date: 2018-07-24
 categories: ["latest","tooltip"]
 order: 1
 ---
@@ -15,13 +15,13 @@ order: 1
 
 툴팁은 차트의 값 영역에 마우스 오버하면 나타납니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 tooltip: {
-    show: true,
-    grouped: true,
+	show: true,
+	grouped: true,
 }
 ```
 
@@ -31,7 +31,7 @@ tooltip: {
 
 툴팁 표시 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -42,10 +42,10 @@ tooltip: {
 
 툴팁이 그룹화되어 같이 표시될지 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
 * 주의
 
-  * 버블 차트 `data.type = 'bubble'`는 값과 상관없이 항상 `tooltip.grouped = false` 로 동작합니다.
+	* 버블 차트(`data.type = 'bubble'`)는 항상 `tooltip.grouped = false` 로 동작합니다.

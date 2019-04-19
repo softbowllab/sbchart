@@ -1,6 +1,6 @@
 ---
-title:  extend.point
-date:   2018-06-12
+title: extend.point
+date: 2018-06-12
 categories: ["latest","extend"]
 order: 1
 ---
@@ -11,17 +11,17 @@ order: 1
 
 ---
 
-점(포인트)에 대한 확장 옵션를 지정합니다.
+라인 차트 계열에서 포인트에 대한 확장 옵션을 지정합니다.
 
-* Type : object
+* Type : Object
 
 * Format
 ```javascript
 extend: {
-    point: {
-        show: true,
-        r: 2.5
-    }
+	point: {
+		show: true,
+		r: 2.5
+	}
 }
 ```
 
@@ -29,9 +29,9 @@ extend: {
 
 `#2.0.0`
 
-각 점을 줄에 표시할지 여부 지정합니다.
+각 포인트의 show/hide 여부를 지정합니다.
 
-* Type : boolean
+* Type : Boolean
 
 * Default : true
 
@@ -40,8 +40,8 @@ extend: {
 
 `#2.0.0`
 
-각 점의 반지름값을 지정합니다.
+각 포인트의 반지름 값을 지정합니다.
 
-* Type : number
+* Type : Number
 
 * Default : 2.5

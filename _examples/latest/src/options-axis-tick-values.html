@@ -1,10 +1,10 @@
 ---
-title:  Axis Tick Values
-date:   2018-08-16
+title: Axis Tick Values
+date: 2018-08-16
 categories: ["latest","options"]
 order: 336
 ---
-<p>Y축의 tick을 커스트마이징 하거나 표시될 tick을 선택 할 수 있습니다.</p>
+<p>X, Y축의 Tick의 값을 설정할 수 있습니다.</p>
 <hr>
 <!-- Options -->
 <h4>Options</h4>
@@ -23,45 +23,12 @@ order: 336
 	</ul>
 </div>
 <!-- Example -->
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "bar",
-        columns: [
-            ["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
-        ]
-    },
-    axis: {
-        x: {
-            tick: {
-                values: [0, 4, 6, 8]
-            }
-        },
-        y: {
-            tick: {
-                values: [7000000, 8000000, 9000000]
-            }
-        }
-    }
-});
-//values-x
-document.getElementById("chkValuesX").onchange = function() {
-    chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8]: null;
-    chart.render();
-};
-//values-y
-document.getElementById("chkValuesY").onchange = function() {
-    chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
-    chart.render();
-};
-{% endhighlight %}</p>
-<!-- Script -->
-<script>
-var chart = sb.chart.render("#chartWrap", {
-	data : {
+	data: {
 		type: "bar",
 		columns: [
 			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
@@ -82,12 +49,45 @@ var chart = sb.chart.render("#chartWrap", {
 });
 //values-x
 document.getElementById("chkValuesX").onchange = function() {
-	chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8]: null;
+	chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8] : null;
 	chart.render();
 };
 //values-y
 document.getElementById("chkValuesY").onchange = function() {
-	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000]: null;
+	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000] : null;
+	chart.render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "bar",
+		columns: [
+			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+		]
+	},
+	axis: {
+		x: {
+			tick: {
+				values: [0, 4, 6, 8]
+			}
+		},
+		y: {
+			tick: {
+				values: [7000000, 8000000, 9000000]
+			}
+		}
+	}
+});
+//values-x
+document.getElementById("chkValuesX").onchange = function() {
+	chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8] : null;
+	chart.render();
+};
+//values-y
+document.getElementById("chkValuesY").onchange = function() {
+	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000] : null;
 	chart.render();
 };
 </script>

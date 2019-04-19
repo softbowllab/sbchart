@@ -1,10 +1,10 @@
 ---
-title:  Approval rating
-date:   2018-09-04
+title: Approval rating
+date: 2018-09-04
 categories: ["latest","demo"]
 order: 903
 ---
-<p>스택바(stackbar) 차트 응용 예제 입니다.</p>
+<p>스택바(stackbar) 차트 응용 예제입니다.</p>
 <hr>
 <div class="row">
 	<div id="chartWrap" class="col-sm-12"></div>
@@ -12,73 +12,79 @@ order: 903
 <!-- Highlight -->
 <h4>Code</h4>
 <p>{% highlight css %}
-svg {font-family: AppleSDGothicNeo-Regular,Malgun Gothic,"sans-serif"}
-.sbchart-title { font-size: 18px; line-height: 21px; font-weight:bold; }
-.sbchart-legend .sbchart-legend-item {font-size:12px; line-height: 15px; }
+svg { font-family: AppleSDGothicNeo-Regular,Malgun Gothic,"sans-serif"; }
+.sbchart-title { font-size: 18px; line-height: 21px; font-weight: bold; }
+.sbchart-legend .sbchart-legend-item { font-size: 12px; line-height: 15px; }
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
-sb.chart.render("#chartWrap",{
-    global: {
-        size : {width: 400, height: 130},
-        color: {
-            pattern: ["#006BC9","#E62A22","#04B8A6","#F7B500","#86BE24","#AD9E75","#899099","#B0B7BF"]
-        }
-    },
-    data : {
-        type: "stackbar",
-        columns: [
-            ["더불어 민주당",48.7],
-            ["자유한국당", 15],
-            ["바른미래당", 9.5],
-            ["정의당", 5.3],
-            ["민주평화당",0.4],
-            ["기타", 2.7],
-            ["없음", 11.5],
-            ["잘모름", 6.8]
-        ]
-    },
-    axis: {
-        rotated: true,
-        x: {
-            show:false,
-            type: "category",
-            categories: ["정당 지지도"]
-        },
-        y: {
-            show:false
-        }
-    },
-    grid: {
-        x: {
-            show:false
-        },
-        y: {
-            show:false
-        }
-    },
-    title: { 
-        text: "서울시민 정당지지도",
-        position: "top-left"
-    }
+sb.chart.render("#chartWrap", {
+	global: {
+		size: {
+			width: 400, 
+			height: 130
+		},
+		color: {
+			pattern: ["#006BC9","#E62A22","#04B8A6","#F7B500","#86BE24","#AD9E75","#899099","#B0B7BF"]
+		}
+	},
+	data: {
+		type: "stackbar",
+		columns: [
+			["더불어 민주당",48.7],
+			["자유한국당", 15],
+			["바른미래당", 9.5],
+			["정의당", 5.3],
+			["민주평화당",0.4],
+			["기타", 2.7],
+			["없음", 11.5],
+			["잘모름", 6.8]
+		]
+	},
+	axis: {
+		rotated: true,
+		x: {
+			show: false,
+			type: "category",
+			categories: ["정당 지지도"]
+		},
+		y: {
+			show: false
+		}
+	},
+	grid: {
+		x: {
+			show: false
+		},
+		y: {
+			show: false
+		}
+	},
+	title: { 
+		text: "서울시민 정당지지도",
+		position: "top-left"
+	}
 });
 {% endhighlight %}</p>
 
 <!-- Code -->
 <!-- 첫번째 차트 코드 -->
 <style>
-	svg {font-family: AppleSDGothicNeo-Regular,Malgun Gothic,"sans-serif"}
-	.sbchart-title { font-size: 18px; line-height: 21px; font-weight:bold; }
-	.sbchart-legend .sbchart-legend-item {font-size:12px; line-height: 15px; }
+	svg { font-family: AppleSDGothicNeo-Regular,Malgun Gothic,"sans-serif" }
+	.sbchart-title { font-size: 18px; line-height: 21px; font-weight: bold; }
+	.sbchart-legend .sbchart-legend-item { font-size: 12px; line-height: 15px; }
 </style>
 <script>
-	sb.chart.render("#chartWrap",{
+	sb.chart.render("#chartWrap", {
 		global: {
-			size : {width: 400, height: 130},
+			size: {
+				width: 400, 
+				height: 130
+			},
 			color: {
 				pattern: ["#006bc9","#e62a22","#04b8a6","#f7b500","#86be24","#ad9e75","#899099","#b0b7bf"]
 			}
 		},
-		data : {
+		data: {
 			type: "stackbar",
 			columns: [
 				["더불어 민주당",48.7],
@@ -94,20 +100,20 @@ sb.chart.render("#chartWrap",{
 		axis: {
 			rotated: true,
 			x: {
-				show:false,
+				show: false,
 				type: "category",
 				categories: ["정당 지지도"]
 			},
 			y: {
-				show:false
+				show: false
 			}
 		},
 		grid: {
 			x: {
-				show:false
+				show: false
 			},
 			y: {
-				show:false
+				show: false
 			}
 		},
 		title: { 

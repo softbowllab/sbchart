@@ -1,11 +1,11 @@
 ---
-title:  AI Patents
-date:   2018-09-04
+title: AI Patents
+date: 2018-09-04
 categories: ["latest","demo"]
 order: 901
 ---
-<p>간단한 원(pie) 및 바(bar) 차트 응용 예제 입니다.</p>
-<p>타이틀 지정 및 위치변경, 범례 위치변경, 차트 라벨 변경, 범례, 타이틀 스타일 조정 등</p>
+<p>간단한 원(pie) 및 바(bar) 차트 응용 예제입니다.</p>
+<p>타이틀 지정 및 위치 변경, 범례 위치 변경, 차트 라벨 변경, 범례, 타이틀 스타일 조정 등</p>
 <hr>
 <div class="row">
 	<div id="chartWrap1" class="col-sm-6"></div>
@@ -14,120 +14,131 @@ order: 901
 <!-- Highlight -->
 <h4>Code</h4>
 <p>{% highlight css %}
-#chartWrap1 .sbchart-title { font-size:18px; } /* 타이틀 폰트 */
-#chartWrap1 .sbchart-legend-background {stroke-width:0}	/* 범례 outline 제거 */
-#chartWrap1 .sbchart-legend-item-text {font-size:13px} /* 범례 폰트 */
-#chartWrap2 .sbchart-title { font-size:20px; } /* 타이틀 폰트 */
-#chartWrap2 .sbchart-axis-x .tick text {font-size:12px;} /* x축 tick 폰트 */
-#chartWrap2 .sbchart-axis-x .tick line {display:none;} /* x축 tick hidden */
-#chartWrap2 .sbchart-axis-y .tick text {font-size:12px;fill:#aaaaaa;} /* y축 tick 폰트, 폰트색 */
-#chartWrap2 .sbchart-axis-y .domain {display:none} /* y축 선 hidden */
-#chartWrap2 .sbchart-axis-y .tick line {display:none;}  /* y축 tick 선 hidden */
+#chartWrap1 .sbchart-title { font-size: 18px; } /* 타이틀 폰트 */
+#chartWrap1 .sbchart-legend-background { stroke-width: 0 }	/* 범례 outline 제거 */
+#chartWrap1 .sbchart-legend-item-text { font-size: 13px } /* 범례 폰트 */
+#chartWrap2 .sbchart-title { font-size: 20px; } /* 타이틀 폰트 */
+#chartWrap2 .sbchart-axis-x .tick text { font-size: 12px; } /* x축 tick 폰트 */
+#chartWrap2 .sbchart-axis-x .tick line { display: none; } /* x축 tick hidden */
+#chartWrap2 .sbchart-axis-y .tick text { font-size: 12px; fill: #aaaaaa; } /* y축 tick 폰트, 폰트색 */
+#chartWrap2 .sbchart-axis-y .domain { display: none; } /* y축 선 hidden */
+#chartWrap2 .sbchart-axis-y .tick line { display: none; }	/* y축 tick 선 hidden */
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
-sb.chart.render("#chartWrap1",{
-    global: {
-        size : {width: 400, height: 250}
-    },
-    data : {
-        type: "pie",
-        columns: [
-            ["US",47],
-            ["China", 19],
-            ["EU", 10],
-            ["Japan", 15],
-            ["Korea", 3],
-            ["Others", 5]
-        ],
-    },
-    title: { 
-        text: "AI Patents by Country (Total:7,319)",
-        position: "top-left"
-    },
-    legend: {
-        position: "inset",
-        inset: {
-            y: 30
-        }
-    },
-    extend: {
-        pie: {
-            label: {
-                format: function(value, ratio, index) {
-                    return value;
-                }
-            }
-        }
-    }
+sb.chart.render("#chartWrap1", {
+	global: {
+		size: {
+			width: 400, 
+			height: 250
+		}
+	},
+	data: {
+		type: "pie",
+		columns: [
+			["US",47],
+			["China", 19],
+			["EU", 10],
+			["Japan", 15],
+			["Korea", 3],
+			["Others", 5]
+		],
+	},
+	title: { 
+		text: "AI Patents by Country (Total:7,319)",
+		position: "top-left"
+	},
+	legend: {
+		position: "inset",
+		inset: {
+			y: 30
+		}
+	},
+	extend: {
+		pie: {
+			label: {
+				format: function(value, ratio, index) {
+					return value;
+				}
+			}
+		}
+	}
 });
-sb.chart.render("#chartWrap2",{
-    global: {
-        size : {width: 400, height: 250},
-        color: {
-            pattern: ["#6d9eec"]
-        }
-    },
-    data : {
-        type: "bar",
-        keys: {
-            x: "company",
-            value: ["no"]
-        },
-        json: [
-            {company:"IBM", no:2400},
-            {company:"Alphabet", no:2100},
-            {company:"Microsoft", no:1550},
-            {company:"Baidu", no:850},
-            {company:"Aibaba", no:800}
-        ],
-    },
-    title: { 
-        text: "AI Patents by Company",
-        position: "top-left"
-    },
-    axis: {
-        rotated:true,
-        x: {
-            type: "category",
-            tick: {
-                outer: false
-            }
-        },
-        y: {
-            tick: {
-                values: [500, 1000, 1500, 2000],
-                outer: false
-            }
-        }
-    },
-    legend: {
-        show:false
-    },
-    grid: {
-        x: { show:false }
-    }
+sb.chart.render("#chartWrap2", {
+	global: {
+		size: {
+			width: 400,
+			height: 250
+		},
+		color: {
+			pattern: ["#6d9eec"]
+		}
+	},
+	data: {
+		type: "bar",
+		keys: {
+			x: "company",
+			value: ["no"]
+		},
+		json: [
+			{company:"IBM", no:2400},
+			{company:"Alphabet", no:2100},
+			{company:"Microsoft", no:1550},
+			{company:"Baidu", no:850},
+			{company:"Aibaba", no:800}
+		],
+	},
+	title: { 
+		text: "AI Patents by Company",
+		position: "top-left"
+	},
+	axis: {
+		rotated: true,
+		x: {
+			type: "category",
+			tick: {
+				outer: false
+			}
+		},
+		y: {
+			tick: {
+				values: [500, 1000, 1500, 2000],
+				outer: false
+			}
+		}
+	},
+	legend: {
+		show: false
+	},
+	grid: {
+		x: { 
+			show: false 
+		}
+	}
 });
 {% endhighlight %}</p>
 
 <!-- Code -->
 <!-- 첫번째 차트 코드 -->
 <style>
-	#chartWrap1 .sbchart-title { font-size:18px; } /* 타이틀 폰트 */
-	#chartWrap1 .sbchart-legend-background {stroke-width:0}	/* 범례 outline 제거 */
-	#chartWrap1 .sbchart-legend-item-text {font-size:13px} /* 범례 폰트 */
-	#chartWrap2 .sbchart-title { font-size:20px; } /* 타이틀 폰트 */
-	#chartWrap2 .sbchart-axis-x .tick text {font-size:12px;} /* x축 tick 폰트 */
-	#chartWrap2 .sbchart-axis-x .tick line {display:none;} /* x축 tick hidden */
-	#chartWrap2 .sbchart-axis-y .tick text {font-size:12px;fill:#aaaaaa;} /* y축 tick 폰트, 폰트색 */
-	#chartWrap2 .sbchart-axis-y .domain {display:none} /* y축 선 hidden */
-	#chartWrap2 .sbchart-axis-y .tick line {display:none;}  /* y축 tick 선 hidden */
+	#chartWrap1 .sbchart-title { font-size: 18px; } /* 타이틀 폰트 */
+	#chartWrap1 .sbchart-legend-background { stroke-width: 0 }	/* 범례 outline 제거 */
+	#chartWrap1 .sbchart-legend-item-text { font-size: 13px } /* 범례 폰트 */
+	#chartWrap2 .sbchart-title { font-size: 20px; } /* 타이틀 폰트 */
+	#chartWrap2 .sbchart-axis-x .tick text { font-size: 12px; } /* x축 tick 폰트 */
+	#chartWrap2 .sbchart-axis-x .tick line { display: none; } /* x축 tick hidden */
+	#chartWrap2 .sbchart-axis-y .tick text { font-size: 12px; fill: #aaaaaa; } /* y축 tick 폰트, 폰트색 */
+	#chartWrap2 .sbchart-axis-y .domain { display: none; } /* y축 선 hidden */
+	#chartWrap2 .sbchart-axis-y .tick line { display: none; } 	/* y축 tick 선 hidden */
 </style>
 <script>
-	sb.chart.render("#chartWrap1",{
+	sb.chart.render("#chartWrap1", {
 		global: {
-			size : {width: 400, height: 250}
+			size: {
+				width: 400, 
+				height: 250
+			}
 		},
-		data : {
+		data: {
 			type: "pie",
 			columns: [
 				["US",47],
@@ -158,14 +169,17 @@ sb.chart.render("#chartWrap2",{
 			}
 		}
 	});
-	sb.chart.render("#chartWrap2",{
+	sb.chart.render("#chartWrap2", {
 		global: {
-			size : {width: 400, height: 250},
+			size: {
+				width: 400,
+				height: 250
+			},
 			color: {
 				pattern: ["#6d9eec"]
 			}
 		},
-		data : {
+		data: {
 			type: "bar",
 			keys: {
 				x: "company",
@@ -184,7 +198,7 @@ sb.chart.render("#chartWrap2",{
 			position: "top-left"
 		},
 		axis: {
-			rotated:true,
+			rotated: true,
 			x: {
 				type: "category",
 				tick: {
@@ -199,10 +213,12 @@ sb.chart.render("#chartWrap2",{
 			}
 		},
 		legend: {
-			show:false
+			show: false
 		},
 		grid: {
-			x: { show:false }
+			x: { 
+				show: false 
+			}
 		}
 	});	
 </script>

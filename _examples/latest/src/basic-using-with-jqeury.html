@@ -1,12 +1,12 @@
 ---
-title:  Using with jQuery
-date:   2018-06-27
+title: Using with jQuery
+date: 2018-06-27
 categories: ["latest","basic"]
 order: 3
 ---
-<p>jquery.js 파일이 <mark>sbchart.js 파일보다 먼저 선언되어</mark> 있다면 SBChart를 jquery 플러그인으로 사용 할 수 있습니다.</p>
+<p>jquery.js 파일이 <mark>sbchart.js 파일보다 먼저 선언되어</mark> 있다면 SBChart를 jquery 플러그인으로 사용할 수 있습니다.</p>
 <p><code>$("..").sbChart();</code>형태로 사용하며 <br>
-파라메터(옵션)은 일반적인 javascript 사용 방식과 동일합니다.</p>
+파라미터(옵션)는 일반적인 javascript 사용 방식과 동일합니다.</p>
 <hr>
 <!-- Format -->
 <h4>Format</h4>
@@ -15,7 +15,7 @@ $("....").sbChart({data:{ ... }});
 {% endhighlight %}</p>
 <!-- bindto -->
 <h4>Example</h4>
-<p  id="chartWrap"></p>
+<p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight html %}
@@ -23,52 +23,52 @@ $("....").sbChart({data:{ ... }});
 <script type="text/javascript" src="js/sbchart.js"></script>
 <script>
 (function($) {
-    $(function() {
-        var charts = $("#chartWrap").sbChart({
-            data : {
-                type: "bar",
-                columns: [
-                    ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
-                ]
-            }
-        });
-        // 2초후 데이터 변경
-        setTimeout(function() {
-            charts.forEach(function(chart) {
-                chart.data({
-                    type: "area",
-                    columns: [
-                        ["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
-                    ]
-                }).render();
-            });
-        },2000);
-    });
+	$(function() {
+		var charts = $("#chartWrap").sbChart({
+			data: {
+				type: "bar",
+				columns: [
+					["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
+				]
+			}
+		});
+		// 2초후 데이터 변경
+		setTimeout(function() {
+			charts.forEach(function(chart) {
+				chart.data({
+					type: "area",
+					columns: [
+						["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
+					]
+				}).render();
+			});
+		},2000);
+	});
 })(jQuery.noConflict())
 </script>
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
 (function($) {
-    $(function() {
-        var charts = $("#chartWrap").sbChart({
-            data : {
-                type: "bar",
-                columns: [
-                    ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
-                ]
-            }
-        });
-        setTimeout(function() {
-            charts.forEach(function(chart) {
-                chart.data({
-                    type: "area",
-                    columns: [
-                        ["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
-                    ]
-                }).render();
-            });
-        },2000);
-    });
+	$(function() {
+		var charts = $("#chartWrap").sbChart({
+			data: {
+				type: "bar",
+				columns: [
+					["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
+				]
+			}
+		});
+		setTimeout(function() {
+			charts.forEach(function(chart) {
+				chart.data({
+					type: "area",
+					columns: [
+						["온라인쇼핑몰 거래액 (백만원)", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890, 8740814]
+					]
+				}).render();
+			});
+		},2000);
+	});
 })(jQuery.noConflict())
 </script>

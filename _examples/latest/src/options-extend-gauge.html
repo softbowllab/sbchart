@@ -1,10 +1,10 @@
 ---
-title:  Gauge Options
-date:   2018-10-30
+title: Gauge Options
+date: 2018-10-30
 categories: ["latest","options"]
 order: 427
 ---
-<style> #chartWrap {min-height:230px;}  @media screen and (max-width: 1000px) { #chartWrap{min-height: 180px;} }</style>
+<style> #chartWrap { min-height: 230px; } @media screen and (max-width: 1000px) { #chartWrap { min-height: 180px; } } </style>
 <p>게이지(gauge) 차트 고유 옵션입니다.</p>
 <hr>
 <!-- Options -->
@@ -22,16 +22,16 @@ order: 427
 	<ul>
 		<li>
 			<h6><code>extend.gauge.min.show</code></h6>
-			<p><label><input type="checkbox" id="txtMinShow" checked> 최소값 라벨을 보이거나 숨깁니다.</label></p>
+			<p><label><input type="checkbox" id="txtMinShow" checked> 최솟값 라벨을 보이거나 숨깁니다.</label></p>
 		</li>
 		<li>
 			<h6><code>extend.gauge.min.format</code></h6>
-			<p><label><input type="checkbox" id="txtMinFormat"> 최소값 라벨을 커스트마이징합니다.</label></p>
-			<p><code>extend.gauge.min.format=function(val) { return val.toFixed(2);}</code></p>
+			<p><label><input type="checkbox" id="txtMinFormat"> 최솟값 라벨을 커스터마이징 합니다.</label></p>
+			<p><code>extend.gauge.min.format = function(val) { return val.toFixed(2); }</code></p>
 		</li>
 		<li>
 			<h6><code>extend.gauge.min.value</code></h6>
-			<p>최소값을 지정합니다.</p>
+			<p>최솟값을 지정합니다.</p>
 			<p><input type="text" id="txtMinValue" class="w-short" value="0"></p>
 		</li>
 	</ul>
@@ -39,16 +39,16 @@ order: 427
 	<ul>
 		<li>
 			<h6><code>extend.gauge.max.show</code></h6>
-			<p><label><input type="checkbox" id="txtMaxShow" checked> 최대값 라벨을 보이거나 숨깁니다.</label></p>
+			<p><label><input type="checkbox" id="txtMaxShow" checked> 최댓값 라벨을 보이거나 숨깁니다.</label></p>
 		</li>
 		<li>
 			<h6><code>extend.gauge.max.format</code></h6>
-			<p><label><input type="checkbox" id="txtMaxFormat"> 최대값 라벨을 커스트마이징합니다.</label></p>
-			<p><code>extend.gauge.max.format=function(val) { return val.toFixed(2);}</code></p>
+			<p><label><input type="checkbox" id="txtMaxFormat"> 최댓값 라벨을 커스터마이징 합니다.</label></p>
+			<p><code>extend.gauge.max.format = function(val) { return val.toFixed(2); }</code></p>
 		</li>
 		<li>
 			<h6><code>extend.gauge.max.value</code></h6>
-			<p>최대값을 지정합니다.</p>
+			<p>최댓값을 지정합니다.</p>
 			<p><input type="text" id="txtMaxValue" class="w-short" value="100"></p>
 		</li>
 	</ul>
@@ -60,55 +60,7 @@ order: 427
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-    data : {
-        type: "gauge",
-        columns: [
-            ["2015",65.26]
-        ]
-    }
-});
-// units
-document.getElementById("txtUnits").onchange = function() {
-    chart.extend({
-        gauge: {
-            units: this.value
-        }
-    }).render();
-};
-// min
-function fnMin() {
-    var conf = {
-        min: {
-            show: document.getElementById("txtMinShow").checked,
-            format: document.getElementById("txtMinFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
-            value: document.getElementById("txtMinValue").value
-        }
-    }
-    chart.extend({gauge:conf}).render();
-}
-// max
-function fnMax() {
-    var conf = {
-        max: {
-            show: document.getElementById("txtMaxShow").checked,
-            format: document.getElementById("txtMaxFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
-            value: document.getElementById("txtMaxValue").value
-        }
-    }
-    chart.extend({gauge:conf}).render();
-}
-//events
-document.getElementById("txtMinShow").onchange = fnMin;
-document.getElementById("txtMinFormat").onchange = fnMin;
-document.getElementById("txtMinValue").onchange = fnMin;
-document.getElementById("txtMaxShow").onchange = fnMax;
-document.getElementById("txtMaxFormat").onchange = fnMax;
-document.getElementById("txtMaxValue").onchange = fnMax;
-{% endhighlight %}</p>
-<!-- Script -->
-<script>
-var chart = sb.chart.render("#chartWrap", {
-	data : {
+	data: {
 		type: "gauge",
 		columns: [
 			["2015",65.26]
@@ -132,7 +84,7 @@ function fnMin() {
 			value: document.getElementById("txtMinValue").value
 		}
 	}
-	chart.extend({gauge:conf}).render();
+	chart.extend({ gauge: conf }).render();
 }
 // max
 function fnMax() {
@@ -143,7 +95,55 @@ function fnMax() {
 			value: document.getElementById("txtMaxValue").value
 		}
 	}
-	chart.extend({gauge:conf}).render();
+	chart.extend({gauge: conf }).render();
+}
+//events
+document.getElementById("txtMinShow").onchange = fnMin;
+document.getElementById("txtMinFormat").onchange = fnMin;
+document.getElementById("txtMinValue").onchange = fnMin;
+document.getElementById("txtMaxShow").onchange = fnMax;
+document.getElementById("txtMaxFormat").onchange = fnMax;
+document.getElementById("txtMaxValue").onchange = fnMax;
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "gauge",
+		columns: [
+			["2015",65.26]
+		]
+	}
+});
+// units
+document.getElementById("txtUnits").onchange = function() {
+	chart.extend({
+		gauge: {
+			units: this.value
+		}
+	}).render();
+};
+// min
+function fnMin() {
+	var conf = {
+		min: {
+			show: document.getElementById("txtMinShow").checked,
+			format: document.getElementById("txtMinFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
+			value: document.getElementById("txtMinValue").value
+		}
+	}
+	chart.extend({ gauge: conf }).render();
+}
+// max
+function fnMax() {
+	var conf = {
+		max: {
+			show: document.getElementById("txtMaxShow").checked,
+			format: document.getElementById("txtMaxFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
+			value: document.getElementById("txtMaxValue").value
+		}
+	}
+	chart.extend({ gauge: conf }).render();
 }
 //events
 document.getElementById("txtMinShow").onchange = fnMin;
