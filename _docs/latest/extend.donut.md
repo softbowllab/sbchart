@@ -116,29 +116,3 @@ full circle 여부를 지정합니다.
 * Type : Boolean
 
 * Default : true
-
-<!-- ### extend.donut.startAngle
-
-`#2.0.4`
-
-원의 시작 각도를 지정한다.
-
-원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
-
-* Type : Number
-
-* Default : -180
-
-
-### extend.donut.endAngle
-
-`#2.0.4`
-
-원의 종료 각도를 지정한다.
-
-원의 최상위 값을 기준으로 (값 = 0) 이며 좌측은 -, 우측은 + 값을 갖습니다.
-
-* Type : Number
-
-* Default : 180
- -->

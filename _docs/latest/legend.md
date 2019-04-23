@@ -60,9 +60,9 @@ legend: {
 
 `#2.0.7`
 
-`legend.position` 값이 'bottom', 'right' 인 경우 범례의 백그라운드 영역을 표시합니다.
+`legend.position = "bottom" or "right"`인 경우 범례의 백그라운드 영역을 표시합니다.
 
-`legend.position = 'inset'` 인 경우는 해당되지 않습니다.
+`legend.position = "inset"`인 경우에는 항상 백그라운드 영역을 표시됩니다.
 
 * Type : Boolean
 
@@ -74,6 +74,7 @@ legend: {
 `#2.0.0`
 
 각 범례 아이템 박스의 padding을 지정합니다.
+
 `legend.position = bottom`일 때, 마지막 범례의 우측으로는 `legend.padding`이 적용되지 않습니다. `#2.0.8`
 
 * Type : Number

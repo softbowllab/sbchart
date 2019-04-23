@@ -1,6 +1,6 @@
 title: SBChart
 subtitle: 
-email: escho@softbowl.co.kr
+email: sunmi@softbowl.co.kr
 description: >-
 baseurl: "/sbchart"
 url: ""
@@ -61,4 +61,4 @@ disqus_shortname: "softbowllab"
 # 변수
 codeurl: 'https://github.com/softbowllab/sbchart'
 twitter_username: softbowl
-github_username:  softbowllab 
+github_username: softbowllab 

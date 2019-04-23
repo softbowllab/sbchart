@@ -36,7 +36,7 @@ axis: {
 
 `#2.0.0`
 
-X축에 표시할 Tick 개수를 지정합니다.
+X축에 표시할 Tick의 개수를 지정합니다.
 
 2 이하의 값은 유효하지 않으므로 3 이상의 값을 입력합니다.
 
@@ -102,6 +102,17 @@ X축 Tick의 멀티라인 여부를 허용합니다.
 * Default: true
 
 
+### axis.x.tick.width
+
+`#2.0.0`
+
+X축 Tick이 멀티라인 일 때, Tick의 너비를 지정합니다.
+
+`axis.x.type = "category"`이고 `axis.x.tick.multiline = true (Default)` 일 때만 허용합니다.
+
+* Type: Number
+
+
 ### axis.x.tick.centered
 
 `#2.0.0`
@@ -163,8 +174,8 @@ axis: {
 	x: {
 		tick: {
 			format: function(index, value) {
-				var m = value.substring(5,7);
-				return (index == 0 || m =="01" )? value: m;
+				var m = value.substring(5, 7);
+				return (index == 0 || m == "01") ? value : m;
 			}
 		}
 	}

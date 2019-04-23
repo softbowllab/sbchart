@@ -52,7 +52,7 @@ legend: {
 
 * Type : Number
 
-* Default : 0
+* Default : 10
 
 ### legend.inset.y
 
@@ -71,5 +71,3 @@ legend: {
 `legend.position = "inset"` 인 경우 범례의 행의 개수를 정의합니다 
 
 * Type : Number
-
-* Default : 1
