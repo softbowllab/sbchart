@@ -8,6 +8,34 @@ permalink: /:collection/releasenote:output_ext
 # Release Note
 ---
 
+## 2.0.9
+`2019.01.30`
+
+#### 기능 추가
+
+* 웹 접근성 기능 추가
+
+#### 옵션 추가
+
+* `conf.global.accessibility.use`, `conf.global.accessibility.title`, `conf.global.accessibility.description` 추가 
+* `conf.global.pattern` 추가
+
+
+
+## 2.0.8
+`2018.12.14`
+
+
+#### 기능 변경
+
+* `legend.position = bottom` 일 때, 마지막 범례 우측으로 legend.padding이 적용되지 않게 변경
+
+#### 버그 수정
+
+* `legend.background = true` 일 때, background 위치 조정
+
+
+
 ## 2.0.7
 `2018.12.13`
 
