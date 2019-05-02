@@ -22,6 +22,7 @@ order: 1
 tooltip: {
 	show: true,
 	grouped: true,
+	sort: "asc"
 }
 ```
 
@@ -49,3 +50,17 @@ tooltip: {
 * 주의
 
 	* 버블 차트(`data.type = 'bubble'`)는 항상 `tooltip.grouped = false` 로 동작합니다.
+
+### tooltip.sort
+
+`#2.0.12`
+
+툴팁의 데이터 값을 오름차순/내림차순으로 정렬합니다.
+값을 설정하지 않을 경우 데이터 입력 순으로 나타납니다.
+
+* Type : String
+
+* Values
+
+	* asc: 오름차순
+	* desc: 내림차순

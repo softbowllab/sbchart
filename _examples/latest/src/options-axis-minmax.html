@@ -39,6 +39,7 @@ order: 332
 </div>
 <!-- Example -->
 <h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.zerobased def_chart="bar" %}
 <p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
@@ -47,6 +48,7 @@ var chart = sb.chart.render("#chartWrap", {
 	data: {
 		type: "bar",
 		columns: [
+			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
 			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
 		]
 	},
@@ -96,6 +98,7 @@ document.getElementById("txtYMax").onchange = function() {
 			max: this.value
 		}
 	}).render();
+};
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
@@ -103,6 +106,7 @@ var chart = sb.chart.render("#chartWrap", {
 	data: {
 		type: "bar",
 		columns: [
+			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
 			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
 		]
 	},

@@ -2,23 +2,31 @@
 title: Categories
 date: 2018-05-17
 categories: ["latest","options"]
-order: 351
+order: 330
 ---
-<p>X축을 카테고리로 지정하고 Tick에 표시될 문자열을 정의합니다.<br>
-카테고리로 지정되면 Tick이 X축 영역 사이에 표시됩니다.</p>
+<p><code>axis.x.type = "category"</code> 혹은 <code>axis.x.type = "timeseries"</code>일 때 사용합니다.<br>
+X축의 카테고리를 지정하고 Tick에 표시될 문자열 혹은 시간을 정의합니다.</p>
+
+<p><code>axis.x.type = "category"</code>일 때는 Tick이 X축 영역 사이에 표시됩니다.</p>
 <hr>
 <!-- Options -->
 <h4>Options</h4>
 <div class="row options">
 	<ul>
 		<li>
-			<p><label><input type="checkbox" id="chkEx01" checked>카테고리 예제 적용</label></p>
-			<p><code>axis.x.type = "category"</code>, <code>axis.x.categories = ["전국","서울",...]</code></p>
+			<h6><code>axis.x.type</code></h6>
+			<p><label><input type="radio" name="type" id="chkType1" checked>category</label></p>
+			<p><code>axis.x.categories = ["전국","서울","부산",...,"경북","경남","제주"]</code></p>
+		</li>
+		<li>
+			<p><label><input type="radio" name="type" id="chkType2">timeseries</label></p>
+			<p><code>axis.x.categories = ["2019-01-01","2019-01-02","2019-01-03",...,"2019-01-16","2019-01-17","2019-01-18"]</code></p>
 		</li>
 	</ul>
 </div>
 <!-- Example -->
 <h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.excludecircles def_chart="line" %}
 <p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
@@ -39,8 +47,8 @@ var chart = sb.chart.render("#chartWrap", {
 		}
 	}
 });
-//categories
-document.getElementById("chkEx01").onchange = function() {
+// category
+document.getElementById("chkType1").onchange = function() {
 	if(this.checked) {
 		chart.axis({
 			x: {
@@ -52,7 +60,21 @@ document.getElementById("chkEx01").onchange = function() {
 		delete chart.axis().x;
 		chart.render();
 	}
-};
+}
+// timeseries
+document.getElementById("chkType2").onchange = function() {
+	if(this.checked) {
+		chart.axis({
+			x: {
+				type: "timeseries",
+				categories: ["2019-01-01","2019-01-02","2019-01-03","2019-01-04","2019-01-05","2019-01-06","2019-01-07","2019-01-08","2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13","2019-01-14","2019-01-15","2019-01-16","2019-01-17","2019-01-18","2019-01-19"]
+			}
+		}).render();		
+	} else {
+		delete chart.axis().x;
+		chart.render();
+	}
+}
 {% endhighlight %}</p>
 <!-- Script -->
 <script>
@@ -73,7 +95,7 @@ var chart = sb.chart.render("#chartWrap", {
 	}
 });
 //categories
-document.getElementById("chkEx01").onchange = function() {
+document.getElementById("chkType1").onchange = function() {
 	if(this.checked) {
 		chart.axis({
 			x: {
@@ -85,5 +107,18 @@ document.getElementById("chkEx01").onchange = function() {
 		delete chart.axis().x;
 		chart.render();
 	}
-};
+}
+document.getElementById("chkType2").onchange = function() {
+	if(this.checked) {
+		chart.axis({
+			x: {
+				type: "timeseries",
+				categories: ["2019-01-01","2019-01-02","2019-01-03","2019-01-04","2019-01-05","2019-01-06","2019-01-07","2019-01-08","2019-01-09","2019-01-10","2019-01-11","2019-01-12","2019-01-13","2019-01-14","2019-01-15","2019-01-16","2019-01-17","2019-01-18","2019-01-19"]
+			}
+		}).render();		
+	} else {
+		delete chart.axis().x;
+		chart.render();
+	}
+}
 </script>

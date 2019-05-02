@@ -12,13 +12,6 @@ order: 301
 	<div class="col-sm-12">
 		<div class="checkbox">
 			<label>
-				<input type="checkbox" id="chkLegend" checked>
-				<mark>범례</mark>
-			</label>
-			<code>legend.show = true/false</code>
-		</div>
-		<div class="checkbox">
-			<label>
 				<input type="checkbox" id="chkAxisX" checked>
 				<mark>x축</mark>
 			</label>
@@ -30,8 +23,7 @@ order: 301
 				<mark>y축</mark>
 			</label>
 			<code>axis.y.show = true/false</code>
-		</div>
-			
+		</div>	
 		<div class="checkbox">
 			<label>
 				<input type="checkbox" id="chkGridX" checked>
@@ -48,10 +40,32 @@ order: 301
 		</div>
 		<div class="checkbox">
 			<label>
+				<input type="checkbox" id="chkTickOuter" checked>
+				<mark>바깥쪽 Tick</mark>
+			</label>
+			<code>axis.x.tick.outer = true/false, axis.y.tick.outer = true/false</code>
+		</div>	
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkLabels" checked>
+				<mark>라벨</mark>
+			</label>
+			<code>data.labels = true/false</code>
+		</div>
+		<div class="checkbox">
+			<label>
 				<input type="checkbox" id="chkPoint" checked>
 				<mark>포인트</mark>
 			</label>
 			<code>extend.point.show = true/false</code>
+			<i>(Line, Spline, Area, StackArea 차트에만 적용됩니다)</i>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="chkLegend" checked>
+				<mark>범례</mark>
+			</label>
+			<code>legend.show = true/false</code>
 		</div>
 		<div class="checkbox">
 			<label>
@@ -62,31 +76,18 @@ order: 301
 		</div>
 		<div class="checkbox">
 			<label>
-				<input type="checkbox" id="chkTickOuter" checked>
-				<mark>바깥쪽 Tick</mark>
-			</label>
-			<code>axis.x.tick.outer = true/false, axis.y.tick.outer = true/false</code>
-		</div>
-		<div class="checkbox">
-			<label>
 				<input type="checkbox" id="chkTooltip" checked>
 				<mark>툴팁</mark>
 			</label>
 			<code>tooltip.show = true/false</code>
-			(값을 변경하고 차트에 마우스를 올려보세요)
-		</div>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" id="chkLabels" checked>
-				<mark>라벨</mark>
-			</label>
-			<code>data.labels = true/false</code>
+			<i>(값을 변경하고 차트에 마우스를 올려보세요)</i>
 		</div>
 	</div>
 </div>
 
 <!-- Example -->
 <h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.excludecircles def_chart="line" %}
 <p id="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
@@ -135,58 +136,57 @@ var conf = {
 		text: "그래프 제목" 
 	}
 };
-sb.chart.render("#chartWrap", conf);
-
+var chart = sb.chart.render("#chartWrap", conf);
 //legend show/hide
 document.getElementById("chkLegend").onchange = function() {
-	conf.legend.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.legend().show = this.checked;
+	chart.render();
 };
 //axis-x show/hide
 document.getElementById("chkAxisX").onchange = function() {
-	conf.axis.x.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().x.show = this.checked;
+	chart.render();
 };
 //axis-y show/hide
 document.getElementById("chkAxisY").onchange = function() {
-	conf.axis.y.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().y.show = this.checked;
+	chart.render();
 };
 //grid axis-x show/hide
 document.getElementById("chkGridX").onchange = function() {
-	conf.grid.x.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.grid().x.show = this.checked;
+	chart.render();
 };
 //grid axis-y show/hide
 document.getElementById("chkGridY").onchange = function() {
-	conf.grid.y.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.grid().y.show = this.checked;
+	chart.render();
 };
 //point show/hide
 document.getElementById("chkPoint").onchange = function() {
-	conf.extend.point.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.extend().point.show = this.checked;
+	chart.render();
 };
 //title show/hide
 document.getElementById("chkTitle").onchange = function() {
-	conf.title.text = this.checked ? "그래프 제목" : "";
-	sb.chart.render("#chartWrap", conf);
+	chart.title().text = this.checked ? "그래프 제목" : "";
+	chart.render();
 };
 //outer tick show/hide
 document.getElementById("chkTickOuter").onchange = function() {
-	conf.axis.x.tick.outer = this.checked;
-	conf.axis.y.tick.outer = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().x.tick.outer = this.checked;
+	chart.axis().y.tick.outer = this.checked;
+	chart.render();
 };
 //tooltip show/hide
 document.getElementById("chkTooltip").onchange = function() {
-	conf.tooltip = { show: this.checked };
-	sb.chart.render("#chartWrap", conf);
+	chart.tooltip().show = this.checked;
+	chart.render();
 };
 //label show/hide
 document.getElementById("chkLabels").onchange = function() {
-	conf.data.labels = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.data().labels = this.checked;
+	chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->
@@ -234,56 +234,56 @@ var conf = {
 		text: "그래프 제목" 
 	}
 };
-sb.chart.render("#chartWrap", conf);
+var chart = sb.chart.render("#chartWrap", conf);
 //legend show/hide
 document.getElementById("chkLegend").onchange = function() {
-	conf.legend.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.legend().show = this.checked;
+	chart.render();
 };
 //axis-x show/hide
 document.getElementById("chkAxisX").onchange = function() {
-	conf.axis.x.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().x.show = this.checked;
+	chart.render();
 };
 //axis-y show/hide
 document.getElementById("chkAxisY").onchange = function() {
-	conf.axis.y.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().y.show = this.checked;
+	chart.render();
 };
 //grid axis-x show/hide
 document.getElementById("chkGridX").onchange = function() {
-	conf.grid.x.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.grid().x.show = this.checked;
+	chart.render();
 };
 //grid axis-y show/hide
 document.getElementById("chkGridY").onchange = function() {
-	conf.grid.y.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.grid().y.show = this.checked;
+	chart.render();
 };
 //point show/hide
 document.getElementById("chkPoint").onchange = function() {
-	conf.extend.point.show = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.extend().point.show = this.checked;
+	chart.render();
 };
 //title show/hide
 document.getElementById("chkTitle").onchange = function() {
-	conf.title.text = this.checked ? "그래프 제목" : "";
-	sb.chart.render("#chartWrap", conf);
+	chart.title().text = this.checked ? "그래프 제목" : "";
+	chart.render();
 };
 //outer tick show/hide
 document.getElementById("chkTickOuter").onchange = function() {
-	conf.axis.x.tick.outer = this.checked;
-	conf.axis.y.tick.outer = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.axis().x.tick.outer = this.checked;
+	chart.axis().y.tick.outer = this.checked;
+	chart.render();
 };
 //tooltip show/hide
 document.getElementById("chkTooltip").onchange = function() {
-	conf.tooltip = { show: this.checked };
-	sb.chart.render("#chartWrap", conf);
+	chart.tooltip().show = this.checked;
+	chart.render();
 };
 //label show/hide
 document.getElementById("chkLabels").onchange = function() {
-	conf.data.labels = this.checked;
-	sb.chart.render("#chartWrap", conf);
+	chart.data().labels = this.checked;
+	chart.render();
 };
 </script>

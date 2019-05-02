@@ -1,0 +1,219 @@
+all: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - area
+  - bubble
+  - combi
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+  - stackarea
+  - stackarea.100
+  - pie
+  - donut
+  - gauge
+
+excludecombigauge: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - area
+  - bubble
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+  - stackarea
+  - stackarea.100
+  - pie
+  - donut
+
+excludecircles: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - area
+  - bubble
+  - combi
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+  - stackarea
+  - stackarea.100
+
+excluderotated:
+  - line
+  - bar
+  - spline
+  - step
+  - area
+  - bubble
+  - stackbar
+  - stackbar.100
+  - stackarea
+  - stackarea.100
+ 
+bars: 
+  - bar
+  - bar.rotated
+  
+barstackbars: 
+  - bar
+  - bar.rotated
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+ 
+lines: 
+  - line
+  - spline
+  - step
+
+areas: 
+  - area
+  - area-spline
+  - area-step
+
+lineareas:
+  - line
+  - spline
+  - step
+  - area
+
+stacks:
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+  - stackarea
+  - stackarea.100
+
+stackbars:
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+
+stackareas:
+  - stackarea
+  - stackarea.100
+
+circles:
+  - pie
+  - donut
+  - gauge
+
+rotated: 
+  - bar.rotated
+  - stackbar.rotated
+  - stackbar.100.rotated
+
+points: 
+  - line
+  - spline
+  - area
+  - stackarea
+  - stackarea.100
+
+zerobased: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - bubble
+  - area
+  - combi
+  - stackbar
+  - stackarea
+
+tickvalues: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - area
+  - bubble
+  - combi
+
+charts:
+  - name: line
+    value: line
+    title: Line
+
+  - name: line.rotated
+    value: line.rotated
+    title: Line (Rotated)
+
+  - name: bar
+    value: bar
+    title: Bar
+
+  - name: bar.rotated
+    value: bar.rotated
+    title: Bar (Rotated)
+
+  - name: spline
+    value: spline
+    title: Spline
+
+  - name: step
+    value: step
+    title: Step
+
+  - name: area
+    value: area
+    title: Area
+
+  - name: bubble
+    value: bubble
+    title: Bubble
+
+  - name: combi
+    value: combination
+    title: Combination
+
+  - name: stackbar
+    value: stackbar
+    title: StackBar
+  
+  - name: stackbar.100
+    value: stackbar.100
+    title: StackBar (100%)
+
+  - name: stackbar.rotated
+    value: stackbar.rotated
+    title: StackBar (Rotated)
+
+  - name: stackbar.100.rotated
+    value: stackbar.100.rotated
+    title: StackBar (100%, Rotated)
+
+  - name: stackarea
+    value: stackarea
+    title: StackArea
+
+  - name: stackarea.100
+    value: stackarea.100
+    title: StackArea (100%)
+
+  - name: stackarea.100.rotated
+    value: stackarea.100.rotated
+    title: StackArea (100%, Rotated)
+
+  - name: pie
+    value: pie
+    title: Pie
+
+  - name: donut
+    value: donut
+    title: Donut
+
+  - name: gauge
+    value: gauge
+    title: Gauge

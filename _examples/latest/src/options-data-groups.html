@@ -1,0 +1,91 @@
+---
+title: Stacked Groups
+date: 2019-04-26
+categories: ["latest","options"]
+order: 323
+---
+<p>
+	Stack 계열 차트에서 그룹으로 보여줄 범례를 지정합니다.
+</p>
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>data.groups</code></h6>
+			<p><label><input type="radio" name="group" id="chkGroup1" checked>["2015", "2016", "2017"]</label></p>
+			<p><code>data.groups = [ ["2015", "2016", "2017"] ]</code></p>
+		</li>
+		<li>
+			<p><label><input type="radio" name="group" id="chkGroup2">["2015", "2016"], ["2017"]</label></p>
+			<p><code>data.groups = [ ["2015", "2016"], ["2017"] ]</code></p>
+		</li>
+		<li>
+			<p><label><input type="radio" name="group" id="chkGroup3">["2015"], ["2016", "2017"]</label></p>
+			<p><code>data.groups = [ ["2015"], ["2016", "2017"] ]</code></p>
+		</li>
+	</ul>
+</div>
+
+<!-- Example -->
+<h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.stacks def_chart="stackbar" %}
+<p id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "stackbar",
+		columns: [
+			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+			["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,0.7,1.51,0.09,1.05,1.66,0.58,4.63],
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,1.08,4.29,1.67,2.4,0.36,0.53,1.98,2.23,0.9,1.62,1.66]
+		],
+		groups: [
+			["2015", "2016", "2017"]
+		]
+	}
+});
+document.getElementById("chkGroup1").onchange = function() {
+	chart.data().groups = [ ["2015", "2016", "2017"] ];
+	chart.render();
+}
+document.getElementById("chkGroup2").onchange = function() {
+	chart.data().groups = [ ["2015", "2016"], ["2017"] ];
+	chart.render();
+}
+document.getElementById("chkGroup3").onchange = function() {
+	chart.data().groups = [ ["2015"], ["2016", "2017"] ];
+	chart.render();
+}
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "stackbar",
+		columns: [
+			["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+			["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,0.7,1.51,0.09,1.05,1.66,0.58,4.63],
+			["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,1.08,4.29,1.67,2.4,0.36,0.53,1.98,2.23,0.9,1.62,1.66]
+		],
+		groups: [
+			["2015", "2016", "2017"]
+		]
+	}
+});
+document.getElementById("chkGroup1").onchange = function() {
+	chart.data().groups = [ ["2015", "2016", "2017"] ];
+	chart.render();
+}
+document.getElementById("chkGroup2").onchange = function() {
+	chart.data().groups = [ ["2015", "2016"], ["2017"] ];
+	chart.render();
+}
+document.getElementById("chkGroup3").onchange = function() {
+	chart.data().groups = [ ["2015"], ["2016", "2017"] ];
+	chart.render();
+}
+</script>

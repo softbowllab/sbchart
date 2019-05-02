@@ -2,7 +2,7 @@
 title: Tick Rotation
 date: 2018-08-16
 categories: ["latest","options"]
-order: 341
+order: 338
 ---
 <style>.w40{ width: 40px; }</style>
 <p>X축의 Tick을 지정된 각도로 회전하거나 멀티라인으로 표시합니다.</p>
@@ -24,6 +24,7 @@ order: 341
 </div>
 <!-- Example -->
 <h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.excluderotated def_chart="bar" %}
 <p id="chartWrap1" class="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
@@ -32,6 +33,7 @@ var chart1 = sb.chart.render("#chartWrap1", {
 	data: {
 		type: "bar",
 		columns: [
+			["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,0.7,1.51,0.09,1.05,1.66,0.58],
 			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
 		]
 	},
@@ -73,6 +75,7 @@ var chart = sb.chart.render("#chartWrap1", {
 	data: {
 		type: "bar",
 		columns: [
+			["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,0.7,1.51,0.09,1.05,1.66,0.58],
 			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
 		]
 	},

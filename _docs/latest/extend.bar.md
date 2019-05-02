@@ -56,7 +56,7 @@ extend: {
 * Type : Number
 
 
-### ~~extend.area.zerobased~~
+### ~~extend.bar.zerobased~~
 
 `#2.0.0` _`deprecated #2.0.3`_ _integrate with `axis.y.zerobased`_
 

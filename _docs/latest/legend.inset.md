@@ -2,7 +2,7 @@
 title: legend.inset
 date: 2018-05-14
 categories: ["latest","legend"]
-order: 2
+order: 3
 ---
 
 ## legend.inset

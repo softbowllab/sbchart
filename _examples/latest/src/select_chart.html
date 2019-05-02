@@ -1,0 +1,53 @@
+{% if include.chart_type %}
+<div class="row options charts">
+	<h5>사용 가능 차트 : </h5>
+	<select id="selCharts">	
+
+	{% for chart in include.chart_type %}
+		{% for c in site.data.chart.charts %}
+			{% if c.name == chart %}
+			<option value="{{ c.value }}" {% if c.name == include.def_chart %}selected="selected"{% endif %}>{{ c.title }}</option>
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+
+	</select>
+</div>
+<script>
+	var _data = undefined;
+
+	document.getElementById("selCharts").onchange = function() {
+		if(chart) {
+			if(-1 < this.value.indexOf('rotated')) {
+				chart.data().type = this.value.substring(0, this.value.indexOf('rotated') - 1);
+				chart.axis().rotated = true;
+			} else {
+				chart.data().type = this.value;
+				chart.axis().rotated = false;
+			}
+
+			if(this.value == "combination") {
+				var _tmp = JSON.parse(JSON.stringify(chart.data().columns));
+				var types = {};
+
+				for(var i = 0; i < _tmp.length; i++) {
+					types[_tmp[i].shift()] = (i % 2) ? "bar" : "line"
+				}
+				
+				chart.data().types = types;
+			} else 
+				delete chart.data().types;
+
+			if(this.value == "gauge") {
+				_data = chart.data().columns;
+				chart.data().columns = [["2015", 65]];
+			} else {
+				var data = _data || chart.data().columns
+				chart.data().columns = data;
+			}
+
+			chart.render();
+		}
+	}
+</script>
+{% endif %}

@@ -1,11 +1,11 @@
 ---
-title: Tick Rotation (rotated)
+title: Tick Rotation (Rotated)
 date: 2018-08-16
 categories: ["latest","options"]
-order: 342
+order: 339
 ---
 <p>X축의 Tick을 지정된 각도로 회전하거나 멀티라인으로 표시합니다.<br>
-가로 차트<code>axis.rotated = true</code>인 경우 X, Y 축이 서로 바뀌므로 X축의 Tick을 회전하기 위해서는 Y축 옵션을 사용합니다</p>
+가로 차트<code>axis.rotated = true</code>인 경우 X, Y축이 서로 바뀌므로 X축의 Tick을 회전하기 위해서는 Y축 옵션을 사용합니다.</p>
 <hr>
 <!-- Options -->
 <h4>Options</h4>
@@ -20,15 +20,17 @@ order: 342
 </div>
 <!-- Example -->
 <h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.rotated def_chart="bar" %}
 <p id="chartWrap1" class="chartWrap"></p>
 <!-- Code -->
 <h4>Code</h4>
 <p>{% highlight javascript %}
-var chart1 = sb.chart.render("#chartWrap1", {
+var chart = sb.chart.render("#chartWrap1", {
 	data: {
 		type: "bar",
 		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
 		]
 	},
 	axis: {
@@ -57,7 +59,8 @@ var chart = sb.chart.render("#chartWrap1", {
 	data: {
 		type: "bar",
 		columns: [
-			["온라인쇼핑몰 거래액", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890]
+			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
 		]
 	},
 	axis: {
