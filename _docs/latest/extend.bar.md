@@ -23,7 +23,6 @@ extend: {
 			ratio: 0.6,
 			max: 20
 		},
-		zerobased: false
 	}
 }
 ```

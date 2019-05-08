@@ -64,6 +64,8 @@ extend: {
 게이지의 가운데에 표시되는 값에 대한 라벨을 커스터마이징 합니다.
 
 * Type : Function
+
+* Format
 ```javascript
 extend: {
 	gauge: {

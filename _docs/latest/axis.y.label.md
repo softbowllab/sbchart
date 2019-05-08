@@ -23,7 +23,7 @@ Object 타입으로 지정하면 라벨 및 위치를 조정할 수 있습니다
 ```javascript
 axis: {
 	y: {
-		label: "지역별"
+		label: "변동률(%)"
 	}
 }
 ```

@@ -24,11 +24,10 @@ SVG 엘리먼트의 CSS 클래스명을 정의합니다.
 * Type : String
 
 * Format
-
 ```javascript
 global: {
 	svg: { 
-		class: "sbchart"
+		classname: "sbchart"
 	}
 }
 ```

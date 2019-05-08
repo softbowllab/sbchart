@@ -2,7 +2,7 @@
 title: axis.x.tick
 date: 2018-05-14
 categories: ["latest","axis"]
-order: 3
+order: 4
 ---
 
 ## axis.x.tick

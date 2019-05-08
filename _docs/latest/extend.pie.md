@@ -50,6 +50,8 @@ extend: {
 라벨을 커스터마이징 합니다.
 
 * Type : Function
+
+* Format
 ```javascript
 extend: {
 	pie: {

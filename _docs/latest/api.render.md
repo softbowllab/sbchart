@@ -63,7 +63,7 @@ var chart = sb.chart.render("#chartWrap", {
 
 	1. 차트 옵션 (데이터 포함), Optional
 
-* Example # 1
+* Example #1
 
 	```javascript
 var chart = new sb.chart("#chartWrap", {
