@@ -7,19 +7,40 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.13
+`2019.05.14`
+
+#### 기능 추가
+
+* 차트 애니메이션 기능 추가
+
+#### 옵션 추가
+
+* `conf.global.animation.show`, `conf.global.animation.type`, `conf.global.animation.types`, `conf.global.animation.delay`, `conf.global.animation.ease` 추가
+
+#### 기능 개선
+
+* step chart에서 `tooltip.grouped = false` 일 때 tooltip이 나타나는 영역 개선
+
+#### 버그 수정
+
+* bubble chart에서 `axis.rotated = true` 일 때 음수값의 label이 왼쪽으로 치우쳐있는 현상 수정
+* stacke area percent chart에서 `axis.rotated = true` 일 때 크롬에서 가장 우측 label이 잘리는 현상 수정
+
+
 ## 2.0.12
 `2019.05.02`
 
 #### 옵션 추가
 
-* conf.tooltip.sort 추가 (asc, desc)
+* `conf.tooltip.sort` 추가 (asc, desc)
 
 #### 버그 수정
 
-* pie chart에서 conf.extend.pie.padding을 2 이상 적용 시 라벨이 사라지는 현상 수정
-* stacked area percent chart에서 axis.x.type = timeseries일 때 data.labels 및 tooltip이 표시되지 않는 현상 수정
+* pie chart에서 `conf.extend.pie.padding`을 2 이상 적용 시 라벨이 사라지는 현상 수정
+* stacked area percent chart에서 `axis.x.type = timeseries`일 때 data.labels 및 tooltip이 표시되지 않는 현상 수정
 * combination chart에서 툴팁 순서가 데이터 순으로 나오지 않는 현상 수정
-* step chart에서 tooltip.grouped = false 일 때 point가 나타나는 현상 수정
+* step chart에서 `tooltip.grouped = false` 일 때 point가 나타나는 현상 수정
 
 
 ## 2.0.11
@@ -31,7 +52,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선
 
-* stacked percent chart에서 axis.y.tick에 % 표시 추가
+* stacked percent chart에서 `axis.y.tick`에 % 표시 추가
 
 
 ## 2.0.10

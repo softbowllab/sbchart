@@ -34,6 +34,43 @@
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/assets/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="{{ site.baseurl }}/{{ page.collection }}/{{ page.categories[0] }}/assets/js/sbchart-trial.js"></script>
+	<script type="text/javascript">
+
+		var _data = undefined;
+		function changeChart(value) {
+			if(chart) {
+				if(-1 < value.indexOf('rotated')) {
+					chart.data().type = value.substring(0, value.indexOf('rotated') - 1);
+					chart.axis().rotated = true;
+				} else {
+					chart.data().type = value;
+					chart.axis().rotated = false;
+				}
+
+				if(value == "combination") {
+					var _tmp = JSON.parse(JSON.stringify(chart.data().columns));
+					var types = {};
+
+					for(var i = 0; i < _tmp.length; i++) {
+						types[_tmp[i].shift()] = (i % 2) ? "bar" : "line"
+					}
+					
+					chart.data().types = types;
+				} else 
+					delete chart.data().types;
+
+				if(value == "gauge") {
+					_data = chart.data().columns;
+					chart.data().columns = [["2015", 65]];
+				} else {
+					var data = _data || chart.data().columns
+					chart.data().columns = data;
+				}
+
+				chart.render();
+			}
+		}
+	</script>
 </head>
 <body>
 	{% include header.html %}

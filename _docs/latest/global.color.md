@@ -2,7 +2,7 @@
 title: global.color
 date: 2018-05-14
 categories: ["latest","global"]
-order: 1
+order: 2
 ---
 
 ## global.color

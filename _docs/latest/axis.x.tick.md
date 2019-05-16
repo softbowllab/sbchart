@@ -184,7 +184,7 @@ axis: {
 
 * `axis.x.type = "timeseries"` 인 경우 아래와 같이 사용 가능합니다. 
 
-	* 포맷 Syntax는 [D3.format](https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Formatting.md)을 참조하세요 
+	* 포맷 Syntax는 [D3.format](https://github.com/d3/d3-3.x-api-reference/blob/master/Time-Formatting.md){:target="_blank"}을 참조하세요 
 
 	```javascript
 axis: {
