@@ -25,7 +25,7 @@ permalink: /:collection/releasenote:output_ext
 #### 버그 수정
 
 * bubble chart에서 `axis.rotated = true` 일 때 음수값의 label이 왼쪽으로 치우쳐있는 현상 수정
-* stacke area percent chart에서 `axis.rotated = true` 일 때 크롬에서 가장 우측 label이 잘리는 현상 수정
+* stacked area percent chart에서 `axis.rotated = true` 일 때 크롬에서 가장 우측 label이 잘리는 현상 수정
 
 
 ## 2.0.12
