@@ -15,6 +15,7 @@ all:
   - pie
   - donut
   - gauge
+  - radar
 
 excludecombigauge: 
   - line
@@ -31,6 +32,7 @@ excludecombigauge:
   - stackarea.100
   - pie
   - donut
+  - radar
 
 excludecircles: 
   - line
@@ -85,6 +87,7 @@ lineareas:
   - spline
   - step
   - area
+  - radar
 
 stacks:
   - stackbar
@@ -118,6 +121,7 @@ points:
   - area
   - stackarea
   - stackarea.100
+  - radar
 
 zerobased: 
   - line
@@ -217,3 +221,7 @@ charts:
   - name: gauge
     value: gauge
     title: Gauge
+
+  - name: radar
+    value: radar
+    title: Radar

@@ -1,0 +1,236 @@
+---
+title: Radar Options
+date: 2019-04-26
+categories: ["latest","options"]
+order: 429
+---
+레이더(radar) 차트 고유 옵션입니다.
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>extend.radar.area</code></h6>
+			<p><label><input type="checkbox" id="chkArea" checked>Area 표시 여부를 설정합니다.</label></p>
+			<p><code>extend.radar.area = true/false</code></p>
+		</li>
+	</ul>
+	<h5>Axis</h5>
+	<ul>
+		<li>
+			<h6><code>extend.radar.axis.show</code></h6>
+			<p><label><input type="checkbox" id="chkAxisShow" checked>Axis 표시 여부를 설정합니다.</label></p>
+			<p><code>extend.radar.axis.show = true/false</code></p>
+		</li>
+		<li>
+			<h6><code>extend.radar.axis.label</code></h6>
+			<p><label><input type="checkbox" id="chkAxisLabel" checked>Axis 라벨 표시 여부를 설정합니다.</label></p>
+			<p><code>extend.radar.axis.label = true/false</code></p>
+		</li>
+		<li>
+			<h6><code>extend.radar.axis.maxValue</code></h6>
+			<p>최대값을 설정합니다.</p>
+			<p><input type="text" id="axisMaxValue" class="w-short" init="500"></p>
+		</li>
+	</ul>
+	<h5>Level</h5>
+	<ul>
+		<li>
+			<h6><code>extend.radar.level.depth</code></h6>
+			<p>표시할 level 개수를 지정합니다. 표시하지 않으려면 0을 입력합니다.</p>
+			<p><input type="text" id="levelDepth" class="w-short" init="5"></p>
+		</li>
+		<li>
+			<h6><code>extend.radar.level.label</code></h6>
+			<p><label><input type="checkbox" id="chkLevelLabel" checked>Level 라벨 표시 여부를 설정합니다.</label></p>
+			<p><code>extend.radar.level.label = true/false</code></p>
+		</li>
+		<li>
+			<h6><code>extend.radar.level.format</code></h6>
+			<p><label><input type="checkbox" id="chkLevelLabelFormat" checked>Level 라벨을 커스터마이징(포맷 정의) 합니다.</label></p>
+			<p><code>extend.radar.level.format = function(value) { return value + "천만"; }</code></p>
+			
+		</li>
+	</ul>
+</div>
+<!-- Example -->
+<h4>Example</h4>
+<p id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "radar",
+		x: "x",
+		columns: [
+			["x", "Data A", "Data B", "Data C", "Data D", "Data E"],
+			["data1", 330, 350, 200, 380, 150],
+			["data2", 130, 100, 30, 200, 80],
+			["data3", 230, 153, 85, 300, 250]
+		]
+	},
+	extend: {
+		radar: {
+			area: true,
+			axis: {
+				show: true,
+				label: true,
+				maxValue: 500
+			},
+			level: {
+				depth: 5 ,
+				label: true,
+				format: function(value) { return value + "천만"; }
+			}
+		}
+	}
+});
+// area
+document.getElementById("chkArea").onchange = function() {
+	chart.extend({
+		radar: {
+			area: this.checked
+		}
+	}).render();
+};
+// show
+document.getElementById("chkAxisShow").onchange = function() {
+	chart.extend({
+		radar: {
+			axis: {
+				show: this.checked
+			}
+		}
+	}).render();
+};
+// axis.label
+document.getElementById("chkAxisLabel").onchange = function() {
+	chart.extend({
+		radar: {
+			axis: {
+				label: this.checked
+			}
+		}
+	}).render();
+};
+// maxValue
+document.getElementById("axisMaxValue").onchange = function() {
+	chart.extend({
+		radar: {
+			axis: {
+				maxValue: this.value
+			}
+		}
+	}).render();
+}
+// depth
+document.getElementById("levelDepth").onchange = function() {
+	chart.extend({
+		radar: {
+			level: {
+				depth: this.value
+			}
+		}
+	}).render();
+}
+// level.label
+document.getElementById("chkLevelLabel").onchange = function() {
+	chart.extend({
+		radar: {
+			level: {
+				label: this.checked
+			}
+		}
+	}).render();
+};
+// format
+document.getElementById("chkLevelLabelFormat").onchange = function() {
+	chart.extend().radar.level.format = this.checked ? function(value) { return value + "천만"; } : null;
+	chart.render();
+};
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "radar",
+		x: "x",
+		columns: [
+			["x", "Data A", "Data B", "Data C", "Data D", "Data E"],
+			["data1", 330, 350, 200, 380, 150],
+			["data2", 130, 100, 30, 200, 80],
+			["data3", 230, 153, 85, 300, 250]
+		]
+	},
+	extend: {
+		radar: {
+			area: true,
+			axis: {
+				show: true,
+				label: true,
+				maxValue: 500
+			},
+			level: {
+				depth: 5 ,
+				label: true,
+				format: function(value) { return value + "천만"; }
+			}
+		}
+	}
+});
+// area
+document.getElementById("chkArea").onchange = function() {
+	chart.extend({
+		radar: {
+			area: this.checked
+		}
+	}).render();
+};
+// show
+document.getElementById("chkAxisShow").onchange = function() {
+	chart.extend().radar.axis.show = this.checked;
+	chart.render();
+};
+// axis.label
+document.getElementById("chkAxisLabel").onchange = function() {
+	chart.extend().radar.axis.label = this.checked;
+	chart.render();
+};
+// maxValue
+document.getElementById("axisMaxValue").onchange = function() {
+	chart.extend({
+		radar: {
+			axis: {
+				maxValue: this.value
+			}
+		}
+	}).render();
+}
+// depth
+document.getElementById("levelDepth").onchange = function() {
+	chart.extend({
+		radar: {
+			level: {
+				depth: this.value
+			}
+		}
+	}).render();
+}
+// level.label
+document.getElementById("chkLevelLabel").onchange = function() {
+	chart.extend({
+		radar: {
+			level: {
+				label: this.checked
+			}
+		}
+	}).render();
+};
+// format
+document.getElementById("chkLevelLabelFormat").onchange = function() {
+	chart.extend().radar.level.format = this.checked ? function(value) { return value + "천만"; } : null;
+	chart.render();
+};
+</script>
