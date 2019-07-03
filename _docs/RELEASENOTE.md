@@ -7,6 +7,22 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.14
+`2019.07.02`
+
+#### 차트 추가
+
+* Scatter Plot, Radar Chart 추가
+
+#### 옵션 추가 
+
+* `conf.data.x`, `conf.data.xs` 추가
+
+#### 버그 수정
+
+* `tooltip.grouped = false` 일 때 툴팁이 차트 영역 밖에 표시되는 현상 수정
+
+
 ## 2.0.13
 `2019.05.14`
 

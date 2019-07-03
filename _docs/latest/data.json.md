@@ -15,7 +15,7 @@ JSON 배열 형태로 차트 데이터를 지정하는 방식입니다.
 
 배열 내 JSON 객체는 하나의 범례를 의미합니다.
 
-**반드시** x축 열과 y축 값으로 쓰일 속성들을 [data.keys](/data/data.keys.html)로 지정해야 합니다.
+**반드시** x축 열과 y축 값으로 쓰일 속성들을 [data.keys](./data.keys.html)로 지정해야 합니다.
 
 data.keys.value 에 지정된 값들이 범례 아이디가 됩니다.
 
