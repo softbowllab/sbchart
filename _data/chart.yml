@@ -7,6 +7,7 @@ all:
   - area
   - bubble
   - combi
+  - scatter
   - stackbar
   - stackbar.100
   - stackbar.rotated
@@ -25,6 +26,7 @@ excludecombigauge:
   - step
   - area
   - bubble
+  - scatter
   - stackbar
   - stackbar.100
   - stackbar.rotated
@@ -35,6 +37,22 @@ excludecombigauge:
   - radar
 
 excludecircles: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - area
+  - bubble
+  - combi
+  - scatter
+  - stackbar
+  - stackbar.100
+  - stackbar.rotated
+  - stackarea
+  - stackarea.100
+
+excludescattercircles:
   - line
   - bar
   - bar.rotated
@@ -56,6 +74,7 @@ excluderotated:
   - step
   - area
   - bubble
+  - scatter
   - stackbar
   - stackbar.100
   - stackarea
@@ -119,11 +138,25 @@ points:
   - line
   - spline
   - area
+  - scatter
   - stackarea
   - stackarea.100
   - radar
 
 zerobased: 
+  - line
+  - bar
+  - bar.rotated
+  - spline
+  - step
+  - bubble
+  - scatter
+  - area
+  - combi
+  - stackbar
+  - stackarea
+
+excludescatterzerobased: 
   - line
   - bar
   - bar.rotated
@@ -144,6 +177,7 @@ tickvalues:
   - area
   - bubble
   - combi
+  - scatter
 
 charts:
   - name: line
@@ -177,6 +211,10 @@ charts:
   - name: bubble
     value: bubble
     title: Bubble
+  
+  - name: scatter
+    value: scatter
+    title: Scatter Plot
 
   - name: combi
     value: combination
