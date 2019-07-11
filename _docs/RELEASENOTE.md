@@ -12,18 +12,18 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선 
 
-* Radar Chart `conf.axis.x.type`을 category로 고정
-* Radar Chart `conf.global.pattern`의 형태를 area와 같은 형태로 변경
-* Scatter Plot Chart `conf.axis.x.type`을 indexed로 고정
+* radar chart에서 `conf.axis.x.type`을 category로 고정
+* radar chart에서 `conf.global.pattern`의 형태를 area와 같은 형태로 변경
+* scatter plot chart에서 `conf.axis.x.type`을 indexed로 고정
 
 #### 버그 수정
 
-* Radar Chart `tooltip` 위치가 틀어지는 현상 수정
-* Step Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
-* Step Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
-* Scatter Plot Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
-* Scatter Plot Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
-* Bubble Chart에서 `conf.global.pattern="true"` 일 때 pattern이 정상적으로 나오지 않는 현상 수정
+* radar chart `tooltip` 위치가 틀어지는 현상 수정
+* step chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
+* step chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
+* scatter plot chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
+* scatter plot chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
+* bubble chart에서 `conf.global.pattern="true"` 일 때 pattern이 정상적으로 나오지 않는 현상 수정
 
 
 ## 2.0.14
