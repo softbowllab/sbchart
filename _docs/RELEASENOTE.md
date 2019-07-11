@@ -7,6 +7,25 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.15
+`2019.07.10`
+
+#### 기능 개선 
+
+* Radar Chart `conf.axis.x.type`을 category로 고정
+* Radar Chart `conf.global.pattern`의 형태를 area와 같은 형태로 변경
+* Scatter Plot Chart `conf.axis.x.type`을 indexed로 고정
+
+#### 버그 수정
+
+* Radar Chart `tooltip` 위치가 틀어지는 현상 수정
+* Step Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
+* Step Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
+* Scatter Plot Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 차트의 모양이 일치하지 않는 부분 수정
+* Scatter Plot Chart에서 `conf.global.pattern="true"` 일 때 legend의 tile과 tooltip의 tile이 일치하지 않는 부분 수정
+* Bubble Chart에서 `conf.global.pattern="true"` 일 때 pattern이 정상적으로 나오지 않는 현상 수정
+
+
 ## 2.0.14
 `2019.07.02`
 
@@ -20,7 +39,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 버그 수정
 
-* `tooltip.grouped = false` 일 때 툴팁이 차트 영역 밖에 표시되는 현상 수정
+* `conf.tooltip.grouped = false` 일 때 툴팁이 차트 영역 밖에 표시되는 현상 수정
 
 
 ## 2.0.13
@@ -36,12 +55,12 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선
 
-* step chart에서 `tooltip.grouped = false` 일 때 tooltip이 나타나는 영역 개선
+* step chart에서 `conf.tooltip.grouped = false` 일 때 tooltip이 나타나는 영역 개선
 
 #### 버그 수정
 
-* bubble chart에서 `axis.rotated = true` 일 때 음수값의 label이 왼쪽으로 치우쳐있는 현상 수정
-* stacked area percent chart에서 `axis.rotated = true` 일 때 크롬에서 가장 우측 label이 잘리는 현상 수정
+* bubble chart에서 `conf.axis.rotated = true` 일 때 음수값의 label이 왼쪽으로 치우쳐있는 현상 수정
+* stacked area percent chart에서 `conf.axis.rotated = true` 일 때 크롬에서 가장 우측 label이 잘리는 현상 수정
 
 
 ## 2.0.12
@@ -54,7 +73,7 @@ permalink: /:collection/releasenote:output_ext
 #### 버그 수정
 
 * pie chart에서 `conf.extend.pie.padding`을 2 이상 적용 시 라벨이 사라지는 현상 수정
-* stacked area percent chart에서 `axis.x.type = timeseries`일 때 data.labels 및 tooltip이 표시되지 않는 현상 수정
+* stacked area percent chart에서 `conf.axis.x.type = timeseries`일 때 data.labels 및 tooltip이 표시되지 않는 현상 수정
 * combination chart에서 툴팁 순서가 데이터 순으로 나오지 않는 현상 수정
 * step chart에서 `tooltip.grouped = false` 일 때 point가 나타나는 현상 수정
 
@@ -68,7 +87,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선
 
-* stacked percent chart에서 `axis.y.tick`에 % 표시 추가
+* stacked percent chart에서 `conf.axis.y.tick`에 % 표시 추가
 
 
 ## 2.0.10
@@ -80,7 +99,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 변경
 
-* line, spline, area, bubble 차트에서 `axis.rotated = true` 적용되게 변경
+* line, spline, area, bubble 차트에서 `conf.axis.rotated = true` 적용되게 변경
 
 
 ## 2.0.9
@@ -103,11 +122,11 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 변경
 
-* `legend.position = bottom` 일 때, 마지막 범례 우측으로 legend.padding이 적용되지 않게 변경
+* `conf.legend.position = bottom` 일 때, 마지막 범례 우측으로 legend.padding이 적용되지 않게 변경
 
 #### 버그 수정
 
-* `legend.background = true` 일 때, background 위치 조정
+* `conf.legend.background = true` 일 때, background 위치 조정
 
 
 
@@ -116,7 +135,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선
 
-* `legend.background` 옵션 추가
+* `conf.legend.background` 옵션 추가
 
 #### 버그 수정
 
@@ -132,7 +151,7 @@ permalink: /:collection/releasenote:output_ext
 
 #### 버그 수정
 
-* 게이지(gauge) 차트의 min, max 값에 따른 값 계산오류 `extend.gauge.min`, `extend.gauge.max`
+* 게이지(gauge) 차트의 min, max 값에 따른 값 계산오류 `conf.extend.gauge.min`, `conf.extend.gauge.max`
 
 * 게이지(gauge), 도넛(donut) 차트에서 차트 크기에 따른 내부 원 반지름 비율 계산오류
 
@@ -154,30 +173,30 @@ permalink: /:collection/releasenote:output_ext
 
 #### 기능 개선
 
-* 도넛차트 내부 원 내부에 문자열 표현 기능 추가 `extend.donut.title`
+* 도넛차트 내부 원 내부에 문자열 표현 기능 추가 `conf.extend.donut.title`
 
 #### 버그 수정
 
-* `axis.x.type = "category"` & `axis.x.tick.centered = true` 일 때 첫번째 tick이 사라지는 현상
-* `axis.x.type = "category"` & `axis.x.tick.outer = false` 일 때 우측 tick이 사라지지 않는 현상
+* `conf.axis.x.type = "category"` & `conf.axis.x.tick.centered = true` 일 때 첫번째 tick이 사라지는 현상
+* `conf.axis.x.type = "category"` & `conf.axis.x.tick.outer = false` 일 때 우측 tick이 사라지지 않는 현상
 
 ## 2.0.3 
 `2018.09.14`
 
 #### 버그 수정
 
-* `axis.x.type`이 `timeseries`일 때, tooltip이 표시되지 않는 현상
-* `axis.x.type = "timeseries"`에서 데이터가 시간 순이 아닐 때, 시간 순으로 자동 정렬
+* `conf.axis.x.type`이 `timeseries`일 때, tooltip이 표시되지 않는 현상
+* `conf.axis.x.type = "timeseries"`에서 데이터가 시간 순이 아닐 때, 시간 순으로 자동 정렬
 
 #### 기능 개선
 
 * 범례 항목 마우스 event (legend.item.onmouseover, legend.item.onmouseout) 추가
 * zerobased 옵션 변경
-	* `extend.bar.zerobased`, `extend.area.zerobased` 옵션 제거
-	* `axis.y.zerobased` 옵션 추가
+	* `conf.extend.bar.zerobased`, `conf.extend.area.zerobased` 옵션 제거
+	* `conf.axis.y.zerobased` 옵션 추가
 	* bar와 area에서만 적용되던 zerobased 옵션이 공통으로 변경됨에 따라, line, spline 에서도 영향을 받게 변경
-* `axis.x.type`이 category일 때, `x.tick.format` 파라미터에 category name 추가
-* `data.groups` 옵션 추가 : stacked bar 차트 계열에서 범례별 묶음(그룹화) 처리 지원
+* `conf.axis.x.type`이 category일 때, `conf.axis.x.tick.format` 파라미터에 category name 추가
+* `conf.data.groups` 옵션 추가 : stacked bar 차트 계열에서 범례별 묶음(그룹화) 처리 지원
 
 ## 2.0.2 
 `2018.08.22`
