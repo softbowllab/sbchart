@@ -7,6 +7,16 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.16
+`2019.08.26`
+
+#### 옵션 추가
+* `conf.data.noData` 추가 - 데이터가 없을 경우 문구 설정 기능 추가
+
+#### 버그 수정
+* stackarea percent chart에서 `conf.global.pattern = true` 일 때 point 위치 오류 수정
+
+
 ## 2.0.15
 `2019.07.10`
 

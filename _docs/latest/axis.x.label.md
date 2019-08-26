@@ -75,7 +75,7 @@ X축 라벨의 위치를 지정합니다.
 	* "inner-left": 축 안쪽 왼쪽
 	* "outer-right": 축 바깥쪽 오른쪽
 	* "outer-center": 축 바깥쪽 가운데
-	* "outer-left":축 바깥쪽 왼쪽
+	* "outer-left": 축 바깥쪽 왼쪽
 
 * Values (Rotated, `axis.rotated = true` 인 경우)
 	* "inner-top": `Default` 축 안쪽 상단
