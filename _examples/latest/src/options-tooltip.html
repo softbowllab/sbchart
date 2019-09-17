@@ -39,71 +39,71 @@ order: 411
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "bar",
-		json: [
-			{"region":"서울", "2015":4.6, "2016":2.14, "2017":3.64},
-			{"region":"경기", "2015":4.47, "2016":0.84, "2017":1.67},
-			{"region":"강원", "2015":2.21, "2016":1.33, "2017":2.4},
-			{"region":"충청", "2015":1.13, "2016":-0.7, "2017":-0.36},
-			{"region":"전라", "2015":0.35, "2016":0.09, "2017":1.98},
-			{"region":"경상", "2015":2.65, "2016":-1.66, "2017":-0.9},
-			{"region":"제주", "2015":8.08, "2016":4.63, "2017":1.66}
-		],
-		keys: {
-			x: "region",
-			value: ["2015", "2016", "2017"]
-		}
-	},
-	axis: {
-		x: {
-			type: "category"
-		}
-	}
+    data: {
+        type: "bar",
+        json: [
+            {"region":"서울", "2015":4.6, "2016":2.14, "2017":3.64},
+            {"region":"경기", "2015":4.47, "2016":0.84, "2017":1.67},
+            {"region":"강원", "2015":2.21, "2016":1.33, "2017":2.4},
+            {"region":"충청", "2015":1.13, "2016":-0.7, "2017":-0.36},
+            {"region":"전라", "2015":0.35, "2016":0.09, "2017":1.98},
+            {"region":"경상", "2015":2.65, "2016":-1.66, "2017":-0.9},
+            {"region":"제주", "2015":8.08, "2016":4.63, "2017":1.66}
+        ],
+        keys: {
+            x: "region",
+            value: ["2015", "2016", "2017"]
+        }
+    },
+    axis: {
+        x: {
+            type: "category"
+        }
+    }
 });
 //show/hide
 document.getElementById("chkShow").onchange = function() {
-	chart.tooltip().show = this.checked;
-	chart.render();
+    chart.tooltip().show = this.checked;
+    chart.render();
 };
 //grouped
 document.getElementById("chkGrouped").onchange = function() {
-	chart.tooltip().grouped = this.checked;
-	chart.render();
+    chart.tooltip().grouped = this.checked;
+    chart.render();
 };
 //format
 document.getElementById("chkFormat").onchange = function() {
-	if(this.checked) {
-		chart.tooltip({
-			format: {
-				title: function(x) {
-					return "지역:" + chart.data().json[x].region;
-				},
-				name: function(name, ratio, id, index) {
-					return name + "년";
-				},
-				value: function(value, ratio, id, index) {
-					return value.toFixed(2) + "%";
-				}
-			}
-		}).render();
-	} else {
-		delete chart.tooltip().format;
-		chart.render();
-	}
+    if(this.checked) {
+        chart.tooltip({
+            format: {
+                title: function(x) {
+                    return "지역:" + chart.data().json[x].region;
+                },
+                name: function(name, ratio, id, index) {
+                    return name + "년";
+                },
+                value: function(value, ratio, id, index) {
+                    return value.toFixed(2) + "%";
+                }
+            }
+        }).render();
+    } else {
+        delete chart.tooltip().format;
+        chart.render();
+    }
 };
 //position
 document.getElementById("chkPosition").onchange = function() {
-	if(this.checked) {
-		chart.tooltip({
-			position: function(data, element, width, height) {
-				return {top: 0, left: 25};
-			}
-		}).render();
-	} else {
-		delete chart.tooltip().position;
-		chart.render();
-	}
+    if(this.checked) {
+        chart.tooltip({
+            position: function(data, element, width, height) {
+                return {top: 0, left: 25};
+            }
+        }).render();
+    } else {
+        delete chart.tooltip().position;
+        chart.render();
+    }
 };
 {% endhighlight %}</p>
 <!-- Script -->

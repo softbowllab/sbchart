@@ -30,39 +30,39 @@ order: 335
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "bar",
-		columns: [
-			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
-			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
-		]
-	},
-	axis: {
-		x: {
-			tick: {
-				format: function(d) {
-					return (d + 1) + "번째";
-				}
-			}
-		},
-		y: {
-			tick: {
-				format: function(d) {
-					return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만";
-				}
-			}
-		}
-	}
+    data: {
+        type: "bar",
+        columns: [
+            ["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+            ["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
+        ]
+    },
+    axis: {
+        x: {
+            tick: {
+                format: function(d) {
+                    return (d + 1) + "번째";
+                }
+            }
+        },
+        y: {
+            tick: {
+                format: function(d) {
+                    return ("" + Math.floor(d/1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만";
+                }
+            }
+        }
+    }
 });
 // format-x
 document.getElementById("chkFormatX").onchange = function() {
-	chart.axis().x.tick.format = this.checked ? function(d) { return (d + 1) + "번째"; } : null;
-	chart.render();
+    chart.axis().x.tick.format = this.checked ? function(d) { return (d + 1) + "번째"; } : null;
+    chart.render();
 };
 // format-y
 document.getElementById("chkFormatY").onchange = function() {
-	chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d / 1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; } : null;
-	chart.render();
+    chart.axis().y.tick.format = this.checked ? function(d) { return ("" + Math.floor(d / 1000)).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 천만"; } : null;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

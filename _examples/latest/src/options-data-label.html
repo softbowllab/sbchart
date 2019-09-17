@@ -42,49 +42,49 @@ order: 321
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "bar",
-		columns: [
-			["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33],
-			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
-		],
-		labels: {
-			format: function(value, id, index) {
-				return value.toFixed(3);
-			},
-			position: {
-				x: 0,
-				y: -10
-			}
-		}
-	}
+    data: {
+        type: "bar",
+        columns: [
+            ["2016",0.71,2.14,3.18,1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33],
+            ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4]
+        ],
+        labels: {
+            format: function(value, id, index) {
+                return value.toFixed(3);
+            },
+            position: {
+                x: 0,
+                y: -10
+            }
+        }
+    }
 });
 // format
 document.getElementById("chkFormat").onchange = function() {
-	if(this.checked) {
-		chart.data({
-			labels: {
-				format: function(value, id, index) {
-					return value.toFixed(3);
-				},
-				position: {
-					x: document.getElementById("txtX").value,
-					y: document.getElementById("txtY").value
-				}
-			}
-		}).render();
-	} else {
-		delete chart.data().labels; // delete labels
-		chart.render();
-	}
+    if(this.checked) {
+        chart.data({
+            labels: {
+                format: function(value, id, index) {
+                    return value.toFixed(3);
+                },
+                position: {
+                    x: document.getElementById("txtX").value,
+                    y: document.getElementById("txtY").value
+                }
+            }
+        }).render();
+    } else {
+        delete chart.data().labels; // delete labels
+        chart.render();
+    }
 };
 // x
 document.getElementById("txtX").onchange = function() {
-	document.getElementById("chkFormat").onchange();
+    document.getElementById("chkFormat").onchange();
 };
 // y
 document.getElementById("txtY").onchange = function() {
-	document.getElementById("chkFormat").onchange();
+    document.getElementById("chkFormat").onchange();
 };
 {% endhighlight %}</p>
 <!-- Script -->

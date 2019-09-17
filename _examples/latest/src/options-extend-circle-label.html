@@ -37,107 +37,107 @@ order: 423
 <p>{% highlight javascript %}
 //pie
 var chart1 = sb.chart.render("#chartWrap1", {
-	data: {
-		type: "pie",
-		columns: [
-			["2015",65.26],
-			["2016",12.74],
-			["2017",22]
-		]
-	}
+    data: {
+        type: "pie",
+        columns: [
+            ["2015",65.26],
+            ["2016",12.74],
+            ["2017",22]
+        ]
+    }
 });
 //donut
 var chart2 = sb.chart.render("#chartWrap2", {
-	data: {
-		type: "donut",
-		columns: [
-			["2015",65.26],
-			["2016",12.74],
-			["2017",22]
-		]
-	}
+    data: {
+        type: "donut",
+        columns: [
+            ["2015",65.26],
+            ["2016",12.74],
+            ["2017",22]
+        ]
+    }
 }); 
 //gauge
 var chart3 = sb.chart.render("#chartWrap3", {
-	data: {
-		type: "gauge",
-		columns: [
-			["2015",65.26]
-		]
-	}
+    data: {
+        type: "gauge",
+        columns: [
+            ["2015",65.26]
+        ]
+    }
 }); 
 
 // show/hide
 document.getElementById("chkShow").onchange = function() {
-	//pie
-	chart1.extend({
-		pie: {
-			label: {
-				show: this.checked
-			}
-		}
-	}).render();
-	//donut
-	chart2.extend({
-		donut: {
-			label: {
-				show: this.checked
-			}
-		}
-	}).render();
-	//gauge
-	chart3.extend({
-		gauge: {
-			label: {
-				show: this.checked
-			}
-		}
-	}).render();
+    //pie
+    chart1.extend({
+        pie: {
+            label: {
+                show: this.checked
+            }
+        }
+    }).render();
+    //donut
+    chart2.extend({
+        donut: {
+            label: {
+                show: this.checked
+            }
+        }
+    }).render();
+    //gauge
+    chart3.extend({
+        gauge: {
+            label: {
+                show: this.checked
+            }
+        }
+    }).render();
 };
 // format
 document.getElementById("chkFormat").onchange = function() {
-	if(this.checked) {
-		//apply format
-		var func = function(value, ratio, id) {
-			return value.toFixed(2) + "%";
-		};
-		document.getElementById("chkShow").checked = true;
-		//pie
-		chart1.extend({
-			pie: {
-				label: {
-					show: true,
-					format: func
-				}
-			}
-		}).render();
-		//donut
-		chart2.extend({
-			donut: {
-				label: {
-					show: true,
-					format: func
-				}
-			}
-		}).render();
-		//gauge
-		chart3.extend({
-			gauge: {
-				label: {
-					show: true,
-					format: func
-				}
-			}
-		}).render();
-	} else {
-		//remove format
-		delete chart1.extend().pie.label.format;
-		delete chart2.extend().donut.label.format;
-		delete chart3.extend().gauge.label.format;
-		chart1.render();
-		chart2.render();
-		chart3.render();
-	}
+    if(this.checked) {
+        //apply format
+        var func = function(value, ratio, id) {
+            return value.toFixed(2) + "%";
+        };
+        document.getElementById("chkShow").checked = true;
+        //pie
+        chart1.extend({
+            pie: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+        //donut
+        chart2.extend({
+            donut: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+        //gauge
+        chart3.extend({
+            gauge: {
+                label: {
+                    show: true,
+                    format: func
+                }
+            }
+        }).render();
+    } else {
+        //remove format
+        delete chart1.extend().pie.label.format;
+        delete chart2.extend().donut.label.format;
+        delete chart3.extend().gauge.label.format;
+        chart1.render();
+        chart2.render();
+        chart3.render();
+    }
 };
 {% endhighlight %}</p>
 <!-- Script -->

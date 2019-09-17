@@ -2,7 +2,7 @@
 title: axis.x.padding
 date: 2018-05-14
 categories: ["latest","axis"]
-order: 6
+order: 9
 ---
 
 ## axis.x.padding

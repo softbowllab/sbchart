@@ -30,35 +30,35 @@ order: 336
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "bar",
-		columns: [
-			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
-			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
-		]
-	},
-	axis: {
-		x: {
-			tick: {
-				values: [0, 4, 6, 8]
-			}
-		},
-		y: {
-			tick: {
-				values: [7000000, 8000000, 9000000]
-			}
-		}
-	}
+    data: {
+        type: "bar",
+        columns: [
+            ["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+            ["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
+        ]
+    },
+    axis: {
+        x: {
+            tick: {
+                values: [0, 4, 6, 8]
+            }
+        },
+        y: {
+            tick: {
+                values: [7000000, 8000000, 9000000]
+            }
+        }
+    }
 });
 //values-x
 document.getElementById("chkValuesX").onchange = function() {
-	chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8] : null;
-	chart.render();
+    chart.axis().x.tick.values = this.checked ? [0, 4, 6, 8] : null;
+    chart.render();
 };
 //values-y
 document.getElementById("chkValuesY").onchange = function() {
-	chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000] : null;
-	chart.render();
+    chart.axis().y.tick.values = this.checked ? [7000000, 8000000, 9000000] : null;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

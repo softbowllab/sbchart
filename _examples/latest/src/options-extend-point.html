@@ -25,21 +25,21 @@ order: 422
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		columns: [
-			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
-			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
-		]
-	},
-	extend: {
-		point: {
-			r: 2.5
-		}
-	}
+    data: {
+        columns: [
+            ["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+            ["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
+        ]
+    },
+    extend: {
+        point: {
+            r: 2.5
+        }
+    }
 });
 document.getElementById("txtR").onchange = function() {
-	chart.extend().point.r = this.value;
-	chart.render();
+    chart.extend().point.r = this.value;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

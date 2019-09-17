@@ -2,7 +2,7 @@
 title: axis.x.categories
 date: 2018-05-14
 categories: ["latest","axis"]
-order: 3
+order: 6
 ---
 
 ## axis.x.categories

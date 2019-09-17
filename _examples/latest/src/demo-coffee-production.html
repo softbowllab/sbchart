@@ -25,74 +25,74 @@ order: 904
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap", {
-	global: {
-		color: {
-			pattern: ["#3366cc","#dc3912","#ff9900","#109618","#990099","#0099c6"]
-		}
-	},
-	data: {
-		types: {bolivia: "bar", ecuador: "bar", madagascar: "bar", papuanewguinea: "bar", rwanda: "bar", average: "line"},
-		json: [
-			{month:"2015/01", bolivia:250, ecuador:1050, madagascar:600, papuanewguinea:1250, rwanda:300, average:700},
-			{month:"2015/02", bolivia:260, ecuador:950, madagascar:550, papuanewguinea:1000, rwanda:450, average:600},
-			{month:"2015/03", bolivia:250, ecuador:1100, madagascar:600, papuanewguinea:800, rwanda:380, average:650},
-			{month:"2015/04", bolivia:260, ecuador:700, madagascar:600, papuanewguinea:1100, rwanda:350, average:600},
-			{month:"2015/05", bolivia:250, ecuador:1050, madagascar:620, papuanewguinea:1000, rwanda:250, average:650}
-		],
-		keys: {
-			x: "month",
-			value: ["bolivia","ecuador","madagascar","papuanewguinea","rwanda","average"]
-		},
-		legends: {bolivia: "Bolivia", ecuador: "Ecuador", madagascar: "Madagascar", papuanewguinea: "Papua New Guinea", rwanda: "Rwanda", average: "Average"},
-	},
-	axis: {
-		x: {
-			type: "category",
-			tick: {
-				outer: false
-			},
-			label: {
-				text: "Month",
-				position: "outer-center"
-			}
-		},
-		y: {
-			tick: {
-				values: [400,800,1200,1600]
-			},
-			label: {
-				text: "Cups",
-				position: "outer-middle"
-			}
-		}
-	},
-	title: {
-		text: "Monthly Coffee Production by Country",
-		position: "top-left"
-	},
-	grid: {
-		x: {
-			show: false
-		}
-	},
-	legend: {
-		position: "right",
-		item: {
-			tile: {
-				width: 25
-			}
-		}
-	},
-	extend: {
-		point: {
-			show: false
-		},
-		bar: {
-			width: {
-				ratio: 0.45
-			}
-		}
-	}
+    global: {
+        color: {
+            pattern: ["#3366cc","#dc3912","#ff9900","#109618","#990099","#0099c6"]
+        }
+    },
+    data: {
+        types: {bolivia: "bar", ecuador: "bar", madagascar: "bar", papuanewguinea: "bar", rwanda: "bar", average: "line"},
+        json: [
+            {month:"2015/01", bolivia:250, ecuador:1050, madagascar:600, papuanewguinea:1250, rwanda:300, average:700},
+            {month:"2015/02", bolivia:260, ecuador:950, madagascar:550, papuanewguinea:1000, rwanda:450, average:600},
+            {month:"2015/03", bolivia:250, ecuador:1100, madagascar:600, papuanewguinea:800, rwanda:380, average:650},
+            {month:"2015/04", bolivia:260, ecuador:700, madagascar:600, papuanewguinea:1100, rwanda:350, average:600},
+            {month:"2015/05", bolivia:250, ecuador:1050, madagascar:620, papuanewguinea:1000, rwanda:250, average:650}
+        ],
+        keys: {
+            x: "month",
+            value: ["bolivia","ecuador","madagascar","papuanewguinea","rwanda","average"]
+        },
+        legends: {bolivia: "Bolivia", ecuador: "Ecuador", madagascar: "Madagascar", papuanewguinea: "Papua New Guinea", rwanda: "Rwanda", average: "Average"},
+    },
+    axis: {
+        x: {
+            type: "category",
+            tick: {
+                outer: false
+            },
+            label: {
+                text: "Month",
+                position: "outer-center"
+            }
+        },
+        y: {
+            tick: {
+                values: [400,800,1200,1600]
+            },
+            label: {
+                text: "Cups",
+                position: "outer-middle"
+            }
+        }
+    },
+    title: {
+        text: "Monthly Coffee Production by Country",
+        position: "top-left"
+    },
+    grid: {
+        x: {
+            show: false
+        }
+    },
+    legend: {
+        position: "right",
+        item: {
+            tile: {
+                width: 25
+            }
+        }
+    },
+    extend: {
+        point: {
+            show: false
+        },
+        bar: {
+            width: {
+                ratio: 0.45
+            }
+        }
+    }
 });
 {% endhighlight %}</p>
 

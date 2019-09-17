@@ -32,7 +32,7 @@ order: 0
 
 ### axis
 
-X, Y 축 관련 옵션입니다.
+X, Y, Y2 축 관련 옵션입니다.
 
 {% assign cate = "axis" %}
 {% assign pages = site.docs | where: "categories", page.categories[0] | where: "categories", cate | sort: "order"%}

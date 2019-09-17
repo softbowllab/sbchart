@@ -24,37 +24,37 @@ order: 340
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "area",
-		json: [
-			{ month:"2017.07", volume: 7707750 },
-			{ month:"2017.08", volume: 7573752 },
-			{ month:"2017.09", volume: 7914913 },
-			{ month:"2017.10", volume: 7386713 },
-			{ month:"2017.11", volume: 8708523 },
-			{ month:"2017.12", volume: 8624841 },
-			{ month:"2018.01", volume: 8785755 },
-			{ month:"2018.02", volume: 8048044 },
-			{ month:"2018.03", volume: 9083890 }
-		],
-		keys: {
-			x: "month",
-			value: ["volume"]
-		}
-	},
-	axis: {
-		x: {
-			type: "category"
-		},
-		y: {
-			zerobased: true
-		}
-	},
+    data: {
+        type: "area",
+        json: [
+            { month:"2017.07", volume: 7707750 },
+            { month:"2017.08", volume: 7573752 },
+            { month:"2017.09", volume: 7914913 },
+            { month:"2017.10", volume: 7386713 },
+            { month:"2017.11", volume: 8708523 },
+            { month:"2017.12", volume: 8624841 },
+            { month:"2018.01", volume: 8785755 },
+            { month:"2018.02", volume: 8048044 },
+            { month:"2018.03", volume: 9083890 }
+        ],
+        keys: {
+            x: "month",
+            value: ["volume"]
+        }
+    },
+    axis: {
+        x: {
+            type: "category"
+        },
+        y: {
+            zerobased: true
+        }
+    },
 });
 
 document.getElementById("chkZerobased").onchange = function() {
-	chart.axis().y.zerobased = this.checked;
-	chart.render();
+    chart.axis().y.zerobased = this.checked;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

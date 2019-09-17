@@ -18,51 +18,51 @@ svg { font-family: AppleSDGothicNeo-Regular,Malgun Gothic,"sans-serif"; }
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap", {
-	global: {
-		size: {
-			width: 400, 
-			height: 130
-		},
-		color: {
-			pattern: ["#006BC9","#E62A22","#04B8A6","#F7B500","#86BE24","#AD9E75","#899099","#B0B7BF"]
-		}
-	},
-	data: {
-		type: "stackbar",
-		columns: [
-			["더불어 민주당",48.7],
-			["자유한국당", 15],
-			["바른미래당", 9.5],
-			["정의당", 5.3],
-			["민주평화당",0.4],
-			["기타", 2.7],
-			["없음", 11.5],
-			["잘모름", 6.8]
-		]
-	},
-	axis: {
-		rotated: true,
-		x: {
-			show: false,
-			type: "category",
-			categories: ["정당 지지도"]
-		},
-		y: {
-			show: false
-		}
-	},
-	grid: {
-		x: {
-			show: false
-		},
-		y: {
-			show: false
-		}
-	},
-	title: { 
-		text: "서울시민 정당지지도",
-		position: "top-left"
-	}
+    global: {
+        size: {
+            width: 400, 
+            height: 130
+        },
+        color: {
+            pattern: ["#006BC9","#E62A22","#04B8A6","#F7B500","#86BE24","#AD9E75","#899099","#B0B7BF"]
+        }
+    },
+    data: {
+        type: "stackbar",
+        columns: [
+            ["더불어 민주당",48.7],
+            ["자유한국당", 15],
+            ["바른미래당", 9.5],
+            ["정의당", 5.3],
+            ["민주평화당",0.4],
+            ["기타", 2.7],
+            ["없음", 11.5],
+            ["잘모름", 6.8]
+        ]
+    },
+    axis: {
+        rotated: true,
+        x: {
+            show: false,
+            type: "category",
+            categories: ["정당 지지도"]
+        },
+        y: {
+            show: false
+        }
+    },
+    grid: {
+        x: {
+            show: false
+        },
+        y: {
+            show: false
+        }
+    },
+    title: { 
+        text: "서울시민 정당지지도",
+        position: "top-left"
+    }
 });
 {% endhighlight %}</p>
 

@@ -30,23 +30,23 @@ order: 313
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	global: {
-		svg: {
-			classname: document.getElementById("txtClassname").value
-		}
-	},
-	data: {
-		type: "bar",
-		columns: [
-			["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
-			["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
-		]
-	}
+    global: {
+        svg: {
+            classname: document.getElementById("txtClassname").value
+        }
+    },
+    data: {
+        type: "bar",
+        columns: [
+            ["2016", 7707750, 7573752, 7914913, 7386713, 8708523, 8624841, 8785755, 8048044, 9083890],
+            ["2017", 7958450, 8392392, 9011231, 8092838, 8829832, 7029282, 8103392, 7403013, 7182900]
+        ]
+    }
 });
 //classname
 document.getElementById("txtClassname").onchange = function() {
-	chart.global().svg.classname = this.value;
-	chart.render();
+    chart.global().svg.classname = this.value;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

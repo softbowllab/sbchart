@@ -61,94 +61,94 @@ order: 429
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "radar",
-		x: "x",
-		columns: [
-			["x", "Data A", "Data B", "Data C", "Data D", "Data E"],
-			["data1", 330, 350, 200, 380, 150],
-			["data2", 130, 100, 30, 200, 80],
-			["data3", 230, 153, 85, 300, 250]
-		]
-	},
-	extend: {
-		radar: {
-			area: true,
-			axis: {
-				show: true,
-				label: true,
-				maxValue: 500
-			},
-			level: {
-				depth: 5 ,
-				label: true,
-				format: function(value) { return value + "천만"; }
-			}
-		}
-	}
+    data: {
+        type: "radar",
+        x: "x",
+        columns: [
+            ["x", "Data A", "Data B", "Data C", "Data D", "Data E"],
+            ["data1", 330, 350, 200, 380, 150],
+            ["data2", 130, 100, 30, 200, 80],
+            ["data3", 230, 153, 85, 300, 250]
+        ]
+    },
+    extend: {
+        radar: {
+            area: true,
+            axis: {
+                show: true,
+                label: true,
+                maxValue: 500
+            },
+            level: {
+                depth: 5 ,
+                label: true,
+                format: function(value) { return value + "천만"; }
+            }
+        }
+    }
 });
 // area
 document.getElementById("chkArea").onchange = function() {
-	chart.extend({
-		radar: {
-			area: this.checked
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            area: this.checked
+        }
+    }).render();
 };
 // show
 document.getElementById("chkAxisShow").onchange = function() {
-	chart.extend({
-		radar: {
-			axis: {
-				show: this.checked
-			}
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            axis: {
+                show: this.checked
+            }
+        }
+    }).render();
 };
 // axis.label
 document.getElementById("chkAxisLabel").onchange = function() {
-	chart.extend({
-		radar: {
-			axis: {
-				label: this.checked
-			}
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            axis: {
+                label: this.checked
+            }
+        }
+    }).render();
 };
 // maxValue
 document.getElementById("axisMaxValue").onchange = function() {
-	chart.extend({
-		radar: {
-			axis: {
-				maxValue: this.value
-			}
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            axis: {
+                maxValue: this.value
+            }
+        }
+    }).render();
 }
 // depth
 document.getElementById("levelDepth").onchange = function() {
-	chart.extend({
-		radar: {
-			level: {
-				depth: this.value
-			}
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            level: {
+                depth: this.value
+            }
+        }
+    }).render();
 }
 // level.label
 document.getElementById("chkLevelLabel").onchange = function() {
-	chart.extend({
-		radar: {
-			level: {
-				label: this.checked
-			}
-		}
-	}).render();
+    chart.extend({
+        radar: {
+            level: {
+                label: this.checked
+            }
+        }
+    }).render();
 };
 // format
 document.getElementById("chkLevelLabelFormat").onchange = function() {
-	chart.extend().radar.level.format = this.checked ? function(value) { return value + "천만"; } : null;
-	chart.render();
+    chart.extend().radar.level.format = this.checked ? function(value) { return value + "천만"; } : null;
+    chart.render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

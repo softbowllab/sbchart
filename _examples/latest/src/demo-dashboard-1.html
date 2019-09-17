@@ -75,96 +75,96 @@ order: 906
 #chartWrap1	.sbchart-axis-y .tick text { fill: #999; }	/* y축 tick 폰트색 */
 #chartWrap1	.sbchart-axis-y .domain { display: none; }	/* y축 라인 숨김 */
 #chartWrap1	.sbchart-grid-y-line { stroke-dasharray: 3; }	/* y축 그리드 라인 점선처리 */
-#chartWrap1	.sbchart-grid line { stroke: #666; }	/* 그리드 라인 색 */
+#chartWrap1	.sbchart-grid line { stroke: #666; }	        /* 그리드 라인 색 */
 #chartWrap1	.sbchart-shapes-other { stroke-width: 4; }	/* other 값 라인 굵기 */
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart1 = new sb.chart("#chartWrap1", {
-	global: {
-		color: {
-			pattern: ["#00a9ff", "#4a82b6"]
-		},
-		padding: { 
-			right: 10
-		}			
-	},
-	data: {
-		types: {capital: "area", other: "line"},
-		json: [],
-		keys: {
-			x: "day",
-			value: ["capital", "other"]
-		},
-	},
-	axis: {
-		x: {
-			type: "timeseries",
-			tick: {
-				count: 5,
-				format: "%M'%S''"
-			}
-		},
-		y: {
-			tick: {
-				values: [0, 2, 4, 6, 8, 10]
-			}
-		}
-	},
-	grid: {
-		x: { 
-			show: false 
-		}
-	},
-	legend: {
-		show: false
-	},
-	tooltip: {
-		show: false
-	},
-	extend: {
-		point: { 
-			show: false 
-		}
-	}
+    global: {
+        color: {
+            pattern: ["#00a9ff", "#4a82b6"]
+        },
+        padding: { 
+            right: 10
+        }			
+    },
+    data: {
+        types: {capital: "area", other: "line"},
+        json: [],
+        keys: {
+            x: "day",
+            value: ["capital", "other"]
+        },
+    },
+    axis: {
+        x: {
+            type: "timeseries",
+            tick: {
+                count: 5,
+                format: "%M'%S''"
+            }
+        },
+        y: {
+            tick: {
+                values: [0, 2, 4, 6, 8, 10]
+            }
+        }
+    },
+    grid: {
+        x: { 
+            show: false 
+        }
+    },
+    legend: {
+        show: false
+    },
+    tooltip: {
+        show: false
+    },
+    extend: {
+        point: { 
+            show: false 
+        }
+    }
 });
 
 //차트 #1 랜덤 데이터 생성
 for(var i = 20; i > 0; i--) {
-	var dt = new Date();
-	dt.setSeconds(dt.getSeconds() - (i));
-	chart1.data().json.push({ day: dt, capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1) });
+    var dt = new Date();
+    dt.setSeconds(dt.getSeconds() - (i));
+    chart1.data().json.push({ day: dt, capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1) });
 }
 
 // 도넛 차트 2개 공통 속성
 var conf = {
-	global: {
-		color: {
-			pattern: ["#86b9e6", "#f2f2f2"]
-		}
-	},
-	data: {
-		type: "donut"
-	},
-	extend: {
-		donut: {
-			label: false,
-			innerRadius: 40
-		}
-	},
-	legend: {
-		show: false
-	},
-	tooltip: {
-		show: false
-	}
+    global: {
+        color: {
+            pattern: ["#86b9e6", "#f2f2f2"]
+        }
+    },
+    data: {
+        type: "donut"
+    },
+    extend: {
+        donut: {
+            label: false,
+            innerRadius: 40
+        }
+    },
+    legend: {
+        show: false
+    },
+    tooltip: {
+        show: false
+    }
 };
 
 var chart2 = new sb.chart("#chartWrap2", conf);
 var chart3 = new sb.chart("#chartWrap3", conf);
 chart3.global({
-	color: {
-		pattern: ["#f5707a", "#f2f2f2"]
-	}
+    color: {
+        pattern: ["#f5707a", "#f2f2f2"]
+    }
 });
 
 
@@ -175,50 +175,50 @@ doRender3();
 
 //차트 #1 렌더링
 function doRender1() {
-	//랜덤 데이터
-	chart1.data().json.push({ day: new Date(), capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1)});
-	if(chart1.data().json.length > 20) chart1.data().json.shift();
-	chart1.render();
+    //랜덤 데이터
+    chart1.data().json.push({ day: new Date(), capital: Math.floor((Math.random() * 9) + 1), other: Math.floor((Math.random() * 9) + 1)});
+    if(chart1.data().json.length > 20) chart1.data().json.shift();
+    chart1.render();
 
-	setTimeout(doRender1, 500);	//0.5초후 재실행
+    setTimeout(doRender1, 500);	//0.5초후 재실행
 }
 
 //차트 #2 렌더링
 function doRender2() {
-	var d = chart2.data().columns ? (chart2.data().columns[0][1] + (Math.random() * 10 / 100)) : 0;	//랜덤 데이터
-	if(d >= 1) d = 0;
+    var d = chart2.data().columns ? (chart2.data().columns[0][1] + (Math.random() * 10 / 100)) : 0;	//랜덤 데이터
+    if(d >= 1) d = 0;
 
-	chart2.data({
-		columns: [
-			["d", d],
-			["a", (1 - d)]
-		]
-	}).extend({
-		donut: { 
-			title: (d * 100).toFixed(0) + "%"
-		}
-	}).render();
+    chart2.data({
+        columns: [
+            ["d", d],
+            ["a", (1 - d)]
+        ]
+    }).extend({
+        donut: { 
+            title: (d * 100).toFixed(0) + "%"
+        }
+    }).render();
 
-	setTimeout(doRender2, 1000);	//1초후 재실행
+    setTimeout(doRender2, 1000);	//1초후 재실행
 }
 
 //차트 #3 렌더링
 function doRender3() {
-	var d = chart3.data().columns ? (chart3.data().columns[0][1] - (Math.random() * 5 / 100)) : 1;	//랜덤 데이터
-	if(d <= 0) d = 1;
+    var d = chart3.data().columns ? (chart3.data().columns[0][1] - (Math.random() * 5 / 100)) : 1;	//랜덤 데이터
+    if(d <= 0) d = 1;
 
-	chart3.data({
-		columns: [
-			["d", d],
-			["a", (1 - d)]
-		]
-	}).extend({
-		donut: { 
-			title: (d * 100).toFixed(0) + "%"
-		}
-	}).render();
+    chart3.data({
+        columns: [
+            ["d", d],
+            ["a", (1 - d)]
+        ]
+    }).extend({
+        donut: { 
+            title: (d * 100).toFixed(0) + "%"
+        }
+    }).render();
 
-	setTimeout(doRender3, 500); //0.5초후 재실행
+    setTimeout(doRender3, 500); //0.5초후 재실행
 }
 {% endhighlight %}</p>
 

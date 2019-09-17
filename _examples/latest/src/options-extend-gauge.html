@@ -60,42 +60,42 @@ order: 427
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "gauge",
-		columns: [
-			["2015",65.26]
-		]
-	}
+    data: {
+        type: "gauge",
+        columns: [
+            ["2015",65.26]
+        ]
+    }
 });
 // units
 document.getElementById("txtUnits").onchange = function() {
-	chart.extend({
-		gauge: {
-			units: this.value
-		}
-	}).render();
+    chart.extend({
+        gauge: {
+            units: this.value
+        }
+    }).render();
 };
 // min
 function fnMin() {
-	var conf = {
-		min: {
-			show: document.getElementById("txtMinShow").checked,
-			format: document.getElementById("txtMinFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
-			value: document.getElementById("txtMinValue").value
-		}
-	}
-	chart.extend({ gauge: conf }).render();
+    var conf = {
+        min: {
+            show: document.getElementById("txtMinShow").checked,
+            format: document.getElementById("txtMinFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
+            value: document.getElementById("txtMinValue").value
+        }
+    }
+    chart.extend({ gauge: conf }).render();
 }
 // max
 function fnMax() {
-	var conf = {
-		max: {
-			show: document.getElementById("txtMaxShow").checked,
-			format: document.getElementById("txtMaxFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
-			value: document.getElementById("txtMaxValue").value
-		}
-	}
-	chart.extend({gauge: conf }).render();
+    var conf = {
+        max: {
+            show: document.getElementById("txtMaxShow").checked,
+            format: document.getElementById("txtMaxFormat").checked? function(val){ return parseFloat(val).toFixed(2);}: undefined,
+            value: document.getElementById("txtMaxValue").value
+        }
+    }
+    chart.extend({gauge: conf }).render();
 }
 //events
 document.getElementById("txtMinShow").onchange = fnMin;

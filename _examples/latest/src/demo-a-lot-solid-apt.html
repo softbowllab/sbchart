@@ -22,104 +22,104 @@ svg { background-color: #f2f2f2 } /* 배경색 */
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 sb.chart.render("#chartWrap", {
-	global: {
-		size: {
-			width: 620, 
-			height: 380
-		},
-		color: {
-			pattern: ["#4473c5", "#ed7d31"]
-		},
-		padding: {
-			right: 8
-		}
-	},
-	data: {
-		type: "stackbar",
-		json: [
-			{month:"2017-07", capital:24266, other:10685},
-			{month:"2017-08", capital:13614, other:8936},
-			{month:"2017-09", capital:14471, other:16878},
-			{month:"2017-10", capital:10548, other:6579},
-			{month:"2017-11", capital:16935, other:21289},
-			{month:"2017-12", capital:19586, other:25810},
-			{month:"2018-01", capital:7732, other:9888},
-			{month:"2018-02", capital:2931, other:4889},
-			{month:"2018-03", capital:15303, other:8763},
-			{month:"2018-04", capital:24990, other:15577},
-			{month:"2018-05", capital:19284, other:23271},
-			{month:"2018-06", capital:15901, other:11623},
-			{month:"2018-07", capital:18660, other:19084},
-			{month:"2018-08", capital:9455, other:12097},
-			{month:"2018-09", capital:17250, other:11358},
-			{month:"2018-10", capital:25898, other:10791},
-			{month:"2018-11", capital:21631, other:14948}
-		],
-		keys: {
-			x: "month",
-			value: ["capital","other"]
-		},
-		legends: {capital: "수도권", other: "수도권 제외 지방"},
-		labels: {
-			format: function(value, id) {
-				return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-			}
-		}
-	},
-	title: { 
-		text: "아파트 분양 및 분양예정 물량",
-		padding: {
-			top: 5
-		}
-	},
-	axis: {
-		x: {
-			type: "category",
-			tick: {
-				multiline: false,
-				format: function(index, name) {
-					var m = name.substring(5,7);
-					return (index == 0 || m == "01") ? name : m;
-				}
-			}
-		},
-		y: {
-			show: false
-		}
-	},
-	grid: {
-		y: {
-			show: false
-		}
-	},
-	legend: {
-		position: "inset",
-		inset: {
-			x: 220,
-			y: 0,
-			step: 1
-		},
-		item: {
-			tile: {
-				height: 6, 
-				width: 6
-			}
-		}
-	},
-	tooltip: {
-		format: {
-			value: function(value, ratio, id) {
-				return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-			}
-		}
-	},
-	extend: {
-		bar: {
-			width: {
-				ratio: 0.9
-			}
-		}
-	}
+    global: {
+        size: {
+            width: 620, 
+            height: 380
+        },
+        color: {
+            pattern: ["#4473c5", "#ed7d31"]
+        },
+        padding: {
+            right: 8
+        }
+    },
+    data: {
+        type: "stackbar",
+        json: [
+            {month:"2017-07", capital:24266, other:10685},
+            {month:"2017-08", capital:13614, other:8936},
+            {month:"2017-09", capital:14471, other:16878},
+            {month:"2017-10", capital:10548, other:6579},
+            {month:"2017-11", capital:16935, other:21289},
+            {month:"2017-12", capital:19586, other:25810},
+            {month:"2018-01", capital:7732, other:9888},
+            {month:"2018-02", capital:2931, other:4889},
+            {month:"2018-03", capital:15303, other:8763},
+            {month:"2018-04", capital:24990, other:15577},
+            {month:"2018-05", capital:19284, other:23271},
+            {month:"2018-06", capital:15901, other:11623},
+            {month:"2018-07", capital:18660, other:19084},
+            {month:"2018-08", capital:9455, other:12097},
+            {month:"2018-09", capital:17250, other:11358},
+            {month:"2018-10", capital:25898, other:10791},
+            {month:"2018-11", capital:21631, other:14948}
+        ],
+        keys: {
+            x: "month",
+            value: ["capital","other"]
+        },
+        legends: {capital: "수도권", other: "수도권 제외 지방"},
+        labels: {
+            format: function(value, id) {
+                return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+        }
+    },
+    title: { 
+        text: "아파트 분양 및 분양예정 물량",
+        padding: {
+            top: 5
+        }
+    },
+    axis: {
+        x: {
+            type: "category",
+            tick: {
+                multiline: false,
+                format: function(index, name) {
+                    var m = name.substring(5,7);
+                    return (index == 0 || m == "01") ? name : m;
+                }
+            }
+        },
+        y: {
+            show: false
+        }
+    },
+    grid: {
+        y: {
+            show: false
+        }
+    },
+    legend: {
+        position: "inset",
+        inset: {
+            x: 220,
+            y: 0,
+            step: 1
+        },
+        item: {
+            tile: {
+                height: 6, 
+                width: 6
+            }
+        }
+    },
+    tooltip: {
+        format: {
+            value: function(value, ratio, id) {
+                return ("" + value).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+        }
+    },
+    extend: {
+        bar: {
+            width: {
+                ratio: 0.9
+            }
+        }
+    }
 });
 {% endhighlight %}</p>
 

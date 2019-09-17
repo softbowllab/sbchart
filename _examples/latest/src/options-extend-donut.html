@@ -27,27 +27,27 @@ order: 426
 {% endhighlight %}</p>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "donut",
-		columns: [
-			["2015",3.51],
-			["2016",0.71],
-			["2017",1.48]
-		]
-	},
-	extend: {
-		donut: {
-			title: document.getElementById("txtTitle").value
-		}
-	}
+    data: {
+        type: "donut",
+        columns: [
+            ["2015",3.51],
+            ["2016",0.71],
+            ["2017",1.48]
+        ]
+    },
+    extend: {
+        donut: {
+            title: document.getElementById("txtTitle").value
+        }
+    }
 });
 // title
 document.getElementById("txtTitle").onchange = function() {
-	chart.extend({
-		donut: {
-			title: this.value
-		}
-	}).render();
+    chart.extend({
+        donut: {
+            title: this.value
+        }
+    }).render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

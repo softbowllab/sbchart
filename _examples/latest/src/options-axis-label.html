@@ -58,69 +58,69 @@ order: 333
 <h4>Code</h4>
 <p>{% highlight javascript %}
 var chart = sb.chart.render("#chartWrap", {
-	data: {
-		type: "line",
-		columns: [
-			["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66],
-			["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
-		]
-	},
-	axis: {
-		x: {
-			type: "category",
-			categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"],
-			label: {
-				text: "지역별",
-				position: "inner-right"
-			}
-		},
-		y: {
-			label: {
-				text: "변동율(%)",
-				position: "innert-top"
-			}
-		}
-	}
+    data: {
+        type: "line",
+        columns: [
+            ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66],
+            ["2017",2.8,1.45,2.35,0.29,0.42,2.0,5.12,1.12,2.3,2.67,1.4,2.2,1.3,3.8,0.23,2.9,1.62,2.66]
+        ]
+    },
+    axis: {
+        x: {
+            type: "category",
+            categories: ["전국","서울","부산","대구","인천","광주","대전","울산","세종","경기","강원","충북","충남","전북","전남","경북","경남","제주"],
+            label: {
+                text: "지역별",
+                position: "inner-right"
+            }
+        },
+        y: {
+            label: {
+                text: "변동율(%)",
+                position: "innert-top"
+            }
+        }
+    }
 });
 //axis-X label
 document.getElementById("txtLabelX").onchange = function() {
-	chart.axis({
-		x: {
-			label: {
-				text: this.value
-			}
-		}
-	}).render();
+    chart.axis({
+        x: {
+            label: {
+                text: this.value
+            }
+        }
+    }).render();
 };
 //axis-X label
 document.getElementById("cboPositionX").onchange = function() {
-	chart.axis({
-		x: {
-			label: {
-				position: this.value
-			}
-		}
-	}).render();
+    chart.axis({
+        x: {
+            label: {
+                position: this.value
+            }
+        }
+    }).render();
 };
 //axis-Y label
 document.getElementById("txtLabelY").onchange = function() {
-	chart.axis({
-		y: {
-			label: {
-				text: this.value
-			}
-		}
-	}).render();
+    chart.axis({
+        y: {
+            label: {
+                text: this.value
+            }
+        }
+    }).render();
 };
 //axis-Y label
 document.getElementById("cboPositionY").onchange = function() {
-	chart.axis({
-		y: {
-			label: {
-				position: this.value
-			}
-		}
-	}).render();
+    chart.axis({
+        y: {
+            label: {
+                position: this.value
+            }
+        }
+    }).render();
 };
 {% endhighlight %}</p>
 <!-- Script -->

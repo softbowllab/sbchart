@@ -7,6 +7,16 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.17
+`2019.09.17`
+
+#### 기능 추가
+* Y2축 기능 추가
+
+#### 옵션 추가
+- `conf.axis.axes`, `conf.axis.y2` 옵션 추가
+
+
 ## 2.0.16
 `2019.08.26`
 
