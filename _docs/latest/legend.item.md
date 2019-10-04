@@ -21,14 +21,17 @@ legend: {
 	item: {
 		tile: {
 			height: 10,
-			width: 10
+            width: 10,
+            point: "circle",
+            position: "right"
 		}
 		mouseover: function(id) {
 			return false;
 		},
 		mouseout: function(id) {
 			return false;
-		}
+        },
+        paddingBottom: 5
 	}
 }
 ```
@@ -54,6 +57,41 @@ legend: {
 
 * Default : 10
 
+
+### legend.item.tile.point
+
+`#2.0.18`
+
+각 범례의 Tile 박스의 모양을 지정합니다.
+
+* Type: String
+ 
+* Default: "rect"
+
+* Values
+
+	* rect: `Default` 사각형
+
+    * circle: 원
+
+
+### legend.item.tile.position
+
+`#2.0.18`
+
+각 범례의 Tile 박스의 위치를 지정합니다.
+
+* Type : String
+ 
+* Default : "left"
+
+* Values
+
+    * left: `Default` 텍스트의 좌측에 위치
+
+    * right: 텍스트의 우측에 위치
+
+
 ### legend.item.onmouseover
 
 `#2.0.3`
@@ -74,3 +112,14 @@ legend: {
 현재는 범례 항목 마우스 아웃 시 해당되는 차트 내 데이터 표현 부분을 highlight 하는 기본 기능을 사용하지 않는 경우만 사용합니다.
 
 * Type : Function
+
+
+### legend.item.paddingBottom
+
+`#2.0.10`
+
+범례 각 항목의 하단 padding을 지정합니다.
+
+`legend.position = "inset"`, `legend.position="right"` 일 때 적용되며, 마지막 범례 항목에는 적용되지 않습니다.
+
+* Type : Number

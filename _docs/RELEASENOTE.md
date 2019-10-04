@@ -7,6 +7,14 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.18
+`2019.10.04`
+
+#### 옵션 추가
+* `conf.legend.item.paddingBottom` 추가
+* `conf.legend.item.tile.point` (rect/circle) 추가 
+* `conf.legend.item.tile.position` (left/right) 추가 
+
 ## 2.0.17
 `2019.09.17`
 
@@ -14,7 +22,7 @@ permalink: /:collection/releasenote:output_ext
 * Y2축 기능 추가
 
 #### 옵션 추가
-- `conf.axis.axes`, `conf.axis.y2` 옵션 추가
+* `conf.axis.axes`, `conf.axis.y2` 옵션 추가
 
 
 ## 2.0.16
