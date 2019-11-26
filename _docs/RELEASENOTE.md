@@ -7,6 +7,25 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.19
+`2019.11.20`
+
+#### 기능 추가
+* 이미지 다운로드 추가
+* 범례 아이템 클릭 시 해당 차트 숨기기, 보이기 기능 추가
+* `conf.data.noData`에 이미지 경로 입력 시 이미지가 나오게 변경
+
+#### 기능 개선
+* IE9 지원
+
+#### 옵션 추가
+* `conf.global.export.show` 추가
+* `conf.legend.item.onclick` 추가
+
+#### 버그 수정
+* Radar Chart가 `conf.global.animation.show = true`일 때 IE에서 나오지 않는 현상 수정
+
+
 ## 2.0.18
 `2019.10.04`
 

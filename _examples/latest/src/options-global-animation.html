@@ -21,7 +21,7 @@ order: 315
 		<li>
 			<h6><code>global.animation.type</code></h6>
 			<p>애니메이션 타입을 설정합니다.</p>
-			<p id="typeBars" class="none">
+			<p id="typeBars" class="none" style="display: block;">
 				<select name="aniType">
 					<option value="rise">rise (Default)</option>
 					<option value="fill">fill</option>
@@ -30,22 +30,22 @@ order: 315
 				</select>
 				<label>(bar, bar.rotated, stackbar, stackbar 100%)</label>
 			</p>
-			<p id="typeLines" class="none">
+			<p id="typeLines" class="none" style="display: none;">
 				<select name="aniType">
 					<option value="rise">rise (Default)</option>
 					<option value="fill">fill</option>
 					<option value="fade">fade</option>
 				</select>
-				<label>(line, spline, step, area, stackarea, stackarea 100%)</label>
+				<label>(line, spline, step, area, stackarea, stackarea 100%, radar)</label>
 			</p>
-			<p id="typeBubble" class="none">
+			<p id="typeBubble" class="none" style="display: none;">
 				<select name="aniType">
 					<option value="pop">pop (Default)</option>
 					<option value="fade">fade</option>
 				</select>
-				<label>(bubble)</label>
+				<label>(bubble, scatter plot)</label>
 			</p>
-			<p id="typeArcs" class="none">
+			<p id="typeArcs" class="none" style="display: none;">
 				<select name="aniType">
 					<option value="fan">fan (Default)</option>
 					<option value="circle">circle</option>
@@ -53,7 +53,7 @@ order: 315
 				</select>
 				<label>(pie, donut, gauge)</label>
 			</p>
-			<p id="typeCombi" class="none">
+			<p id="typeCombi" class="none" style="display: none;">
 				<label>2015</label>
 				<select name="aniType" data-key="2015">
 					<option value="rise">rise (Default)</option>
@@ -215,9 +215,11 @@ function setChart(value) {
 		case "area":
 		case "stackarea":
 		case "stackarea.100":
+		case "radar":
 			changeDefaultType(document.getElementById("typeLines"));
 			break;
 		case "bubble":
+		case "scatter":
 			changeDefaultType(document.getElementById("typeBubble"));
 			break;
 		case "pie":
