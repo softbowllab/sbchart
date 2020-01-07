@@ -2,7 +2,7 @@
 title: axis.y2.tick
 date: 2019-09-17
 categories: ["latest","axis"]
-order: 21
+order: 201
 ---
 
 ## axis.y2.tick
