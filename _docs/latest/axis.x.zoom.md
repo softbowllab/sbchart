@@ -11,7 +11,7 @@ order: 11
 
 ---
 
-X축 줌 관련 값들을 설정합니다.
+X축 Zoom 관련 값들을 설정합니다.
 
 X축이 없는 원 계열(원, 도넛, 게이지) 차트와 Radar 차트는 해당되지 않습니다.
 
@@ -35,12 +35,12 @@ axis: {
 
 zoom type을 설정합니다. (현재 drag 한가지만 설정 가능합니다.)
 
-* Type : Boolean
+* Type : String
 
 * Default : "drag"
 
 
-### axis.x.scroll.maxScale
+### axis.x.zoom.maxScale
 
 `#2.0.20`
 
