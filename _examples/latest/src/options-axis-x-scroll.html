@@ -1,0 +1,104 @@
+---
+title: Axis X Scroll
+date: 2020-01-14
+categories: ["latest","options"]
+order: 350
+---
+<p>막대 / 라인 차트 계열에서 X축에 스크롤을 표현할 수 있습니다.</p>
+<hr>
+<!-- Options -->
+<h4>Options</h4>
+<div class="row options">
+	<ul>
+		<li>
+			<h6><code>axis.x.scroll.show</code></h6>
+			<p><label><input type="checkbox" id="chkShow" checked>스크롤을 사용합니다.</label></p>
+			<p><code>axis.x.scroll.show = true/false</code></p>
+		</li>
+		<li>
+			<h6><code>axis.x.scroll.xSize</code></h6>
+            <p><label>X축의 사이즈를 설정합니다. (스크롤로 표시하고 싶은 실제 차트의 크기)</label></p>
+            <p><input type="text" id="txtSize" class="w-short" value="1000"></p>
+		</li>
+		<li>
+			<h6><code>axis.x.scroll.wheel</code></h6>
+			<p><label><input type="checkbox" id="chkWheel" checked>마우스 휠로 스크롤 이동 여부를 설정합니다.</label></p>
+			<p><code>axis.x.scroll.wheel = true/false</code></p>
+		</li>
+	</ul>
+</div>
+<!-- Example -->
+<h4>Example</h4>
+{% include_relative select_chart.html chart_type=site.data.chart.excludecircles def_chart="area" %}
+<p id="chartWrap"></p>
+<!-- Code -->
+<h4>Code</h4>
+<p>{% highlight javascript %}
+    var chart = sb.chart.render("#chartWrap", {
+        data: {
+            type: "area",
+            columns: [
+                ["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+                ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+                ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+            ]
+        },
+        axis: {
+            x: {
+                scroll: {
+                    show: true,
+                    xSize: 1000,
+                    wheel: true,
+                }
+            },
+        }
+    });
+    
+    document.getElementById("chkShow").onchange = function() {
+        chart.axis().x.scroll.show = this.checked;
+        chart.render();
+    }
+    document.getElementById("txtSize").onchange = function() {
+        chart.axis().x.scroll.xSize = this.value;
+        chart.render();
+    }
+    document.getElementById("chkWheel").onchange = function() {
+        chart.axis().x.scroll.wheel = this.checked;
+        chart.render();
+    }
+{% endhighlight %}</p>
+<!-- Script -->
+<script>
+var chart = sb.chart.render("#chartWrap", {
+	data: {
+		type: "area",
+        columns: [
+            ["2015",3.51,4.6,3.43,7.96,3.37,5.83,0.35,3.23,-0.09,4.47,2.21,1.13,0.77,0.35,0.92,2.65,1.64,8.08],
+            ["2016",0.71,2.14,3.18,-1.84,0.79,0.35,0.28,0.44,0.79,0.84,1.33,-0.7,-1.51,0.09,1.05,-1.66,-0.58,4.63],
+            ["2017",1.48,3.64,2.35,1.29,1.42,1.34,1.51,-1.08,4.29,1.67,2.4,-0.36,-0.53,1.98,2.23,-0.9,-1.62,1.66]
+        ]
+	},
+	axis: {
+		x: {
+            scroll: {
+                show: true,
+                xSize: 1000,
+                wheel: true,
+            }
+		},
+	}
+});
+
+document.getElementById("chkShow").onchange = function() {
+	chart.axis().x.scroll.show = this.checked;
+	chart.render();
+}
+document.getElementById("txtSize").onchange = function() {
+    chart.axis().x.scroll.xSize = this.value;
+    chart.render();
+}
+document.getElementById("chkWheel").onchange = function() {
+	chart.axis().x.scroll.wheel = this.checked;
+	chart.render();
+}
+</script>
