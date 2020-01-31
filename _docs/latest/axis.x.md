@@ -26,7 +26,10 @@ axis: {
 		max: 10,
 		min: 1,
 		height: 20,
-		localtime: true
+		localtime: true,
+        domain: {
+            show: false
+        }
 	}
 }
 ```
@@ -87,6 +90,16 @@ X축 영역의 높이를 지정합니다.
 `#2.0.0`
 
 X축 시간대를 처리하는 방법으로 true인 경우 x값을 localtime으로 처리, false이면 내부적으로 UTC로 변환합니다.
+
+* Type : Boolean
+
+* Default : true
+
+### axis.x.domain.show
+
+`#2.0.21`
+
+X축 Domain(X축 라인)의 노출 여부를 설정합니다.
 
 * Type : Boolean
 

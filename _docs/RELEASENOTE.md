@@ -7,6 +7,31 @@ permalink: /:collection/releasenote:output_ext
 
 # Release Note
 ---
+## 2.0.21
+`2020.01.31`
+
+#### 기능 개선
+* gauge chart, stack data 표현 가능하게 변경
+* title, extend.donut.title 에서 \n으로 줄바꿈 가능하게 변경
+* data에 null 허용 가능하게 변경
+- bubble chart, data.columns일 때 배열로 입력하여 bubble 크기를 사용자가 지정 가능하게 변경
+```
+	ex) columns = [
+			["data1", 20, [30, 50], 70, [40, 10], 20],
+			["data2", [10, 20], 70, 40, 50, [60, 30]],
+			["data3", 80, 60, [90, 20], 30, [40, 70]],
+		]
+```       
+
+#### 옵션 추가
+* extend.bar.padding 추가
+* axis.x/y/y2.tick.culling.max 추가
+* axis.x/y/y2.tick.line.show, axis.x/y/y2.tick.text.show, axis.x/y/y2.domain.show 추가
+
+#### 버그 수정
+* pie, donut, gauge chart fullcircle이 아닐 때, animation 오류 수정
+
+
 ## 2.0.20
 `2020.01.03`
 

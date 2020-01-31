@@ -26,7 +26,16 @@ axis: {
 			outer: true,
 			rotate: 0,
 			multiline: true,
-			centered: false
+			centered: false,
+            culling: {
+                max: 5
+            },
+            line: {
+                show: false
+            },
+            text: {
+                show: false
+            }
 		}
 	}
 }
@@ -195,3 +204,36 @@ axis: {
 	}
 }
 ```
+
+
+### axis.x.tick.culling.max
+
+`#2.0.21`
+
+X축 Tick의 Text의 max값을 지정할 수 있습니다. (max값이기 때문에 지정한 수보다 적게 나올 수 있습니다.)
+
+
+* Type: Number
+
+
+### axis.x.tick.line.show
+
+`#2.0.21`
+
+X축 Tick의 Line의 노출 여부를 설정합니다.
+
+* Type: Boolean
+
+* Default : true
+
+
+### axis.x.tick.text.show
+
+`#2.0.21`
+
+X축 Tick의 Text의 노출 여부를 설정합니다.
+
+
+* Type: Boolean
+
+* Default : true

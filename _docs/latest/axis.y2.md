@@ -25,7 +25,10 @@ axis: {
 		min: 0,
 		max: 100,
 		center: 50,
-		zerobased: false
+		zerobased: false,
+        domain: {
+            show: false
+        }
 	}
 }
 ```
@@ -76,6 +79,17 @@ y2축 값의 중간값을 지정합니다.
 값이 모두 양수이거나 모두 음수인 경우 Y2축의 최솟값 또는 최댓값이 0으로 설정됩니다.
 
 모두 양수이면 최솟값(Y2축 최하단)이 0으로 모두 음수이면 최댓값(Y2축 최상단)이 0이 됩니다.
+
+* Type : Boolean
+
+* Default : true
+
+
+### axis.y2.domain.show
+
+`#2.0.21`
+
+Y2축 Domain(Y2축 라인)의 노출 여부를 설정합니다.
 
 * Type : Boolean
 

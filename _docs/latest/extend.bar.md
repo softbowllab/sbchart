@@ -23,6 +23,7 @@ extend: {
 			ratio: 0.6,
 			max: 20
 		},
+        padding: 5
 	}
 }
 ```
@@ -53,6 +54,16 @@ extend: {
 각 막대의 너비 최댓값을 지정합니다. 너비 지정된 비율 값에 따라 max 값을 넘을 경우는 max 값으로 고정됩니다.
 
 * Type : Number
+
+### extend.bar.padding
+
+`#2.0.21`
+
+각 막대 사이의 padding을 지정합니다.
+
+* Type : Number
+
+* Default : 0
 
 
 ### ~~extend.bar.zerobased~~

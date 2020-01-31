@@ -24,7 +24,16 @@ axis: {
 			count: 5,
 			values: [2, 4, 10],
 			outer: true,
-			rotate: 0
+			rotate: 0,
+            culling: {
+                max: 5
+            },
+            line: {
+                show: false
+            },
+            text: {
+                show: false
+            }
 		}
 	}
 }
@@ -80,3 +89,34 @@ Y2축 Tick을 주어진 각도로 회전합니다.
 * Type: Number
 
 * Default: 0
+
+
+### axis.y2.tick.culling.max
+
+`#2.0.21`
+
+Y2축 Tick의 Text의 max값을 지정할 수 있습니다. (max값이기 때문에 지정한 수보다 적게 나올 수 있습니다.)
+
+* Type: Number
+
+
+### axis.y2.tick.line.show
+
+`#2.0.21`
+
+Y2축 Tick의 Line의 노출 여부를 설정합니다.
+
+* Type: Boolean
+
+* Default : true
+
+
+### axis.y2.tick.text.show
+
+`#2.0.21`
+
+Y2축 Tick의 Text의 노출 여부를 설정합니다.
+
+* Type: Boolean
+
+* Default : true
